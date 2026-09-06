@@ -1,0 +1,32 @@
+# 依赖与构建产物
+node_modules/
+build/
+dist/
+backups/
+*.log
+.DS_Store
+Thumbs.db
+
+# DSH 运行时
+.dsh/
+.dsh-vision-toolkit/
+
+# ---- 数据：只提交题库主数据，其余视为本地用户数据 ----
+data/*
+!data/library.json
+!data/classifications.json
+
+# ---- 提取管线：只留成品，忽略分片中间态 ----
+extraction/*.part*.json
+extraction/*.round1.json
+
+# ---- 开发过程产物，不入库 ----
+docs/images/
+其他文件/
+PROMPT-*.md
+
+# 运行期闲散产物
+shot-out.txt
+shot-err.txt
+gh-auth-out.txt
+gh-auth-err.txt

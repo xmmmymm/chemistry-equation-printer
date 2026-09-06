@@ -1,0 +1,144 @@
+{
+  "book": "选择性必修2",
+  "version": "人教版",
+  "entries": [
+    {
+      "name": "镁在二氧化碳中燃烧",
+      "description": "点燃条件下金属镁与二氧化碳反应生成氧化镁和碳；教材资料卡片将点燃的镁粉用干冰盖住，镁粉在干冰内继续燃烧发出耀眼的白光，证明了金属镁可以跟二氧化碳反应。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数为2，单一点燃条件，配平简单但属陌生情境的燃烧反应",
+      "textbooks": [
+        { "chapter": "第三章 晶体结构与性质", "section": "第二节 分子晶体与共价晶体", "context": "资料卡片" }
+      ],
+      "substanceCategories": ["单质", "氧化物"],
+      "reactionTypes": ["置换反应", "氧化还原反应", "燃烧反应"],
+      "knowledgeModules": ["金属及其化合物", "非金属及其化合物"],
+      "tags": [],
+      "versions": [
+        { "type": "chemical", "line": "2Mg + CO2 = 2MgO + C", "conditions": ["点燃"], "reversible": false }
+      ],
+      "source": "人教版·选择性必修2"
+    },
+    {
+      "name": "碘与碘离子反应生成三碘离子",
+      "description": "向碘水中加入浓碘化钾溶液，振荡后溶液紫色变浅，水溶液中碘单质与碘离子可逆地结合生成三碘离子，体现碘在水溶液中的平衡移动。",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，系数均为1，但为离子方程式且含可逆号⇌",
+      "textbooks": [
+        { "chapter": "第二章 分子结构与性质", "section": "第三节 分子结构与物质的性质", "context": "思考与讨论（溶解性与相似相溶）" }
+      ],
+      "substanceCategories": ["单质", "其他"],
+      "reactionTypes": ["离子反应", "可逆反应"],
+      "knowledgeModules": ["化学平衡", "水溶液中的离子平衡"],
+      "tags": [],
+      "versions": [
+        { "type": "ionic", "line": "I2 + I- ⇌ I3-", "conditions": [], "reversible": true }
+      ],
+      "source": "人教版·选择性必修2"
+    },
+    {
+      "name": "铜离子与氨水反应生成氢氧化铜",
+      "description": "向硫酸铜溶液中逐滴加入氨水，氨水呈碱性，铜离子与一水合氨反应生成难溶的氢氧化铜蓝色沉淀和铵根离子。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，涉及弱碱 NH3·H2O 的拆分判断，生成物有沉淀符号",
+      "textbooks": [
+        { "chapter": "第三章 晶体结构与性质", "section": "第四节 配合物与超分子", "context": "实验3-3" },
+        { "chapter": "第三章 晶体结构与性质", "section": "第四节 配合物与超分子", "context": "练习与应用" }
+      ],
+      "substanceCategories": ["盐", "碱", "其他"],
+      "reactionTypes": ["离子反应", "复分解反应"],
+      "knowledgeModules": ["水溶液中的离子平衡"],
+      "tags": [],
+      "versions": [
+        { "type": "ionic", "line": "Cu^2+ + 2NH3·H2O = Cu(OH)2↓ + 2NH4+", "conditions": [], "reversible": false }
+      ],
+      "source": "人教版·选择性必修2"
+    },
+    {
+      "name": "氢氧化铜与氨水反应生成四氨合铜配合物",
+      "description": "向含氢氧化铜沉淀的体系中继续添加氨水，难溶物溶解，氢氧化铜与氨分子以配位键结合生成深蓝色的四氨合铜配合物 [Cu(NH3)4](OH)2，得到深蓝色透明溶液。",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，系数出现4，配合物方括号写法是难点",
+      "textbooks": [
+        { "chapter": "第三章 晶体结构与性质", "section": "第四节 配合物与超分子", "context": "实验3-3" },
+        { "chapter": "第三章 晶体结构与性质", "section": "第四节 配合物与超分子", "context": "练习与应用" }
+      ],
+      "substanceCategories": ["碱", "氢化物", "盐"],
+      "reactionTypes": ["其他"],
+      "knowledgeModules": ["物质及其变化"],
+      "tags": [],
+      "versions": [
+        { "type": "chemical", "line": "Cu(OH)2 + 4NH3 = [Cu(NH3)4](OH)2", "conditions": [], "reversible": false },
+        { "type": "ionic", "line": "Cu(OH)2 + 4NH3 = [Cu(NH3)4]^2+ + 2OH-", "conditions": [], "reversible": false }
+      ],
+      "source": "人教版·选择性必修2"
+    },
+    {
+      "name": "氯化银与氨水反应生成二氨合银配合物",
+      "description": "向氯化银白色沉淀中滴入氨水并振荡，AgCl 与氨分子发生配位反应生成可溶性的 [Ag(NH3)2]Cl，沉淀消失，得到澄清的无色溶液。",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，系数为2，需理解配合物生成使沉淀溶解，方括号写法陌生",
+      "textbooks": [
+        { "chapter": "第三章 晶体结构与性质", "section": "第四节 配合物与超分子", "context": "实验3-5" }
+      ],
+      "substanceCategories": ["盐", "氢化物"],
+      "reactionTypes": ["其他"],
+      "knowledgeModules": ["物质及其变化"],
+      "tags": [],
+      "versions": [
+        { "type": "chemical", "line": "AgCl + 2NH3 = [Ag(NH3)2]Cl", "conditions": [], "reversible": false },
+        { "type": "ionic", "line": "AgCl + 2NH3 = [Ag(NH3)2]+ + Cl-", "conditions": [], "reversible": false }
+      ],
+      "source": "人教版·选择性必修2"
+    },
+    {
+      "name": "铁氰化钾的电离",
+      "description": "铁氰化钾 K3[Fe(CN)6] 在水中完全电离出钾离子和六氰合铁(III)配离子 [Fe(CN)6]3-，该配离子在水中稳定存在，与简单 Fe3+ 的性质不同。",
+      "difficulty": "简单",
+      "difficultyReason": "一步完全电离，物质3种，系数为3",
+      "textbooks": [
+        { "chapter": "第三章 晶体结构与性质", "section": "实验活动 简单配合物的形成", "context": "问题和讨论" }
+      ],
+      "substanceCategories": ["盐", "其他"],
+      "reactionTypes": ["电离"],
+      "knowledgeModules": ["水溶液中的离子平衡"],
+      "tags": [],
+      "versions": [
+        { "type": "ionization", "line": "K3[Fe(CN)6] = 3K+ + [Fe(CN)6]^3-", "conditions": [], "reversible": false }
+      ],
+      "source": "人教版·选择性必修2"
+    }
+  ],
+  "excluded": [
+    {
+      "raw": "Fe3+ + SCN- → 硫氰化铁配离子（血红色）",
+      "location": "第三章 晶体结构与性质·第四节 配合物与超分子（实验3-4；另见练习与应用6、实验活动·简单离子与配离子的区别）",
+      "reason": "教材只描述三价铁离子跟硫氰酸根离子形成配离子的颜色与用途，未给出方程式，也未指明配离子组成（[Fe(SCN)]2+ 或 Fe(SCN)3 等写法不一），无法可靠书写，请父代理复核是否按 [Fe(SCN)]2+ 补录"
+    },
+    {
+      "raw": "NaCl + AgNO3 → AgCl↓（白色沉淀）",
+      "location": "第三章 晶体结构与性质·第四节 配合物与超分子（实验3-5；另见实验活动·实验步骤1(2)）",
+      "reason": "教材只描述滴加 AgNO3 后'产生难溶于水的白色 AgCl 沉淀'，未印出方程式；该反应属必修阶段已学内容，本书重点是随后的配合物溶解反应（已收录）"
+    },
+    {
+      "raw": "Cu2+ + 4H2O → [Cu(H2O)4]2+（水合铜离子）",
+      "location": "第三章 晶体结构与性质·第四节 配合物与超分子（实验3-2）",
+      "reason": "教材仅说明溶液呈天蓝色是由于水合铜离子 [Cu(H2O)4]2+，用于讲解配位键概念，未写成方程式，未收录"
+    },
+    {
+      "raw": "2[Ag(CN)2]- + Zn = [Zn(CN)4]2- + 2Ag（推断式）",
+      "location": "第三章 晶体结构与性质·复习与提高 15(3)",
+      "reason": "习题仅要求'写出上述反应的离子方程式'，教材未给答案；依题干推断（E 为 Zn、F 为 Ag、AB- 为 CN-、配位数分别为4和2）可得此式，属推断性内容，请父代理复核后决定是否收录"
+    },
+    {
+      "raw": "石墨 →（高温高压、催化剂）金刚石",
+      "location": "第三章 晶体结构与性质·第二节 科学·技术·社会（人工合成金刚石）",
+      "reason": "同素异形体转变，教材仅文字叙述并配图，未写成方程式；且反应前后化学式同为 C，机器解析无意义，不收录"
+    },
+    {
+      "raw": "[Cu(NH3)4](OH)2 / [Ag(NH3)2]Cl / [Fe(CN)6]^3- / NH3·H2O / I3- 等写法",
+      "location": "全书（集中在第三章第四节、实验活动及第二章第三节思考与讨论）",
+      "reason": "已收录 entries 的 versions.line 使用配合物方括号记法（方括号整体作为一个化学式、多价电荷以 ^2+ 收尾）、一水合氨 NH3·H2O 的中圆点；教材原文 I₂+I⁻⇌I₃ 丢失电荷上标，已按电荷守恒补为 I3-。项目解析器对这些写法的支持不确定，请父代理用 chem.js 机器校验复核"
+    }
+  ]
+}

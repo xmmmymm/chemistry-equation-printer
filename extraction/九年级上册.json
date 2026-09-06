@@ -1,0 +1,1897 @@
+{
+  "book": "九年级上册",
+  "version": "人教版",
+  "entries": [
+    {
+      "name": "红磷在氧气中燃烧",
+      "description": "红磷（白磷同理）在氧气中燃烧生成五氧化二磷，产生大量白烟并放出大量热；是测定空气中氧气含量和验证质量守恒定律的常用反应。",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，系数为4、5，需最小公倍数法配平",
+      "textbooks": [
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题1 我们周围的空气",
+          "context": "思考与讨论"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "正文"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "正文"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "4P + 5O2 = 2P2O5",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "碳在氧气中燃烧",
+      "description": "木炭（碳）在氧气中充分燃烧生成二氧化碳并放出大量热，是氧气性质实验和化学方程式概念的典型示例。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为1，单一点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "实验2-2"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "正文"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题1 碳单质的多样性",
+          "context": "正文"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C + O2 = CO2",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "硫在氧气中燃烧",
+      "description": "硫在空气中燃烧发出微弱的淡蓝色火焰，在氧气中燃烧发出蓝紫色火焰，生成有刺激性气味的二氧化硫；也是工业制硫酸的第一步反应。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为1，单一点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "实验2-3"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题3 制取氧气",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第三单元 物质构成的奥秘",
+          "section": "课题1 分子和原子",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第三单元 物质构成的奥秘",
+          "section": "课题3 元素",
+          "context": "思考与讨论"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "正文"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "S + O2 = SO2",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "铁在氧气中燃烧",
+      "description": "细铁丝在氧气中点燃后剧烈燃烧、火星四射，生成黑色固体四氧化三铁；集气瓶底预留少量水以防熔融物炸裂瓶底。",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，系数为3，需配平并标注点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "实验2-4"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "实验活动1 氧气的实验室制取与性质",
+          "context": "氧气的性质"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "3Fe + 2O2 = Fe3O4",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "氧化汞受热分解",
+      "description": "氧化汞受热分解生成汞和氧气，是拉瓦锡研究空气组成、建立质量守恒定律所用的经典反应。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题1 质量守恒定律",
+          "context": "正文"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2HgO = 2Hg + O2↑",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "高锰酸钾受热分解",
+      "description": "加热高锰酸钾分解生成锰酸钾、二氧化锰和氧气，是实验室用排水法收集氧气的常用方法；试管口需放一团棉花以防粉末进入导管。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，生成物3种，配平与符号标注综合",
+      "textbooks": [
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题3 制取氧气",
+          "context": "实验2-5"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题3 制取氧气",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "实验活动1 氧气的实验室制取与性质",
+          "context": "制取氧气"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题1 质量守恒定律",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "正文"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2KMnO4 = K2MnO4 + MnO2 + O2↑",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "过氧化氢分解制取氧气",
+      "description": "过氧化氢在二氧化锰催化下分解生成水和氧气，常温即可进行，是实验室制取氧气和简易供氧器的常用原理；二氧化锰作催化剂，反应前后其质量和化学性质不变。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，催化剂条件",
+      "textbooks": [
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题3 制取氧气",
+          "context": "探究"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第三单元 物质构成的奥秘",
+          "section": "课题3 元素",
+          "context": "思考与讨论"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "思考与讨论"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "过氧化物",
+        "氢化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2H2O2 = 2H2O + O2↑",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "电解水",
+      "description": "水在通电条件下分解生成氢气和氧气，正极产生氧气、负极产生氢气，体积比约1:2，证明水由氢、氧两种元素组成。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，通电条件与气体符号",
+      "textbooks": [
+        {
+          "chapter": "第四单元 自然界的水",
+          "section": "课题2 水的组成",
+          "context": "正文"
+        },
+        {
+          "chapter": "第四单元 自然界的水",
+          "section": "课题2 水的组成",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第四单元 自然界的水",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第四单元 自然界的水",
+          "section": "实验活动2 水的组成及变化的探究",
+          "context": "水的分解"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题1 质量守恒定律",
+          "context": "正文"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题2 化石能源的合理利用",
+          "context": "正文"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2H2O = 2H2↑ + O2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "氢气的燃烧",
+      "description": "氢气在空气或氧气中燃烧生成水，产生淡蓝色火焰，是认识水组成的基础实验，也是氢能利用的化学基础；点燃前必须检验纯度。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，单一点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第四单元 自然界的水",
+          "section": "课题2 水的组成",
+          "context": "实验4-4"
+        },
+        {
+          "chapter": "第四单元 自然界的水",
+          "section": "课题2 水的组成",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题1 质量守恒定律",
+          "context": "思考与讨论"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "思考与讨论"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2H2 + O2 = 2H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "铁与水蒸气的反应",
+      "description": "高温下红热的铁与水蒸气反应生成四氧化三铁和氢气（“易燃空气”），是拉瓦锡研究水的组成并命名氢元素所用反应；教材以文字式出现，此处按化学式配平转写。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数出现3、4，需自行配平",
+      "textbooks": [
+        {
+          "chapter": "第四单元 自然界的水",
+          "section": "课题2 水的组成",
+          "context": "科学史话"
+        },
+        {
+          "chapter": "第四单元 自然界的水",
+          "section": "课题2 水的组成",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "3Fe + 4H2O = Fe3O4 + 4H2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "镁条的燃烧",
+      "description": "镁条在空气中点燃剧烈燃烧、发出耀眼白光，生成氧化镁固体；教材用于验证质量守恒定律（开放体系中因参加反应的氧气计入，称量表观质量会变化）。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，单一点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题1 质量守恒定律",
+          "context": "实验5-2"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Mg + O2 = 2MgO",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "铝在氧气中燃烧",
+      "description": "铝在氧气中燃烧生成氧化铝，铝、氧气与氧化铝的质量比为108:96:204（即27:32:102）；教材以计算题形式出现，需自行书写并配平方程式。",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，系数为3、4",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "4Al + 3O2 = 2Al2O3",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "铜与氧气的反应",
+      "description": "铜粉在空气中加热与氧气化合生成黑色氧化铜，反应后固体质量比铜粉大（因氧气参加反应）；教材用作密闭装置中验证质量守恒定律的实验。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，加热条件",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题1 质量守恒定律",
+          "context": "探究"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题1 质量守恒定律",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Cu + O2 = 2CuO",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "铁与硫酸铜溶液的反应",
+      "description": "铁浸入硫酸铜溶液中置换出红色的铜并生成硫酸亚铁（“曾青得铁则化为铜”的湿法炼铜原理），反应前后总质量不变，是验证质量守恒定律的经典实验。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种（溶液中置换），系数均为1",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题1 质量守恒定律",
+          "context": "探究"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "思考与讨论"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "正文"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe + CuSO4 = FeSO4 + Cu",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "碳酸钠与盐酸的反应",
+      "description": "碳酸钠与盐酸反应生成氯化钠、水和二氧化碳，敞口容器中因气体逸出反应后总质量减小，教材用于讨论质量守恒定律中气体逸出的情形；也是简易灭火器产生二氧化碳的原理。",
+      "difficulty": "中等",
+      "difficultyReason": "物质5种，系数出现2，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题1 质量守恒定律",
+          "context": "实验5-1"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "简易灭火器的设计与制作"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氢化物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Na2CO3 + 2HCl = 2NaCl + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "甲烷的燃烧",
+      "description": "天然气、沼气的主要成分甲烷在空气中燃烧生成二氧化碳和水，放出大量热；干冷烧杯内壁出现水雾、澄清石灰水变浑浊可检验两种产物。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数出现2，有机物燃烧",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题2 化石能源的合理利用",
+          "context": "实验7-2"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH4 + 2O2 = CO2 + 2H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "乙醇（酒精）的燃烧",
+      "description": "乙醇（酒精的化学名称）在空气中燃烧生成二氧化碳和水并放出大量热，是酒精灯燃料和秸秆等生物质能源利用的化学基础。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数出现3，有机物燃烧",
+      "textbooks": [
+        {
+          "chapter": "第一单元 走进化学世界",
+          "section": "课题1 物质的变化和性质",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "正文"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C2H5OH + 3O2 = 2CO2 + 3H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "丙烷的燃烧",
+      "description": "2008年北京奥运会“祥云”火炬所用燃料丙烷（C3H8）在空气中燃烧生成二氧化碳和水，放出大量热。注意：教材原式“C3H8+5O2=4H2O”疑排版遗漏3CO2，本条按质量守恒配平补全。",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，系数为5，有机物配平",
+      "textbooks": [
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C3H8 + 5O2 = 3CO2 + 4H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "一氧化碳的燃烧",
+      "description": "一氧化碳能够燃烧，火焰呈蓝色并放出大量热，是水煤气等气体燃料的主要成分；煤炉里煤层上方的蓝色火焰即一氧化碳在燃烧。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，单一点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "正文"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CO + O2 = 2CO2",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "碳的不充分燃烧",
+      "description": "木炭（碳）在氧气不充足时燃烧不充分，生成有毒的一氧化碳并放出热；燃气灶火焰呈黄色或橙色、锅底出现黑色物质即燃料不充分燃烧的表现。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，单一点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题1 碳单质的多样性",
+          "context": "正文"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2C + O2 = 2CO",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "木炭还原氧化铜",
+      "description": "高温下木炭与氧化铜反应生成红色的铜和能使澄清石灰水变浑浊的气体（二氧化碳）；含氧化合物里的氧被夺去的反应属于还原反应，碳单质与某些氧化物的反应可用于冶金工业。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数为2，高温条件",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题1 碳单质的多样性",
+          "context": "实验6-2"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题1 碳单质的多样性",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CuO + C = 2Cu + CO2↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "碳还原氧化铁",
+      "description": "高温下利用焦炭可以把铁从它的氧化物矿石（如氧化铁）里还原出来，同时生成二氧化碳；碳单质与某些氧化物的反应可用于冶金工业。",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，系数为2、3、4，配平较复杂",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题1 碳单质的多样性",
+          "context": "正文"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Fe2O3 + 3C = 4Fe + 3CO2↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "碳与二氧化碳的反应",
+      "description": "高温条件下碳能使二氧化碳转化成一氧化碳，该反应吸收热量，教材用作吸热反应的典型例子；煤炉里下层生成的二氧化碳上升与炽热的碳层反应也发生此反应。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，高温条件",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题1 碳单质的多样性",
+          "context": "正文"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "正文"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CO2 + C = 2CO",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "二氧化碳与水反应",
+      "description": "二氧化碳能溶于水并与水反应生成碳酸，碳酸能使紫色石蕊溶液变红色；生产汽水等碳酸饮料即利用了二氧化碳的这一性质。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "实验6-5"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "实验活动3 二氧化碳的实验室制取与性质",
+          "context": "二氧化碳的性质"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "氢化物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CO2 + H2O = H2CO3",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "碳酸的分解",
+      "description": "碳酸很不稳定，容易分解生成二氧化碳和水；吹干石蕊纸花时碳酸分解、二氧化碳从溶液里逸出，纸花的颜色又变成紫色。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "正文"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题3 二氧化碳的实验室制取",
+          "context": "正文"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "实验活动3 二氧化碳的实验室制取与性质",
+          "context": "二氧化碳的性质"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2CO3 = CO2↑ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "二氧化碳使澄清石灰水变浑浊",
+      "description": "二氧化碳与氢氧化钙反应生成白色的碳酸钙沉淀和水，使澄清石灰水变浑浊，是检验二氧化碳的标准方法；长期盛放石灰水的试剂瓶内壁附着的白色固体即由此形成。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，有沉淀符号",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "正文"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题3 二氧化碳的实验室制取",
+          "context": "正文"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "实验活动1 氧气的实验室制取与性质",
+          "context": "氧气的性质"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题2 化石能源的合理利用",
+          "context": "实验7-2"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "碱",
+        "盐",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "其他"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CO2 + Ca(OH)2 = CaCO3↓ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "碳酸钙高温分解",
+      "description": "高温煅烧石灰石（主要成分碳酸钙）分解生成生石灰（氧化钙）和二氧化碳，是《天工开物》所载“凡石灰经火焚炼为用”的烧石灰反应，也是工业制生石灰和二氧化碳的方法。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，高温条件，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "正文"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CaCO3 = CaO + CO2↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "氧化钙与水的反应",
+      "description": "生石灰（氧化钙）与水反应生成熟石灰（氢氧化钙），并放出大量热，是自热食品发热包的发热原理；教材用作化学反应放热的典型例子。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，放热化合",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "实验7-1"
+        },
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题1 燃料的燃烧",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "氢化物",
+        "碱"
+      ],
+      "reactionTypes": [
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CaO + H2O = Ca(OH)2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "一氧化碳还原氧化铜",
+      "description": "加热条件下一氧化碳夺取氧化铜中的氧，将黑色的氧化铜还原为红色的铜，同时生成二氧化碳；一氧化碳与某些氧化物的反应可用于冶金工业。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数均为1，加热条件",
+      "textbooks": [
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "正文"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题2 碳的氧化物",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CuO + CO = Cu + CO2",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "实验室制取二氧化碳",
+      "description": "实验室常用稀盐酸与石灰石（或大理石，主要成分都是碳酸钙）反应制取二氧化碳；教材先写出生成碳酸（CaCO3+2HCl=CaCl2+H2CO3），碳酸再分解为二氧化碳和水，总反应即上式。",
+      "difficulty": "中等",
+      "difficultyReason": "物质5种，系数出现2，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第一单元 走进化学世界",
+          "section": "课题1 物质的变化和性质",
+          "context": "实验1-1"
+        },
+        {
+          "chapter": "第二单元 空气和氧气",
+          "section": "课题2 氧气",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题3 二氧化碳的实验室制取",
+          "context": "正文"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "课题3 二氧化碳的实验室制取",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        },
+        {
+          "chapter": "第六单元 碳和碳的氧化物",
+          "section": "实验活动3 二氧化碳的实验室制取与性质",
+          "context": "制取二氧化碳"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CaCO3 + 2HCl = CaCl2 + CO2↑ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "硫酸铜溶液与氢氧化钠溶液的反应",
+      "description": "向硫酸铜溶液中滴加氢氧化钠溶液，生成蓝色的氢氧化铜沉淀和硫酸钠；教材用作溶液中生成沉淀的书写规则示例，也是第一单元认识化学变化的实验。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数为2，有沉淀符号",
+      "textbooks": [
+        {
+          "chapter": "第一单元 走进化学世界",
+          "section": "课题1 物质的变化和性质",
+          "context": "实验1-1"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "正文"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "碱"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CuSO4 + 2NaOH = Cu(OH)2↓ + Na2SO4",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "氯酸钾受热分解",
+      "description": "氯酸钾粉末在二氧化锰作催化剂并加热的条件下分解生成氯化钾和氧气，也是实验室制取氧气的方法之一；本册教材仅在习题中出现（正文已删去此法）。",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，系数为2、3，催化剂与加热双条件",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2KClO3 = 2KCl + 3O2↑",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "氢气在氯气中燃烧",
+      "description": "氢气在氯气中燃烧生成氯化氢，可用于工业制备盐酸；教材还从分子角度举例说明该反应中氢分子和氯分子分解为原子、原子重新结合成新分子。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第三单元 物质构成的奥秘",
+          "section": "课题1 分子和原子",
+          "context": "正文"
+        },
+        {
+          "chapter": "第三单元 物质构成的奥秘",
+          "section": "课题1 分子和原子",
+          "context": "思考与讨论"
+        },
+        {
+          "chapter": "第四单元 自然界的水",
+          "section": "课题3 物质组成的表示",
+          "context": "正文"
+        },
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2 + Cl2 = 2HCl",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "肼（N2H4）的催化分解",
+      "description": "“神舟”系列载人飞船使用的某种发动机利用肼（N2H4）的分解反应提供动力；教材习题给出“3N2H4→□↑+□↑+2NH3↑”并提示两个方框物质均为单质，据质量守恒可补全为氮气和氢气。",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，系数为2、3，需据质量守恒补全两种单质产物",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "3N2H4 = 2N2↑ + 3H2↑ + 2NH3↑",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "石灰石脱硫反应",
+      "description": "火力发电厂为防止燃煤烟气中的二氧化硫污染环境，使用石灰石进行烟气脱硫，生成的硫酸钙可用于生产建筑材料；教材直接给出该方程式并以此进行计算。",
+      "difficulty": "较难",
+      "difficultyReason": "物质5种，多反应物配平",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "复习与提高",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "其他"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CaCO3 + 2SO2 + O2 = 2CaSO4 + 2CO2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "乙烯的燃烧",
+      "description": "乙烯（C2H4）在氧气中完全燃烧生成二氧化碳和水；教材配平练习中出现，原式未配平，需按质量守恒定律配平。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数出现3",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C2H4 + 3O2 = 2CO2 + 2H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "氢气还原三氧化钨",
+      "description": "高温下氢气与三氧化钨（WO3）反应生成金属钨和水，是氢气还原金属氧化物的置换反应；教材配平练习中出现，原式未配平。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数为3，高温条件",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "WO3 + 3H2 = W + 3H2O",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "一氧化碳还原氧化铁",
+      "description": "高温下一氧化碳夺取氧化铁中的氧将其还原为铁，同时生成二氧化碳，是工业炼铁的主要反应原理；教材配平练习中出现，原式未配平。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数为3，高温条件",
+      "textbooks": [
+        {
+          "chapter": "第五单元 化学反应的定量关系",
+          "section": "课题2 化学方程式",
+          "context": "练习与应用"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "其他"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe2O3 + 3CO = 2Fe + 3CO2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "钠与氯气的反应",
+      "description": "钠原子的最外层有1个电子，氯原子的最外层有7个电子；钠与氯气反应时，钠原子最外层的1个电子转移到氯原子的最外层，两者都形成相对稳定的结构，化合生成氯化钠。教材在原子结构教学中以示意图呈现。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，化合价变化示例",
+      "textbooks": [
+        {
+          "chapter": "第三单元 物质构成的奥秘",
+          "section": "课题2 原子结构",
+          "context": "正文"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Na + Cl2 = 2NaCl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    },
+    {
+      "name": "锌与稀硫酸反应制氢气",
+      "description": "实验室里常用锌与稀硫酸反应来制取氢气，生成硫酸锌并放出氢气；工业上一般通过电解水或以化石能源为原料制取氢气。教材正文写明“反应的化学方程式为”，其式在电子文本中缺失，按反应原理补写为上式。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，置换反应，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第七单元 能源的合理利用与开发",
+          "section": "课题2 化石能源的合理利用",
+          "context": "正文"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Zn + H2SO4 = ZnSO4 + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级上册"
+    }
+  ],
+  "excluded": [
+    {
+      "raw": "石蜡 + 氧气 →(点燃) 二氧化碳 + 水（蜡烛燃烧生成水和二氧化碳）",
+      "location": "第二单元 课题3 制取氧气 练习与应用 第4题B；第一单元 课题1/课题2（蜡烛及其燃烧）",
+      "reason": "石蜡是混合物，无确定的化学式，无法转写为配平的化学式方程式"
+    },
+    {
+      "raw": "二氧化碳 + 水 →(光、叶绿体) 淀粉 + 氧气（光合作用）",
+      "location": "第五单元 课题1 质量守恒定律 练习与应用 第2题",
+      "reason": "生成物淀粉为聚合记法 (C6H10O5)n，无确定化学计量数，无法配平为确定的化学方程式"
+    },
+    {
+      "raw": "汽车尾气催化处理装置中的反应（条件为催化剂，微观示意图含碳、氮、氧三种原子）",
+      "location": "第五单元 复习与提高 第5题",
+      "reason": "反应物与生成物种类仅由微观示意图给出，文本与图题无法确定具体分子种类，无法可靠写出方程式"
+    },
+    {
+      "raw": "CO2 + H2 →(催化剂) (CH2)n + H2O（二氧化碳转化为汽油流程第Ⅰ段）",
+      "location": "第六单元 复习与提高 第9题(2)",
+      "reason": "产物 (CH2)n（汽油馏分）为聚合记法，无法配平成确定的化学方程式"
+    },
+    {
+      "raw": "氧化汞加热分解 HgO = Hg + O2↑",
+      "location": "第五单元 课题2 化学方程式 练习与应用 第5题(1)",
+      "reason": "教材示错例：式子未配平（正确应为 2HgO = 2Hg + O2↑），正确反应已另行提取"
+    },
+    {
+      "raw": "过氧化氢在二氧化锰催化下分解 2H2O2 - 2H2O + O2↑",
+      "location": "第五单元 课题2 化学方程式 练习与应用 第5题(2)",
+      "reason": "教材示错例：连接符误用短横线“-”而非等号，正确反应已另行提取"
+    },
+    {
+      "raw": "红磷在氧气中燃烧 4P + 3O2↑ = 2P2O3（条件：点燃）",
+      "location": "第五单元 课题2 化学方程式 练习与应用 第5题(3)",
+      "reason": "教材示错例：产物化学式错误（应为 P2O5 而非 P2O3）且未配平，正确反应已另行提取"
+    }
+  ]
+}

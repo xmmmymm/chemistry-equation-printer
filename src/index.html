@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' 'unsafe-inline' file:; img-src 'self' data: file:; font-src 'self' file:;">
+  <title>高中化学方程式组卷打印系统</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header id="topbar">
+    <div class="brand">
+      <span class="brand-icon">⚗</span>
+      <span class="brand-name">高中化学方程式组卷打印系统</span>
+    </div>
+    <nav id="main-nav">
+      <button class="nav-btn active" data-view="library">题库管理</button>
+      <button class="nav-btn" data-view="generate">生成作业</button>
+      <button class="nav-btn" data-view="worksheet">当前作业</button>
+      <button class="nav-btn" data-view="history">历史作业</button>
+      <button class="nav-btn" data-view="datamanage">数据管理</button>
+      <button class="nav-btn" data-view="settings">设置</button>
+    </nav>
+    <div class="topbar-right">
+      <span id="worksheet-badge" class="worksheet-badge" title="当前作业题数">0 题</span>
+    </div>
+  </header>
+
+  <main id="view-container">
+    <!-- 各视图由 JS 渲染 -->
+  </main>
+
+  <div id="toast-container"></div>
+  <div id="modal-root"></div>
+  <!-- 分页测量容器（隐藏） -->
+  <div id="measure-root" style="position:absolute;left:-9999px;top:0;visibility:hidden;"></div>
+
+  <script src="libs/chem.js"></script>
+  <script src="libs/constants.js"></script>
+  <script src="libs/generator.js"></script>
+  <script src="libs/importer.js"></script>
+  <script src="libs/exporter.js"></script>
+  <script src="libs/docx.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/scope-picker.js"></script>
+  <script src="js/library.js"></script>
+  <script src="js/generate.js"></script>
+  <script src="js/worksheet.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/datamanage.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

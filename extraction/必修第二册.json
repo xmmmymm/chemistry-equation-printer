@@ -1,0 +1,3890 @@
+{
+  "book": "必修第二册",
+  "version": "人教版",
+  "entries": [
+    {
+      "name": "硫与铁的反应",
+      "description": "硫单质与铁粉共热化合，硫的氧化性较弱，只能将铁氧化为+2价，生成黑色的硫化亚铁。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，单一加热条件。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "正文（1. 硫）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "S + Fe = FeS",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "硫与铜的反应",
+      "description": "硫与铜共热化合，硫的氧化性较弱，只能把铜氧化为+1价，生成硫化亚铜而不是硫化铜。",
+      "difficulty": "中等",
+      "difficultyReason": "生成物为Cu2S而非CuS，是易错点，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "正文（1. 硫）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "S + 2Cu = Cu2S",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "硫与氢气的反应",
+      "description": "硫蒸气与氢气共热化合，生成有臭鸡蛋气味的硫化氢气体。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，单一加热条件。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "正文（1. 硫）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "S + H2 = H2S",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "硫的燃烧",
+      "description": "硫在空气中点燃，发出明亮蓝紫色火焰，生成有刺激性气味的二氧化硫。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，单一点燃条件。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "正文（1. 硫）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "燃烧反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "S + O2 = SO2",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "二氧化硫与水的反应",
+      "description": "二氧化硫溶于水与水反应生成亚硫酸，亚硫酸不稳定又易分解为二氧化硫和水，是教材引入可逆反应概念的实例。",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，需使用可逆号⇌。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "正文（2. 二氧化硫）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "正文（二、化学反应的限度）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "SO2 + H2O ⇌ H2SO3",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "二氧化硫的催化氧化（工业制硫酸）",
+      "description": "二氧化硫在催化剂并加热的条件下被氧气氧化为三氧化硫，是工业制硫酸的关键一步；该反应为可逆反应，不能进行到底。",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，需催化剂并加热，工业条件重要。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "正文（2. 二氧化硫）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "练习与应用 第2题"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "练习与应用 第7题"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2SO2 + O2 ⇌ 2SO3",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "三氧化硫与水的反应",
+      "description": "三氧化硫也是酸性氧化物，溶于水时与水剧烈反应生成硫酸。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，无附加条件。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "正文（2. 二氧化硫）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "SO3 + H2O = H2SO4",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "二氧化硫与硫化氢的反应",
+      "description": "二氧化硫与硫化氢发生归中反应生成单质硫和水，体现二氧化硫既有氧化性又有还原性（此处表现氧化性）。",
+      "difficulty": "中等",
+      "difficultyReason": "硫元素价态归中（+4与-2变为0），系数出现3。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "正文（2. 二氧化硫）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "氢化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "SO2 + 2H2S = 3S + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "铜与浓硫酸的反应",
+      "description": "在加热条件下铜与浓硫酸反应生成硫酸铜、二氧化硫和水，浓硫酸表现强氧化性和酸性。",
+      "difficulty": "较难",
+      "difficultyReason": "物质5种，系数为2，强氧化性酸与不活泼金属反应，有气体生成。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "实验5-3"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "实验活动5",
+          "context": "不同价态含硫物质的转化（实验步骤2）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Cu + 2H2SO4 = CuSO4 + SO2↑ + 2H2O",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "木炭与浓硫酸的反应",
+      "description": "在加热条件下木炭与浓硫酸反应，生成二氧化碳、二氧化硫和水，体现浓硫酸的强氧化性；蔗糖被浓硫酸脱水炭化后产生刺激性气味气体也是该反应。",
+      "difficulty": "较难",
+      "difficultyReason": "物质5种，生成两种气体，需加热条件。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "正文（二、硫酸）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "练习与应用 第4题（蔗糖与浓硫酸实验）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "复习与提高",
+          "context": "第5题（产物检验实验）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C + 2H2SO4 = CO2↑ + 2SO2↑ + 2H2O",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "硫酸根离子的检验",
+      "description": "在溶液中钡离子与硫酸根离子反应生成不溶于稀盐酸的白色硫酸钡沉淀，通常先用稀盐酸酸化排除碳酸根等干扰，再加入氯化钡溶液检验硫酸根离子。",
+      "difficulty": "简单",
+      "difficultyReason": "两种离子结合生成沉淀，离子方程式简单。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "实验5-4"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "实验活动4",
+          "context": "用化学沉淀法去除粗盐中的杂质离子"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第一节 硫及其化合物",
+          "context": "思考与讨论（粗盐提纯）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Ba^2+ + SO4^2- = BaSO4↓",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "二氧化硫使酸性高锰酸钾溶液褪色",
+      "description": "二氧化硫具有还原性，被酸性高锰酸钾溶液氧化为硫酸根离子，使紫色溶液褪色，可用于测定空气中二氧化硫的含量。",
+      "difficulty": "较难",
+      "difficultyReason": "五项系数，酸性介质中多离子配平。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "复习与提高",
+          "context": "第10题（测定空气中SO2含量）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "5SO2 + 2MnO4- + 2H2O = 5SO4^2- + 2Mn^2+ + 4H+",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氮气与镁的反应",
+      "description": "镁在氮气中点燃，氮气与镁化合生成离子化合物氮化镁。",
+      "difficulty": "中等",
+      "difficultyReason": "系数出现3，生成氮化镁。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（一、氮气与氮的固定）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "N2 + 3Mg = Mg3N2",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氮气与氧气的反应",
+      "description": "在放电（如闪电）或高温条件下，氮气与氧气化合生成一氧化氮，是自然固氮的途径之一，也是汽车发动机中氮氧化物的主要来源。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1（教材原条件为放电或高温，条件词典映射为高温）。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（一、氮气与氮的固定）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "练习与应用 第7题（汽车尾气NO的来源）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "N2 + O2 = 2NO",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "工业合成氨",
+      "description": "氮气与氢气在高温、高压和催化剂条件下化合生成氨，是最重要的人工固氮途径；该反应为可逆反应，不能进行到底。",
+      "difficulty": "较难",
+      "difficultyReason": "可逆反应，系数3，多条件（高温、高压、催化剂）。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（一、氮气与氮的固定）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "科学史话（合成氨）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "练习与应用 第6题"
+        },
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第9题（合成塔）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学反应与能量",
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "N2 + 3H2 ⇌ 2NH3",
+          "conditions": [
+            "高温",
+            "高压",
+            "催化剂"
+          ],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "一氧化氮与氧气的反应",
+      "description": "一氧化氮是无色有毒气体，在常温下很容易与氧气化合，生成红棕色的二氧化氮。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，常温即可反应。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（二、一氧化氮和二氧化氮）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "思考与讨论（工业制硝酸）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "练习与应用 第6题(2)②"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NO + O2 = 2NO2",
+          "conditions": [
+            "常温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "二氧化氮与水的反应",
+      "description": "二氧化氮溶于水生成硝酸和一氧化氮，氮元素发生歧化（+4价变为+5价和+2价），工业上利用这一反应生产硝酸。",
+      "difficulty": "中等",
+      "difficultyReason": "系数为3，氮元素价态歧化。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（二、一氧化氮和二氧化氮）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "思考与讨论（工业制硝酸）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "实验5-5"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "练习与应用 第6题(3)②"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "3NO2 + H2O = 2HNO3 + NO",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氨与水的反应（氨溶于水）",
+      "description": "氨极易溶于水，大部分与水结合成一水合氨，一水合氨只有一小部分电离出铵根离子和氢氧根离子，使氨水显弱碱性。",
+      "difficulty": "中等",
+      "difficultyReason": "两步均为可逆，弱电解质部分电离。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（三、氨和铵盐）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "实验5-6（喷泉实验）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "碱"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "可逆反应",
+        "电离"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NH3 + H2O ⇌ NH3·H2O",
+          "conditions": [],
+          "reversible": true
+        },
+        {
+          "type": "ionization",
+          "line": "NH3·H2O ⇌ NH4+ + OH-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氨与氯化氢的反应",
+      "description": "氨与氯化氢气体相遇时迅速化合，生成白烟状的氯化铵晶体。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，常温化合。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（三、氨和铵盐）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NH3 + HCl = NH4Cl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氨的催化氧化",
+      "description": "氨中氮元素为-3价，具有还原性，在催化剂并加热的条件下被氧气氧化为一氧化氮和水，是工业制硝酸的基础。",
+      "difficulty": "较难",
+      "difficultyReason": "系数大（4、5、6），重要工业反应。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（三、氨和铵盐）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "思考与讨论（工业制硝酸）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "复习与提高",
+          "context": "第9题（氧化炉）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "4NH3 + 5O2 = 4NO + 6H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氯化铵受热分解",
+      "description": "氯化铵受热分解生成氨气和氯化氢两种气体，绝大多数铵盐受热易分解。",
+      "difficulty": "中等",
+      "difficultyReason": "生成两种气体，分解反应。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（三、氨和铵盐）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氢化物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NH4Cl = NH3↑ + HCl↑",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "碳酸氢铵受热分解",
+      "description": "碳酸氢铵受热分解生成氨气、水和二氧化碳；碳酸氢铵也是食品加工中常用的膨松剂，受热分解放出气体使面团疏松。",
+      "difficulty": "中等",
+      "difficultyReason": "三种生成物，其中两种为气体。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（三、氨和铵盐）"
+        },
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第二节 化学品的合理使用",
+          "context": "正文（安全使用食品添加剂·膨松剂）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氢化物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NH4HCO3 = NH3↑ + H2O + CO2↑",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "实验室制氨（铵盐与碱共热）",
+      "description": "实验室用氯化铵与氢氧化钙固体混合共热制取氨气；铵盐与强碱溶液反应放出氨，是检验铵根离子的方法，离子方程式表示这一反应的实质。",
+      "difficulty": "中等",
+      "difficultyReason": "固体加热制气，化学方程式系数为2，离子方程式表示反应实质。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（三、氨和铵盐）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "思考与讨论（实验室制氨装置）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "实验5-7（铵根离子的检验）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "复习与提高",
+          "context": "第3题(4)"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "碱"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NH4Cl + Ca(OH)2 = CaCl2 + 2H2O + 2NH3↑",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "NH4+ + OH- = NH3↑ + H2O",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "硝酸的受热分解",
+      "description": "浓硝酸见光或受热会分解，生成二氧化氮、氧气和水，因此硝酸一般保存在棕色试剂瓶中并置于阴凉处。",
+      "difficulty": "较难",
+      "difficultyReason": "系数大（4），生成两种气体，歧化反应。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "正文（四、硝酸）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "练习与应用 第6题(1)"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "4HNO3 = 4NO2↑ + O2↑ + 2H2O",
+          "conditions": [
+            "加热",
+            "光照"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "铜与浓硝酸的反应",
+      "description": "铜与浓硝酸在常温下剧烈反应，生成硝酸铜、二氧化氮和水，试管上方出现红棕色气体。",
+      "difficulty": "较难",
+      "difficultyReason": "物质5种，系数为4，有气体生成。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "实验5-8"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "练习与应用 第6题(3)①"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Cu + 4HNO3 = Cu(NO3)2 + 2NO2↑ + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "铜与稀硝酸的反应",
+      "description": "铜与稀硝酸反应生成硝酸铜、一氧化氮和水，稀硝酸的还原产物为一氧化氮；反应开始后溶液变蓝，可据离子方程式说明反应实质。",
+      "difficulty": "较难",
+      "difficultyReason": "系数大（3、8），稀硝酸还原产物为NO。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "实验5-8"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第二节 氮及其化合物",
+          "context": "练习与应用 第6题(2)①"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "3Cu + 8HNO3 = 3Cu(NO3)2 + 2NO↑ + 4H2O",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "3Cu + 8H+ + 2NO3- = 3Cu^2+ + 2NO↑ + 4H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "二氧化硅与氢氟酸的反应",
+      "description": "氢氟酸能与二氧化硅反应生成四氟化硅和水，可用于蚀刻玻璃生产磨砂玻璃，是氢氟酸的特性反应。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为4，氢氟酸的特性反应。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第三节 无机非金属材料",
+          "context": "练习与应用 第3题"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "SiO2 + 4HF = SiF4↑ + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "二氧化硅与氢氧化钠的反应",
+      "description": "二氧化硅是酸性氧化物，与强碱氢氧化钠溶液反应生成硅酸钠和水；硅酸钠水溶液俗称水玻璃。盛放碱溶液的试剂瓶用橡胶塞而不用玻璃塞，就是为防止该反应使瓶塞粘连。",
+      "difficulty": "简单",
+      "difficultyReason": "酸性氧化物与强碱的类似中和反应，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第三节 无机非金属材料",
+          "context": "练习与应用 第4题"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "SiO2 + 2NaOH = Na2SiO3 + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "工业制粗硅",
+      "description": "工业上用焦炭在高温下还原石英砂（二氧化硅）制得含少量杂质的粗硅，同时生成一氧化碳。",
+      "difficulty": "中等",
+      "difficultyReason": "高温还原，生成CO而非CO2，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第三节 无机非金属材料",
+          "context": "正文（1. 硅和二氧化硅）"
+        },
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第三节 无机非金属材料",
+          "context": "资料卡片（高纯硅的制备）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "SiO2 + 2C = Si + 2CO↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "粗硅制三氯硅烷",
+      "description": "粗硅与氯化氢在约300℃下反应生成三氯硅烷（SiHCl3）和氢气，是制备高纯硅的第一步。",
+      "difficulty": "中等",
+      "difficultyReason": "涉及SiHCl3，系数为3。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第三节 无机非金属材料",
+          "context": "资料卡片（高纯硅的制备）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "其他"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Si + 3HCl = SiHCl3 + H2",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "三氯硅烷制高纯硅",
+      "description": "三氯硅烷在约1100℃下被氢气还原为高纯硅，同时生成氯化氢，氯化氢可循环使用。",
+      "difficulty": "中等",
+      "difficultyReason": "置换反应，系数为3。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "第三节 无机非金属材料",
+          "context": "资料卡片（高纯硅的制备）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "其他"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "SiHCl3 + H2 = Si + 3HCl",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氮化硅的制备",
+      "description": "石英砂、焦炭与氮气在高温的氮气流中反应制备氮化硅（Si3N4）陶瓷原料，同时生成一氧化碳。",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，系数大（3、6、2、6）。",
+      "textbooks": [
+        {
+          "chapter": "第五章 化工生产中的重要非金属元素",
+          "section": "复习与提高",
+          "context": "第7题"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质",
+        "其他"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "3SiO2 + 6C + 2N2 = Si3N4 + 6CO",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氢气与氯气的化合反应",
+      "description": "氢气与氯气化合生成氯化氢。教材以该反应为例，用键能数据（断开1 mol H2和1 mol Cl2中的化学键共吸收679 kJ，形成2 mol HCl中的化学键释放862 kJ）说明化学反应中能量变化的主要原因是化学键的断裂与形成，该反应为放热反应。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第一节 化学反应与能量变化",
+          "context": "正文（一、化学反应与热能）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2 + Cl2 = 2HCl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "镁与盐酸的反应",
+      "description": "镁条放入盐酸中剧烈反应放出氢气，溶液温度升高，是放热反应的典型实验。",
+      "difficulty": "简单",
+      "difficultyReason": "活泼金属与酸置换，系数为2，放热明显。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第一节 化学反应与能量变化",
+          "context": "实验6-1（放热反应）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Mg + 2HCl = MgCl2 + H2↑",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "Mg + 2H+ = Mg^2+ + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氢氧化钡晶体与氯化铵晶体的反应",
+      "description": "氢氧化钡晶体（Ba(OH)2·8H2O）与氯化铵晶体搅拌反应，混合物熔化并放出有刺激性气味的气体，反应大量吸热，使烧杯与木片间的水结成冰，是吸热反应的经典实验。",
+      "difficulty": "中等",
+      "difficultyReason": "含结晶水，系数较大，经典吸热反应。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第一节 化学反应与能量变化",
+          "context": "实验6-2（吸热反应）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Ba(OH)2·8H2O + 2NH4Cl = BaCl2 + 2NH3↑ + 10H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "盐酸与碳酸氢钠的反应",
+      "description": "盐酸与碳酸氢钠反应生成氯化钠、水和二氧化碳，教材将其列为吸热反应的实例之一。",
+      "difficulty": "简单",
+      "difficultyReason": "强酸与碳酸氢盐的复分解反应，系数均为1。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第一节 化学反应与能量变化",
+          "context": "正文（一、化学反应与热能，吸热反应实例）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NaHCO3 + HCl = NaCl + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "锌与稀硫酸的反应",
+      "description": "锌与稀硫酸反应生成硫酸锌和氢气；铜锌原电池实验中，锌片插入稀硫酸即发生该反应，构成原电池的总反应。",
+      "difficulty": "简单",
+      "difficultyReason": "活泼金属与稀酸置换，是原电池的总反应基础。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第一节 化学反应与能量变化",
+          "context": "实验6-3（原电池）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "练习与应用 第3题"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Zn + H2SO4 = ZnSO4 + H2↑",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "Zn + 2H+ = Zn^2+ + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "铜锌原电池的电极反应",
+      "description": "铜锌原电池中，锌比铜活泼，锌作负极失去电子被氧化为锌离子；电子经导线流向铜片，溶液中的氢离子在铜片（正极）上获得电子生成氢气，化学能转化为电能。",
+      "difficulty": "中等",
+      "difficultyReason": "负极氧化、正极还原分处两极进行。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第一节 化学反应与能量变化",
+          "context": "实验6-3（原电池原理）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第一节 化学反应与能量变化",
+          "context": "练习与应用 第5题"
+        }
+      ],
+      "substanceCategories": [
+        "单质"
+      ],
+      "reactionTypes": [
+        "电极反应",
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Zn = Zn^2+ + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极"
+        },
+        {
+          "type": "electrode",
+          "line": "2H+ + 2e- = H2↑",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极"
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "铝与稀盐酸构成的原电池",
+      "description": "铝片与石墨棒浸入稀盐酸组成原电池时，铝作负极失去电子生成铝离子，氢离子在石墨（正极）上得电子生成氢气；电池总反应为铝与盐酸的置换反应。",
+      "difficulty": "中等",
+      "difficultyReason": "电极反应与总反应配合，总反应系数为6。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "复习与提高",
+          "context": "第6题(2)"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "电极反应",
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Al = Al^3+ + 3e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极"
+        },
+        {
+          "type": "electrode",
+          "line": "2H+ + 2e- = H2↑",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极"
+        },
+        {
+          "type": "chemical",
+          "line": "2Al + 6HCl = 2AlCl3 + 3H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "过氧化氢的分解",
+      "description": "过氧化氢溶液常温下分解放出氧气的速率很小，加入二氧化锰等催化剂后分解速率显著增大，生成水和氧气，是探究温度、浓度、催化剂对反应速率影响的常用实验。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，催化剂调控速率的典型实验。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "正文（一、化学反应的速率）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "实验活动7",
+          "context": "化学反应速率的影响因素"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学实验",
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2H2O2 = 2H2O + O2↑",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "碳的燃烧（焦炭的燃烧）",
+      "description": "焦炭在空气中燃烧生成二氧化碳并放出大量热，是高炉炼铁的热量来源；1 mol碳完全燃烧生成CO2(g)放出393.5 kJ热量。",
+      "difficulty": "简单",
+      "difficultyReason": "常见燃烧反应，系数均为1。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "科学史话（炼铁高炉尾气之谜）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "复习与提高",
+          "context": "第8题（燃烧热数据）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C + O2 = CO2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "C(s) + O2(g) = CO2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-393.5 kJ/mol"
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "一氧化碳的燃烧",
+      "description": "一氧化碳燃烧生成二氧化碳，1 mol一氧化碳完全燃烧生成CO2(g)放出283.0 kJ热量，按2倍系数书写时放出566.0 kJ；煤气的主要成分一氧化碳可作气体燃料。",
+      "difficulty": "中等",
+      "difficultyReason": "热化学方程式，系数为2，由每摩尔数值换算。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "复习与提高",
+          "context": "第8题（燃烧热数据）"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第一节 认识有机化合物",
+          "context": "练习与应用 第9题（煤气燃烧）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2CO(g) + O2(g) = 2CO2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-566.0 kJ/mol"
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "碳的不完全燃烧",
+      "description": "碳在氧气不足时燃烧生成一氧化碳，1 mol碳生成CO(g)放出110.5 kJ热量，按2倍系数书写时放出221.0 kJ；教材以此说明煤炭充分燃烧既节约能源又减少污染。",
+      "difficulty": "中等",
+      "difficultyReason": "热化学方程式，系数为2，由每摩尔数值换算。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "复习与提高",
+          "context": "第8题（燃烧热数据）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2C(s) + O2(g) = 2CO(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-221.0 kJ/mol"
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "碳与二氧化碳的反应",
+      "description": "高温下焦炭与二氧化碳反应生成一氧化碳，是高炉中产生CO的反应；该反应是可逆反应，导致高炉尾气中总含有未利用的CO，这正是炼铁高炉尾气之谜的谜底。",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，高温条件。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "科学史话（炼铁高炉尾气之谜）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C + CO2 ⇌ 2CO",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "高炉炼铁的主要反应",
+      "description": "一氧化碳在高温下还原氧化铁生成铁和二氧化碳，是高炉炼铁得到生铁的主要反应；在高炉中该反应也不能全部转化。",
+      "difficulty": "中等",
+      "difficultyReason": "系数为3，工业炼铁原理。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "科学史话（炼铁高炉尾气之谜）"
+        },
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第8题(2)"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe2O3 + 3CO = 2Fe + 3CO2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "铅蓄电池放电的总反应",
+      "description": "铅蓄电池放电时，铅、二氧化铅与硫酸反应生成硫酸铅和水；充电时该氧化还原反应逆向进行，使电池恢复到放电前的状态，实现放电与充电的循环。",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种以上，放电与充电双向进行。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "复习与提高",
+          "context": "第1题(2)（能量转化形式）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Pb + PbO2 + 2H2SO4 ⇌ 2PbSO4 + 2H2O",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "碳酸钙的高温分解",
+      "description": "碳酸钙在高温下分解生成氧化钙和二氧化碳。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，单一高温条件。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "复习与提高",
+          "context": "第1题(2)（能量转化形式）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CaCO3 = CaO + CO2↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "硫代硫酸钠与硫酸的反应",
+      "description": "硫代硫酸钠与稀硫酸反应生成硫酸钠、二氧化硫、硫和水，生成的硫使溶液出现乳白色浑浊，通过比较出现浑浊所需时间的长短可以判断反应快慢。",
+      "difficulty": "中等",
+      "difficultyReason": "物质5种，硫元素歧化，有沉淀与气体生成。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "实验活动7",
+          "context": "实验原理"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Na2S2O3 + H2SO4 = Na2SO4 + SO2↑ + S↓ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "铁与水蒸气的反应",
+      "description": "铁在通常情况下与冷水或热水都不发生反应，但红热的铁能与水蒸气反应，生成四氧化三铁和氢气，说明反应条件对化学反应的影响。",
+      "difficulty": "中等",
+      "difficultyReason": "系数为4，气体参与。",
+      "textbooks": [
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "实验活动7",
+          "context": "问题和讨论"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学实验",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "3Fe + 4H2O = Fe3O4 + 4H2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "甲烷的燃烧",
+      "description": "甲烷在空气中点燃，生成二氧化碳和水并放出大量热，是天然气作燃料时发生的主要反应；1 mol甲烷完全燃烧生成CO2(g)和H2O(l)时放出890.3 kJ热量。",
+      "difficulty": "中等",
+      "difficultyReason": "常见燃料燃烧，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第一节 认识有机化合物",
+          "context": "正文（2. 烷烃的性质）"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第一节 认识有机化合物",
+          "context": "练习与应用 第9题（天然气燃烧）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "复习与提高",
+          "context": "第1题(2)、第3题（燃烧热数据）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH4 + 2O2 = CO2 + 2H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "CH4(g) + 2O2(g) = CO2(g) + 2H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-890.3 kJ/mol"
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "丙烷的燃烧",
+      "description": "丙烷在空气中点燃，完全燃烧生成二氧化碳和水并放出大量热，与甲烷一样体现烷烃的可燃性。",
+      "difficulty": "中等",
+      "difficultyReason": "系数为5，有机物燃烧配平。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第一节 认识有机化合物",
+          "context": "正文（2. 烷烃的性质）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C3H8 + 5O2 = 3CO2 + 4H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "甲烷与氯气的取代反应",
+      "description": "光照下甲烷与氯气发生取代反应，甲烷分子中的4个氢原子被氯原子逐一替代，依次生成一氯甲烷、二氯甲烷、三氯甲烷（氯仿）和四氯甲烷（四氯化碳），同时都生成氯化氢。",
+      "difficulty": "中等",
+      "difficultyReason": "四步取代，产物为混合物，条件为光照。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第一节 认识有机化合物",
+          "context": "实验7-1（方程式以图呈现，据图题信息整理）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "其他",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH4 + Cl2 = CH3Cl + HCl",
+          "conditions": [
+            "光照"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "chemical",
+          "line": "CH3Cl + Cl2 = CH2Cl2 + HCl",
+          "conditions": [
+            "光照"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "chemical",
+          "line": "CH2Cl2 + Cl2 = CHCl3 + HCl",
+          "conditions": [
+            "光照"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "chemical",
+          "line": "CHCl3 + Cl2 = CCl4 + HCl",
+          "conditions": [
+            "光照"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙烯的燃烧",
+      "description": "纯净的乙烯在空气中点燃，火焰明亮且伴有黑烟，生成二氧化碳和水，同时放出大量的热。",
+      "difficulty": "中等",
+      "difficultyReason": "系数为3，有机物燃烧。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第二节 乙烯与有机高分子材料",
+          "context": "实验7-2（1. 氧化反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C2H4 + 3O2 = 2CO2 + 2H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙烯与溴的加成反应",
+      "description": "将乙烯通入溴的四氯化碳溶液，乙烯双键中的一个键断裂，两个溴原子分别加在两个价键不饱和的碳原子上，生成无色的1,2-二溴乙烷液体，溶液褪色。",
+      "difficulty": "中等",
+      "difficultyReason": "加成反应的典型实例，产物为二溴代物。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第二节 乙烯与有机高分子材料",
+          "context": "实验7-3（2. 加成反应；方程式以图呈现，据图题信息整理）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "其他",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C2H4 + Br2 = CH2BrCH2Br",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙烯与氢气的加成反应",
+      "description": "乙烯在催化剂并加热的条件下与氢气发生加成反应，生成乙烷。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第二节 乙烯与有机高分子材料",
+          "context": "正文（2. 加成反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "其他",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C2H4 + H2 = CH3CH3",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙烯与水的加成反应（工业制乙醇）",
+      "description": "乙烯在催化剂、加热、加压条件下与水发生加成反应生成乙醇，工业上利用乙烯与水的加成反应制取乙醇。",
+      "difficulty": "中等",
+      "difficultyReason": "三个条件（催化剂、加热、高压）。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第二节 乙烯与有机高分子材料",
+          "context": "正文（2. 加成反应）"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "练习与应用 第8题（有机物转化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "其他"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C2H4 + H2O = CH3CH2OH",
+          "conditions": [
+            "催化剂",
+            "加热",
+            "高压"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙烯与氯气的加成反应",
+      "description": "乙烯与氯气发生加成反应，生成1,2-二氯乙烷。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第二节 乙烯与有机高分子材料",
+          "context": "练习与应用 第7题(1)"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "其他",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C2H4 + Cl2 = CH2ClCH2Cl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙烯与氯化氢的加成反应",
+      "description": "乙烯与氯化氢发生加成反应，生成氯乙烷。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第二节 乙烯与有机高分子材料",
+          "context": "练习与应用 第7题(2)"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "其他",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C2H4 + HCl = CH3CH2Cl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙醇与钠的反应",
+      "description": "乙醇与钠反应，钠置换了羟基中的氢，生成乙醇钠和氢气；该反应比相同条件下水与钠的反应缓和得多，说明乙醇羟基中的氢原子不如水分子中的氢原子活泼。",
+      "difficulty": "中等",
+      "difficultyReason": "羟基氢被置换，系数为2，与水跟钠反应对比。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "实验7-4（1. 乙醇与钠反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH3CH2OH + 2Na = 2CH3CH2ONa + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙醇的燃烧",
+      "description": "乙醇在空气中点燃生成二氧化碳和水，同时放出大量热，乙醇可用作燃料；1 mol乙醇完全燃烧生成CO2(g)和H2O(l)时放出1366.8 kJ热量。",
+      "difficulty": "中等",
+      "difficultyReason": "系数为3，有机物燃烧。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "正文（2. 氧化反应）"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "复习与提高",
+          "context": "第3题（燃料燃烧热数据）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CH2OH + 3O2 = 2CO2 + 3H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "C2H5OH(l) + 3O2(g) = 2CO2(g) + 3H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-1366.8 kJ/mol"
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙醇的催化氧化",
+      "description": "乙醇在加热和有催化剂（如铜或银）存在的条件下，可以被空气中的氧气氧化为乙醛，醇羟基转化为醛基。",
+      "difficulty": "中等",
+      "difficultyReason": "两个条件（催化剂、加热），系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "实验7-5（2. 氧化反应）"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "实验活动9",
+          "context": "乙醇、乙酸的主要性质"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "练习与应用 第8题（有机物转化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "其他"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH3CH2OH + O2 = 2CH3CHO + 2H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙醛氧化生成乙酸",
+      "description": "乙醛在适当条件下可以被氧气进一步氧化，生成乙酸。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，单一催化剂条件。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "正文（2. 氧化反应）"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "练习与应用 第8题（有机物转化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "其他"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH3CHO + O2 = 2CH3COOH",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙酸与碳酸钙的反应（食醋除水垢）",
+      "description": "乙酸的酸性强于碳酸，食醋中的乙酸能与水垢（主要成分是碳酸钙）反应，生成乙酸钙、水和二氧化碳，从而清除水壶中的水垢。",
+      "difficulty": "中等",
+      "difficultyReason": "弱酸与碳酸盐反应，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "思考与讨论（食醋除水垢）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH3COOH + CaCO3 = (CH3COO)2Ca + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "乙酸与乙醇的酯化反应",
+      "description": "乙酸与乙醇在浓硫酸作催化剂并加热的条件下发生酯化反应，生成乙酸乙酯和水；酸与醇反应生成酯和水的反应叫做酯化反应。酯化反应是可逆反应，乙酸乙酯会与水发生水解反应生成乙酸和乙醇。",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，浓硫酸催化并需加热。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "实验7-6（2. 酯化反应）"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第三节 乙醇与乙酸",
+          "context": "练习与应用 第8题（有机物转化）"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "实验活动9",
+          "context": "乙醇、乙酸的主要性质"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "整理与提升",
+          "context": "有机化合物的转化"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "其他",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3COOH + C2H5OH ⇌ CH3COOC2H5 + H2O",
+          "conditions": [
+            "浓硫酸",
+            "加热"
+          ],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "蔗糖的水解",
+      "description": "蔗糖在酸的催化下水解，生成葡萄糖和果糖两种单糖。",
+      "difficulty": "中等",
+      "difficultyReason": "水解反应，产物为两种同分异构的单糖。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第四节 基本营养物质",
+          "context": "正文（一、糖类）"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第四节 基本营养物质",
+          "context": "练习与应用 第7题（蔗糖水解实验）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "其他"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C12H22O11 + H2O = C6H12O6 + C6H12O6",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "葡萄糖的发酵（制乙醇）",
+      "description": "葡萄糖在酶的催化作用下分解生成乙醇和二氧化碳，这一转化被广泛应用于酿酒和利用生物质生产燃料乙醇。",
+      "difficulty": "中等",
+      "difficultyReason": "酶催化（条件映射为催化剂），系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第四节 基本营养物质",
+          "context": "正文（一、糖类）"
+        },
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "复习与提高",
+          "context": "第10题(3)（发酵法合成燃料乙醇）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H12O6 = 2C2H5OH + 2CO2↑",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "葡萄糖的缓慢氧化",
+      "description": "摄入人体内的葡萄糖经缓慢氧化转变为二氧化碳和水，同时放出能量，是机体生命活动主要的供能反应。",
+      "difficulty": "中等",
+      "difficultyReason": "系数为6，缓慢氧化供能。",
+      "textbooks": [
+        {
+          "chapter": "第七章 有机化合物",
+          "section": "第四节 基本营养物质",
+          "context": "正文（一、糖类，淀粉在人体内的变化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H12O6 + 6O2 = 6CO2 + 6H2O",
+          "conditions": [
+            "常温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "加热分解法冶炼汞",
+      "description": "氧化汞受热分解生成汞和氧气。对一些不活泼金属，可以直接用加热分解的方法将其从化合物中还原出来。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，单一加热条件。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（一、金属矿物的开发利用）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2HgO = 2Hg + O2↑",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "电解冶炼镁",
+      "description": "对非常活泼的金属采用电解法冶炼：电解熔融氯化镁生成金属镁和氯气；从海水中提取镁的最后一步即熔融电解无水氯化镁。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，单一通电条件。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（一、金属矿物的开发利用）"
+        },
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "练习与应用 第6题(4)（海水提镁）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "MgCl2 = Mg + Cl2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "电解冶炼铝",
+      "description": "电解熔融三氧化二铝制取金属铝，同时放出氧气；生产1 mol铝消耗的电能很大，废旧铝制品回收利用可大幅降低能耗。",
+      "difficulty": "中等",
+      "difficultyReason": "系数大（2、4、3）。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（一、金属矿物的开发利用）"
+        },
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第7题④（铝土矿提铝）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Al2O3 = 4Al + 3O2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "电解冶炼钠",
+      "description": "电解熔融氯化钠制取金属钠，同时放出氯气，是电解法冶炼活泼金属的又一实例。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，单一通电条件。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（一、金属矿物的开发利用）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NaCl = 2Na + Cl2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "铝热反应",
+      "description": "铝与氧化铁在高温下发生置换反应生成铁和三氧化二铝，一些活泼金属可作还原剂，将相对不活泼的金属从其化合物中置换出来，这就是铝热反应的原理。",
+      "difficulty": "中等",
+      "difficultyReason": "高温铝热反应，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（一、金属矿物的开发利用）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe2O3 + 2Al = 2Fe + Al2O3",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氯气氧化溴离子（海水提溴）",
+      "description": "海水提溴吹出法的氧化环节：用氯气将海水中的溴离子氧化为溴单质，再经空气吹出、吸收、蒸馏分离提纯。",
+      "difficulty": "简单",
+      "difficultyReason": "离子方程式简单，是氧化性强弱比较的典型。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "思考与讨论（海水提溴）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Cl2 + 2Br- = Br2 + 2Cl-",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "二氧化硫吸收溴（海水提溴）",
+      "description": "海水提溴吹出法的吸收环节：用二氧化硫作还原剂使吹出的溴转化为氢溴酸，使其与空气分离，以便后续再用氯气氧化蒸馏；离子方程式表示溶液中的反应实质。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，氧化还原与离子方程式配合。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "思考与讨论（海水提溴）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Br2 + SO2 + 2H2O = 2HBr + H2SO4",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "Br2 + SO2 + 2H2O = 4H+ + 2Br- + SO4^2-",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氯气氧化碘离子（海带提碘）",
+      "description": "海带灰浸取液中通入氯气，将碘离子氧化为碘单质，之后用有机溶剂萃取分液得到碘。",
+      "difficulty": "简单",
+      "difficultyReason": "离子方程式简单。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "练习与应用 第5题(3)（海带提碘）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "非金属及其化合物",
+        "化学与生活",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Cl2 + 2I- = I2 + 2Cl-",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "碳与水蒸气的反应（制水煤气）",
+      "description": "煤的气化是将煤转化为可燃性气体的过程，主要反应是碳与水蒸气在高温下反应生成一氧化碳和氢气（水煤气）。",
+      "difficulty": "中等",
+      "difficultyReason": "气体参与，系数均为1，高温条件。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（三、煤、石油和天然气的综合利用）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C + H2O = CO + H2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "十六烷的催化裂化",
+      "description": "十六烷在催化剂、加热、加压条件下裂化为辛烷和辛烯，是石油催化裂化将重油裂化为轻质油的实例。",
+      "difficulty": "中等",
+      "difficultyReason": "有机物裂化，分子式较大。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（石油的催化裂化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C16H34 = C8H18 + C8H16",
+          "conditions": [
+            "催化剂",
+            "加热",
+            "高压"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "辛烷的裂化",
+      "description": "辛烷继续在催化剂、加热、加压条件下裂化为丁烷和丁烯。",
+      "difficulty": "中等",
+      "difficultyReason": "裂化产物组合判断。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（石油的催化裂化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C8H18 = C4H10 + C4H8",
+          "conditions": [
+            "催化剂",
+            "加热",
+            "高压"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "丁烷的裂解（生成甲烷和丙烯）",
+      "description": "丁烷在催化剂、加热、加压条件下裂解，生成甲烷和丙烯，是石油裂解获得重要基本化工原料的实例。",
+      "difficulty": "中等",
+      "difficultyReason": "裂解产物组合判断。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（石油的裂化与裂解）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C4H10 = CH4 + C3H6",
+          "conditions": [
+            "催化剂",
+            "加热",
+            "高压"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "丁烷的裂解（生成乙烷和乙烯）",
+      "description": "丁烷在催化剂、加热、加压条件下裂解，也可生成乙烷和乙烯；通过石油裂化和裂解可以得到乙烯、丙烯、甲烷等重要基本化工原料。",
+      "difficulty": "中等",
+      "difficultyReason": "裂解产物组合判断。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "正文（石油的裂化与裂解）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C4H10 = C2H6 + C2H4",
+          "conditions": [
+            "催化剂",
+            "加热",
+            "高压"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "锡的冶炼",
+      "description": "用焦炭在高温下还原二氧化锡冶炼金属锡，同时生成一氧化碳。",
+      "difficulty": "中等",
+      "difficultyReason": "高温还原，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "练习与应用 第2题"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "SnO2 + 2C = Sn + 2CO↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "钨的冶炼",
+      "description": "用氢气在高温下还原三氧化钨冶炼金属钨，同时生成水。",
+      "difficulty": "中等",
+      "difficultyReason": "氢气作还原剂，系数为3。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "练习与应用 第2题"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "WO3 + 3H2 = W + 3H2O",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "方铅矿的焙烧",
+      "description": "方铅矿（PbS）在空气中高温焙烧，与氧气反应生成氧化铅和二氧化硫。",
+      "difficulty": "中等",
+      "difficultyReason": "焙烧氧化，系数为3。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "练习与应用 第2题"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2PbS + 3O2 = 2PbO + 2SO2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "铀的冶炼",
+      "description": "用金属镁在高温下还原四氟化铀冶炼金属铀，同时生成氟化镁。",
+      "difficulty": "中等",
+      "difficultyReason": "活泼金属作还原剂，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第一节 自然资源的开发利用",
+          "context": "练习与应用 第2题"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "UF4 + 2Mg = U + 2MgF2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "碳酸钙与盐酸的反应（抗酸药中和胃酸）",
+      "description": "某抗酸药片含有碳酸钙，服用后碳酸钙与盐酸（胃酸）反应生成氯化钙、水和二氧化碳，中和胃里过多的胃酸，缓解胃部不适。",
+      "difficulty": "简单",
+      "difficultyReason": "碳酸盐与强酸复分解，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第二节 化学品的合理使用",
+          "context": "练习与应用 第6题(1)"
+        },
+        {
+          "chapter": "第六章 化学反应与能量",
+          "section": "第二节 化学反应的速率与限度",
+          "context": "练习与应用 第3题"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CaCO3 + 2HCl = CaCl2 + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氢氧化镁与盐酸的反应（抗酸药中和胃酸）",
+      "description": "某抗酸药片含有氢氧化镁，服用后氢氧化镁与盐酸（胃酸）发生中和反应生成氯化镁和水，中和过多胃酸。",
+      "difficulty": "简单",
+      "difficultyReason": "酸碱中和，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第二节 化学品的合理使用",
+          "context": "练习与应用 第6题(1)"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "中和反应",
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Mg(OH)2 + 2HCl = MgCl2 + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "碳酸氢钠的受热分解（膨松剂）",
+      "description": "碳酸氢钠（小苏打）是常用膨松剂，加工馒头、面包和饼干等食品时受热分解，生成碳酸钠、水和二氧化碳，产生大量气体使面团疏松多孔。",
+      "difficulty": "中等",
+      "difficultyReason": "三种生成物，受热分解。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第二节 化学品的合理使用",
+          "context": "正文（安全使用食品添加剂·膨松剂）"
+        },
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第二节 化学品的合理使用",
+          "context": "练习与应用 第3题、第4题"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NaHCO3 = Na2CO3 + H2O + CO2↑",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氨催化还原一氧化氮（尾气治理）",
+      "description": "一氧化氮是大气污染物之一，在400℃左右、有催化剂存在的条件下，用氨与其反应生成无污染的氮气和水，是治理氮氧化物污染的方法。",
+      "difficulty": "较难",
+      "difficultyReason": "系数大（4、6、5），氧化还原配平。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "第三节 环境保护与绿色化学",
+          "context": "练习与应用 第6题"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "4NH3 + 6NO = 5N2 + 6H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "碘酸根离子与碘离子的反应",
+      "description": "加碘食盐中的碘以碘酸钾形式存在，在酸性溶液中碘酸根离子与碘离子发生归中反应生成碘单质和水，利用该反应可用碘化钾淀粉试纸等检验食盐中的碘酸根离子。",
+      "difficulty": "较难",
+      "difficultyReason": "五项离子系数，酸性介质归中配平。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第1题"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "IO3- + 5I- + 6H+ = 3I2 + 3H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "光合作用（二氧化碳与水生成葡萄糖）",
+      "description": "绿色植物通过光合作用，在光照和叶绿素的作用下，将二氧化碳和水转变为葡萄糖并放出氧气，是糖类等有机物的来源。",
+      "difficulty": "中等",
+      "difficultyReason": "系数为6，多物质，条件为光照。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第6题(3)（由二氧化碳和水生成葡萄糖）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "其他"
+      ],
+      "knowledgeModules": [
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "6CO2 + 6H2O = C6H12O6 + 6O2",
+          "conditions": [
+            "光照"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氨与硫酸的反应（生产硫酸铵）",
+      "description": "用硫酸吸收回收氨，生成硫酸铵化肥；可据产物化学式计算这种氮肥中氮元素的质量分数。",
+      "difficulty": "简单",
+      "difficultyReason": "酸与碱性气体化合，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第4题(3)（煤干馏产物氨的回收）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NH3 + H2SO4 = (NH4)2SO4",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "氢氧化铝的受热分解",
+      "description": "氢氧化铝受热脱水生成氧化铝和水，是铝土矿提铝流程中电解之前的一步转化。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，单一加热条件。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第7题③（铝土矿提铝流程）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Al(OH)3 = Al2O3 + 3H2O",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "孔雀石与稀硫酸的反应",
+      "description": "孔雀石的主要成分为碱式碳酸铜（CuCO3·Cu(OH)2），将其粉碎后加入过量稀硫酸，生成蓝色硫酸铜溶液、二氧化碳和水，是从孔雀石中提取铜的第一步。",
+      "difficulty": "中等",
+      "difficultyReason": "碱式盐与酸反应，含结晶水式组成，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第8题①（孔雀石提取铜）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CuCO3·Cu(OH)2 + 2H2SO4 = 2CuSO4 + CO2↑ + 3H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "四氯化钛的制备（高温氯化）",
+      "description": "在高温下，向金红石（主要成分为二氧化钛）与焦炭的混合物中通入氯气，生成四氯化钛和可燃性气体一氧化碳，是以钛矿为原料冶炼钛的第一步。",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，高温氯化。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第9题①（金红石冶炼钛）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "TiO2 + 2C + 2Cl2 = TiCl4 + 2CO↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    },
+    {
+      "name": "镁还原四氯化钛（冶炼钛）",
+      "description": "在稀有气体（如氩）氛围和加热条件下，用金属镁与四氯化钛反应得到金属钛，同时生成氯化镁；稀有气体氛围可防止高温下金属被空气氧化。",
+      "difficulty": "中等",
+      "difficultyReason": "活泼金属置换，系数为2。",
+      "textbooks": [
+        {
+          "chapter": "第八章 化学与可持续发展",
+          "section": "复习与提高",
+          "context": "第9题②（金红石冶炼钛）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "TiCl4 + 2Mg = Ti + 2MgCl2",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·必修第二册"
+    }
+  ],
+  "excluded": [
+    {
+      "raw": "nCH2=CH2 --催化剂--> [CH2-CH2]n（乙烯加聚生成聚乙烯）",
+      "location": "第七章 第二节 乙烯与有机高分子材料 正文（3. 聚合反应）",
+      "reason": "聚合记法（系数n与方括号重复单元）无法被一行式解析（SPEC 规则4）。"
+    },
+    {
+      "raw": "nCH2=CHCl --催化剂--> 聚氯乙烯（氯乙烯加聚）",
+      "location": "第七章 第二节 练习与应用 第7题(3)",
+      "reason": "聚合记法无法解析。"
+    },
+    {
+      "raw": "nCH2=CHCH3 --催化剂--> 聚丙烯（丙烯加聚）",
+      "location": "第八章 复习与提高 第3题(2)②",
+      "reason": "聚合记法无法解析。"
+    },
+    {
+      "raw": "(C6H10O5)n + nH2O --催化剂--> nC6H12O6（淀粉或纤维素水解）",
+      "location": "第七章 第四节 基本营养物质 正文",
+      "reason": "聚合记法（n重复单元）无法解析。"
+    },
+    {
+      "raw": "mH2O + nCO2 --光/叶绿素--> Cn(H2O)m + nO2（光合作用通式）",
+      "location": "第六章 复习与提高 第1题(2)表",
+      "reason": "含变量系数 m、n 的通式无法解析；已另按 6CO2+6H2O=C6H12O6+6O2 提取为正式 entry。"
+    },
+    {
+      "raw": "3A(g) + B(g) ⇌ 2C(g)",
+      "location": "第六章 复习与提高 第2题",
+      "reason": "以字母 A、B、C 表示的假想反应，非真实化学方程式。"
+    },
+    {
+      "raw": "Al2O3·nH2O + 2NaOH → …（铝土矿碱溶）",
+      "location": "第八章 复习与提高 第7题①",
+      "reason": "铝土矿组成含变量 n，且需推断教材未给出的偏铝酸钠产物，无法确定书写。"
+    },
+    {
+      "raw": "NaAlO2 + CO2 + 2H2O = Al(OH)3↓ + NaHCO3",
+      "location": "第八章 复习与提高 第7题②",
+      "reason": "中间产物偏铝酸钠（NaAlO2）教材未给出，超出必修阶段要求，为稳妥不纳入。"
+    },
+    {
+      "raw": "碱性介质中铝作负极的电极反应（Mg-Al/NaOH 原电池）",
+      "location": "第六章 复习与提高 第6题(3)(4)",
+      "reason": "教材未给出答案，碱性介质中产物形式不唯一（AlO2- 或 Al(OH)4-），超出必修要求。"
+    },
+    {
+      "raw": "乙烯经氯代乙醇法制环氧乙烷（CH2=CH2+Cl2+H2O→ClCH2CH2OH+HCl；2ClCH2CH2OH+Ca(OH)2→环氧乙烷+CaCl2+2H2O；总式；2CH2=CH2+O2 --Ag--> 2环氧乙烷，共4式）",
+      "location": "第八章 第三节 思考与讨论（绿色化学·原子经济性）",
+      "reason": "环氧乙烷以三角环结构表示，一行式无法准确表达（写 C2H4O 有歧义）。"
+    },
+    {
+      "raw": "(CH3)2C=O + HCN → (CH3)2C(OH)CN；再与甲醇、硫酸反应（甲基丙烯酸甲酯旧法）；CH3C≡CH+CO+CH3OH → CH2=C(CH3)COOCH3（新法）",
+      "location": "第八章 第三节 练习与应用 第4题",
+      "reason": "含 (CH3)2C(OH)CN 等复杂支链结构简式，且为原子经济性讨论题。"
+    },
+    {
+      "raw": "水杨酸 + 乙酸酐 --催化剂,Δ--> 乙酰水杨酸（阿司匹林）+ 乙酸",
+      "location": "第八章 第二节 资料卡片（方程式以图片呈现）",
+      "reason": "水杨酸与乙酸酐为环状结构简式，无法可靠转为一行式。"
+    },
+    {
+      "raw": "葡萄糖与新制氢氧化铜反应（生成砖红色氧化亚铜沉淀）、葡萄糖的银镜反应",
+      "location": "第七章 第四节 实验7-7",
+      "reason": "教材未印出方程式，氧化产物（葡萄糖酸等）未在教材中给出化学式，无法仅凭上下文确定书写。"
+    },
+    {
+      "raw": "油脂的氢化（液态植物油与氢气加成生成氢化植物油）与皂化（油脂在碱性条件下的水解，生成高级脂肪酸盐和甘油）",
+      "location": "第七章 第四节 正文（三、油脂）",
+      "reason": "油脂以 R 基团通式表示，无确定化学式，无法写成一行式。"
+    },
+    {
+      "raw": "DDT --酶催化--> DDE + HCl（脱氯化氢）",
+      "location": "第八章 第二节 科学·技术·社会（滴滴涕的功与过）",
+      "reason": "以结构式表示，无法转为一行式。"
+    },
+    {
+      "raw": "C10H22 → 2C3H6 + X（石脑油裂解推断）；丙烯与氨、氧气反应制丙烯腈",
+      "location": "第八章 复习与提高 第6题",
+      "reason": "X 需推断（丁烯），反应式不完整；丙烯腈合成需多步推断，教材未给出方程式。"
+    },
+    {
+      "raw": "2CuCO3·Cu(OH)2 + C --Δ--> Cu + CO2↑ + H2O（蓝铜矿与焦炭共热冶炼铜）",
+      "location": "第八章 第一节 练习与应用 第3题",
+      "reason": "按一个结构单元无法整数配平，需以 2 倍系数书写（2(2CuCO3·Cu(OH)2)），引擎无法解析系数后接括号点式的写法。"
+    },
+    {
+      "raw": "CH2=CH2 --无机物M,催化剂--> A；CH2=CHCH3 --O2,催化剂--> B；A + B --催化剂,Δ--> CH2=CHCOOCH2CH3（丙烯酸乙酯合成及聚合）",
+      "location": "第七章 复习与提高 第12题",
+      "reason": "无机物M与有机物A、B均需推断，教材未给出各步方程式；聚合过程还需聚合记法。"
+    },
+    {
+      "raw": "相对分子质量75的氨基酸（由C、H、O、N组成）与乙醇的酯化",
+      "location": "第七章 复习与提高 第11题",
+      "reason": "需先推断分子式（甘氨酸），教材未给出方程式。"
+    },
+    {
+      "raw": "萘的完全燃烧",
+      "location": "第八章 复习与提高 第4题(2)",
+      "reason": "萘的化学式仅以结构图给出，正文未给出分子式，燃烧方程式无法确定书写。"
+    }
+  ]
+}

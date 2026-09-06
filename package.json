@@ -1,0 +1,46 @@
+{
+  "name": "chem-equation-worksheet",
+  "productName": "高中化学方程式组卷打印系统",
+  "version": "1.0.0",
+  "description": "面向高中化学教师的本地方程式题库管理与组卷打印工具，完全离线运行",
+  "main": "main.js",
+  "author": "Local Teacher Tool",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "node scripts/test-chem.js",
+    "dist": "electron-builder --win nsis",
+    "pack": "electron-builder --win --dir"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.local.chemeq.worksheet",
+    "productName": "化学方程式组卷打印系统",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "examples/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "examples",
+        "to": "examples"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  }
+}

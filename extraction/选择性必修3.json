@@ -1,0 +1,3011 @@
+{
+  "book": "选择性必修3",
+  "version": "人教版",
+  "entries": [
+    {
+      "name": "乙醇与钠的反应（结构简式）",
+      "description": "乙醇分子中氢氧键极性较强，与钠反应放出氢气生成乙醇钠；教材以图式给出化学方程式，用于说明键的断裂位置",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第一章 有机化合物的结构特点与研究方法",
+          "section": "第一节 有机化合物的结构特点",
+          "context": "实验1-1（乙醇与钠，图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "有机物",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH3CH2OH + 2Na = 2CH3CH2ONa + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙醇与氢溴酸的反应",
+      "description": "乙醇分子中碳氧键极性较强，与氢溴酸共热发生取代反应生成溴乙烷和水，是制备溴乙烷的方法之一",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，浓硫酸催化加热",
+      "textbooks": [
+        {
+          "chapter": "第一章 有机化合物的结构特点与研究方法",
+          "section": "第一节 有机化合物的结构特点",
+          "context": "实验1-1（碳氧键断裂，图式方程）"
+        },
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第二节 醇酚",
+          "context": "正文（取代反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "取代反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CH2OH + HBr = CH3CH2Br + H2O",
+          "conditions": [
+            "浓硫酸",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙烯与溴的加成反应（结构简式）",
+      "description": "乙烯与溴发生加成反应生成1,2-二溴乙烷；教材以思考与讨论用例说明碳碳双键中π键断裂",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，无条件",
+      "textbooks": [
+        {
+          "chapter": "第一章 有机化合物的结构特点与研究方法",
+          "section": "第一节 有机化合物的结构特点",
+          "context": "思考与讨论（分析化学键变化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2=CH2 + Br2 = CH2BrCH2Br",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙烷与氯气的取代反应",
+      "description": "乙烷在光照下与氯气发生取代反应生成一氯乙烷和氯化氢；教材要求由甲烷与氯气的反应类推书写",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，光照条件",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第一节 烷烃",
+          "context": "思考与讨论（生成一氯乙烷）"
+        },
+        {
+          "chapter": "第二章 烃",
+          "section": "第三节 芳香烃",
+          "context": "复习与提高（第9题·乙烷制氯乙烷）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "取代反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CH3 + Cl2 = CH3CH2Cl + HCl",
+          "conditions": [
+            "光照"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "电石与水的反应（实验室制乙炔）",
+      "description": "实验室用电石（碳化钙）与水反应制取乙炔，反应剧烈，可用饱和氯化钠溶液减缓速率",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "探究（乙炔的化学性质·资料）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "碱",
+        "有机物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CaC2 + 2H2O = Ca(OH)2 + CH≡CH↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙炔与溴的加成反应（第一步）",
+      "description": "乙炔与溴的四氯化碳溶液发生分步加成，第一步生成1,2-二溴乙烯",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，双键保留",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "正文（乙炔与溴分步加成图式）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH≡CH + Br2 = CHBr=CHBr",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙炔与溴的加成反应（第二步）",
+      "description": "1,2-二溴乙烯继续与溴加成生成1,1,2,2-四溴乙烷",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "正文（乙炔与溴分步加成图式）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CHBr=CHBr + Br2 = CHBr2CHBr2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙炔与氢气的加成反应",
+      "description": "乙炔在催化剂和加热条件下与氢气发生加成反应生成乙烯",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，催化加成",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "正文（乙炔的化学性质）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "加成反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH≡CH + H2 = CH2=CH2",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙炔与氯化氢的加成反应",
+      "description": "乙炔在催化剂和加热条件下与氯化氢发生加成反应生成氯乙烯，氯乙烯可用于合成聚氯乙烯",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，催化加成",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "正文（乙炔的化学性质）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH≡CH + HCl = CH2=CHCl",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙炔与水的加成反应",
+      "description": "乙炔在催化剂和加热条件下与水发生加成反应生成乙醛（乙炔水化法制乙醛）",
+      "difficulty": "中等",
+      "difficultyReason": "物质2种，涉及碳碳三键与水的加成产物推断",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "正文（乙炔的化学性质）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH≡CH + H2O = CH3CHO",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙炔的加聚反应（聚乙炔）",
+      "description": "在合适催化剂和反应条件下乙炔发生加聚反应生成聚乙炔；掺杂碘的聚乙炔具有导电性，可用于导电高分子材料",
+      "difficulty": "中等",
+      "difficultyReason": "聚合度 n 记法，链节含碳碳双键",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "正文（聚乙炔）"
+        },
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "科学·技术·社会（导电高分子）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第1题·乙炔单体）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCH≡CH = [CH=CH]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙炔的燃烧",
+      "description": "乙炔在空气中燃烧放出大量热，氧炔焰温度可超过3000℃，常用于焊接或切割金属；燃烧时火焰明亮而带浓烟",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2和5，点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "探究（结果与讨论·图2-7乙炔燃烧）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "燃烧反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH≡CH + 5O2 = 4CO2 + 2H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "1,3-丁二烯与氯气的1,2-加成",
+      "description": "1,3-丁二烯与氯气加成时存在两种方式，1,2-加成生成3,4-二氯-1-丁烯；两种加成是竞争反应，产物比例取决于反应条件",
+      "difficulty": "中等",
+      "difficultyReason": "共轭二烯烃加成方式判断，产物保留双键",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "资料卡片（二烯烃）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2=CHCH=CH2 + Cl2 = CH2ClCHClCH=CH2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "1,3-丁二烯与氯气的1,4-加成",
+      "description": "1,3-丁二烯与氯气发生1,4-加成生成1,4-二氯-2-丁烯，双键移至中间碳原子之间",
+      "difficulty": "中等",
+      "difficultyReason": "共轭二烯烃加成方式判断，双键位置移动",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "资料卡片（二烯烃）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2=CHCH=CH2 + Cl2 = CH2ClCH=CHCH2Cl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "氯乙烯的加聚反应（聚氯乙烯）",
+      "description": "氯乙烯通过加聚反应生成链状高分子聚氯乙烯；聚氯乙烯是用途广泛的塑料，可制成管材、薄膜等制品",
+      "difficulty": "中等",
+      "difficultyReason": "聚合度 n 记法，链节含氯原子",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "思考与讨论（氯乙烯加聚图式）"
+        },
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第一节 卤代烃",
+          "context": "正文（卤代烯烃的加成聚合）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "正文（加成聚合反应）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "正文（塑料·聚氯乙烯）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCH2=CHCl = [CH2-CHCl]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯与溴的取代反应（溴代）",
+      "description": "苯与溴在溴化铁催化下发生取代反应生成溴苯和溴化氢；用于说明苯的大π键结构使苯易发生取代反应",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，FeBr3 催化",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第三节 芳香烃",
+          "context": "正文（苯的取代反应·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "取代反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H6 + Br2 = C6H5Br + HBr",
+          "conditions": [
+            "FeBr3"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯的硝化反应",
+      "description": "在浓硫酸作用下，苯在50~60℃与浓硝酸发生硝化反应（取代反应）生成硝基苯和水",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，浓硫酸催化控温",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第三节 芳香烃",
+          "context": "正文（苯的硝化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "取代反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H6 + HNO3 = C6H5NO2 + H2O",
+          "conditions": [
+            "浓硫酸",
+            "50℃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯的磺化反应",
+      "description": "苯与浓硫酸在70~80℃发生磺化反应生成苯磺酸和水；磺化反应可用于制备合成洗涤剂",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，加热控温",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第三节 芳香烃",
+          "context": "正文（苯的磺化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "取代反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H6 + H2SO4 = C6H5SO3H + H2O",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯与氢气的加成反应",
+      "description": "在Pt、Ni等催化剂并加热的条件下，苯与氢气发生加成反应生成环己烷；说明苯的大π键在特定条件下仍能发生加成",
+      "difficulty": "中等",
+      "difficultyReason": "物质2种，系数为3，苯环全部加氢",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第三节 芳香烃",
+          "context": "正文（苯的加成反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "加成反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H6 + 3H2 = C6H12",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "甲苯的硝化反应（制TNT）",
+      "description": "甲苯与浓硝酸和浓硫酸的混合物在加热条件下发生取代反应，生成2,4,6-三硝基甲苯（TNT）和水；甲基使苯环邻、对位氢原子活化",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数为3，多硝基取代",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第三节 芳香烃",
+          "context": "正文（苯的同系物·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "取代反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H5CH3 + 3HNO3 = C6H2(NO2)3CH3 + 3H2O",
+          "conditions": [
+            "浓硫酸",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "溴乙烷的水解反应",
+      "description": "溴乙烷在NaOH水溶液中发生取代反应（水解反应），羟基取代溴原子生成乙醇和溴化钠；可用硝酸酸化后加AgNO3检验溴元素",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，水溶液条件加热，官能团转化",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第一节 卤代烃",
+          "context": "实验3-1（溴乙烷的水解）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "取代反应",
+        "水解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CH2Br + NaOH = CH3CH2OH + NaBr",
+          "conditions": [
+            "水",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "溴乙烷的消去反应",
+      "description": "溴乙烷与强碱（NaOH或KOH）的乙醇溶液共热，脱去HBr生成乙烯；消去反应是有机化合物脱去小分子生成不饱和化合物的反应",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，醇溶液条件，消去产物含双键与气体符号",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第一节 卤代烃",
+          "context": "正文（消去反应）"
+        },
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第一节 卤代烃",
+          "context": "探究（1-溴丁烷的消去）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "消去反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CH2Br + NaOH = CH2=CH2↑ + NaBr + H2O",
+          "conditions": [
+            "醇",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "四氟乙烯的加聚反应（聚四氟乙烯）",
+      "description": "四氟乙烯加成聚合生成聚四氟乙烯；聚四氟乙烯性能稳定，用途广泛",
+      "difficulty": "中等",
+      "difficultyReason": "聚合度 n 记法，含氟单体",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第一节 卤代烃",
+          "context": "正文（卤代烯烃的加成聚合）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCF2=CF2 = [CF2-CF2]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙烯与氯气的加成反应（结构简式）",
+      "description": "乙烯与氯气加成生成1,2-二氯乙烷；该反应在乙二酸二乙酯合成路线和聚氯乙烯工业生产中用作第一步",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，无条件",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第五节 有机合成",
+          "context": "正文（合成乙二酸二乙酯示例·第2步）"
+        },
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第一节 卤代烃",
+          "context": "练习与应用（第9题·聚氯乙烯合成路线）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2=CH2 + Cl2 = CH2ClCH2Cl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "1,2-二氯乙烷的消去反应（制氯乙烯）",
+      "description": "工业生产聚氯乙烯的中间步骤：1,2-二氯乙烷受热消去氯化氢生成氯乙烯",
+      "difficulty": "中等",
+      "difficultyReason": "消去产物为不饱和卤代烃，工业路线步骤",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第一节 卤代烃",
+          "context": "练习与应用（第9题·聚氯乙烯合成路线）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "消去反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2ClCH2Cl = CH2=CHCl + HCl",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙烯水化法制乙醇（结构简式）",
+      "description": "乙烯在催化剂、加热加压条件下与水发生加成反应（乙烯水化法）生成乙醇，是工业合成乙醇的方法之一",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，加压催化",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第五节 有机合成",
+          "context": "正文（合成乙二酸二乙酯示例·第1步）"
+        },
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "思考与讨论（乙烯与水的反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2=CH2 + H2O = CH3CH2OH",
+          "conditions": [
+            "催化剂",
+            "加热",
+            "高压"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "1,2-二氯乙烷的水解反应",
+      "description": "1,2-二氯乙烷在氢氧化钠水溶液中加热发生水解（取代）生成乙二醇和氯化钠",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数为2，二元卤代烃水解",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第五节 有机合成",
+          "context": "正文（合成乙二酸二乙酯示例·第3步）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "取代反应",
+        "水解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2ClCH2Cl + 2NaOH = HOCH2CH2OH + 2NaCl",
+          "conditions": [
+            "水",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙二醇的催化氧化（制乙二酸）",
+      "description": "乙二醇在催化剂和加热条件下被氧气氧化生成乙二酸（草酸）和水，是以乙烯为原料合成乙二酸二乙酯路线中的一步",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，系数为2，二元醇逐步氧化",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第五节 有机合成",
+          "context": "正文（合成乙二酸二乙酯示例·第4步）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "HOCH2CH2OH + 2O2 = HOOCCOOH + 2H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙二酸与乙醇的酯化反应（乙二酸二乙酯）",
+      "description": "乙二酸（草酸）与2分子乙醇在催化剂和加热条件下发生酯化反应生成乙二酸二乙酯和水；乙二酸二乙酯是医药和染料工业原料",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，系数为2，二元酸酯化",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第五节 有机合成",
+          "context": "正文（合成乙二酸二乙酯示例·第5步）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "酯化反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "HOOCCOOH + 2CH3CH2OH = C2H5OOCCOOC2H5 + 2H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙炔与氰化氢的加成反应",
+      "description": "炔烃与HCN加成生成含氰基的物质，是增长碳链的方法之一；乙炔与HCN在催化剂作用下加成生成丙烯腈（可用于合成聚丙烯腈）",
+      "difficulty": "中等",
+      "difficultyReason": "物质2种，碳链增长，氰基引入",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第五节 有机合成",
+          "context": "资料卡片（构建碳骨架）"
+        },
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "复习与提高（第10题·合成聚丙烯腈）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH≡CH + HCN = CH2=CHCN",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙醇的消去反应（实验室制乙烯）",
+      "description": "乙醇与浓硫酸混合加热到170℃发生消去反应（分子内脱水）生成乙烯和水；实验室借此制取乙烯",
+      "difficulty": "中等",
+      "difficultyReason": "浓硫酸催化、170℃控温，消去产物有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第二节 醇酚",
+          "context": "实验3-2（乙醇的消去反应）"
+        },
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "复习与提高（乙醇↔乙醛转化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "消去反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CH2OH = CH2=CH2↑ + H2O",
+          "conditions": [
+            "浓硫酸",
+            "170℃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙醇的分子间脱水（制乙醚）",
+      "description": "乙醇和浓硫酸的混合物温度控制在140℃左右时，每两个乙醇分子间脱去一个水分子生成乙醚；乙醚是优良的有机溶剂",
+      "difficulty": "中等",
+      "difficultyReason": "分子间脱水方式判断，140℃控温，系数为2",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第二节 醇酚",
+          "context": "正文（消去反应·分子间脱水）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "取代反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH3CH2OH = CH3CH2OCH2CH3 + H2O",
+          "conditions": [
+            "浓硫酸",
+            "140℃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙醇的催化氧化（结构简式）",
+      "description": "乙醇在铜或银作催化剂等条件下，被空气中的氧气氧化为乙醛，实现由醇到醛的转化",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数为2，催化氧化官能团转化",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第二节 醇酚",
+          "context": "正文（氧化反应引入）"
+        },
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "复习与提高（乙醇↔乙醛转化）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH3CH2OH + O2 = 2CH3CHO + 2H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯酚与氢氧化钠的反应",
+      "description": "苯酚俗称石炭酸，羟基受苯环影响显示弱酸性，与NaOH反应生成苯酚钠和水",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，弱酸性中和",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第二节 醇酚",
+          "context": "实验3-4（苯酚的酸性·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "中和反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H5OH + NaOH = C6H5ONa + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯酚钠与盐酸的反应",
+      "description": "向苯酚钠溶液中滴加稀盐酸又生成苯酚，说明苯酚具有弱酸性",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，强酸制弱酸",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第二节 醇酚",
+          "context": "实验3-4（苯酚的酸性·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H5ONa + HCl = C6H5OH + NaCl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯酚钠与二氧化碳的反应",
+      "description": "向澄清的苯酚钠溶液中通入二氧化碳又变浑浊，生成苯酚和碳酸氢钠，说明苯酚的酸性比碳酸的弱",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，酸性强弱比较（生成碳酸氢钠而非碳酸钠）",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第二节 醇酚",
+          "context": "正文（苯酚的酸性·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "盐",
+        "酸式盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H5ONa + CO2 + H2O = C6H5OH + NaHCO3",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯酚与溴的取代反应",
+      "description": "苯酚与溴水发生取代反应生成2,4,6-三溴苯酚白色沉淀和溴化氢；反应灵敏，可用于苯酚的定性检验和定量测定",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数为3，产物有沉淀符号",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第二节 醇酚",
+          "context": "实验3-5（苯酚与溴反应·图式方程）"
+        },
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第二节 醇酚",
+          "context": "练习与应用（第9题）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "取代反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H5OH + 3Br2 = C6H2Br3OH↓ + 3HBr",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙醛的催化加氢",
+      "description": "乙醛蒸气和氢气的混合气体通过热的镍催化剂发生催化加氢反应（还原反应）得到乙醇",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，催化加成",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第三节 醛酮",
+          "context": "正文（乙醛的加成反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "加成反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CHO + H2 = CH3CH2OH",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙醛的银镜反应",
+      "description": "乙醛与银氨溶液（氢氧化二氨合银）在水浴加热下反应生成乙酸铵、银、氨和水，银附着在试管壁上形成银镜，常用于检验醛基",
+      "difficulty": "较难",
+      "difficultyReason": "物质5种，系数为2和3，银氨溶液配制与水浴条件",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第三节 醛酮",
+          "context": "实验3-7（乙醛的银镜反应）"
+        },
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第三节 醛酮",
+          "context": "练习与应用（第2题选项C）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "混合物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CHO + 2Ag(NH3)2OH = CH3COONH4 + 2Ag↓ + 3NH3 + H2O",
+          "conditions": [
+            "水浴加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙醛与新制氢氧化铜的反应",
+      "description": "新制的氢氧化铜是弱氧化剂，与乙醛在加热条件下反应生成乙酸铜盐（乙酸钠）、砖红色氧化亚铜沉淀和水，可用于检验醛基",
+      "difficulty": "较难",
+      "difficultyReason": "物质5种，系数为2和3，新制氢氧化铜与沉淀符号",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第三节 醛酮",
+          "context": "实验3-8（乙醛与氢氧化铜反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CHO + 2Cu(OH)2 + NaOH = CH3COONa + Cu2O↓ + 3H2O",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙醛与氰化氢的加成反应",
+      "description": "乙醛与氰化氢发生加成反应生成2-羟基丙腈；带负电荷的原子团连接在碳原子上、带正电荷的氢原子连接在氧原子上",
+      "difficulty": "中等",
+      "difficultyReason": "极性试剂对羰基的加成方向判断",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第三节 醛酮",
+          "context": "正文（与HCN加成·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CHO + HCN = CH3CH(OH)CN",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "丙酮的催化加氢",
+      "description": "丙酮在催化剂存在和加热条件下发生催化加氢反应生成2-丙醇；酮不能被银氨溶液等弱氧化剂氧化",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，催化加成",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第三节 醛酮",
+          "context": "正文（酮）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "加成反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3COCH3 + H2 = CH3CH(OH)CH3",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯甲醛与乙醛的羟醛缩合",
+      "description": "苯甲醛与乙醛在NaOH溶液和加热条件下反应生成肉桂醛（苯丙烯醛）和水；工业上以此制备食用香料肉桂醛",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，双分子缩合机理（加成+消去），新类型反应",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第三节 醛酮",
+          "context": "练习与应用（第9题·肉桂醛制备）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱"
+      ],
+      "reactionTypes": [
+        "其他"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H5CHO + CH3CHO = C6H5CH=CHCHO + H2O",
+          "conditions": [
+            "NaOH溶液",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙醛的羟醛加成（羟醛缩合第一步）",
+      "description": "含α-H的醛在催化剂作用下发生加成反应生成β-羟基醛（3-羟基丁醛）；羟醛缩合是常用的增长碳链方法",
+      "difficulty": "较难",
+      "difficultyReason": "两分子醛加成、α-H 活性、碳链增长",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第五节 有机合成",
+          "context": "资料卡片（构建碳骨架·羟醛缩合）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH3CHO = CH3CH(OH)CH2CHO",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "3-羟基丁醛的消去（羟醛缩合第二步）",
+      "description": "β-羟基醛易失水发生消去反应，得到α,β-不饱和醛（丁烯醛）和水",
+      "difficulty": "较难",
+      "difficultyReason": "消去生成共轭双键醛，两步机理第二步",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第五节 有机合成",
+          "context": "资料卡片（构建碳骨架·羟醛缩合）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "消去反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CH(OH)CH2CHO = CH3CH=CHCHO + H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙酸与乙醇的酯化反应（结构简式）",
+      "description": "乙酸与乙醇在浓硫酸催化和加热条件下发生酯化反应生成乙酸乙酯和水；同位素示踪证实乙酸脱羟基、乙醇脱氢；实验活动1「乙酸乙酯的制备与性质」亦涉及此反应",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应、浓硫酸催化加热、示踪法脱水方式",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第四节 羧酸 羧酸衍生物",
+          "context": "正文（酯化反应）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "正文（缩合聚合反应引入）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "酯化反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3COOH + CH3CH2OH ⇌ CH3COOC2H5 + H2O",
+          "conditions": [
+            "浓硫酸",
+            "加热"
+          ],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙酸乙酯的酸性水解",
+      "description": "在稀硫酸催化和加热条件下，乙酸乙酯水解生成乙酸和乙醇；该水解是酯化反应的逆反应（可逆反应）；实验活动1 比较不同条件下水解速率",
+      "difficulty": "中等",
+      "difficultyReason": "可逆水解、酸催化条件对比",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第四节 羧酸 羧酸衍生物",
+          "context": "正文（乙酸乙酯的水解）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3COOC2H5 + H2O ⇌ CH3COOH + CH3CH2OH",
+          "conditions": [
+            "稀硫酸",
+            "加热"
+          ],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙酸乙酯的碱性水解（皂化型）",
+      "description": "在氢氧化钠存在和加热条件下，乙酸乙酯水解生成乙酸钠和乙醇；由于生成乙酸盐，该水解不可逆；实验活动1 比较不同条件下水解速率",
+      "difficulty": "中等",
+      "difficultyReason": "碱性水解产物为盐，不可逆",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第四节 羧酸 羧酸衍生物",
+          "context": "正文（乙酸乙酯的水解）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "水解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3COOC2H5 + NaOH = CH3COONa + CH3CH2OH",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "硬脂酸甘油酯的皂化反应",
+      "description": "油脂在碱性溶液（氢氧化钠或氢氧化钾）中水解生成甘油和高级脂肪酸盐（硬脂酸钠），高级脂肪酸盐用于生产肥皂，故称皂化反应",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，系数为3，三元酯水解产物复杂",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第四节 羧酸 羧酸衍生物",
+          "context": "正文（油脂的水解·图式方程）"
+        },
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第四节 羧酸 羧酸衍生物",
+          "context": "研究与实践（自制肥皂）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "水解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C3H5(OCOC17H35)3 + 3NaOH = C3H5(OH)3 + 3C17H35COONa",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "油酸甘油酯的氢化（油脂的硬化）",
+      "description": "油酸甘油酯通过催化加氢转变为硬脂酸甘油酯（硬化油），油脂的氢化可提高饱和度，便于储存运输",
+      "difficulty": "较难",
+      "difficultyReason": "物质2种，系数为3，三元酯催化加氢",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第四节 羧酸 羧酸衍生物",
+          "context": "正文（油脂的氢化·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C3H5(OCOC17H33)3 + 3H2 = C3H5(OCOC17H35)3",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯胺与盐酸的反应",
+      "description": "胺类化合物具有碱性，苯胺与盐酸反应生成可溶于水的苯胺盐酸盐",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，酸碱成盐",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第四节 羧酸 羧酸衍生物",
+          "context": "正文（胺·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H5NH2 + HCl = C6H5NH2·HCl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙酰胺的酸性水解",
+      "description": "酰胺在酸存在并加热条件下发生水解反应；以乙酰胺为例，与水和盐酸共热生成乙酸和氯化铵",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，酰胺键水解，教材以R通式给出、此处以乙酰胺实例化",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第四节 羧酸 羧酸衍生物",
+          "context": "正文（酰胺的水解）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "水解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CONH2 + H2O + HCl = CH3COOH + NH4Cl",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙酰胺的碱性水解",
+      "description": "乙酰胺在氢氧化钠存在并加热条件下水解生成乙酸钠和氨气；教材以R通式给出，此处以乙酰胺实例化",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，碱性水解逸出氨气",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第四节 羧酸 羧酸衍生物",
+          "context": "正文（酰胺的水解）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "水解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH3CONH2 + NaOH = CH3COONa + NH3↑",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "丙烯与氯气的高温取代（制3-氯丙烯）",
+      "description": "丙烯与氯气在500℃发生α-氢取代反应生成3-氯丙烯和氯化氢；这是制备氯丁橡胶原料2-氯-1,3-丁二烯路线中的提示反应",
+      "difficulty": "较难",
+      "difficultyReason": "500℃高温取代与加成的竞争判断",
+      "textbooks": [
+        {
+          "chapter": "第三章 烃的衍生物",
+          "section": "第五节 有机合成",
+          "context": "复习与提高（第14题提示）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "取代反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2=CHCH3 + Cl2 = CH2=CHCH2Cl + HCl",
+          "conditions": [
+            "500℃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "淀粉与纤维素的水解",
+      "description": "淀粉在酸或酶作用下水解最终生成葡萄糖；纤维素水解最终也生成葡萄糖（二者分子式相同、结构不同）",
+      "difficulty": "中等",
+      "difficultyReason": "聚合度 n 记法，多糖水解逐步进行",
+      "textbooks": [
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第一节 糖类",
+          "context": "正文（淀粉）"
+        },
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第一节 糖类",
+          "context": "正文（纤维素）"
+        },
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第一节 糖类",
+          "context": "实验活动3（糖类的性质·淀粉水解检验）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "水解反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "(C6H10O5)n + nH2O = nC6H12O6",
+          "conditions": [
+            "酸或酶"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "葡萄糖的银镜反应",
+      "description": "葡萄糖是还原糖，分子中含有醛基，与银氨溶液在水浴加热下反应生成葡萄糖酸铵、银（银镜）、氨和水",
+      "difficulty": "较难",
+      "difficultyReason": "物质5种，系数为2和3，结构简式长",
+      "textbooks": [
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第一节 糖类",
+          "context": "实验4-1（葡萄糖的还原性）"
+        },
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第一节 糖类",
+          "context": "实验活动3（糖类的性质·葡萄糖）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "混合物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2OH(CHOH)4CHO + 2Ag(NH3)2OH = CH2OH(CHOH)4COONH4 + 2Ag↓ + 3NH3 + H2O",
+          "conditions": [
+            "水浴加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "葡萄糖与新制氢氧化铜的反应",
+      "description": "葡萄糖与新制的氢氧化铜在加热条件下反应生成葡萄糖酸、砖红色氧化亚铜沉淀和水，说明葡萄糖具有还原性（可用于检验）",
+      "difficulty": "较难",
+      "difficultyReason": "物质4种，结构简式长，沉淀符号",
+      "textbooks": [
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第一节 糖类",
+          "context": "实验4-1（葡萄糖的还原性）"
+        },
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第一节 糖类",
+          "context": "实验活动3（糖类的性质·葡萄糖）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH2OH(CHOH)4CHO + 2Cu(OH)2 = CH2OH(CHOH)4COOH + Cu2O↓ + 2H2O",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "甘氨酸与盐酸的反应",
+      "description": "氨基酸是两性化合物，甘氨酸分子中的氨基与盐酸反应生成甘氨酸盐酸盐",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，系数均为1，两性成盐",
+      "textbooks": [
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第二节 蛋白质",
+          "context": "正文（氨基酸的两性·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NH2CH2COOH + HCl = NH2CH2COOH·HCl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "甘氨酸与氢氧化钠的反应",
+      "description": "甘氨酸分子中的羧基与氢氧化钠反应生成甘氨酸钠和水，体现氨基酸的酸性",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，两性中和",
+      "textbooks": [
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第二节 蛋白质",
+          "context": "正文（氨基酸的两性·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "中和反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NH2CH2COOH + NaOH = NH2CH2COONa + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "甘氨酸的成肽反应",
+      "description": "两个甘氨酸分子通过氨基与羧基间缩合脱去水，形成含有肽键的二肽（甘氨酰甘氨酸）和水",
+      "difficulty": "较难",
+      "difficultyReason": "肽键形成、二肽结构简式书写",
+      "textbooks": [
+        {
+          "chapter": "第四章 生物大分子",
+          "section": "第二节 蛋白质",
+          "context": "正文（成肽反应·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NH2CH2COOH = NH2CH2CONHCH2COOH + H2O",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙烯的加聚反应（聚乙烯）",
+      "description": "乙烯在引发剂或催化剂作用下发生加聚反应生成聚乙烯；高压法得低密度聚乙烯（支链多），低压法得高密度聚乙烯（支链少）",
+      "difficulty": "中等",
+      "difficultyReason": "聚合度 n 记法，单体—链节—聚合度概念",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "正文（聚乙烯）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "正文（加成聚合反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCH2=CH2 = [CH2-CH2]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "丙烯的加聚反应（聚丙烯）",
+      "description": "丙烯在一定条件下发生加聚反应生成聚丙烯（可制塑料包扎绳等丙纶制品）",
+      "difficulty": "中等",
+      "difficultyReason": "链节带甲基支链的书写",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "思考与讨论（丙烯加聚）"
+        },
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "练习与应用（第5题·聚丙烯包扎绳）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第1题·丙烯单体）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCH3CH=CH2 = [CH2-CH(CH3)]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "丙烯腈的加聚反应（聚丙烯腈）",
+      "description": "丙烯腈加聚生成聚丙烯腈，可用于生产腈纶（人造羊毛）；可由乙炔与HCN加成制得丙烯腈",
+      "difficulty": "中等",
+      "difficultyReason": "链节带氰基支链的书写",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第二节 烯烃 炔烃",
+          "context": "复习与提高（第10题·合成聚丙烯腈）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第1题·丙烯腈单体）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCH2=CHCN = [CH2-CH(CN)]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯乙烯的加聚反应（聚苯乙烯）",
+      "description": "苯乙烯发生加聚反应生成聚苯乙烯，具有优良的绝热绝缘性能，可用作包装材料和建筑材料",
+      "difficulty": "较难",
+      "difficultyReason": "链节带苯环支链的书写",
+      "textbooks": [
+        {
+          "chapter": "第二章 烃",
+          "section": "第三节 芳香烃",
+          "context": "复习与提高（第11题·高分子D）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "正文（塑料·聚苯乙烯）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nC6H5CH=CH2 = [CH2-CH(C6H5)]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乙酸乙烯酯的加聚反应",
+      "description": "乙酸乙烯酯加聚生成聚乙酸乙烯酯，其链节含酯基侧基",
+      "difficulty": "较难",
+      "difficultyReason": "链节带酯基支链的书写，单体双键位置在侧链",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第1题·乙酸乙烯酯单体）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCH3COOCH=CH2 = [CH2-CH(OCOCH3)]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "己二酸与乙二醇的缩聚反应（聚己二酸乙二酯）",
+      "description": "己二酸与乙二醇在酸催化下发生酯化缩聚，生成链状聚酯（聚己二酸乙二酯）和水；缩聚反应伴有小分子副产物生成",
+      "difficulty": "较难",
+      "difficultyReason": "两种单体缩聚、链节含两个酯基、副产物水",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "正文（缩合聚合反应·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应",
+        "酯化反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nHOOC(CH2)4COOH + nHOCH2CH2OH = [CO(CH2)4COOCH2CH2O]n + (2n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "6-羟基己酸的自缩聚",
+      "description": "由一种单体（同时含羧基和羟基）进行缩聚反应生成聚酯（聚-6-羟基己酸酯）和水；副产物按教材单一单体缩聚规则写为 (n-1)H2O（链节未标端基，系统按组比较识别端基差并提示）",
+      "difficulty": "较难",
+      "difficultyReason": "单体内官能团自缩聚、副产物系数规则",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "正文（缩聚副产物规则·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应",
+        "酯化反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nHO(CH2)5COOH = [O(CH2)5CO]n + (n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "对苯二甲酸与1,4-丁二醇的缩聚反应",
+      "description": "对苯二甲酸与1,4-丁二醇发生缩聚反应生成聚对苯二甲酸丁二酯和水；教材以两种单体缩聚说明副产物规则，按规则写为 (2n-1)H2O",
+      "difficulty": "较难",
+      "difficultyReason": "芳香族二元酸缩聚、链节含苯环",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "正文（缩聚副产物规则·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应",
+        "酯化反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nHOOCC6H4COOH + nHO(CH2)4OH = [O(CH2)4OCOC6H4CO]n + (2n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "乳酸的自缩聚（聚乳酸）",
+      "description": "乳酸（2-羟基丙酸）发生自缩聚生成聚乳酸和水；聚乳酸是可生物降解的高分子，可用于手术缝合线、可降解餐具等",
+      "difficulty": "较难",
+      "difficultyReason": "羟基酸自缩聚、链节含甲基",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第3题·乳酸）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "科学·技术·社会（可降解高分子·聚乳酸）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应",
+        "酯化反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCH3CH(OH)COOH = [OCH(CH3)CO]n + (n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "戊二酸与1,3-丙二醇的缩聚反应",
+      "description": "戊二酸与1,3-丙二醇发生缩聚反应生成聚酯和水",
+      "difficulty": "较难",
+      "difficultyReason": "两种单体缩聚、链节书写",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第1题·戊二酸与1,3-丙二醇）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应",
+        "酯化反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nHOOC(CH2)3COOH + nHOCH2CH2CH2OH = [O(CH2)3OCO(CH2)3CO]n + (2n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "5-羟基戊酸的自缩聚",
+      "description": "5-羟基戊酸发生自缩聚生成聚酯（含侧链无、主链酯键的聚-5-羟基戊酸酯）和水",
+      "difficulty": "较难",
+      "difficultyReason": "羟基酸自缩聚、链节书写",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第1题·5-羟基戊酸单体）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应",
+        "酯化反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nHO(CH2)4COOH = [O(CH2)4CO]n + (n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "苯酚与甲醛的加成（羟甲基化）",
+      "description": "酸催化下等物质的量的苯酚与甲醛反应，苯酚邻位或对位的氢原子与甲醛羰基加成生成羟甲基苯酚，是酚醛树脂形成的第一步",
+      "difficulty": "较难",
+      "difficultyReason": "酚醛树脂机理第一步、羟甲基苯酚结构",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "实验5-1（酸催化·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加成反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H5OH + HCHO = HOC6H4CH2OH",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "酚醛树脂的缩聚（线型结构）",
+      "description": "羟甲基苯酚之间相互脱水缩合成线型结构酚醛树脂和水；酸催化得线型结构，碱催化（过量甲醛）得网状结构，网状高分子受热不熔融（热固性）",
+      "difficulty": "较难",
+      "difficultyReason": "缩聚链节含酚羟基、线型/网状结构判断",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "实验5-1（酸催化·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nHOC6H4CH2OH = [C6H3(OH)CH2]n + (n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "对苯二甲酸与乙二醇的缩聚反应（涤纶）",
+      "description": "涤纶（聚对苯二甲酸乙二酯纤维）由对苯二甲酸与乙二醇在催化剂作用下缩聚制得；强度大、耐磨、易洗快干，应用广泛",
+      "difficulty": "较难",
+      "difficultyReason": "芳香族二元酸与二元醇缩聚、链节含苯环与两个酯基",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "正文（聚酯纤维·图式方程）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第2题③·涤纶结构）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应",
+        "酯化反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nHOOCC6H4COOH + nHOCH2CH2OH = [OCH2CH2OCOC6H4CO]n + (2n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "己二胺与己二酸的缩聚反应（尼龙66）",
+      "description": "锦纶66（聚己二酰己二胺）由己二胺与己二酸缩聚制得，两个6分别代表二胺和二酸分子的碳原子数；耐磨性和强度优异",
+      "difficulty": "较难",
+      "difficultyReason": "二元胺与二元酸缩聚、链节含肽键（酰胺键）",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "正文（聚酰胺纤维·图式方程）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第2题④·尼龙66结构）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nH2N(CH2)6NH2 + nHOOC(CH2)4COOH = [NH(CH2)6NHOC(CH2)4CO]n + (2n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "对苯二胺与对苯二甲酸的缩聚反应（芳纶1414）",
+      "description": "芳纶1414（聚对苯二甲酰对苯二胺纤维）由对苯二胺与对苯二甲酸缩聚制得；强度高、密度低、耐高温，可制防弹装甲、消防服",
+      "difficulty": "较难",
+      "difficultyReason": "芳香族单体缩聚、链节含两个苯环",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "科学·技术·社会（高强度芳纶纤维·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "缩聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nH2NC6H4NH2 + nHOOCC6H4COOH = [NHC6H4NHCOC6H4CO]n + (2n-1)H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "1,3-丁二烯的加聚反应（顺丁橡胶）",
+      "description": "顺丁橡胶以1,3-丁二烯为原料，在催化剂作用下发生加聚反应得到以顺式结构为主的聚丁二烯；硫化后线型结构连接为网状结构",
+      "difficulty": "较难",
+      "difficultyReason": "共轭二烯烃1,4-加聚、链节保留双键",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "正文（合成橡胶·图式方程）"
+        },
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第一节 合成高分子的基本方法",
+          "context": "练习与应用（第1题·1,3-丁二烯单体）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCH2=CHCH=CH2 = [CH2CH=CHCH2]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    },
+    {
+      "name": "异戊二烯的加聚反应（天然橡胶）",
+      "description": "天然橡胶是异戊二烯（2-甲基-1,3-丁二烯）的聚合物，具有顺式结构（顺式聚异戊二烯）；硫化后转变成网状结构，强度与弹性增大",
+      "difficulty": "较难",
+      "difficultyReason": "链节带甲基且保留双键、顺反结构",
+      "textbooks": [
+        {
+          "chapter": "第五章 合成高分子",
+          "section": "第二节 高分子材料",
+          "context": "正文（天然橡胶·图式方程）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "加聚反应"
+      ],
+      "knowledgeModules": [
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "nCH2=C(CH3)CH=CH2 = [CH2C(CH3)=CHCH2]n",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修3"
+    }
+  ],
+  "excluded": [
+    {
+      "raw": "O3 --紫外线--> O2 + O·（及氟利昂自由基链式 CCl3F→CCl2F·+Cl·、Cl·+O3→O2+ClO·、ClO·+O·→Cl·+O2）",
+      "location": "第三章 第一节 卤代烃·科学·技术·社会（臭氧层的保护）",
+      "reason": "自由基机理示意式（含 O·/Cl· 记法），非完整化学方程式，无法机器解析"
+    },
+    {
+      "raw": "CH3CH=C(CH3)2 --KMnO4/H+--> CH3COOH + CH3COCH3",
+      "location": "第二章 第二节 烯烃 炔烃·练习与应用（第6题）",
+      "reason": "氧化剂作条件的转化式（KMnO4/H+ 为试剂条件），不写氧化剂则氧原子不守恒"
+    },
+    {
+      "raw": "苯环侧链R --KMnO4/H+--> 苯甲酸（R 通式）",
+      "location": "第二章 第三节 芳香烃·练习与应用（第11题）",
+      "reason": "R 通式 + 氧化剂条件式，无法机器解析"
+    },
+    {
+      "raw": "R'C(R'')=CH-R --KMnO4/H+--> R'C(R'')=O + RCOOH；RC≡CH→RCOOH；苯环R侧链→COOH",
+      "location": "第三章 第五节 有机合成·正文（氧化缩短碳链）",
+      "reason": "R/R'/R'' 通式转化式"
+    },
+    {
+      "raw": "CH2=CHCH3 + 3O? 乙烯→环氧乙烷→乙二醇 路线（CH2=CH2 --O2/催化剂--> 环氧乙烷 --H2O/加压--> 乙二醇）",
+      "location": "第三章 第五节 有机合成·思考与讨论",
+      "reason": "环氧乙烷为环状结构，无法用一行式无歧义表达（其组成式与乙醛同）"
+    },
+    {
+      "raw": "CH≡CH --HCN/催化剂--> CH2=CHCN --H2O,H+/Δ--> CH2=CHCOOH（第二步）",
+      "location": "第三章 第五节 有机合成·资料卡片（构建碳骨架）",
+      "reason": "第二步腈水解仅给转化式（未给计量关系，完整式需引入2H2O与NH3为推测）"
+    },
+    {
+      "raw": "C2H5 + CH3^COOH --Δ--> C6H5^COOH（疑似 Diels-Alder 环加成示例）",
+      "location": "第三章 第五节 有机合成·资料卡片（Diels-Alder 反应）",
+      "reason": "LaTeX 源损坏无法复原原文（疑似共轭二烯烃与丙烯酸环加成）"
+    },
+    {
+      "raw": "R-CH2-COOH --Cl2/催化剂--> R-CHCl-COOH",
+      "location": "第三章 第五节 有机合成·复习与提高（第17题已知）；第五章 复习与提高",
+      "reason": "R 通式（α-卤代羧酸通式），无法机器解析"
+    },
+    {
+      "raw": "R-ONa + R'-Cl --Δ--> R-O-R'",
+      "location": "第三章 第五节 有机合成·复习与提高（第17题已知）",
+      "reason": "R/R' 通式（Williamson 醚合成通式）"
+    },
+    {
+      "raw": "蛋白质 + 水 --酸/碱/酶--> 氨基酸（文字叙述）",
+      "location": "第四章 第二节 蛋白质·正文（水解）",
+      "reason": "教材仅文字叙述，无明确化学方程式（蛋白质为复杂混合大分子）"
+    },
+    {
+      "raw": "戊糖+碱基⇌核苷、核苷+磷酸⇌核苷酸、核苷酸缩合聚合⇌核酸",
+      "location": "第四章 第三节 核酸·正文",
+      "reason": "结构示意转化图，非化学方程式"
+    },
+    {
+      "raw": "尿素 + 甲醛 → 脲醛树脂（线型聚合物）",
+      "location": "第五章 第二节 高分子材料·思考与讨论",
+      "reason": "教材要求学生书写、未给出参考方程；线型脲醛链式写法多样（—NHCONHCH2—），系数规则存在 n-1 歧义"
+    },
+    {
+      "raw": "CH2=CH2 + O2 --催化剂--> 环氧乙烷（图式）",
+      "location": "第三章 第五节 有机合成·思考与讨论",
+      "reason": "环氧乙烷环状结构无法用一行式无歧义表达"
+    },
+    {
+      "raw": "甲苯 + Cl2 --光照--> 多种氯代产物（思考与讨论）",
+      "location": "第二章 第三节 芳香烃·思考与讨论",
+      "reason": "教材要求学生书写可能产物、未给完整方程"
+    },
+    {
+      "raw": "1-丁炔 + 2H2 --催化剂--> 丁烷（思考与讨论）",
+      "location": "第二章 第二节 烯烃 炔烃·思考与讨论",
+      "reason": "练习要求学生书写，正文未印出（乙炔加氢已收录同类反应）"
+    },
+    {
+      "raw": "丙醛与银氨溶液/新制Cu(OH)2/H2/HCN 反应（练习第7题）",
+      "location": "第三章 第三节 醛酮·练习与应用（第7题）",
+      "reason": "练习要求学生书写、未给参考答案（与乙醛系列同型）"
+    },
+    {
+      "raw": "乙醛 + Br2 + H2O → 乙酸 + HBr（练习第8题）",
+      "location": "第三章 第三节 醛酮·练习与应用（第8题）",
+      "reason": "练习要求学生尝试书写、未给参考方程"
+    },
+    {
+      "raw": "阿司匹林（乙酰水杨酸）水解",
+      "location": "实验活动2（官能团检验）",
+      "reason": "教材仅叙述水解性质，未给化学方程式"
+    },
+    {
+      "raw": "2,4,6-三羟甲基苯酚等结构简式（非方程式）",
+      "location": "第五章 第二节 高分子材料·正文（酚醛树脂）",
+      "reason": "物质结构简式，非化学方程式"
+    },
+    {
+      "raw": "高吸水性树脂/高分子分离膜等示意",
+      "location": "第五章 第二节 高分子材料·功能高分子材料",
+      "reason": "无具体化学方程式（示意与文字叙述）"
+    },
+    {
+      "raw": "氟他胺、1,4-环己二醇、正丁醇、三硝酸甘油酯等多步合成路线框图",
+      "location": "第三章 第五节 有机合成·练习与复习与提高（第3、6、7、14题）",
+      "reason": "合成路线框图题（任务范围明确不含）"
+    },
+    {
+      "raw": "乙烯制乙酸路线设计（思考与讨论）",
+      "location": "第三章 第五节 有机合成·思考与讨论",
+      "reason": "路线设计题，未给具体方程（直接氧化工艺未给计量）"
+    }
+  ]
+}

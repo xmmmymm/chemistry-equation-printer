@@ -1,0 +1,1587 @@
+[
+  {
+    "id": "R0001",
+    "name": "磷在氧气中燃烧",
+    "equation": "4P + 5O2 = 2P2O5（条件：点燃）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "high",
+    "note": "提示词示例：氧化还原分析语境"
+  },
+  {
+    "id": "R0005",
+    "name": "氧化汞受热分解",
+    "equation": "2HgO = 2Hg + O2↑（条件：△）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "Hg +2→0、O -2→0，氧化还原判断"
+  },
+  {
+    "id": "R0006",
+    "name": "高锰酸钾受热分解",
+    "equation": "2KMnO4 = K2MnO4 + MnO2 + O2↑（条件：△）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "Mn 化合价 +7→+6/+4、O -2→0，氧化还原判断练习"
+  },
+  {
+    "id": "R0007",
+    "name": "过氧化氢的分解",
+    "equation": "2H2O2 = 2H2O + O2↑（条件：催化剂）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "H2O2 歧化（-1→-2、-1→0）"
+  },
+  {
+    "id": "R0009",
+    "name": "氢气的燃烧",
+    "equation": "2H2 + O2 = 2H2O（条件：点燃）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "H2 燃烧：氧化还原概念引入例"
+  },
+  {
+    "id": "R0010",
+    "name": "铁与水蒸气的反应",
+    "equation": "3Fe + 4H2O = Fe3O4 + 4H2（条件：高温）",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "实验活动7",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第二节 化学反应的速率与限度",
+    "confidence": "low",
+    "note": "实验活动7 归速率节（同批 R0186 硫代硫酸钠为速率经典），但铁与水蒸气与速率主题关联弱"
+  },
+  {
+    "id": "R0011",
+    "name": "镁的燃烧",
+    "equation": "2Mg + O2 = 2MgO（条件：点燃）",
+    "book": "选择性必修1",
+    "chapter": "第一章 化学反应的热效应",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 反应热",
+      "第二节 反应热的计算"
+    ],
+    "assignedSection": "第一节 反应热",
+    "confidence": "medium",
+    "note": "镁燃烧=放热反应典型实例（无 ΔH 数据，概念题）"
+  },
+  {
+    "id": "R0014",
+    "name": "铁与硫酸铜溶液的反应",
+    "equation": "Fe + CuSO4 = FeSO4 + Cu",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "Fe + Cu^2+ 离子方程式书写"
+  },
+  {
+    "id": "R0014",
+    "name": "铁与硫酸铜溶液的反应",
+    "equation": "Fe + CuSO4 = FeSO4 + Cu",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "章末综合：置换/电子转移分析"
+  },
+  {
+    "id": "R0015",
+    "name": "碳酸钠与盐酸的反应",
+    "equation": "Na2CO3 + 2HCl = 2NaCl + H2O + CO2↑",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "CO3^2- + 2H+ 离子方程式书写练习"
+  },
+  {
+    "id": "R0015",
+    "name": "碳酸钠与盐酸的反应",
+    "equation": "Na2CO3 + 2HCl = 2NaCl + H2O + CO2↑",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "练习与应用",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第一节 钠及其化合物",
+    "confidence": "medium",
+    "note": "碳酸钠性质（与酸反应）"
+  },
+  {
+    "id": "R0015",
+    "name": "碳酸钠与盐酸的反应",
+    "equation": "Na2CO3 + 2HCl = 2NaCl + H2O + CO2↑",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第一节 钠及其化合物",
+    "confidence": "medium",
+    "note": "同上，章末复习"
+  },
+  {
+    "id": "R0015",
+    "name": "碳酸钠与盐酸的反应",
+    "equation": "Na2CO3 + 2HCl = 2NaCl + H2O + CO2↑",
+    "book": "必修第一册",
+    "chapter": "第四章 物质结构 元素周期律",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 原子结构与元素周期表",
+      "第二节 元素周期律"
+    ],
+    "assignedSection": "第一节 原子结构与元素周期表",
+    "confidence": "low",
+    "note": "与第四章主题无直接关联，综合复习题，按规则归章首节"
+  },
+  {
+    "id": "R0016",
+    "name": "甲烷的燃烧",
+    "equation": "CH4 + 2O2 = CO2 + 2H2O（条件：点燃）",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第一节 化学反应与能量变化",
+    "confidence": "high",
+    "note": "化石燃料燃烧=放热反应实例"
+  },
+  {
+    "id": "R0017",
+    "name": "乙醇的燃烧",
+    "equation": "C2H5OH + 3O2 = 2CO2 + 3H2O（条件：点燃）",
+    "book": "选择性必修1",
+    "chapter": "第一章 化学反应的热效应",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 反应热",
+      "第二节 反应热的计算"
+    ],
+    "assignedSection": "第一节 反应热",
+    "confidence": "medium",
+    "note": "乙醇燃烧热/热化学方程式"
+  },
+  {
+    "id": "R0017",
+    "name": "乙醇的燃烧",
+    "equation": "C2H5OH + 3O2 = 2CO2 + 3H2O（条件：点燃）",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第一节 化学反应与能量变化",
+    "confidence": "high",
+    "note": "燃烧放热实例"
+  },
+  {
+    "id": "R0018",
+    "name": "丙烷的燃烧",
+    "equation": "C3H8 + 5O2 = 3CO2 + 4H2O（条件：点燃）",
+    "book": "选择性必修1",
+    "chapter": "第一章 化学反应的热效应",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 反应热",
+      "第二节 反应热的计算"
+    ],
+    "assignedSection": "第一节 反应热",
+    "confidence": "medium",
+    "note": "丙烷燃烧热标准数据"
+  },
+  {
+    "id": "R0019",
+    "name": "一氧化碳的燃烧",
+    "equation": "2CO + O2 = 2CO2（条件：点燃）",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第一节 化学反应与能量变化",
+    "confidence": "high",
+    "note": "CO 燃烧放热"
+  },
+  {
+    "id": "R0020",
+    "name": "碳的不充分燃烧",
+    "equation": "2C + O2 = 2CO（条件：点燃）",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第一节 化学反应与能量变化",
+    "confidence": "high",
+    "note": "碳燃烧放热"
+  },
+  {
+    "id": "R0027",
+    "name": "碳酸钙高温分解",
+    "equation": "CaCO3 = CaO + CO2↑（条件：高温）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第一节 物质的分类及转化",
+    "confidence": "medium",
+    "note": "碳酸盐→氧化物，钙三角物质转化经典"
+  },
+  {
+    "id": "R0027",
+    "name": "碳酸钙高温分解",
+    "equation": "CaCO3 = CaO + CO2↑（条件：高温）",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第一节 化学反应与能量变化",
+    "confidence": "medium",
+    "note": "高温分解=吸热反应实例"
+  },
+  {
+    "id": "R0030",
+    "name": "实验室制取二氧化碳",
+    "equation": "CaCO3 + 2HCl = CaCl2 + CO2↑ + H2O",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "CaCO3 不拆、CO2↑ 气体，经典离子方程式"
+  },
+  {
+    "id": "R0030",
+    "name": "实验室制取二氧化碳",
+    "equation": "CaCO3 + 2HCl = CaCl2 + CO2↑ + H2O",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第一节 钠及其化合物",
+    "confidence": "low",
+    "note": "与钠/氯主题无直接关联，按规则归章首节"
+  },
+  {
+    "id": "R0032",
+    "name": "氯酸钾的分解",
+    "equation": "2KClO3 = 2KCl + 3O2↑（条件：催化剂、△）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "Cl +5→-1、O -2→0"
+  },
+  {
+    "id": "R0037",
+    "name": "钨的冶炼",
+    "equation": "WO3 + 3H2 = W + 3H2O（条件：高温）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "H2 还原 WO3 冶钨"
+  },
+  {
+    "id": "R0038",
+    "name": "一氧化碳还原氧化铁",
+    "equation": "Fe2O3 + 3CO = 2Fe + 3CO2（条件：高温）",
+    "book": "必修第二册",
+    "chapter": "第八章 化学与可持续发展",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 自然资源的开发利用",
+      "第二节 化学品的合理使用",
+      "第三节 环境保护与绿色化学"
+    ],
+    "assignedSection": "第一节 自然资源的开发利用",
+    "confidence": "high",
+    "note": "提示词示例：铁的冶炼"
+  },
+  {
+    "id": "R0043",
+    "name": "锌与稀盐酸的反应",
+    "equation": "Zn + 2HCl = ZnCl2 + H2↑",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "Zn + 2H+ = Zn^2+ + H2↑ 离子方程式书写；也可能是第三节氧化还原"
+  },
+  {
+    "id": "R0044",
+    "name": "铁与稀盐酸的反应",
+    "equation": "Fe + 2HCl = FeCl2 + H2↑",
+    "book": "必修第一册",
+    "chapter": "第三章 铁 金属材料",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 铁及其化合物",
+      "第二节 金属材料"
+    ],
+    "assignedSection": "第一节 铁及其化合物",
+    "confidence": "high",
+    "note": "铁与盐酸反应，铁的化学性质"
+  },
+  {
+    "id": "R0045",
+    "name": "铁与稀硫酸的反应",
+    "equation": "Fe + H2SO4 = FeSO4 + H2↑",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "Fe + 2H+ 离子方程式；也可能是第三节氧化还原"
+  },
+  {
+    "id": "R0059",
+    "name": "氢氧化钠与二氧化碳的反应",
+    "equation": "2NaOH + CO2 = Na2CO3 + H2O",
+    "book": "必修第一册",
+    "chapter": "第三章 铁 金属材料",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 铁及其化合物",
+      "第二节 金属材料"
+    ],
+    "assignedSection": "第一节 铁及其化合物",
+    "confidence": "low",
+    "note": "NaOH+CO2 与铁主题无直接关联，按规则归章首节"
+  },
+  {
+    "id": "R0066",
+    "name": "盐酸与碳酸氢钠的反应",
+    "equation": "NaHCO3 + HCl = NaCl + CO2↑ + H2O",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "HCO3- 不拆经典"
+  },
+  {
+    "id": "R0066",
+    "name": "盐酸与碳酸氢钠的反应",
+    "equation": "NaHCO3 + HCl = NaCl + CO2↑ + H2O",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "练习与应用",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第一节 钠及其化合物",
+    "confidence": "high",
+    "note": "NaHCO3 性质（2.1 碳酸钠与碳酸氢钠）"
+  },
+  {
+    "id": "R0067",
+    "name": "碳酸钠与氢氧化钙的反应",
+    "equation": "Na2CO3 + Ca(OH)2 = CaCO3↓ + 2NaOH",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "Ca^2+ + CO3^2- 沉淀型离子方程式"
+  },
+  {
+    "id": "R0067",
+    "name": "碳酸钠与氢氧化钙的反应",
+    "equation": "Na2CO3 + Ca(OH)2 = CaCO3↓ + 2NaOH",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "练习与应用",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第一节 钠及其化合物",
+    "confidence": "medium",
+    "note": "纯碱+石灰水（苛化法制烧碱）"
+  },
+  {
+    "id": "R0074",
+    "name": "葡萄糖的缓慢氧化",
+    "equation": "C6H12O6 + 6O2 = 6CO2 + 6H2O（条件：催化剂）",
+    "book": "选择性必修1",
+    "chapter": "第四章 化学反应与电能",
+    "column": "整理与提升",
+    "candidates": [
+      "第二节 电解池",
+      "第一节 原电池",
+      "第三节 金属的腐蚀与防护"
+    ],
+    "assignedSection": "第一节 原电池",
+    "confidence": "medium",
+    "note": "葡萄糖燃料电池/生物电池语境"
+  },
+  {
+    "id": "R0083",
+    "name": "氢氧化钾的电离",
+    "equation": "KOH = K+ + OH-",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "high",
+    "note": "强碱电离方程式书写（电解质电离属 1.2）"
+  },
+  {
+    "id": "R0084",
+    "name": "硫酸铁的电离",
+    "equation": "Fe2(SO4)3 = 2Fe^3+ + 3SO4^2-",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "high",
+    "note": "盐的电离方程式（多价离子书写）"
+  },
+  {
+    "id": "R0085",
+    "name": "硝酸铵的电离",
+    "equation": "NH4NO3 = NH4+ + NO3-",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "high",
+    "note": "铵盐电离方程式"
+  },
+  {
+    "id": "R0089",
+    "name": "氢氧化钡溶液与稀硫酸的反应",
+    "equation": "Ba(OH)2 + H2SO4 = BaSO4↓ + 2H2O",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "high",
+    "note": "Ba^2+ + 2OH- + 2H+ + SO4^2- 经典离子方程式"
+  },
+  {
+    "id": "R0091",
+    "name": "铜生成碱式碳酸铜的反应",
+    "equation": "2Cu + O2 + H2O + CO2 = Cu2(OH)2CO3",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "Cu 0→+2 缓慢氧化；也可能是第一节物质转化"
+  },
+  {
+    "id": "R0094",
+    "name": "碳与水蒸气的反应（制水煤气）",
+    "equation": "H2O + C = H2 + CO（条件：高温）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "C 0→+2、H +1→0"
+  },
+  {
+    "id": "R0095",
+    "name": "铝热反应",
+    "equation": "2Al + Fe2O3 = Al2O3 + 2Fe（条件：高温）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "铝热反应：Al 0→+3、Fe +3→0"
+  },
+  {
+    "id": "R0096",
+    "name": "氢化钠与水的反应",
+    "equation": "NaH + H2O = NaOH + H2↑",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "high",
+    "note": "NaH 中 H 为 -1 价，与水歧化，化合价分析信息题"
+  },
+  {
+    "id": "R0097",
+    "name": "过氧化氢与硫化氢的反应",
+    "equation": "H2O2 + H2S = 2H2O + S↓",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "high",
+    "note": "H2O2 氧化 H2S（-2→0，-1→-2）"
+  },
+  {
+    "id": "R0098",
+    "name": "过氧化氢与氯气的反应",
+    "equation": "H2O2 + Cl2 = 2HCl + O2",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "high",
+    "note": "H2O2 被氧化（-1→0），Cl2 被还原"
+  },
+  {
+    "id": "R0099",
+    "name": "制备高铁酸钠的离子反应",
+    "equation": "3ClO- + 2Fe^3+ + 10OH- = 2FeO4^2- + 3Cl- + 5H2O",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "信息型离子方程式配平练习"
+  },
+  {
+    "id": "R0100",
+    "name": "黑火药的爆炸反应",
+    "equation": "S + 2KNO3 + 3C = K2S + N2↑ + 3CO2↑",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "high",
+    "note": "黑火药：多元素价态分析经典"
+  },
+  {
+    "id": "R0101",
+    "name": "硫酸亚铁处理含铬废水",
+    "equation": "6Fe^2+ + Cr2O7^2- + 14H+ = 6Fe^3+ + 2Cr^3+ + 7H2O",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "信息型离子方程式（含铬废水处理）"
+  },
+  {
+    "id": "R0102",
+    "name": "火法炼锌的反应",
+    "equation": "ZnCO3 + 2C = Zn + 3CO↑（条件：高温）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "碳热还原冶金（Zn +2→0 被还原）"
+  },
+  {
+    "id": "R0103",
+    "name": "碳酸钠与氯化钙溶液的反应",
+    "equation": "Na2CO3 + CaCl2 = CaCO3↓ + 2NaCl",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "Ca^2+ + CO3^2- 沉淀生成"
+  },
+  {
+    "id": "R0103",
+    "name": "碳酸钠与氯化钙溶液的反应",
+    "equation": "Na2CO3 + CaCl2 = CaCO3↓ + 2NaCl",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "练习与应用",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第一节 钠及其化合物",
+    "confidence": "high",
+    "note": "CaCl2 鉴别 Na2CO3/NaHCO3 经典"
+  },
+  {
+    "id": "R0103",
+    "name": "碳酸钠与氯化钙溶液的反应",
+    "equation": "Na2CO3 + CaCl2 = CaCO3↓ + 2NaCl",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第一节 钠及其化合物",
+    "confidence": "high",
+    "note": "同上，章末复习"
+  },
+  {
+    "id": "R0109",
+    "name": "过氧化钠与二氧化碳的反应",
+    "equation": "2Na2O2 + 2CO2 = 2Na2CO3 + O2",
+    "book": "必修第一册",
+    "chapter": "第四章 物质结构 元素周期律",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 原子结构与元素周期表",
+      "第二节 元素周期律"
+    ],
+    "assignedSection": "第一节 原子结构与元素周期表",
+    "confidence": "low",
+    "note": "同族类比综合题（Na2O2 与 CO2/SO2），两节均可能，按规则归章首节"
+  },
+  {
+    "id": "R0111",
+    "name": "电解饱和食盐水",
+    "equation": "2NaCl + 2H2O = 2NaOH + H2↑ + Cl2↑（条件：通电）",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "练习与应用",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第二节 氯及其化合物",
+    "confidence": "high",
+    "note": "氯碱工业制氯气（2.2 内容）"
+  },
+  {
+    "id": "R0112",
+    "name": "铁在氯气中燃烧",
+    "equation": "2Fe + 3Cl2 = 2FeCl3（条件：△）",
+    "book": "必修第一册",
+    "chapter": "第三章 铁 金属材料",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 铁及其化合物",
+      "第二节 金属材料"
+    ],
+    "assignedSection": "第一节 铁及其化合物",
+    "confidence": "high",
+    "note": "铁的化学性质"
+  },
+  {
+    "id": "R0118",
+    "name": "漂白粉在空气中的变质反应",
+    "equation": "Ca(ClO)2 + CO2 + H2O = CaCO3↓ + 2HClO",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "练习与应用",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第二节 氯及其化合物",
+    "confidence": "high",
+    "note": "漂白粉成分与变质（HClO 弱酸性）"
+  },
+  {
+    "id": "R0119",
+    "name": "实验室制氯气（二氧化锰与浓盐酸反应）",
+    "equation": "MnO2 + 4HCl = MnCl2 + Cl2↑ + 2H2O（条件：△）",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第三节 氧化还原反应",
+    "confidence": "medium",
+    "note": "Mn +4→+2、Cl -1→0 氧化还原分析"
+  },
+  {
+    "id": "R0123",
+    "name": "次氯酸钠与盐酸的反应（洁厕灵与84消毒液混用）",
+    "equation": "NaClO + 2HCl = NaCl + H2O + Cl2↑",
+    "book": "必修第一册",
+    "chapter": "第二章 海水中的重要元素——钠和氯",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 氯及其化合物",
+      "第一节 钠及其化合物"
+    ],
+    "assignedSection": "第二节 氯及其化合物",
+    "confidence": "high",
+    "note": "84消毒液+洁厕灵产 Cl2 安全警示"
+  },
+  {
+    "id": "R0131",
+    "name": "氯化铁溶液与铜的反应（蚀刻电路板）",
+    "equation": "2FeCl3 + Cu = 2FeCl2 + CuCl2",
+    "book": "必修第一册",
+    "chapter": "第三章 铁 金属材料",
+    "column": "探究",
+    "candidates": [
+      "第一节 铁及其化合物",
+      "第二节 金属材料"
+    ],
+    "assignedSection": "第一节 铁及其化合物",
+    "confidence": "high",
+    "note": "Fe^3+ 氧化性（蚀刻电路板）"
+  },
+  {
+    "id": "R0131",
+    "name": "氯化铁溶液与铜的反应（蚀刻电路板）",
+    "equation": "2FeCl3 + Cu = 2FeCl2 + CuCl2",
+    "book": "必修第一册",
+    "chapter": "第三章 铁 金属材料",
+    "column": "实验活动2 铁及其化合物的性质",
+    "candidates": [
+      "第一节 铁及其化合物",
+      "第二节 金属材料"
+    ],
+    "assignedSection": "第一节 铁及其化合物",
+    "confidence": "high",
+    "note": "铁及其化合物性质实验"
+  },
+  {
+    "id": "R0132",
+    "name": "锌与氯化亚铁溶液的反应",
+    "equation": "Zn + FeCl2 = ZnCl2 + Fe",
+    "book": "必修第一册",
+    "chapter": "第三章 铁 金属材料",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 铁及其化合物",
+      "第二节 金属材料"
+    ],
+    "assignedSection": "第一节 铁及其化合物",
+    "confidence": "high",
+    "note": "Fe^2+ 与金属置换"
+  },
+  {
+    "id": "R0132",
+    "name": "锌与氯化亚铁溶液的反应",
+    "equation": "Zn + FeCl2 = ZnCl2 + Fe",
+    "book": "必修第一册",
+    "chapter": "第三章 铁 金属材料",
+    "column": "实验活动2 铁及其化合物的性质",
+    "candidates": [
+      "第一节 铁及其化合物",
+      "第二节 金属材料"
+    ],
+    "assignedSection": "第一节 铁及其化合物",
+    "confidence": "high",
+    "note": "铁及其化合物性质实验"
+  },
+  {
+    "id": "R0133",
+    "name": "氯化铁溶液与碘化钾溶液的反应",
+    "equation": "2FeCl3 + 2KI = 2FeCl2 + 2KCl + I2",
+    "book": "必修第一册",
+    "chapter": "第三章 铁 金属材料",
+    "column": "实验活动2 铁及其化合物的性质",
+    "candidates": [
+      "第一节 铁及其化合物",
+      "第二节 金属材料"
+    ],
+    "assignedSection": "第一节 铁及其化合物",
+    "confidence": "high",
+    "note": "Fe^3+ 氧化 I-"
+  },
+  {
+    "id": "R0134",
+    "name": "酸性高锰酸钾溶液氧化亚铁离子",
+    "equation": "5Fe^2+ + MnO4- + 8H+ = 5Fe^3+ + Mn^2+ + 4H2O",
+    "book": "必修第一册",
+    "chapter": "第三章 铁 金属材料",
+    "column": "实验活动2 铁及其化合物的性质",
+    "candidates": [
+      "第一节 铁及其化合物",
+      "第二节 金属材料"
+    ],
+    "assignedSection": "第一节 铁及其化合物",
+    "confidence": "high",
+    "note": "Fe^2+ 还原性"
+  },
+  {
+    "id": "R0135",
+    "name": "铝与稀盐酸的反应",
+    "equation": "2Al + 6HCl = 2AlCl3 + 3H2↑",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第一节 化学反应与能量变化",
+    "confidence": "high",
+    "note": "铝与盐酸放热（6.1 经典实验）"
+  },
+  {
+    "id": "R0140",
+    "name": "氧化铜与盐酸的反应",
+    "equation": "CuO + 2HCl = CuCl2 + H2O",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "碱性氧化物与酸的离子方程式（氧化物不拆）"
+  },
+  {
+    "id": "R0141",
+    "name": "氧化铜与稀硫酸的反应",
+    "equation": "CuO + H2SO4 = CuSO4 + H2O",
+    "book": "必修第一册",
+    "chapter": "第一章 物质及其变化",
+    "column": "练习与应用",
+    "candidates": [
+      "第一节 物质的分类及转化",
+      "第三节 氧化还原反应",
+      "第二节 离子反应"
+    ],
+    "assignedSection": "第二节 离子反应",
+    "confidence": "medium",
+    "note": "同上"
+  },
+  {
+    "id": "R0162",
+    "name": "二氧化硫使酸性高锰酸钾溶液褪色",
+    "equation": "5SO2 + 2MnO4- + 2H2O = 5SO4^2- + 2Mn^2+ + 4H+",
+    "book": "必修第二册",
+    "chapter": "第五章 化工生产中的重要非金属元素",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 硫及其化合物",
+      "第二节 氮及其化合物",
+      "第三节 无机非金属材料"
+    ],
+    "assignedSection": "第一节 硫及其化合物",
+    "confidence": "high",
+    "note": "SO2 还原性使 KMnO4 褪色"
+  },
+  {
+    "id": "R0165",
+    "name": "合成氨",
+    "equation": "N2 + 3H2 ⇌ 2NH3（条件：高温、高压、催化剂）",
+    "book": "必修第二册",
+    "chapter": "第八章 化学与可持续发展",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 自然资源的开发利用",
+      "第二节 化学品的合理使用",
+      "第三节 环境保护与绿色化学"
+    ],
+    "assignedSection": "第一节 自然资源的开发利用",
+    "confidence": "medium",
+    "note": "人工固氮/合成氨工业"
+  },
+  {
+    "id": "R0166",
+    "name": "一氧化氮的氧化",
+    "equation": "2NO + O2 = 2NO2（条件：常温）",
+    "book": "选择性必修1",
+    "chapter": "第二章 化学反应速率与化学平衡",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 化学反应速率",
+      "第三节 化学反应的方向",
+      "第二节 化学平衡",
+      "第四节 化学反应的调控"
+    ],
+    "assignedSection": "第一节 化学反应速率",
+    "confidence": "medium",
+    "note": "NO 遇 O2 迅速红棕色=速率差异经典例"
+  },
+  {
+    "id": "R0170",
+    "name": "氨的催化氧化",
+    "equation": "4NH3 + 5O2 = 4NO + 6H2O（条件：催化剂、△）",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第一节 化学反应与能量变化",
+    "confidence": "medium",
+    "note": "氨催化氧化放热"
+  },
+  {
+    "id": "R0182",
+    "name": "氮化硅的制备",
+    "equation": "3SiO2 + 6C + 2N2 = Si3N4 + 6CO（条件：高温）",
+    "book": "必修第二册",
+    "chapter": "第五章 化工生产中的重要非金属元素",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 硫及其化合物",
+      "第二节 氮及其化合物",
+      "第三节 无机非金属材料"
+    ],
+    "assignedSection": "第三节 无机非金属材料",
+    "confidence": "high",
+    "note": "Si3N4 结构陶瓷（氮化硅）"
+  },
+  {
+    "id": "R0185",
+    "name": "铅酸蓄电池的放电",
+    "equation": "Pb + PbO2 + 2H2SO4 ⇌ 2PbSO4 + 2H2O",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "复习与提高",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第一节 化学反应与能量变化",
+    "confidence": "high",
+    "note": "原电池：化学能转电能（6.1 内容）"
+  },
+  {
+    "id": "R0186",
+    "name": "硫代硫酸钠与硫酸的反应",
+    "equation": "Na2S2O3 + H2SO4 = Na2SO4 + SO2↑ + S↓ + H2O",
+    "book": "必修第二册",
+    "chapter": "第六章 化学反应与能量",
+    "column": "实验活动7",
+    "candidates": [
+      "第二节 化学反应的速率与限度",
+      "第一节 化学反应与能量变化"
+    ],
+    "assignedSection": "第二节 化学反应的速率与限度",
+    "confidence": "high",
+    "note": "硫代硫酸钠与硫酸=速率测定经典实验"
+  },
+  {
+    "id": "R0215",
+    "name": "碘酸根离子与碘离子的反应",
+    "equation": "IO3- + 5I- + 6H+ = 3I2 + 3H2O",
+    "book": "必修第二册",
+    "chapter": "第八章 化学与可持续发展",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 自然资源的开发利用",
+      "第二节 化学品的合理使用",
+      "第三节 环境保护与绿色化学"
+    ],
+    "assignedSection": "第一节 自然资源的开发利用",
+    "confidence": "high",
+    "note": "海水提碘：IO3- + I- 酸化析碘"
+  },
+  {
+    "id": "R0216",
+    "name": "光合作用（二氧化碳与水生成葡萄糖）",
+    "equation": "6CO2 + 6H2O = C6H12O6 + 6O2（条件：光照）",
+    "book": "必修第二册",
+    "chapter": "第八章 化学与可持续发展",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 自然资源的开发利用",
+      "第二节 化学品的合理使用",
+      "第三节 环境保护与绿色化学"
+    ],
+    "assignedSection": "第三节 环境保护与绿色化学",
+    "confidence": "medium",
+    "note": "光合作用=CO2 资源化与绿色化学语境；也可能是第一节资源利用"
+  },
+  {
+    "id": "R0217",
+    "name": "氨与硫酸的反应（生产硫酸铵）",
+    "equation": "2NH3 + H2SO4 = (NH4)2SO4",
+    "book": "必修第二册",
+    "chapter": "第八章 化学与可持续发展",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 自然资源的开发利用",
+      "第二节 化学品的合理使用",
+      "第三节 环境保护与绿色化学"
+    ],
+    "assignedSection": "第二节 化学品的合理使用",
+    "confidence": "low",
+    "note": "硫酸铵=氮肥（化肥语境），也可能是第一节工业资源题"
+  },
+  {
+    "id": "R0218",
+    "name": "氢氧化铝的受热分解",
+    "equation": "2Al(OH)3 = Al2O3 + 3H2O（条件：△）",
+    "book": "必修第二册",
+    "chapter": "第八章 化学与可持续发展",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 自然资源的开发利用",
+      "第二节 化学品的合理使用",
+      "第三节 环境保护与绿色化学"
+    ],
+    "assignedSection": "第一节 自然资源的开发利用",
+    "confidence": "medium",
+    "note": "Al(OH)3 煅烧得 Al2O3（铝冶炼流程）"
+  },
+  {
+    "id": "R0219",
+    "name": "孔雀石与稀硫酸的反应",
+    "equation": "Cu2(OH)2CO3 + 2H2SO4 = 2CuSO4 + CO2↑ + 3H2O",
+    "book": "必修第二册",
+    "chapter": "第八章 化学与可持续发展",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 自然资源的开发利用",
+      "第二节 化学品的合理使用",
+      "第三节 环境保护与绿色化学"
+    ],
+    "assignedSection": "第一节 自然资源的开发利用",
+    "confidence": "medium",
+    "note": "孔雀石（铜矿）酸浸"
+  },
+  {
+    "id": "R0220",
+    "name": "四氯化钛的制备（高温氯化）",
+    "equation": "TiO2 + 2C + 2Cl2 = TiCl4 + 2CO↑（条件：高温）",
+    "book": "必修第二册",
+    "chapter": "第八章 化学与可持续发展",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 自然资源的开发利用",
+      "第二节 化学品的合理使用",
+      "第三节 环境保护与绿色化学"
+    ],
+    "assignedSection": "第一节 自然资源的开发利用",
+    "confidence": "high",
+    "note": "钛冶金：氯化法制 TiCl4"
+  },
+  {
+    "id": "R0221",
+    "name": "镁还原四氯化钛（冶炼钛）",
+    "equation": "TiCl4 + 2Mg = Ti + 2MgCl2（条件：△）",
+    "book": "必修第二册",
+    "chapter": "第八章 化学与可持续发展",
+    "column": "复习与提高",
+    "candidates": [
+      "第一节 自然资源的开发利用",
+      "第二节 化学品的合理使用",
+      "第三节 环境保护与绿色化学"
+    ],
+    "assignedSection": "第一节 自然资源的开发利用",
+    "confidence": "high",
+    "note": "镁热还原法炼钛"
+  },
+  {
+    "id": "R0222",
+    "name": "氯化氢的分解",
+    "equation": "2HCl(g) = H2(g) + Cl2(g)  ΔH = +184.6 kJ/mol",
+    "book": "选择性必修1",
+    "chapter": "第一章 化学反应的热效应",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 反应热",
+      "第二节 反应热的计算"
+    ],
+    "assignedSection": "第一节 反应热",
+    "confidence": "medium",
+    "note": "热化学方程式/吸热反应实例"
+  },
+  {
+    "id": "R0232",
+    "name": "镁与二氧化碳的反应",
+    "equation": "2Mg + CO2 = 2MgO + C（条件：点燃）",
+    "book": "选择性必修1",
+    "chapter": "第一章 化学反应的热效应",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 反应热",
+      "第二节 反应热的计算"
+    ],
+    "assignedSection": "第一节 反应热",
+    "confidence": "medium",
+    "note": "剧烈放热的置换反应"
+  },
+  {
+    "id": "R0233",
+    "name": "乙炔的燃烧",
+    "equation": "2C2H2(g) + 5O2(g) = 4CO2(g) + 2H2O(l)  ΔH = -2599.2 kJ/mol",
+    "book": "选择性必修1",
+    "chapter": "第一章 化学反应的热效应",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 反应热",
+      "第二节 反应热的计算"
+    ],
+    "assignedSection": "第一节 反应热",
+    "confidence": "medium",
+    "note": "C2H2 燃烧热数据（1mol 完全燃烧）"
+  },
+  {
+    "id": "R0234",
+    "name": "丙烷的裂解（已知反应）",
+    "equation": "C3H8(g) = CH4(g) + C2H2(g) + H2(g)  ΔH = +255.7 kJ/mol",
+    "book": "选择性必修1",
+    "chapter": "第一章 化学反应的热效应",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 反应热",
+      "第二节 反应热的计算"
+    ],
+    "assignedSection": "第二节 反应热的计算",
+    "confidence": "high",
+    "note": "盖斯三件套之一：+255.7-131.5=+124.2 数值自洽"
+  },
+  {
+    "id": "R0235",
+    "name": "丙烯的分解",
+    "equation": "C3H6(g) = CH4(g) + C2H2(g)  ΔH = +131.5 kJ/mol",
+    "book": "选择性必修1",
+    "chapter": "第一章 化学反应的热效应",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 反应热",
+      "第二节 反应热的计算"
+    ],
+    "assignedSection": "第二节 反应热的计算",
+    "confidence": "high",
+    "note": "盖斯三件套之二"
+  },
+  {
+    "id": "R0236",
+    "name": "丙烷脱氢制丙烯",
+    "equation": "C3H8(g) = C3H6(g) + H2(g)  ΔH = +124.2 kJ/mol",
+    "book": "选择性必修1",
+    "chapter": "第一章 化学反应的热效应",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 反应热",
+      "第二节 反应热的计算"
+    ],
+    "assignedSection": "第二节 反应热的计算",
+    "confidence": "high",
+    "note": "盖斯三件套目标反应：丙烷脱氢制丙烯"
+  },
+  {
+    "id": "R0243",
+    "name": "二氧化氮与二氧化硫的反应",
+    "equation": "NO2(g) + SO2(g) ⇌ SO3(g) + NO(g)  ΔH = -41.8 kJ/mol",
+    "book": "选择性必修1",
+    "chapter": "第二章 化学反应速率与化学平衡",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 化学反应速率",
+      "第三节 化学反应的方向",
+      "第二节 化学平衡",
+      "第四节 化学反应的调控"
+    ],
+    "assignedSection": "第二节 化学平衡",
+    "confidence": "medium",
+    "note": "带 ⇌+ΔH，平衡移动/转化率综合；也可能是第三节方向"
+  },
+  {
+    "id": "R0245",
+    "name": "一氧化碳与硫化氢的反应",
+    "equation": "CO + H2S ⇌ COS + H2",
+    "book": "选择性必修1",
+    "chapter": "第二章 化学反应速率与化学平衡",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 化学反应速率",
+      "第三节 化学反应的方向",
+      "第二节 化学平衡",
+      "第四节 化学反应的调控"
+    ],
+    "assignedSection": "第二节 化学平衡",
+    "confidence": "medium",
+    "note": "可逆反应平衡计算"
+  },
+  {
+    "id": "R0246",
+    "name": "二氧化碳与氢气生成一氧化碳",
+    "equation": "CO2 + H2 ⇌ CO + H2O",
+    "book": "选择性必修1",
+    "chapter": "第二章 化学反应速率与化学平衡",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 化学反应速率",
+      "第三节 化学反应的方向",
+      "第二节 化学平衡",
+      "第四节 化学反应的调控"
+    ],
+    "assignedSection": "第二节 化学平衡",
+    "confidence": "medium",
+    "note": "逆水煤气变换平衡"
+  },
+  {
+    "id": "R0249",
+    "name": "γ-羟基丁酸转化为γ-丁内酯",
+    "equation": "C4H8O3 ⇌ C4H6O2 + H2O（条件：△）",
+    "book": "选择性必修1",
+    "chapter": "第二章 化学反应速率与化学平衡",
+    "column": "整理与提升",
+    "candidates": [
+      "第一节 化学反应速率",
+      "第三节 化学反应的方向",
+      "第二节 化学平衡",
+      "第四节 化学反应的调控"
+    ],
+    "assignedSection": "第二节 化学平衡",
+    "confidence": "medium",
+    "note": "酯化类可逆平衡/条件调控"
+  },
+  {
+    "id": "R0268",
+    "name": "氨水与强酸的中和反应",
+    "equation": "NH3·H2O + H+ = NH4+ + H2O",
+    "book": "选择性必修1",
+    "chapter": "第三章 水溶液中的离子反应与平衡",
+    "column": "整理与提升",
+    "candidates": [
+      "第四节 沉淀溶解平衡",
+      "第一节 电离平衡",
+      "第二节 水的电离和溶液的pH",
+      "第三节 盐类的水解"
+    ],
+    "assignedSection": "第一节 电离平衡",
+    "confidence": "high",
+    "note": "NH3·H2O 弱碱不拆，弱电解质核心概念"
+  },
+  {
+    "id": "R0285",
+    "name": "银离子与铬酸根离子的反应",
+    "equation": "2Ag+ + CrO4^2- = Ag2CrO4↓",
+    "book": "选择性必修1",
+    "chapter": "第三章 水溶液中的离子反应与平衡",
+    "column": "整理与提升",
+    "candidates": [
+      "第四节 沉淀溶解平衡",
+      "第一节 电离平衡",
+      "第二节 水的电离和溶液的pH",
+      "第三节 盐类的水解"
+    ],
+    "assignedSection": "第四节 沉淀溶解平衡",
+    "confidence": "high",
+    "note": "Ag2CrO4 沉淀/Ksp 经典"
+  },
+  {
+    "id": "R0288",
+    "name": "重铬酸根与铬酸根的转化平衡",
+    "equation": "Cr2O7^2- + H2O ⇌ 2CrO4^2- + 2H+",
+    "book": "选择性必修1",
+    "chapter": "第二章 化学反应速率与化学平衡",
+    "column": "实验活动1 探究影响化学平衡移动的因素",
+    "candidates": [
+      "第一节 化学反应速率",
+      "第三节 化学反应的方向",
+      "第二节 化学平衡",
+      "第四节 化学反应的调控"
+    ],
+    "assignedSection": "第二节 化学平衡",
+    "confidence": "high",
+    "note": "实验活动1 即平衡移动影响因素实验"
+  },
+  {
+    "id": "R0289",
+    "name": "铜的水合离子与氯离子的平衡",
+    "equation": "Cu(H2O)4^2+ + 4Cl- ⇌ CuCl4^2- + 4H2O",
+    "book": "选择性必修1",
+    "chapter": "第二章 化学反应速率与化学平衡",
+    "column": "实验活动1 探究影响化学平衡移动的因素",
+    "candidates": [
+      "第一节 化学反应速率",
+      "第三节 化学反应的方向",
+      "第二节 化学平衡",
+      "第四节 化学反应的调控"
+    ],
+    "assignedSection": "第二节 化学平衡",
+    "confidence": "high",
+    "note": "Cu^2+ 颜色平衡移动实验"
+  },
+  {
+    "id": "R0306",
+    "name": "锌银纽扣电池",
+    "equation": "Zn + Ag2O = ZnO + 2Ag",
+    "book": "选择性必修1",
+    "chapter": "第四章 化学反应与电能",
+    "column": "整理与提升",
+    "candidates": [
+      "第二节 电解池",
+      "第一节 原电池",
+      "第三节 金属的腐蚀与防护"
+    ],
+    "assignedSection": "第一节 原电池",
+    "confidence": "high",
+    "note": "纽扣电池=化学电源"
+  },
+  {
+    "id": "R0307",
+    "name": "锂-亚硫酰氯电池",
+    "equation": "8Li + 3SOCl2 = 6LiCl + Li2SO3 + 2S",
+    "book": "选择性必修1",
+    "chapter": "第四章 化学反应与电能",
+    "column": "整理与提升",
+    "candidates": [
+      "第二节 电解池",
+      "第一节 原电池",
+      "第三节 金属的腐蚀与防护"
+    ],
+    "assignedSection": "第一节 原电池",
+    "confidence": "high",
+    "note": "锂一次电池"
+  },
+  {
+    "id": "R0308",
+    "name": "锌-空气电池",
+    "equation": "2Zn + O2 + 4OH- + 2H2O = 2Zn(OH)4^2-",
+    "book": "选择性必修1",
+    "chapter": "第四章 化学反应与电能",
+    "column": "整理与提升",
+    "candidates": [
+      "第二节 电解池",
+      "第一节 原电池",
+      "第三节 金属的腐蚀与防护"
+    ],
+    "assignedSection": "第一节 原电池",
+    "confidence": "high",
+    "note": "锌空气燃料电池"
+  },
+  {
+    "id": "R0309",
+    "name": "镍系可充电电池的放电",
+    "equation": "H2 + 2OH- = 2H2O + 2e-",
+    "book": "选择性必修1",
+    "chapter": "第四章 化学反应与电能",
+    "column": "整理与提升",
+    "candidates": [
+      "第二节 电解池",
+      "第一节 原电池",
+      "第三节 金属的腐蚀与防护"
+    ],
+    "assignedSection": "第一节 原电池",
+    "confidence": "medium",
+    "note": "放电电极反应=原电池负极；充电语境则属电解池"
+  },
+  {
+    "id": "R0310",
+    "name": "碳酸镁与酸的反应（调节pH除铁）",
+    "equation": "MgCO3 + 2H+ = Mg^2+ + H2O + CO2↑",
+    "book": "选择性必修1",
+    "chapter": "第三章 水溶液中的离子反应与平衡",
+    "column": "整理与提升",
+    "candidates": [
+      "第四节 沉淀溶解平衡",
+      "第一节 电离平衡",
+      "第二节 水的电离和溶液的pH",
+      "第三节 盐类的水解"
+    ],
+    "assignedSection": "第四节 沉淀溶解平衡",
+    "confidence": "medium",
+    "note": "调 pH 除 Fe^3+，Ksp 应用"
+  },
+  {
+    "id": "R0315",
+    "name": "铁氰化钾的电离",
+    "equation": "K3[Fe(CN)6] = 3K+ + [Fe(CN)6]^3-",
+    "book": "选择性必修2",
+    "chapter": "第三章 晶体结构与性质",
+    "column": "实验活动 简单配合物的形成",
+    "candidates": [
+      "第二节 分子晶体与共价晶体",
+      "第四节 配合物与超分子"
+    ],
+    "assignedSection": "第四节 配合物与超分子",
+    "confidence": "high",
+    "note": "铁氰化钾=配合物电离"
+  }
+]

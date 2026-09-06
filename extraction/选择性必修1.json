@@ -1,0 +1,5558 @@
+{
+  "book": "选择性必修1",
+  "version": "人教版",
+  "entries": [
+    {
+      "name": "氢气与氯气的反应",
+      "description": "氢气在氯气中点燃化合生成氯化氢；教材以其热化学方程式（ΔH=-184.6 kJ/mol）引入反应热与热化学方程式概念",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数为2，单一点燃条件",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "正文（热化学方程式）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第4题，键能与ΔH）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2 + Cl2 = 2HCl",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "H2(g) + Cl2(g) = 2HCl(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-184.6 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氯化氢的分解",
+      "description": "氯化氢分解为氢气和氯气，ΔH与生成反应数值相等、符号相反",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数2，由生成反应的ΔH直接取逆",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第4题）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2HCl(g) = H2(g) + Cl2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+184.6 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氢气与氧气的反应（氢气的燃烧）",
+      "description": "氢气在氧气中燃烧生成水；生成液态水与生成水蒸气放热不同，氢气的燃烧热为285.8 kJ/mol（每mol H2，生成液态水）",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数2；气态水版本ΔH由教材每mol H2放热241.8 kJ按2倍系数换算（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "正文（聚集状态与ΔH、燃烧热）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "练习与应用（第2、3题）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第1、3题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2H2 + O2 = 2H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "2H2(g) + O2(g) = 2H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-571.6 kJ/mol"
+        },
+        {
+          "type": "thermochemical",
+          "line": "2H2(g) + O2(g) = 2H2O(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-483.6 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "液态水的分解",
+      "description": "液态水分解为氢气和氧气，吸热反应，与氢气燃烧生成液态水互为逆反应",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数2，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "练习与应用（第5题②）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2H2O(l) = 2H2(g) + O2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+571.6 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "水蒸气的分解",
+      "description": "水蒸气分解为氢气和氧气；教材按H2O(g)=H2(g)+1/2O2(g) ΔH=+241.8 kJ/mol给出，此处换算为2倍系数",
+      "difficulty": "简单",
+      "difficultyReason": "系数换算自教材每mol数值（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第6题①）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2H2O(g) = 2H2(g) + O2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+483.6 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳的燃烧（碳的燃烧热）",
+      "description": "碳（石墨）在氧气中完全燃烧生成二氧化碳，燃烧热为393.5 kJ/mol；该反应是盖斯定律例题的组成反应",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数1，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "正文（燃烧热）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "正文（例题：盖斯定律）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "练习与应用（第6题③）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第6题③、第8题①）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C + O2 = CO2",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "C(s) + O2(g) = CO2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-393.5 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "一氧化碳的燃烧",
+      "description": "一氧化碳在氧气中燃烧生成二氧化碳，CO的燃烧热为283.0 kJ/mol（每mol CO）",
+      "difficulty": "简单",
+      "difficultyReason": "教材按CO(g)+1/2O2(g)系数给出ΔH=-283.0 kJ/mol，本行式换算为2倍系数-566.0 kJ/mol（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "正文（例题：盖斯定律）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "练习与应用（第4题）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第6题(4)）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CO + O2 = 2CO2",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "2CO(g) + O2(g) = 2CO2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-566.0 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳与氧气反应生成一氧化碳",
+      "description": "碳不完全燃烧生成一氧化碳；该反应热无法直接测定，教材以盖斯定律由碳、CO的燃烧热间接求得（ΔH=-110.5 kJ/mol，每mol C）",
+      "difficulty": "中等",
+      "difficultyReason": "教材按C(s)+1/2O2(g)系数给出ΔH=-110.5 kJ/mol，本行式换算为2倍系数-221.0 kJ/mol（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "正文（盖斯定律引例）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "练习与应用（第6题①）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第6题②）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2C(s) + O2(g) = 2CO(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-221.0 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳与水蒸气的反应（制水煤气）",
+      "description": "焦炭与水蒸气高温反应生成一氧化碳和氢气（工业制水煤气），吸热反应",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，吸热反应，工业制氢重要反应",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "正文（吸热反应示例）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "正文（例题3）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "练习与应用（第1题(3)）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "C(s) + H2O(g) = CO(g) + H2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+131.5 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "强酸与强碱的中和反应",
+      "description": "盐酸与氢氧化钠稀溶液发生中和反应生成氯化钠和水；中和热为57.3 kJ/mol（生成1 mol水放热）",
+      "difficulty": "简单",
+      "difficultyReason": "强酸强碱中和，物质3种，系数1",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "探究：中和反应反应热的测定"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "正文（中和热57.3 kJ/mol）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第二节 水的电离和溶液的pH",
+          "context": "例题（中和滴定计算）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "实验活动2 强酸与强碱的中和滴定",
+          "context": "实验原理"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "碱",
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "中和反应",
+        "离子反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "HCl + NaOH = NaCl + H2O",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "H+ + OH- = H2O",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "HCl(aq) + NaOH(aq) = NaCl(aq) + H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-57.3 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铜与氧气的反应",
+      "description": "铜与氧气反应生成氧化铜，1 mol Cu反应放出157.3 kJ热量",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数2；ΔH由每mol Cu放热157.3 kJ换算为2倍系数（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "练习与应用（第1题(1)）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2Cu(s) + O2(g) = 2CuO(s)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-314.6 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "乙烯的燃烧",
+      "description": "乙烯在氧气中完全燃烧生成二氧化碳和液态水，放出1411.0 kJ/mol热量",
+      "difficulty": "中等",
+      "difficultyReason": "系数3，有机物燃烧，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "练习与应用（第1题(2)）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "C2H4(g) + 3O2(g) = 2CO2(g) + 2H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-1411.0 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "硫的燃烧",
+      "description": "硫在氧气中完全燃烧生成二氧化硫；由4 g硫粉放出37 kJ换算得每mol S放热约296 kJ",
+      "difficulty": "简单",
+      "difficultyReason": "ΔH由习题数据换算，教材未直接给出数值（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "练习与应用（第1题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "S(s) + O2(g) = SO2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-296 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氮气与氧气的反应（NO的生成）",
+      "description": "氮气与氧气在放电或高温条件下化合生成一氧化氮；教材给出键能数据供计算反应热",
+      "difficulty": "中等",
+      "difficultyReason": "ΔH由键能计算（946+498-2×632=+180 kJ/mol），教材未直接给出数值（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "练习与应用（第2题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "N2(g) + O2(g) = 2NO(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+180 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "甲烷的燃烧",
+      "description": "甲烷在氧气中完全燃烧生成二氧化碳和液态水，燃烧热为890.3 kJ/mol",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，有机物燃烧，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "正文（燃烧热）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第5题）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CH4 + 2O2 = CO2 + 2H2O",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "CH4(g) + 2O2(g) = CO2(g) + 2H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-890.3 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "辛烷的燃烧",
+      "description": "汽油成分之一辛烷完全燃烧生成二氧化碳和液态水；教材按C8H18(l)+25/2O2(g)系数给出ΔH=-5518 kJ/mol",
+      "difficulty": "较难",
+      "difficultyReason": "系数大（25），本行式换算为2倍系数-11036 kJ/mol（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "正文（燃烧热示例）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2C8H18(l) + 25O2(g) = 16CO2(g) + 18H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-11036 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "软脂酸的燃烧",
+      "description": "人体内代表性脂肪酸软脂酸（CH3(CH2)14COOH，分子式C16H32O2）完全燃烧生成二氧化碳和液态水，放出9977 kJ/mol热量",
+      "difficulty": "较难",
+      "difficultyReason": "系数大（23），教材以结构简式给出，本行式按分子式书写",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第一节 反应热",
+          "context": "科学·技术·社会：重要的体内能源——脂肪"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "C16H32O2(s) + 23O2(g) = 16CO2(g) + 16H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-9977 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "黄铁矿（FeS2）的燃烧",
+      "description": "黄铁矿（主要成分FeS2）燃烧是工业制硫酸中制取SO2的途径；1 mol FeS2完全燃烧放出853 kJ热量",
+      "difficulty": "较难",
+      "difficultyReason": "系数11/8大，配平复杂；热化学版本按教材FeS2(s)+11/4O2(g)系数ΔH=-853 kJ/mol换算为4倍（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "正文（例题1）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "燃烧反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "4FeS2 + 11O2 = 2Fe2O3 + 8SO2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "4FeS2(s) + 11O2(g) = 2Fe2O3(s) + 8SO2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-3412 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "葡萄糖的氧化反应",
+      "description": "葡萄糖在人体组织中完全氧化（呼吸作用）提供能量，1 mol放出2800 kJ热量；也是微生物电池的总反应",
+      "difficulty": "中等",
+      "difficultyReason": "系数6，有机物氧化，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "正文（例题2）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "整理与提升",
+          "context": "复习与提高（第8题，微生物电池总反应）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "燃烧反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学",
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "C6H12O6(s) + 6O2(g) = 6CO2(g) + 6H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-2800 kJ/mol"
+        },
+        {
+          "type": "chemical",
+          "line": "C6H12O6 + 6O2 = 6CO2 + 6H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "甲烷与水蒸气的反应",
+      "description": "甲烷与水蒸气反应生成一氧化碳和氢气，是工业上制取氢气的重要方法，吸热反应",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数3，吸热反应",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "正文（例题3）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "CH4(g) + H2O(g) = CO(g) + 3H2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+205.9 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "甲烷的分解",
+      "description": "甲烷分解为碳和氢气；教材在例题3中由盖斯定律计算得其ΔH=+74.4 kJ/mol",
+      "difficulty": "中等",
+      "difficultyReason": "涉及盖斯定律计算，结果为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "正文（例题3，盖斯定律计算结果）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "CH4(g) = C(s) + 2H2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+74.4 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氮气与氧气生成二氧化氮",
+      "description": "氮气与氧气化合生成二氧化氮，吸热反应；作为已知反应用于书写肼与NO2反应的热化学方程式",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，系数2，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "练习与应用（第4题①）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "N2(g) + 2O2(g) = 2NO2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+66.4 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "肼与氧气的反应（肼的燃烧）",
+      "description": "火箭燃料肼（N2H4，液态）与氧气反应生成氮气和水蒸气，放热反应",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "练习与应用（第4题②）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "N2H4(l) + O2(g) = N2(g) + 2H2O(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-534 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "肼与二氧化氮的反应（火箭推进剂）",
+      "description": "肼作燃料、NO2作氧化剂反应生成氮气和水蒸气，是火箭推进剂反应；由①②两已知反应按盖斯定律计算",
+      "difficulty": "较难",
+      "difficultyReason": "需盖斯定律组合计算（2ΔH2-ΔH1=-1068-66.4），教材未直接给出ΔH（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "练习与应用（第4题）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2N2H4(l) + 2NO2(g) = 3N2(g) + 4H2O(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-1134.4 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "二氧化碳与氢气生成甲烷",
+      "description": "航天器中将呼出的CO2与H2反应转化为甲烷和水，实现氧的再生循环",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数4，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "练习与应用（第5题①）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "氢化物",
+        "有机物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "CO2(g) + 4H2(g) = CH4(g) + 2H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-252.9 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "镁的燃烧",
+      "description": "镁在氧气中燃烧生成氧化镁，放热反应；作为已知反应用于计算镁与CO2的反应热",
+      "difficulty": "中等",
+      "difficultyReason": "系数2，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第8题②）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Mg + O2 = 2MgO",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "thermochemical",
+          "line": "2Mg(s) + O2(g) = 2MgO(s)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-1203.4 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "镁与二氧化碳的反应",
+      "description": "镁在二氧化碳中燃烧生成氧化镁和碳，由镁燃烧与碳燃烧两个反应按盖斯定律计算反应热",
+      "difficulty": "较难",
+      "difficultyReason": "需盖斯定律计算（ΔH2-ΔH1=-1203.4+393.5），教材未直接给出ΔH（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第8题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2Mg(s) + CO2(g) = 2MgO(s) + C(s)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-809.9 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "乙炔的燃烧",
+      "description": "乙炔（氧炔焰燃料）在氧气中完全燃烧生成二氧化碳和液态水，1 mol放出1299.6 kJ热量",
+      "difficulty": "较难",
+      "difficultyReason": "本行式按2倍系数书写，ΔH=-2599.2 kJ/mol换算自教材每mol数值（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第7题(1)）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2C2H2(g) + 5O2(g) = 4CO2(g) + 2H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-2599.2 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "乙醇的燃烧",
+      "description": "乙醇在氧气中完全燃烧生成二氧化碳和液态水；由23 g（0.5 mol）乙醇放出683.4 kJ换算得燃烧热1366.8 kJ/mol，与附录I数据一致",
+      "difficulty": "中等",
+      "difficultyReason": "系数3，有机物燃烧，ΔH与教材附录I燃烧热一致",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第7题(2)）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "C2H5OH(l) + 3O2(g) = 2CO2(g) + 3H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-1366.8 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "丙烷的燃烧",
+      "description": "丙烷（火炬燃料）在氧气中完全燃烧；教材给出生成液态水版本ΔH=-2219.9 kJ/mol，并结合H2O(l)=H2O(g)推算生成水蒸气版本",
+      "difficulty": "较难",
+      "difficultyReason": "系数5；生成水蒸气版本ΔH=-2043.9 kJ/mol由②与ΔH3=+44.0 kJ/mol计算，教材未直接给出（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第10题）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "燃烧反应",
+        "氧化还原反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "C3H8(g) + 5O2(g) = 3CO2(g) + 4H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-2219.9 kJ/mol"
+        },
+        {
+          "type": "thermochemical",
+          "line": "C3H8(g) + 5O2(g) = 3CO2(g) + 4H2O(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-2043.9 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "丙烷的裂解（已知反应）",
+      "description": "丙烷裂解生成甲烷、乙炔和氢气，吸热反应；作为已知反应用于计算丙烷脱氢制丙烯的反应热",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第9题①）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "C3H8(g) = CH4(g) + C2H2(g) + H2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+255.7 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "丙烯的分解",
+      "description": "丙烯分解生成甲烷和乙炔，吸热反应；作为已知反应用于计算丙烷脱氢制丙烯的反应热",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第9题②）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "C3H6(g) = CH4(g) + C2H2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+131.5 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "丙烷脱氢制丙烯",
+      "description": "丙烷脱氢生成丙烯和氢气（石油化工重要反应）；由①②两已知反应按盖斯定律（ΔH1-ΔH2）计算",
+      "difficulty": "中等",
+      "difficultyReason": "需盖斯定律计算（255.7-131.5=+124.2 kJ/mol），教材未直接给出ΔH（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "整理与提升",
+          "context": "复习与提高（第9题）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学反应与能量",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "C3H8(g) = C3H6(g) + H2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+124.2 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碘化氢的分解",
+      "description": "碘化氢分解为氢气和碘；教材以其两步基元反应历程说明活化能与有效碰撞理论",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数2，无条件",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第一节 化学反应速率",
+          "context": "正文（反应历程与活化能）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2HI = H2 + I2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氨的催化氧化",
+      "description": "氨经催化氧化生成一氧化氮和水，是工业制硝酸的基础反应；教材在速率计算题中给出该反应（未标注条件，此处按催化氧化惯例标注）",
+      "difficulty": "较难",
+      "difficultyReason": "系数5、6较大，氧化还原配平复杂",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第一节 化学反应速率",
+          "context": "练习与应用（第3题）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "4NH3 + 5O2 = 4NO + 6H2O",
+          "conditions": [
+            "催化剂",
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "二氧化铅氧化亚铁离子",
+      "description": "废旧铅酸蓄电池铅再生流程中，PbO2在酸性条件下将Fe2+氧化为Fe3+并生成PbSO4沉淀",
+      "difficulty": "较难",
+      "difficultyReason": "离子方程式涉及4种反应物，配平复杂",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第一节 化学反应速率",
+          "context": "练习与应用（第6题①）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "盐",
+        "酸"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "2Fe^2+ + PbO2 + 4H+ + SO4^2- = 2Fe^3+ + PbSO4 + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铅还原铁离子",
+      "description": "铅再生流程中，Pb将Fe3+还原为Fe2+并生成PbSO4沉淀；与前一反应构成Fe2+/Fe3+循环",
+      "difficulty": "中等",
+      "difficultyReason": "离子方程式配平涉及电荷守恒",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第一节 化学反应速率",
+          "context": "练习与应用（第6题②）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "2Fe^3+ + Pb + SO4^2- = 2Fe^2+ + PbSO4",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "汽车尾气的催化转化",
+      "description": "利用催化技术将汽车尾气中的NO和CO转化为CO2和N2；该反应熵减但仍可自发进行",
+      "difficulty": "中等",
+      "difficultyReason": "氧化还原配平，涉及气体4种",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第一节 化学反应速率",
+          "context": "练习与应用（第7题）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第三节 化学反应的方向",
+          "context": "正文（熵减仍自发）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NO + 2CO = N2 + 2CO2",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "锌与稀硫酸的反应",
+      "description": "锌粒与稀硫酸反应生成硫酸锌和氢气；教材用于探究浓度、温度等因素对反应速率的影响",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，置换反应，气体符号",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第一节 化学反应速率",
+          "context": "探究：定性与定量研究影响化学反应速率的因素（实验探究II）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "整理与提升",
+          "context": "复习与提高（第1题提及）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "金属及其化合物",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Zn + H2SO4 = ZnSO4 + H2↑",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "Zn + 2H+ = Zn^2+ + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "硫代硫酸钠与稀硫酸的反应",
+      "description": "硫代硫酸钠与稀硫酸反应生成硫沉淀（溶液变浑浊）、二氧化硫和水；教材以浑浊出现快慢比较反应速率",
+      "difficulty": "中等",
+      "difficultyReason": "物质5种，产物多；教材给出试剂与现象，方程式按反应原理书写（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第一节 化学反应速率",
+          "context": "探究：定性与定量研究影响化学反应速率的因素（实验探究I）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Na2S2O3 + H2SO4 = Na2SO4 + S↓ + SO2↑ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "合成氨",
+      "description": "氮气与氢气在高温、高压、催化剂条件下可逆地化合生成氨，是化学平衡与反应调控的核心实例；ΔH=-92.4 kJ/mol",
+      "difficulty": "较难",
+      "difficultyReason": "可逆反应，多条件（高温、高压、催化剂），热化学与平衡双重属性",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第一节 化学反应速率",
+          "context": "正文（反应速率例题）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "正文（可逆反应与化学平衡状态）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第四节 化学反应的调控",
+          "context": "正文"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第四节 化学反应的调控",
+          "context": "思考与讨论（数据分析）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "整理与提升",
+          "context": "复习与提高（第2、5题）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "整理与提升",
+          "context": "科学·技术·社会：合成氨——实验室研究与工业化生产"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "可逆反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "N2 + 3H2 ⇌ 2NH3",
+          "conditions": [
+            "高温",
+            "高压",
+            "催化剂"
+          ],
+          "reversible": true
+        },
+        {
+          "type": "thermochemical",
+          "line": "N2(g) + 3H2(g) ⇌ 2NH3(g)",
+          "conditions": [],
+          "reversible": true,
+          "deltaH": "-92.4 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氢气与碘蒸气的反应",
+      "description": "氢气与碘蒸气可逆化合生成碘化氢；教材以457.6℃下的平衡数据引入化学平衡常数的概念",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，平衡常数计算的经典体系",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "正文（平衡常数表2-1）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "正文（例题1）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2 + I2 ⇌ 2HI",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "二氧化氮与四氧化二氮的转化",
+      "description": "NO2与N2O4之间存在平衡（ΔH=-56.9 kJ/mol）；教材通过注射器加压、冷热水浴实验探究压强和温度对平衡的影响",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，热化学与平衡移动实验结合",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "实验2-2（压强对化学平衡的影响）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "实验2-3（温度对化学平衡的影响）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "实验活动1 探究影响化学平衡移动的因素",
+          "context": "实验步骤"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "可逆反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NO2 ⇌ N2O4",
+          "conditions": [],
+          "reversible": true
+        },
+        {
+          "type": "thermochemical",
+          "line": "2NO2(g) ⇌ N2O4(g)",
+          "conditions": [],
+          "reversible": true,
+          "deltaH": "-56.9 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氯化铁与硫氰化钾的反应",
+      "description": "Fe3+与SCN-可逆反应生成红色的Fe(SCN)3；教材通过加铁粉或KSCN观察颜色变化探究浓度对平衡的影响",
+      "difficulty": "中等",
+      "difficultyReason": "可逆的离子平衡，3种微粒",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "实验2-1（浓度对化学平衡的影响）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "实验活动1 探究影响化学平衡移动的因素",
+          "context": "实验步骤"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "其他"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Fe^3+ + 3SCN- ⇌ Fe(SCN)3",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "乙烷的裂解",
+      "description": "乙烷可逆裂解生成乙烯和氢气，吸热反应（ΔH>0）；用于化学平衡转化率分析",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，有机物裂解",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "练习与应用（第2题）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C2H6 ⇌ C2H4 + H2",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "二氧化硫的催化氧化（硫酸工业）",
+      "description": "SO2在催化剂作用下与O2可逆反应生成SO3，是硫酸工业的核心反应；ΔH=-196.6 kJ/mol",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应+热化学，工业调控条件分析（温度、压强、过量空气）",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "练习与应用（第5题）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第四节 化学反应的调控",
+          "context": "练习与应用（第3题）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "整理与提升",
+          "context": "复习与提高（第3、7题）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "可逆反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2SO2(g) + O2(g) ⇌ 2SO3(g)",
+          "conditions": [],
+          "reversible": true,
+          "deltaH": "-196.6 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳与二氧化碳的反应",
+      "description": "碳与二氧化碳在高温下可逆反应生成一氧化碳；勒夏特列由高炉中该可逆反应认识到研究平衡因素的重要性",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，气体体积增大的平衡移动示例",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "科学史话：勒夏特列"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C + CO2 ⇌ 2CO",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "一氧化氮的氧化",
+      "description": "NO与O2可逆反应生成NO2，ΔH=-113.0 kJ/mol；用于盖斯定律计算NO2与SO2的反应",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应+热化学，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "整理与提升",
+          "context": "复习与提高（第7题(1)）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应",
+        "可逆反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2NO(g) + O2(g) ⇌ 2NO2(g)",
+          "conditions": [],
+          "reversible": true,
+          "deltaH": "-113.0 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "二氧化氮与二氧化硫的反应",
+      "description": "NO2与SO2可逆反应生成SO3和NO；由SO2催化氧化与NO氧化两个反应按盖斯定律计算ΔH",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应；ΔH=-41.8 kJ/mol由盖斯定律计算，教材未直接给出（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "整理与提升",
+          "context": "复习与提高（第7题）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "可逆反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "NO2(g) + SO2(g) ⇌ SO3(g) + NO(g)",
+          "conditions": [],
+          "reversible": true,
+          "deltaH": "-41.8 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "二氧化碳与氢气合成甲醇",
+      "description": "CO2与H2可逆反应合成甲醇和水蒸气；用于平衡常数表达式与转化率措施分析",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，气体分子数减小，多条件调控",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第二节 化学平衡",
+          "context": "练习与应用（第6题）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "氢化物",
+        "有机物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CO2 + 3H2 ⇌ CH3OH + H2O",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "一氧化碳与硫化氢的反应",
+      "description": "CO与H2S可逆反应生成羰基硫（COS，粮食熏蒸剂）和氢气；用于平衡状态判断与平衡常数计算",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，4种气体，平衡常数计算",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "整理与提升",
+          "context": "复习与提高（第6题）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "氢化物",
+        "有机物"
+      ],
+      "reactionTypes": [
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CO + H2S ⇌ COS + H2",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "二氧化碳与氢气生成一氧化碳",
+      "description": "CO2与H2可逆反应生成CO和水蒸气（逆水煤气变换）；由平衡常数随温度变化判断反应吸热",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，K随温度升高增大",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "整理与提升",
+          "context": "复习与提高（第9题）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CO2 + H2 ⇌ CO + H2O",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "锌与硫酸铜溶液的反应（锌铜原电池）",
+      "description": "锌置换硫酸铜溶液中的铜（ΔH=-216.8 kJ/mol）；按原电池原理设计为锌铜原电池，Zn作负极、Cu2+在正极得电子",
+      "difficulty": "简单",
+      "difficultyReason": "置换反应，原电池基础实例",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第三节 化学反应的方向",
+          "context": "正文（放热自发反应）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "实验4-1"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "思考与讨论"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应",
+        "离子反应",
+        "热化学反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "电化学",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "Zn(s) + CuSO4(aq) = ZnSO4(aq) + Cu(s)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "-216.8 kJ/mol"
+        },
+        {
+          "type": "ionic",
+          "line": "Zn + Cu^2+ = Zn^2+ + Cu",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "electrode",
+          "line": "Zn = Zn^2+ + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸氢钠与盐酸的反应",
+      "description": "碳酸氢钠与盐酸反应生成氯化钠、二氧化碳和水，吸热反应（ΔH=+31.4 kJ/mol）却可自发进行",
+      "difficulty": "简单",
+      "difficultyReason": "复分解反应，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第三节 化学反应的方向",
+          "context": "正文（吸热反应可自发）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "NaHCO3(s) + HCl(aq) = NaCl(aq) + CO2(g) + H2O(l)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+31.4 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "五氧化二氮的分解",
+      "description": "N2O5分解生成NO2和O2，吸热反应（ΔH=+109.8 kJ/mol），熵增，可自发进行",
+      "difficulty": "中等",
+      "difficultyReason": "分解反应，系数4，ΔH为教材原值",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第三节 化学反应的方向",
+          "context": "正文（吸热反应可自发）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "热化学反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "thermochemical",
+          "line": "2N2O5(g) = 4NO2(g) + O2(g)",
+          "conditions": [],
+          "reversible": false,
+          "deltaH": "+109.8 kJ/mol"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "过氧化氢的分解",
+      "description": "过氧化氢分解生成水和氧气；教材以H2O2与FeCl3（催化剂）探究催化剂对速率的影响，并作熵增自发示例",
+      "difficulty": "简单",
+      "difficultyReason": "分解反应，物质3种，系数2",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第一节 化学反应速率",
+          "context": "探究：定性与定量研究影响化学反应速率的因素（实验探究I，FeCl3作催化剂）"
+        },
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第三节 化学反应的方向",
+          "context": "正文（熵增示例）"
+        }
+      ],
+      "substanceCategories": [
+        "过氧化物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2H2O2 = 2H2O + O2↑",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氯酸钾的分解",
+      "description": "氯酸钾分解生成氯化钾和氧气，熵增过程；教材作自发过程示例给出（未标注条件）",
+      "difficulty": "简单",
+      "difficultyReason": "分解反应，系数3，教材未标注条件（实验室制氧气常用MnO2催化加热）",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第三节 化学反应的方向",
+          "context": "正文（熵增示例）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2KClO3 = 2KCl + 3O2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氨与氯化氢的反应",
+      "description": "氨与氯化氢气体化合生成氯化铵（白烟），气体减少、熵减的反应",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，化合反应，无条件",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第三节 化学反应的方向",
+          "context": "练习与应用（第2题(4)）"
+        }
+      ],
+      "substanceCategories": [
+        "氢化物",
+        "盐"
+      ],
+      "reactionTypes": [
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NH3 + HCl = NH4Cl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铜氨液吸收一氧化碳",
+      "description": "合成氨原料气经铜氨液处理除去CO：[Cu(NH3)2]+与CO、NH3可逆反应生成[Cu(NH3)3CO]+（放热）；此处配离子按一行式惯例省略方括号",
+      "difficulty": "较难",
+      "difficultyReason": "配离子方程式，记号特殊（待父代理复核机器解析）",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第四节 化学反应的调控",
+          "context": "练习与应用（第4题）"
+        }
+      ],
+      "substanceCategories": [
+        "其他"
+      ],
+      "reactionTypes": [
+        "可逆反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Cu(NH3)2+ + CO + NH3 ⇌ Cu(NH3)3CO+",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "γ-羟基丁酸转化为γ-丁内酯",
+      "description": "γ-羟基丁酸（HOCH2CH2CH2COOH，分子式C4H8O3）在H+/加热条件下转化为γ-丁内酯（C4H6O2）和水，是可逆的酯化（内酯化）反应；教材以结构简式与环状结构图给出，此处按分子式书写",
+      "difficulty": "较难",
+      "difficultyReason": "有机可逆反应，教材用结构图示，转写为分子式（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "整理与提升",
+          "context": "复习与提高（第8题）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物"
+      ],
+      "reactionTypes": [
+        "可逆反应",
+        "其他"
+      ],
+      "knowledgeModules": [
+        "化学平衡",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C4H8O3 ⇌ C4H6O2 + H2O",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "盐酸的电离",
+      "description": "HCl是强电解质，在稀溶液中全部电离生成H+和Cl-（教材图3-1微观示意）",
+      "difficulty": "简单",
+      "difficultyReason": "强电解质一步完全电离",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "正文（实验3-1，强电解质与弱电解质）"
+        }
+      ],
+      "substanceCategories": [
+        "酸"
+      ],
+      "reactionTypes": [
+        "电离"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionization",
+          "line": "HCl = H+ + Cl-",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "醋酸的电离",
+      "description": "醋酸是弱电解质，在水中部分电离生成CH3COO-和H+，分子与离子共存，存在电离平衡",
+      "difficulty": "中等",
+      "difficultyReason": "弱电解质可逆电离，电离常数Ka=1.75×10^-5",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "正文（弱电解质的电离平衡）"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "有机物"
+      ],
+      "reactionTypes": [
+        "电离"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionization",
+          "line": "CH3COOH ⇌ CH3COO- + H+",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氨水的电离",
+      "description": "一水合氨是弱碱，在水中部分电离生成NH4+和OH-；教材以例题计算其电离常数Kb",
+      "difficulty": "中等",
+      "difficultyReason": "弱电解质可逆电离，电离常数计算示例",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "正文（弱电解质的电离平衡）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "正文（例题：电离常数计算）"
+        }
+      ],
+      "substanceCategories": [
+        "碱"
+      ],
+      "reactionTypes": [
+        "电离"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionization",
+          "line": "NH3·H2O ⇌ NH4+ + OH-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸的一级电离",
+      "description": "碳酸是二元弱酸，第一步电离生成H+和HCO3-（Ka1=4.5×10^-7）",
+      "difficulty": "中等",
+      "difficultyReason": "多元弱酸分步电离，第一步为主",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "正文（多元弱酸分步电离）"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "电离"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionization",
+          "line": "H2CO3 ⇌ H+ + HCO3-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸的二级电离",
+      "description": "碳酸第二步电离生成H+和CO3^2-（Ka2=4.7×10^-11，远小于Ka1）",
+      "difficulty": "中等",
+      "difficultyReason": "多元弱酸二级电离，程度更小",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "正文（多元弱酸分步电离）"
+        }
+      ],
+      "substanceCategories": [
+        "酸"
+      ],
+      "reactionTypes": [
+        "电离"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionization",
+          "line": "HCO3- ⇌ H+ + CO3^2-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "水的电离",
+      "description": "水是极弱的电解质，微弱电离生成H+和OH-；水的离子积Kw是溶液酸碱性与pH计算的基础",
+      "difficulty": "简单",
+      "difficultyReason": "电离方程式简单，但概念基础重要",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第二节 水的电离和溶液的pH",
+          "context": "正文（水的电离）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "正文（水解过程引用）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "电离"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionization",
+          "line": "H2O ⇌ H+ + OH-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "镁与盐酸的反应",
+      "description": "镁与盐酸反应生成氯化镁和氢气；教材比较盐酸与醋酸分别与镁条反应的剧烈程度",
+      "difficulty": "简单",
+      "difficultyReason": "置换反应，物质3种，气体符号",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "实验3-1（比较盐酸与醋酸）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "思考与讨论（图3-4气体压强对比）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Mg + 2HCl = MgCl2 + H2↑",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "Mg + 2H+ = Mg^2+ + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "镁与醋酸的反应",
+      "description": "镁与醋酸（弱酸）反应生成醋酸镁和氢气，因c(H+)较小反应较缓慢",
+      "difficulty": "中等",
+      "difficultyReason": "弱酸参与，生成物醋酸镁书写稍复杂",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "实验3-1、思考与讨论（弱酸与镁反应对比）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐",
+        "有机物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Mg + 2CH3COOH = (CH3COO)2Mg + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "醋酸与碳酸钠的反应",
+      "description": "醋酸滴入碳酸钠溶液产生气泡，证明醋酸的酸性比碳酸强（Ka>Ka1）",
+      "difficulty": "中等",
+      "difficultyReason": "强酸制弱酸原理，离子方程式需注意弱酸不拆",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "实验3-2（比较Ka与Ka1大小）"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "盐",
+        "氧化物",
+        "有机物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2CH3COOH + Na2CO3 = 2CH3COONa + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "2CH3COOH + CO3^2- = 2CH3COO- + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氰化钠与亚硝酸的反应",
+      "description": "NaCN与HNO2反应生成HCN和NaNO2（强酸制弱酸型复分解），用于比较三种弱酸的电离常数",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，弱酸强酸相对强弱判断",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "练习与应用（第1题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NaCN + HNO2 = HCN + NaNO2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氰化钠与氢氟酸的反应",
+      "description": "NaCN与HF反应生成HCN和NaF（强酸制弱酸型），用于比较弱酸电离常数大小",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，弱酸强弱相对判断",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "练习与应用（第1题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NaCN + HF = HCN + NaF",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "亚硝酸钠与氢氟酸的反应",
+      "description": "NaNO2与HF反应生成HNO2和NaF（强酸制弱酸型），用于比较弱酸电离常数大小",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，弱酸强弱相对判断",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第一节 电离平衡",
+          "context": "练习与应用（第1题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NaNO2 + HF = HNO2 + NaF",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氯化铵的水解",
+      "description": "NH4Cl是强酸弱碱盐，NH4+与水电离的OH-结合生成弱电解质NH3·H2O，破坏水的电离平衡，溶液呈酸性",
+      "difficulty": "中等",
+      "difficultyReason": "水解可逆，分子式与离子式两种写法",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "正文（盐溶液呈酸碱性的原因）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "整理与提升",
+          "context": "正文（三类平衡对比）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "碱",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "hydrolysis",
+          "line": "NH4Cl + H2O ⇌ NH3·H2O + HCl",
+          "conditions": [],
+          "reversible": true
+        },
+        {
+          "type": "hydrolysis",
+          "line": "NH4+ + H2O ⇌ NH3·H2O + H+",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "醋酸钠的水解",
+      "description": "CH3COONa是强碱弱酸盐，CH3COO-结合水电离的H+生成弱电解质CH3COOH，溶液呈碱性",
+      "difficulty": "中等",
+      "difficultyReason": "水解可逆，溶液碱性原因分析",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "思考与讨论（仿照NH4Cl分析）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "练习与应用（第5题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "碱",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "hydrolysis",
+          "line": "CH3COO- + H2O ⇌ CH3COOH + OH-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸钠的水解（第一步）",
+      "description": "Na2CO3是强碱弱酸盐，CO3^2-第一步水解生成HCO3-和OH-，溶液呈碱性（纯碱可作碱使用的原因）",
+      "difficulty": "中等",
+      "difficultyReason": "水解可逆，分步水解的第一步",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "正文（Na2CO3分步水解）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "练习与应用（第3题草木灰、第8题）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "练习与应用（第8题盐碱地呈碱性）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸式盐",
+        "碱"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "hydrolysis",
+          "line": "CO3^2- + H2O ⇌ HCO3- + OH-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸氢根的水解",
+      "description": "Na2CO3第二步水解（也是NaHCO3的水解）：HCO3-结合H+生成H2CO3和OH-，第二步水解程度很小",
+      "difficulty": "中等",
+      "difficultyReason": "水解可逆，第二步水解程度小",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "正文（Na2CO3第二步水解）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "整理与提升",
+          "context": "练习与应用（第6题NaHCO3溶液）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "碱"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "hydrolysis",
+          "line": "HCO3- + H2O ⇌ H2CO3 + OH-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铝离子的水解（明矾净水）",
+      "description": "Al3+水解生成Al(OH)3胶体吸附悬浮物净水；明矾[KAl(SO4)2·12H2O]溶液因水解呈酸性",
+      "difficulty": "中等",
+      "difficultyReason": "多价阳离子水解，可逆，胶体生成",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "正文（盐类水解的应用——净水剂）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "练习与应用（第1题明矾）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "实验活动3 盐类水解的应用",
+          "context": "实验步骤"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "碱",
+        "胶体"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "hydrolysis",
+          "line": "Al^3+ + 3H2O ⇌ Al(OH)3 + 3H+",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铁离子的水解",
+      "description": "Fe3+水解生成Fe(OH)3；水解平衡用于净水及Fe2(SO4)3溶液配制，滴入沸水促使水解趋于完全制得Fe(OH)3胶体",
+      "difficulty": "中等",
+      "difficultyReason": "多价阳离子水解，可逆与促完全两种写法",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "探究：反应条件对Fe2(SO4)3水解平衡的影响"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "正文（盐类水解的应用——净水剂）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "实验活动3 盐类水解的应用",
+          "context": "实验步骤（滴入沸水制胶体）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "碱",
+        "胶体"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "hydrolysis",
+          "line": "Fe^3+ + 3H2O ⇌ Fe(OH)3 + 3H+",
+          "conditions": [],
+          "reversible": true
+        },
+        {
+          "type": "hydrolysis",
+          "line": "Fe^3+ + 3H2O = Fe(OH)3 + 3H+",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "三氯化锑的水解",
+      "description": "SbCl3水解制取Sb2O3的总反应（可逆）；操作上将SbCl3缓慢加入大量水并加氨水促进水解",
+      "difficulty": "较难",
+      "difficultyReason": "水解总反应，可逆，平衡移动应用",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "练习与应用（第9题）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "整理与提升",
+          "context": "练习与应用（第8题配制SbCl3溶液）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "hydrolysis",
+          "line": "2SbCl3 + 3H2O ⇌ Sb2O3 + 6HCl",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "亚硫酰氯与水的反应",
+      "description": "SOCl2与水剧烈反应生成SO2和HCl（白雾）；由实验现象推断，SOCl2可用于制无水AlCl3",
+      "difficulty": "较难",
+      "difficultyReason": "信息型反应，需由现象推断产物",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第三节 盐类的水解",
+          "context": "练习与应用（第10题）"
+        }
+      ],
+      "substanceCategories": [
+        "其他",
+        "氧化物",
+        "酸"
+      ],
+      "reactionTypes": [
+        "水解反应",
+        "其他"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "SOCl2 + H2O = SO2 + 2HCl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氨水与强酸的中和反应",
+      "description": "一水合氨与强酸（如稀硫酸）中和生成铵盐和水；所得铵盐溶液因水解呈酸性",
+      "difficulty": "简单",
+      "difficultyReason": "弱碱中和，物质3种",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "整理与提升",
+          "context": "练习与应用（第7题(2)）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "中和反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "NH3·H2O + H+ = NH4+ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸氢盐缓冲体系（血液pH稳定）",
+      "description": "血浆中H2CO3/HCO3-缓冲体系：H+与HCO3-可逆结合生成H2CO3，H2CO3进一步与CO2(g)+H2O(l)平衡联动，稳定血液pH；此处取缓冲主体一步书写",
+      "difficulty": "中等",
+      "difficultyReason": "缓冲平衡，教材以链式平衡给出（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第二节 水的电离和溶液的pH",
+          "context": "科学·技术·社会：血液的酸碱平衡"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "可逆反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "H+ + HCO3- ⇌ H2CO3",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "银离子与氯离子的反应（氯化银沉淀的生成）",
+      "description": "AgNO3溶液与NaCl溶液混合生成白色AgCl沉淀，是离子反应生成沉淀的典型实例",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种（离子），沉淀符号，经典复分解",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "正文"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "实验3-4（步骤1）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "整理与提升",
+          "context": "练习与应用（第3、4题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Ag+ + Cl- = AgCl↓",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氯化银的沉淀溶解平衡",
+      "description": "AgCl在水中存在沉淀与溶解的动态平衡（Ksp=1.8×10^-10），决定Ag+与Cl-的反应不能进行完全",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀溶解平衡，溶度积概念的核心实例",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "正文（溶度积）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "思考与讨论"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "实验3-4"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "整理与提升",
+          "context": "练习与应用（第3题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "AgCl ⇌ Ag+ + Cl-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碘化银的沉淀溶解平衡",
+      "description": "AgI在水中存在沉淀溶解平衡，Ksp=8.5×10^-17远小于AgCl，溶解度更小",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀溶解平衡，Ksp大小比较",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "正文（AgCl转化为AgI的分析）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "AgI ⇌ Ag+ + I-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "硫化银的沉淀溶解平衡",
+      "description": "Ag2S在水中存在沉淀溶解平衡（Ksp示例：Ksp=c²(Ag+)·c(S²-)），Ag2S极难溶",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀溶解平衡，Ksp表达式示例",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "正文（溶度积示例）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Ag2S ⇌ 2Ag+ + S^2-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氯化银转化为碘化银",
+      "description": "向AgCl沉淀中滴加KI溶液，AgCl转化为更难溶的AgI；沉淀转化的实质是沉淀溶解平衡的移动",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀转化，可逆，溶解度比较",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "正文（沉淀的转化）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "实验3-4（步骤2）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "I- + AgCl ⇌ AgI + Cl-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碘化银转化为硫化银",
+      "description": "实验3-4步骤(3)中AgI沉淀继续转化为更难溶的Ag2S沉淀（Ag2S的Ksp极小）；教材描述现象，方程式按沉淀转化原理书写",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀转化，方程式由教材现象推写（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "实验3-4（步骤3）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "2AgI + S^2- = Ag2S + 2I-",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸钙的沉淀溶解平衡",
+      "description": "CaCO3在水中存在沉淀溶解平衡；教材借其与H+结合生成H2CO3的分析说明难溶物溶于强酸的原理",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀溶解平衡，与酸溶解联动分析",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "正文（沉淀的溶解）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "CaCO3 ⇌ Ca^2+ + CO3^2-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸钙与盐酸的反应",
+      "description": "盐酸提供H+结合CO3^2-生成H2CO3并分解放出CO2，促使CaCO3溶解平衡右移直至完全溶解",
+      "difficulty": "简单",
+      "difficultyReason": "复分解反应，气体与沉淀符号",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "正文（沉淀的溶解）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "CaCO3 + 2H+ = Ca^2+ + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "chemical",
+          "line": "CaCO3 + 2HCl = CaCl2 + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸钡与盐酸（胃酸）的反应",
+      "description": "BaCO3能溶于盐酸（胃酸）生成可溶性Ba2+而中毒，因此不能代替BaSO4作钡餐",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀溶解平衡应用，需结合Ksp与胃酸分析",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "练习与应用（第6题钡餐）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "BaCO3 + 2H+ = Ba^2+ + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氢氧化镁的沉淀溶解平衡",
+      "description": "Mg(OH)2在水中存在沉淀溶解平衡（Ksp=5.6×10^-12），加入酸可促使平衡右移",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀溶解平衡，Ksp表达式书写",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "练习与应用（第1题）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "实验3-3"
+        }
+      ],
+      "substanceCategories": [
+        "碱"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Mg(OH)2 ⇌ Mg^2+ + 2OH-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氢氧化镁与盐酸的反应",
+      "description": "Mg(OH)2沉淀溶于盐酸：H+结合OH-使溶解平衡右移，沉淀完全溶解",
+      "difficulty": "简单",
+      "difficultyReason": "酸碱反应，物质3种",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "实验3-3"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "思考与讨论（写出实验3-3中的化学方程式）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "中和反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Mg(OH)2 + 2HCl = MgCl2 + 2H2O",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "Mg(OH)2 + 2H+ = Mg^2+ + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "羟基磷灰石的溶解（龋齿的成因）",
+      "description": "口腔细菌产生的有机酸电离出的H+使牙齿釉质主要成分羟基磷灰石[Ca5(PO4)3OH]溶解，长期进行导致龋齿",
+      "difficulty": "较难",
+      "difficultyReason": "复杂化学式，离子方程式配平较难",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "科学·技术·社会：氟化物预防龋齿的化学原理"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "其他"
+      ],
+      "reactionTypes": [
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Ca5(PO4)3OH + 4H+ = 5Ca^2+ + 3HPO4^2- + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氟离子与羟基磷灰石的反应（含氟牙膏防龋）",
+      "description": "F-与羟基磷灰石反应生成更难溶、更抗酸侵蚀的氟磷灰石[Ca5(PO4)3F]，改变釉质组成预防龋齿",
+      "difficulty": "较难",
+      "difficultyReason": "复杂化学式，沉淀转化原理",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "科学·技术·社会：氟化物预防龋齿的化学原理"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "其他"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Ca5(PO4)3OH + F- ⇌ Ca5(PO4)3F + OH-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "硫酸钡的沉淀溶解平衡",
+      "description": "BaSO4在水中存在沉淀溶解平衡（Ksp=1.1×10^-10）；用含SO4^2-的稀硫酸洗涤可抑制其溶解减少损失，且不溶于胃酸故可作钡餐",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀溶解平衡，同离子效应应用",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "练习与应用（第5题洗涤剂的选择）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "练习与应用（第6题钡餐）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "BaSO4 ⇌ Ba^2+ + SO4^2-",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "硫酸钙转化为碳酸钙",
+      "description": "锅炉水垢中的CaSO4用Na2CO3溶液处理转化为疏松易溶于酸的CaCO3；也是石膏降低盐碱地碱性的原理",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀转化，结合Ksp大小分析",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "正文（锅炉水垢的处理）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "练习与应用（第8题盐碱地改良）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "CaSO4 + CO3^2- = CaCO3 + SO4^2-",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "硫化钠沉淀废水中的汞离子",
+      "description": "以Na2S作沉淀剂，使废水中的Hg2+生成极难溶的HgS沉淀而除去（Ksp=1.6×10^-52）",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀生成，离子方程式简单但应用性强",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "练习与应用（第7题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Hg^2+ + S^2- = HgS↓",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "硫化亚铁转化法除汞",
+      "description": "FeS也可用于除去废水中的Hg2+：Hg2+将FeS转化为更难溶的HgS并释放Fe2+（沉淀转化）",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀转化，需比较Ksp大小",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "练习与应用（第7题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学与生活"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Hg^2+ + FeS = Fe^2+ + HgS",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "银离子与铬酸根离子的反应",
+      "description": "Ag+与CrO4^2-反应生成砖红色Ag2CrO4沉淀；化学分析中以其指示AgNO3滴定Cl-的终点",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀生成，结合Ksp计算滴定终点",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "整理与提升",
+          "context": "练习与应用（第9题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "2Ag+ + CrO4^2- = Ag2CrO4↓",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氢氧化镁转化为氢氧化铁",
+      "description": "向Mg(OH)2沉淀悬浊液中滴加FeCl3溶液，沉淀转化为更难溶的Fe(OH)3（实验3-5现象）",
+      "difficulty": "较难",
+      "difficultyReason": "沉淀转化离子方程式配平较复杂",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "第四节 沉淀溶解平衡",
+          "context": "实验3-5（步骤2）"
+        },
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "实验活动3 盐类水解的应用",
+          "context": "问题和讨论"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "3Mg(OH)2 + 2Fe^3+ = 2Fe(OH)3 + 3Mg^2+",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "亚铁离子与氢氧根离子的反应",
+      "description": "铁锅锈蚀（吸氧腐蚀）中负、正极产物Fe2+与OH-继续反应生成Fe(OH)2，进而被氧化为铁锈",
+      "difficulty": "简单",
+      "difficultyReason": "沉淀生成，离子方程式简单",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第三节 金属的腐蚀与防护",
+          "context": "练习与应用（第2题）"
+        }
+      ],
+      "substanceCategories": [
+        "碱"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Fe^2+ + 2OH- = Fe(OH)2↓",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "重铬酸根与铬酸根的转化平衡",
+      "description": "K2Cr2O7溶液中存在Cr2O7^2-（橙色）与CrO4^2-（黄色）的水合平衡；加碱或加酸使平衡移动",
+      "difficulty": "中等",
+      "difficultyReason": "可逆离子平衡，颜色变化明显",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "实验活动1 探究影响化学平衡移动的因素",
+          "context": "实验步骤（浓度对平衡的影响）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Cr2O7^2- + H2O ⇌ 2CrO4^2- + 2H+",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铜的水合离子与氯离子的平衡",
+      "description": "CuCl2溶液中[Cu(H2O)4]2+（蓝色）与Cl-可逆反应生成[CuCl4]2-（黄色），ΔH>0；加热颜色加深，冷却变浅；此处配离子按一行式惯例省略方括号",
+      "difficulty": "较难",
+      "difficultyReason": "配离子平衡，记号特殊（待父代理复核机器解析）",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "实验活动1 探究影响化学平衡移动的因素",
+          "context": "实验步骤（温度对平衡的影响）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "其他"
+      ],
+      "reactionTypes": [
+        "离子反应",
+        "可逆反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Cu(H2O)4^2+ + 4Cl- ⇌ CuCl4^2- + 4H2O",
+          "conditions": [],
+          "reversible": true
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氯化铜的电离",
+      "description": "CuCl2在水中电离生成Cu2+和Cl-，为电解CuCl2溶液作铺垫",
+      "difficulty": "简单",
+      "difficultyReason": "强电解质完全电离",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "正文（实验4-2）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "电离"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionization",
+          "line": "CuCl2 = Cu^2+ + 2Cl-",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "熔融氯化钠的电离",
+      "description": "NaCl在高温下熔融并电离出Na+和Cl-，通电后发生电解制得金属钠",
+      "difficulty": "简单",
+      "difficultyReason": "强电解质完全电离（熔融态）",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "正文（电冶金）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "电离"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionization",
+          "line": "NaCl = Na+ + Cl-",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碱性锌锰电池",
+      "description": "Zn作负极、MnO2作正极，KOH为电解质的碱性锌锰电池放电反应",
+      "difficulty": "较难",
+      "difficultyReason": "碱性介质电极反应，产物书写易错",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "正文（化学电源·一次电池）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "练习与应用（第3题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "碱"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Zn + 2OH- = Zn(OH)2 + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极",
+          "medium": "碱性介质"
+        },
+        {
+          "type": "electrode",
+          "line": "MnO2 + H2O + e- = MnO(OH) + OH-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极",
+          "medium": "碱性介质"
+        },
+        {
+          "type": "chemical",
+          "line": "Zn + 2MnO2 + 2H2O = 2MnO(OH) + Zn(OH)2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铅酸蓄电池的放电",
+      "description": "铅酸蓄电池（二次电池）放电：Pb作负极、PbO2作正极，稀硫酸作电解质溶液",
+      "difficulty": "较难",
+      "difficultyReason": "电极反应含H+、SO4^2-，酸性介质配平易错",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "正文（化学电源·二次电池）"
+        },
+        {
+          "chapter": "第一章 化学反应的热效应",
+          "section": "第二节 反应热的计算",
+          "context": "练习与应用（第6题，Pb与PbO2反应）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Pb + SO4^2- = PbSO4 + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极",
+          "medium": "酸性介质"
+        },
+        {
+          "type": "electrode",
+          "line": "PbO2 + 4H+ + SO4^2- + 2e- = PbSO4 + 2H2O",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极",
+          "medium": "酸性介质"
+        },
+        {
+          "type": "chemical",
+          "line": "Pb + PbO2 + 2H2SO4 = 2PbSO4 + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铅酸蓄电池的充电",
+      "description": "铅酸蓄电池充电过程与放电相反：PbSO4在阴极还原为Pb、在阳极氧化为PbO2；由放电反应逆推（习题7）",
+      "difficulty": "较难",
+      "difficultyReason": "电解池电极反应，由放电逆推（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "练习与应用（第7题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物",
+        "单质",
+        "酸"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "PbSO4 + 2e- = Pb + SO4^2-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阴极",
+          "medium": "酸性介质"
+        },
+        {
+          "type": "electrode",
+          "line": "PbSO4 + 2H2O = PbO2 + 4H+ + SO4^2- + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阳极",
+          "medium": "酸性介质"
+        },
+        {
+          "type": "chemical",
+          "line": "2PbSO4 + 2H2O = Pb + PbO2 + 2H2SO4",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氢氧燃料电池（酸性电解质）",
+      "description": "氢氧燃料电池以铂作电极，酸性电解质下H2在负极失电子、O2在正极得电子生成水；总反应即氢气的燃烧反应",
+      "difficulty": "中等",
+      "difficultyReason": "燃料电池电极反应，酸性介质；总反应按教材H2+1/2O2系数换算为整数",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "正文（燃料电池）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "实验活动5 制作简单的燃料电池",
+          "context": "实验步骤"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "整理与提升",
+          "context": "复习与提高（第10题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "H2 = 2H+ + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极",
+          "medium": "酸性介质"
+        },
+        {
+          "type": "electrode",
+          "line": "O2 + 4H+ + 4e- = 2H2O",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极",
+          "medium": "酸性介质"
+        },
+        {
+          "type": "chemical",
+          "line": "2H2 + O2 = 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "甲醇燃料电池（酸性电解质）",
+      "description": "根据甲醇在酸性电解质中与氧气反应生成CO2和H2O设计的燃料电池，负极甲醇失电子被氧化",
+      "difficulty": "较难",
+      "difficultyReason": "有机燃料电池负极反应，电子数计算易错",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "练习与应用（第5题）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "有机化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "CH3OH + H2O = CO2↑ + 6H+ + 6e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极",
+          "medium": "酸性介质"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "镁-氯化银贮备电池的负极反应",
+      "description": "Mg-AgCl海水激活贮备电池中Mg作负极失电子（习题4选项A）",
+      "difficulty": "简单",
+      "difficultyReason": "活泼金属负极氧化，物质2种",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "练习与应用（第4题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Mg = Mg^2+ + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "镁与水的反应",
+      "description": "Mg-AgCl贮备电池负极的副反应：Mg与水反应生成Mg(OH)2和H2（习题4选项D）",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，置换型反应",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "练习与应用（第4题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "碱",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Mg + 2H2O = Mg(OH)2 + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "普通锌锰电池",
+      "description": "普通锌锰干电池放电的主要反应：Zn被氧化、MnO2被还原，NH4Cl参与生成Zn(NH3)2Cl2",
+      "difficulty": "较难",
+      "difficultyReason": "总反应物质5种，产物复杂",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "练习与应用（第6题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐",
+        "氧化物",
+        "其他"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Zn + 2NH4Cl + 2MnO2 = Zn(NH3)2Cl2 + 2MnO(OH)",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铜离子得电子的还原反应",
+      "description": "Cu2+ + 2e- = Cu：原电池正极（锌铜原电池）、电解池及电镀的阴极上均为该反应",
+      "difficulty": "简单",
+      "difficultyReason": "单电子转移还原，物质2种",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "思考与讨论（原电池工作原理）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "实验4-2（阴极）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "练习与应用（第5题）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "实验活动4 简单的电镀实验",
+          "context": "实验步骤"
+        }
+      ],
+      "substanceCategories": [
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Cu^2+ + 2e- = Cu",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "电解氯化铜溶液",
+      "description": "通电时CuCl2溶液中Cu2+在阴极得电子析出Cu，Cl-在阳极失电子生成Cl2；化学方程式由两极反应组成",
+      "difficulty": "中等",
+      "difficultyReason": "电解原理核心实例，阴阳极产物判断",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "正文（实验4-2）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CuCl2 = Cu + Cl2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "Cu^2+ + 2Cl- = Cu + Cl2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氯离子在阳极的氧化反应",
+      "description": "2Cl- - 2e- = Cl2↑：电解CuCl2溶液、氯碱工业与电解熔融NaCl中阳极上Cl-失电子的氧化反应",
+      "difficulty": "简单",
+      "difficultyReason": "阴离子放电，物质2种",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "实验4-2（阳极）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "正文（氯碱工业）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "正文（电冶金）"
+        }
+      ],
+      "substanceCategories": [
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "2Cl- = Cl2↑ + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阳极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "电解饱和食盐水（氯碱工业）",
+      "description": "电解饱和食盐水（氯碱工业）制烧碱、氯气和氢气，在离子交换膜电解槽中进行；化学方程式由离子方程式组成",
+      "difficulty": "中等",
+      "difficultyReason": "电解总反应，阴阳极产物同时出现",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "正文（电解饱和食盐水）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "练习与应用（第8题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物",
+        "碱",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NaCl + 2H2O = 2NaOH + H2↑ + Cl2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "ionic",
+          "line": "2Cl- + 2H2O = Cl2↑ + H2↑ + 2OH-",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "水在阴极的还原反应",
+      "description": "2H2O + 2e- = H2↑ + 2OH-：氯碱工业阴极H+（来自水）放电生成氢气，同时产生OH-；电解Na2SO4等溶液时亦为此反应",
+      "difficulty": "中等",
+      "difficultyReason": "水的电极还原，易与H+直接放电混淆",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "正文（氯碱工业阴极）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "实验活动5 制作简单的燃料电池",
+          "context": "实验步骤"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "整理与提升",
+          "context": "复习与提高（第9题）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "氢化物",
+        "碱"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "2H2O + 2e- = H2↑ + 2OH-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阴极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "电解熔融氯化钠制金属钠",
+      "description": "电解熔融NaCl，阴极Na+得电子析出金属钠，阳极Cl-失电子生成氯气；电解法冶炼活泼金属的重要实例",
+      "difficulty": "中等",
+      "difficultyReason": "电冶金，阴阳极产物判断",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "正文（电冶金）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NaCl = 2Na + Cl2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "electrode",
+          "line": "Na+ + e- = Na",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阴极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "电解熔融氯化钙",
+      "description": "电解熔融CaCl2：阴极Ca2+得电子析出钙，阳极Cl-失电子生成氯气（习题1）",
+      "difficulty": "中等",
+      "difficultyReason": "电解原理迁移应用，阴阳极反应书写",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "练习与应用（第1题(1)）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CaCl2 = Ca + Cl2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        },
+        {
+          "type": "electrode",
+          "line": "Ca^2+ + 2e- = Ca",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阴极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "电解水",
+      "description": "电解Na2SO4（或稀NaOH）溶液，实质是电解水：阴极析出H2、阳极析出O2；实验活动5先电解水再组成氢氧燃料电池",
+      "difficulty": "简单",
+      "difficultyReason": "物质2种，气体符号，通电条件",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "实验活动5 制作简单的燃料电池",
+          "context": "实验步骤（电解Na2SO4溶液）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "练习与应用（第1题(2)电解稀NaOH溶液实质）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2H2O = 2H2↑ + O2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氢氧根离子在阳极的氧化反应",
+      "description": "4OH- - 4e- = O2↑ + 2H2O：电解稀溶液时阳极上OH-（来自水）放电生成氧气（习题5选项D、复习9电解稀MgSO4溶液）",
+      "difficulty": "中等",
+      "difficultyReason": "水的阳极氧化，系数4易错",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第一节 原电池",
+          "context": "练习与应用（第5题）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "整理与提升",
+          "context": "复习与提高（第9题）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "4OH- = O2↑ + 2H2O + 4e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阳极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "铜在阳极的氧化反应（电解精炼铜）",
+      "description": "电解精炼铜与电镀铜时，粗铜（或镀层金属铜）作阳极失电子溶解为Cu2+，杂质沉为阳极泥",
+      "difficulty": "简单",
+      "difficultyReason": "活性电极溶解，物质2种",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "正文（电解精炼铜）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "实验活动4 简单的电镀实验",
+          "context": "实验步骤"
+        }
+      ],
+      "substanceCategories": [
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Cu = Cu^2+ + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阳极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "电镀镍的电极反应",
+      "description": "在铁制品表面镀镍：镍作阳极失电子溶解，镀件（铁）作阴极，Ni2+在阴极得电子析出（习题3）",
+      "difficulty": "简单",
+      "difficultyReason": "电镀原理，阴阳极反应对称",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "练习与应用（第3题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Ni = Ni^2+ + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阳极"
+        },
+        {
+          "type": "electrode",
+          "line": "Ni^2+ + 2e- = Ni",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "阴极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "钢铁的析氢腐蚀",
+      "description": "钢铁表面水膜酸性较强时发生析氢腐蚀：Fe作负极失电子，H+在正极得电子生成H2",
+      "difficulty": "中等",
+      "difficultyReason": "电化学腐蚀，负正极反应与总反应对应",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第三节 金属的腐蚀与防护",
+          "context": "正文（析氢腐蚀）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氢化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Fe = Fe^2+ + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极"
+        },
+        {
+          "type": "electrode",
+          "line": "2H+ + 2e- = H2↑",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极"
+        },
+        {
+          "type": "ionic",
+          "line": "Fe + 2H+ = Fe^2+ + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "钢铁的吸氧腐蚀",
+      "description": "钢铁表面水膜酸性很弱或呈中性时发生吸氧腐蚀：O2在正极得电子生成OH-，总反应生成Fe(OH)2；钢铁腐蚀以此为主",
+      "difficulty": "中等",
+      "difficultyReason": "正极反应系数4，暖贴发热原理",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第三节 金属的腐蚀与防护",
+          "context": "正文（吸氧腐蚀）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第三节 金属的腐蚀与防护",
+          "context": "练习与应用（第2题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "碱"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "Fe = Fe^2+ + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极"
+        },
+        {
+          "type": "electrode",
+          "line": "2H2O + O2 + 4e- = 4OH-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极"
+        },
+        {
+          "type": "chemical",
+          "line": "2Fe + O2 + 2H2O = 2Fe(OH)2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "氢氧化亚铁的氧化",
+      "description": "Fe(OH)2在空气中被O2氧化为Fe(OH)3，后者失水生成铁锈主要成分Fe2O3·xH2O；该反应熵减但可自发进行",
+      "difficulty": "中等",
+      "difficultyReason": "系数4，氧化还原配平",
+      "textbooks": [
+        {
+          "chapter": "第二章 化学反应速率与化学平衡",
+          "section": "第三节 化学反应的方向",
+          "context": "正文（熵减仍自发）"
+        },
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第三节 金属的腐蚀与防护",
+          "context": "正文（铁锈的生成）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物",
+        "化学平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "4Fe(OH)2 + O2 + 2H2O = 4Fe(OH)3",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "锌银纽扣电池",
+      "description": "由Zn+Ag2O=ZnO+2Ag设计的锌银纽扣电池（KOH电解质）；电极反应由总反应与碱性介质推写",
+      "difficulty": "较难",
+      "difficultyReason": "碱性介质电极反应，由总反应逆推（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "整理与提升",
+          "context": "复习与提高（第1题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Zn + Ag2O = ZnO + 2Ag",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "electrode",
+          "line": "Zn + 2OH- = ZnO + H2O + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极",
+          "medium": "碱性介质"
+        },
+        {
+          "type": "electrode",
+          "line": "Ag2O + H2O + 2e- = 2Ag + 2OH-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极",
+          "medium": "碱性介质"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "锂-亚硫酰氯电池",
+      "description": "心脏起搏器用锂电池的总反应：8Li+3SOCl2=6LiCl+Li2SO3+2S（教材给出总反应，电极反应略）",
+      "difficulty": "较难",
+      "difficultyReason": "总反应物质多，产物复杂",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "整理与提升",
+          "context": "复习与提高（第3题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "其他",
+        "盐"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "8Li + 3SOCl2 = 6LiCl + Li2SO3 + 2S",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "锌-空气电池",
+      "description": "锌-空气电池（KOH电解质）放电：Zn在负极被氧化为Zn(OH)4^2-，总反应为2Zn+O2+4OH-+2H2O=2Zn(OH)4^2-；配离子按一行式惯例省略方括号",
+      "difficulty": "较难",
+      "difficultyReason": "配离子电极反应，碱性介质（待父代理复核机器解析）",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "整理与提升",
+          "context": "复习与提高（第5题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "碱",
+        "其他"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "2Zn + O2 + 4OH- + 2H2O = 2Zn(OH)4^2-",
+          "conditions": [],
+          "reversible": false
+        },
+        {
+          "type": "electrode",
+          "line": "Zn + 4OH- = Zn(OH)4^2- + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极",
+          "medium": "碱性介质"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "镍系可充电电池的放电",
+      "description": "一种可充电电池（氢镍/镍系）放电时的电极反应：H2在负极于碱性条件下失电子，NiO(OH)在正极得电子生成Ni(OH)2",
+      "difficulty": "较难",
+      "difficultyReason": "新型电池电极反应，充电时电极角色互换",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "整理与提升",
+          "context": "复习与提高（第7题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物",
+        "碱"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "电极反应"
+      ],
+      "knowledgeModules": [
+        "电化学"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "electrode",
+          "line": "H2 + 2OH- = 2H2O + 2e-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "负极"
+        },
+        {
+          "type": "electrode",
+          "line": "NiO(OH) + H2O + e- = Ni(OH)2 + OH-",
+          "conditions": [],
+          "reversible": false,
+          "electrode": "正极"
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "电解法处理酸性含铬废水",
+      "description": "以铁板作阴、阳极电解处理酸性含铬废水：阳极生成的Fe2+将Cr2O7^2-还原为Cr3+，最后以Cr(OH)3形式除去",
+      "difficulty": "较难",
+      "difficultyReason": "复杂离子方程式，系数大（6、14）配平难",
+      "textbooks": [
+        {
+          "chapter": "第四章 化学反应与电能",
+          "section": "第二节 电解池",
+          "context": "练习与应用（第6题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "电化学",
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "Cr2O7^2- + 6Fe^2+ + 14H+ = 2Cr^3+ + 6Fe^3+ + 7H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    },
+    {
+      "name": "碳酸镁与酸的反应（调节pH除铁）",
+      "description": "除去MgCl2酸性溶液中的Fe3+时加入MgCO3：MgCO3消耗H+（MgCO3+2H+=Mg2++H2O+CO2↑），促进Fe3+水解为Fe(OH)3沉淀且不引入新杂质；教材以选择题给出（答案为碳酸镁），方程式按其原理书写",
+      "difficulty": "中等",
+      "difficultyReason": "沉淀溶解平衡与水解平衡综合应用（待父代理复核）",
+      "textbooks": [
+        {
+          "chapter": "第三章 水溶液中的离子反应与平衡",
+          "section": "整理与提升",
+          "context": "练习与应用（第3题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "离子反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "化学实验"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "ionic",
+          "line": "MgCO3 + 2H+ = Mg^2+ + H2O + CO2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·选择性必修1"
+    }
+  ],
+  "excluded": [
+    {
+      "raw": "mA(g) + nB(g) ⇌ pC(g) + qD(g)（ΔH<0，m+n>p+q）",
+      "location": "第二章 整理与提升·二、化学反应速率和化学平衡",
+      "reason": "抽象通式，A/B/C/D为代指字母，非具体物质，无法转为实际化学方程式"
+    },
+    {
+      "raw": "A(g) + 3B(g) ⇌ 2C(g)",
+      "location": "第二章 第二节 练习与应用（第1题）",
+      "reason": "抽象通式，非具体物质"
+    },
+    {
+      "raw": "X(g) + 2Y(g) ⇌ 3Z(g)",
+      "location": "第二章 第二节 练习与应用（第3题）",
+      "reason": "抽象通式，非具体物质"
+    },
+    {
+      "raw": "xA(g) + yB(g) ⇌ zC(g)",
+      "location": "第二章 第二节 练习与应用（第4题）",
+      "reason": "抽象通式，系数为未知数"
+    },
+    {
+      "raw": "X(g) + Y(g) ⇌ Z(g) + M(g) + N(s)",
+      "location": "第二章 整理与提升·复习与提高（第4题）",
+      "reason": "抽象通式，非具体物质"
+    },
+    {
+      "raw": "2HI → H2 + 2I· ；2I· → I2",
+      "location": "第二章 第一节 正文（反应历程）",
+      "reason": "含自由基符号\"·\"的基元反应历程式，非完整化学方程式"
+    },
+    {
+      "raw": "ICN → I· + ·CN",
+      "location": "第二章 第一节 飞秒化学（科学视野）",
+      "reason": "自由基光分解示意式，非完整方程式"
+    },
+    {
+      "raw": "H· + CO2 → H···O···CO → ·OH + CO",
+      "location": "第二章 第一节 飞秒化学（科学视野）",
+      "reason": "含过渡态记号的历程示意，无法按一行式解析"
+    },
+    {
+      "raw": "M^n+ + ne- = M",
+      "location": "第四章 第二节 正文（电冶金）",
+      "reason": "通式，金属M与价数n未指明"
+    },
+    {
+      "raw": "LixCy - xe- = xLi+ + Cy；Li1-xCoO2 + xLi+ + xe- = LiCoO2；LixCy + Li1-xCoO2 = LiCoO2 + Cy",
+      "location": "第四章 第一节 资料卡片（锂离子电池）",
+      "reason": "含未知变量x、y的嵌入（嵌锂）记法，无法按一行式解析"
+    },
+    {
+      "raw": "TiCl4 + (x+2)H2O = TiO2·xH2O↓ + 4HCl",
+      "location": "第三章 第三节 正文（盐类水解的应用）",
+      "reason": "含未知数x的水合物记法（TiO2·xH2O），无法配平为确定系数"
+    },
+    {
+      "raw": "A- + H2O ⇌ HA + OH-（及 MA = A- + M+）",
+      "location": "第三章 第三节 资料卡片（盐的水解常数）与正文",
+      "reason": "通式，A、M为代指符号，非具体物质"
+    },
+    {
+      "raw": "2CH2=CHCN + 2H+ + 2e- = NC(CH2)4CN（含阳极 H2O-2e-=1/2O2↑+2H+ 与总反应）",
+      "location": "第四章 第二节 资料卡片（电有机合成·己二腈）",
+      "reason": "有机结构式内含\"=\"与方程式等号冲突，且含分数系数，无法按一行式解析"
+    },
+    {
+      "raw": "丁烷燃烧的热化学方程式（2C4H10(g)+13O2(g)=8CO2(g)+10H2O(l)）",
+      "location": "第一章 第二节 练习与应用（第3题）",
+      "reason": "ΔH须由习题数据（10 kg丁烷放热5×10^5 kJ）换算（约-2900 kJ/mol），教材未给标准答案，数值精度存疑"
+    },
+    {
+      "raw": "铝-空气电池的电极反应及总反应",
+      "location": "第四章 整理与提升·复习与提高（第2题）",
+      "reason": "教材未给出答案，负极产物形式（Al3+/Al(OH)3）不唯一，无法可靠书写"
+    },
+    {
+      "raw": "锂-亚硫酰氯电池的负极、正极反应",
+      "location": "第四章 整理与提升·复习与提高（第3题）",
+      "reason": "教材仅给出总反应（已提取），正极产物复杂无法可靠书写"
+    },
+    {
+      "raw": "氯碱—燃料电池组合工艺中燃料电池B的电极反应",
+      "location": "第四章 整理与提升·复习与提高（第10题(2)）",
+      "reason": "依赖流程图物料与介质信息（图无法判读），电极未标明"
+    },
+    {
+      "raw": "Ag+ + e- = Ag（Mg-AgCl电池正极选项）",
+      "location": "第四章 第一节 练习与应用（第4题选项B）",
+      "reason": "习题选项中的不正确表述（实际正极为AgCl得电子），不宜作为方程式入库"
+    },
+    {
+      "raw": "普通锌锰电池的正极反应",
+      "location": "第四章 第一节 练习与应用（第6题(1)）",
+      "reason": "教材仅给出总反应（已提取），正极反应未给出"
+    },
+    {
+      "raw": "Fe2+ 与 K3[Fe(CN)6] 生成 KFe[Fe(CN)6] 沉淀",
+      "location": "第四章 第三节 资料卡片（Fe2+的检验）",
+      "reason": "配合物记号，教材未给出可解析的方程式"
+    }
+  ]
+}

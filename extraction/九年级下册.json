@@ -1,0 +1,1823 @@
+{
+  "book": "九年级下册",
+  "version": "人教版",
+  "entries": [
+    {
+      "name": "铝与氧气的反应",
+      "description": "铝在常温下就能与空气中的氧气反应，表面生成一层致密的氧化铝薄膜，从而阻止铝进一步被氧化，因此铝具有很好的抗腐蚀性能。",
+      "difficulty": "中等",
+      "difficultyReason": "物质3种，系数出现4、3、2，配平需同时兼顾铝原子和氧原子数",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "正文（一、金属与氧气的反应）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "4Al + 3O2 = 2Al2O3",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "镁与稀盐酸的反应",
+      "description": "镁与稀盐酸剧烈反应产生大量气泡，生成氯化镁和可燃性气体氢气，说明镁的金属活动性排在氢之前。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数1、2，常温即可反应，生成气体",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "探究（金属与稀盐酸或稀硫酸的反应）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（酸的化学性质，回忆金属与酸的反应）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Mg + 2HCl = MgCl2 + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "镁与稀硫酸的反应",
+      "description": "镁与稀硫酸反应生成硫酸镁和氢气，产生大量气泡，生成的氢气能被点燃。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数1、1、1，常温置换反应",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "探究（金属与稀盐酸或稀硫酸的反应）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（酸的化学性质，回忆金属与酸的反应）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Mg + H2SO4 = MgSO4 + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "锌与稀盐酸的反应",
+      "description": "锌与稀盐酸反应产生气泡，生成氯化锌和氢气，是探究金属活动性顺序的实验之一。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数1、2，常温置换反应",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "探究（金属与稀盐酸或稀硫酸的反应）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（酸的化学性质，回忆金属与酸的反应）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Zn + 2HCl = ZnCl2 + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "锌与稀硫酸的反应",
+      "description": "锌与稀硫酸反应生成硫酸锌和氢气，是实验室制取氢气的常用原理。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，常温置换反应",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "探究（金属与稀盐酸或稀硫酸的反应）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（酸的化学性质，回忆金属与酸的反应）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Zn + H2SO4 = ZnSO4 + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "铁与稀盐酸的反应",
+      "description": "铁与稀盐酸反应生成氯化亚铁和氢气，反应速率比镁、锌慢，铁在生成物中显+2价。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数1、2，注意生成+2价的氯化亚铁易错",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "探究（金属与稀盐酸或稀硫酸的反应）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（酸的化学性质，回忆金属与酸的反应）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "实验活动8 常见酸、碱的化学性质",
+          "context": "实验步骤3（铁钉除锈后酸继续与铁反应）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会",
+        "易错"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe + 2HCl = FeCl2 + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "铁与稀硫酸的反应",
+      "description": "铁与稀硫酸反应生成硫酸亚铁和氢气，溶液呈浅绿色，铁在生成物中显+2价。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，注意生成+2价的硫酸亚铁易错",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "探究（金属与稀盐酸或稀硫酸的反应）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（酸的化学性质，回忆金属与酸的反应）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会",
+        "易错"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe + H2SO4 = FeSO4 + H2↑",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "铁与硫酸铜溶液的反应",
+      "description": "把铁丝放入硫酸铜溶液中，铁丝表面有红色铜析出，溶液由蓝色逐渐变浅绿色，说明铁的金属活动性比铜强。",
+      "difficulty": "简单",
+      "difficultyReason": "系数均为1，常温置换，无特殊条件",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "正文（三、金属活动性顺序）"
+        },
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "复习与提高",
+          "context": "第6(2)题（硫酸铜溶液中加入铁粉）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe + CuSO4 = FeSO4 + Cu",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "铝与硫酸铜溶液的反应",
+      "description": "将打磨过的铝丝浸入硫酸铜溶液中，铝丝表面有红色铜析出，溶液蓝色变浅，说明铝的金属活动性比铜强。",
+      "difficulty": "中等",
+      "difficultyReason": "系数出现2、3，硫酸铝化学式Al2(SO4)3书写较复杂",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "探究（金属活动性顺序）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会",
+        "易错"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Al + 3CuSO4 = Al2(SO4)3 + 3Cu",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "铜与硝酸银溶液的反应",
+      "description": "将洁净的铜丝浸入硝酸银溶液中，铜丝表面有银白色银析出，溶液由无色逐渐变蓝，说明铜的金属活动性比银强。",
+      "difficulty": "简单",
+      "difficultyReason": "系数1、2，常温置换反应",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "探究（金属活动性顺序）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Cu + 2AgNO3 = Cu(NO3)2 + 2Ag",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "镁与氧气的反应（镁条燃烧）",
+      "description": "镁在空气中点燃时剧烈燃烧，发出耀眼白光，生成白色的氧化镁；常温下镁也能与氧气缓慢反应。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数2、1、2，化合反应",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "练习与应用（第4题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Mg + O2 = 2MgO",
+          "conditions": [
+            "点燃"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "铜与氧气的反应",
+      "description": "铜在常温下几乎不与氧气反应，加热（高温）时能与氧气反应生成黑色的氧化铜。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数2、1、2，单一加热条件",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "练习与应用（第4题）"
+        },
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "实验活动5 常见金属的物理性质和化学性质",
+          "context": "实验步骤2(1)（铜片在酒精灯火焰上加热）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "化合反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Cu + O2 = 2CuO",
+          "conditions": [
+            "加热"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "锌与硫酸铜溶液的反应",
+      "description": "锌的金属活动性比铜强，能把铜从硫酸铜溶液中置换出来，生成硫酸锌和红色的铜。",
+      "difficulty": "简单",
+      "difficultyReason": "系数均为1，常温置换，无特殊条件",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "练习与应用（第5题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Zn + CuSO4 = ZnSO4 + Cu",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "铝与硝酸银溶液的反应",
+      "description": "铝的金属活动性比银强，能把银从硝酸银溶液中置换出来，生成硝酸铝和银。",
+      "difficulty": "中等",
+      "difficultyReason": "系数出现3，硝酸铝化学式Al(NO3)3书写较复杂",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "练习与应用（第5题）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Al + 3AgNO3 = Al(NO3)3 + 3Ag",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "铁与氯化铜溶液的反应",
+      "description": "铁与氯化铜溶液反应生成氯化亚铁和铜，可用于除去氯化亚铁溶液中混有的氯化铜杂质。",
+      "difficulty": "简单",
+      "difficultyReason": "系数均为1，常温置换，无特殊条件",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题2 金属的化学性质",
+          "context": "练习与应用（第6题，除杂表格）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe + CuCl2 = FeCl2 + Cu",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "一氧化碳还原氧化铁（工业炼铁原理）",
+      "description": "工业炼铁的主要原理是在高温下，利用一氧化碳把铁从氧化铁里还原出来，生成铁和二氧化碳。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数出现3，条件为高温",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题3 金属资源的利用和保护",
+          "context": "正文（二、铁的冶炼）"
+        },
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题3 金属资源的利用和保护",
+          "context": "例题（含杂质计算）"
+        },
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题3 金属资源的利用和保护",
+          "context": "学完本课题你知道了什么"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe2O3 + 3CO = 2Fe + 3CO2",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸锌受热分解",
+      "description": "我国古代将炉甘石（主要成分碳酸锌）与赤铜、木炭粉混合加热到约800℃炼取锌铜合金，其中碳酸锌受热分解生成氧化锌和二氧化碳。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，分解反应",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题3 金属资源的利用和保护",
+          "context": "练习与应用（第7题，古法炼锌）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "ZnCO3 = ZnO + CO2↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳还原氧化锌",
+      "description": "碳在高温下把氧化锌中的锌还原出来，生成锌和二氧化碳，是我国古代制取锌铜合金的相关反应。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数2、2、1，碳还原金属氧化物的置换反应",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题3 金属资源的利用和保护",
+          "context": "练习与应用（第7题，古法炼锌）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2ZnO + C = 2Zn + CO2↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳还原氧化亚铜",
+      "description": "赤铜（主要成分氧化亚铜）与木炭粉在高温下反应，碳把铜还原出来，生成铜和二氧化碳。",
+      "difficulty": "中等",
+      "difficultyReason": "氧化亚铜不常见，系数2、1、4、1，需按Cu2O正确配平",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "课题3 金属资源的利用和保护",
+          "context": "练习与应用（第7题，古法炼锌）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Cu2O + C = 4Cu + CO2↑",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "电解熔融氧化铝（工业冶炼铝）",
+      "description": "工业冶炼铝的原理是电解熔融的氧化铝，生成铝和一种气体（氧气）。",
+      "difficulty": "中等",
+      "difficultyReason": "系数2、4、3，条件为通电电解",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "复习与提高",
+          "context": "第6(1)题"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "分解反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2Al2O3 = 4Al + 3O2↑",
+          "conditions": [
+            "通电"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "铁与硫酸镍溶液的反应",
+      "description": "铁的金属活动性比镍强，把打磨过的铁片浸入硫酸镍溶液中，铁片表面有镍析出，生成硫酸亚铁和镍，用于探究镍、铁、铜的金属活动性顺序。",
+      "difficulty": "简单",
+      "difficultyReason": "系数均为1，置换反应，镍为题给新金属",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "复习与提高",
+          "context": "第7题（镍、铁、铜活动性探究）"
+        }
+      ],
+      "substanceCategories": [
+        "单质",
+        "盐"
+      ],
+      "reactionTypes": [
+        "置换反应",
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe + NiSO4 = FeSO4 + Ni",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "氢气还原氧化铁",
+      "description": "竖炉炼铁的还原反应室中，在高温下氢气还原氧化铁生成铁和水，是炼铁工艺中的还原反应之一。",
+      "difficulty": "中等",
+      "difficultyReason": "物质4种，系数出现3，条件为高温",
+      "textbooks": [
+        {
+          "chapter": "第八单元 金属和金属材料",
+          "section": "复习与提高",
+          "context": "第8(2)题（竖炉炼铁工艺流程）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "单质"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe2O3 + 3H2 = 2Fe + 3H2O",
+          "conditions": [
+            "高温"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "盐酸除铁锈（氧化铁与盐酸反应）",
+      "description": "铁锈（主要成分氧化铁）与稀盐酸反应生成氯化铁和水，溶液变黄色，可用于除去铁制品表面的锈，但除锈时不能将铁制品长时间浸在酸中。",
+      "difficulty": "中等",
+      "difficultyReason": "系数出现6、2、3，生成+3价的氯化铁",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（酸的化学性质，铁锈与酸反应表格）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "实验活动8 常见酸、碱的化学性质",
+          "context": "问题与交流（第1题）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会",
+        "易错"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe2O3 + 6HCl = 2FeCl3 + 3H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "硫酸除铁锈（氧化铁与硫酸反应）",
+      "description": "铁锈（主要成分氧化铁）与稀硫酸反应生成硫酸铁和水，酸能与金属氧化物反应生成盐和水，可用于金属表面除锈。",
+      "difficulty": "中等",
+      "difficultyReason": "硫酸铁化学式Fe2(SO4)3书写复杂，系数出现3",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（酸的化学性质，铁锈与酸反应表格）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会",
+        "易错"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Fe2O3 + 3H2SO4 = Fe2(SO4)3 + 3H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "二氧化碳与氢氧化钙的反应（检验二氧化碳）",
+      "description": "二氧化碳使澄清石灰水变浑浊，生成白色的碳酸钙沉淀和水，是检验二氧化碳气体的反应。",
+      "difficulty": "简单",
+      "difficultyReason": "简单沉淀反应，系数均为1，石灰水变浑浊",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（碱的化学性质，回忆检验二氧化碳）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "练习与应用（第7题，生石灰干燥剂结块）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "其他"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "非金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CO2 + Ca(OH)2 = CaCO3↓ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "氢氧化钠与二氧化碳的反应",
+      "description": "氢氧化钠与二氧化碳反应生成碳酸钠和水，因此氢氧化钠必须密封保存，该反应无明显现象。",
+      "difficulty": "简单",
+      "difficultyReason": "系数1、2，常温反应，用于氢氧化钠变质分析",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（碱的化学性质，由氢氧化钙与二氧化碳类推）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "氧化物",
+        "盐"
+      ],
+      "reactionTypes": [
+        "其他"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NaOH + CO2 = Na2CO3 + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "氢氧化钠与三氧化硫的反应",
+      "description": "三氧化硫与碱的反应和二氧化碳类似，氢氧化钠与三氧化硫反应生成硫酸钠和水。",
+      "difficulty": "中等",
+      "difficultyReason": "三氧化硫为类比迁移的新物质，需由碱与非金属氧化物反应的规律类推",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "探究（碱的化学性质，类比迁移题）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "氧化物",
+        "盐"
+      ],
+      "reactionTypes": [
+        "其他"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NaOH + SO3 = Na2SO4 + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "氢氧化钠与盐酸的中和反应",
+      "description": "向滴有酚酞的氢氧化钠溶液中滴加稀盐酸至红色恰好褪去，生成氯化钠和水，是典型的中和反应。",
+      "difficulty": "简单",
+      "difficultyReason": "强酸强碱中和，系数均为1",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "正文（三、中和反应，实验10-10）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "复习与提高",
+          "context": "第5题（pH传感器曲线A点）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "实验活动8 常见酸、碱的化学性质",
+          "context": "实验步骤5"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "酸",
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "中和反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NaOH + HCl = NaCl + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "氢氧化钙与盐酸的中和反应",
+      "description": "氢氧化钙与盐酸发生中和反应生成氯化钙和水，属于酸与碱生成盐和水的复分解反应。",
+      "difficulty": "简单",
+      "difficultyReason": "强酸强碱中和，系数1、2、1、2",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "正文（三、中和反应）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "酸",
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "中和反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Ca(OH)2 + 2HCl = CaCl2 + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "氢氧化钠与硫酸的中和反应",
+      "description": "氢氧化钠与硫酸发生中和反应生成硫酸钠和水，可用于处理酸性废水、中和石油产品中的残余硫酸等。",
+      "difficulty": "简单",
+      "difficultyReason": "强酸强碱中和，系数2、1、1、2",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "正文（三、中和反应）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "练习与应用（第7题，氢氧化钠洗涤残余硫酸计算）"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "酸",
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "中和反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NaOH + H2SO4 = Na2SO4 + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "硫酸与氢氧化钙的中和反应",
+      "description": "硫酸与氢氧化钙发生中和反应生成硫酸钙和水，是用熟石灰中和酸性土壤、处理硫酸厂酸性废水的原理。",
+      "difficulty": "简单",
+      "difficultyReason": "强酸强碱中和，系数1、1、1、2",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "练习与应用（第2题）"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "碱",
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应",
+        "中和反应"
+      ],
+      "knowledgeModules": [
+        "水溶液中的离子平衡",
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2SO4 + Ca(OH)2 = CaSO4 + 2H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "硫酸与氯化钡的反应",
+      "description": "硫酸与氯化钡溶液反应生成不溶于稀酸的白色硫酸钡沉淀和盐酸，可用于检验硫酸或硫酸根离子。",
+      "difficulty": "简单",
+      "difficultyReason": "简单沉淀反应，白色硫酸钡沉淀不溶于酸",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "练习与应用（第2题）"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "水溶液中的离子平衡"
+      ],
+      "tags": [
+        "基础必会",
+        "易错"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2SO4 + BaCl2 = BaSO4↓ + 2HCl",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "氧化钙与水的反应（生石灰制熟石灰）",
+      "description": "生石灰（氧化钙）与水反应生成氢氧化钙并放出大量的热，因此生石灰可作干燥剂，吸水后会粘结成块。",
+      "difficulty": "简单",
+      "difficultyReason": "化合反应，物质3种，系数均为1",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题2 常见的酸和碱",
+          "context": "练习与应用（第7题，生石灰干燥剂）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "复习与提高",
+          "context": "第6题（草木灰与贝壳灰制去污剂）"
+        }
+      ],
+      "substanceCategories": [
+        "氧化物",
+        "碱"
+      ],
+      "reactionTypes": [
+        "化合反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CaO + H2O = Ca(OH)2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸钙与稀盐酸的反应（实验室制二氧化碳原理）",
+      "description": "碳酸钙与稀盐酸反应生成氯化钙、二氧化碳和水（先生成碳酸，碳酸随即分解），是实验室制取二氧化碳的反应原理。",
+      "difficulty": "中等",
+      "difficultyReason": "物质5种，氯化钙系数为2，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "正文（二、碳酸钠、碳酸氢钠和碳酸钙，含分步式）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "非金属及其化合物"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "CaCO3 + 2HCl = CaCl2 + CO2↑ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸的分解",
+      "description": "碳酸不稳定，容易分解成二氧化碳和水；碳酸钙与稀盐酸反应生成的碳酸会立即分解。",
+      "difficulty": "简单",
+      "difficultyReason": "物质3种，系数均为1，分解反应",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "正文（二、碳酸钠、碳酸氢钠和碳酸钙）"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化",
+        "非金属及其化合物"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2CO3 = CO2↑ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸钠与稀盐酸的反应",
+      "description": "碳酸钠（纯碱）与稀盐酸反应生成氯化钠、二氧化碳和水，产生大量气泡，是含碳酸根离子的盐与酸发生的复分解反应。",
+      "difficulty": "中等",
+      "difficultyReason": "物质5种，氯化钠系数为2，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "正文（实验10-11）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会",
+        "易错"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Na2CO3 + 2HCl = 2NaCl + CO2↑ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸氢钠与稀盐酸的反应",
+      "description": "碳酸氢钠（小苏打）与稀盐酸反应生成氯化钠、二氧化碳和水，是发酵粉产气原理和治疗胃酸过多症的相关反应。",
+      "difficulty": "中等",
+      "difficultyReason": "物质5种，系数均为1，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "正文（实验10-11）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会",
+        "易错"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "NaHCO3 + HCl = NaCl + CO2↑ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸钠与氢氧化钙的反应",
+      "description": "碳酸钠溶液与澄清石灰水反应生成白色碳酸钙沉淀和氢氧化钠，是工业上制烧碱相关的盐与碱的复分解反应。",
+      "difficulty": "简单",
+      "difficultyReason": "盐与碱的复分解沉淀反应，系数1、1、1、2",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "正文（实验10-12）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "练习与应用（第2题）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "碱"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会",
+        "易错"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "Na2CO3 + Ca(OH)2 = CaCO3↓ + 2NaOH",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "氢氧化钠与硫酸铜的反应",
+      "description": "氢氧化钠溶液与硫酸铜溶液反应生成蓝色氢氧化铜沉淀和硫酸钠，是盐与碱发生的复分解反应。",
+      "difficulty": "简单",
+      "difficultyReason": "简单沉淀反应，系数2、1、1、1，生成蓝色沉淀",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "正文（实验10-13）"
+        },
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "实验活动8 常见酸、碱的化学性质",
+          "context": "实验步骤4"
+        }
+      ],
+      "substanceCategories": [
+        "碱",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "2NaOH + CuSO4 = Cu(OH)2↓ + Na2SO4",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "氯化钡与硫酸铜的反应",
+      "description": "氯化钡溶液与硫酸铜溶液反应生成白色硫酸钡沉淀和氯化铜，是盐与盐发生的复分解反应。",
+      "difficulty": "简单",
+      "difficultyReason": "简单沉淀反应，系数均为1",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "正文（实验10-13）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "BaCl2 + CuSO4 = BaSO4↓ + CuCl2",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "硫酸与硝酸钡的反应",
+      "description": "稀硫酸与硝酸钡溶液反应生成白色硫酸钡沉淀和硝酸，是判断复分解反应能否发生（有沉淀生成）的实例之一。",
+      "difficulty": "简单",
+      "difficultyReason": "简单沉淀反应，系数1、1、1、2",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "思考与讨论（参考溶解性表判断复分解反应）"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2SO4 + Ba(NO3)2 = BaSO4↓ + 2HNO3",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸钾与硝酸钡的反应",
+      "description": "碳酸钾溶液与硝酸钡溶液反应生成白色碳酸钡沉淀和硝酸钾，是盐与盐发生的复分解反应。",
+      "difficulty": "简单",
+      "difficultyReason": "盐与盐的复分解沉淀反应，系数均为1",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "思考与讨论（参考溶解性表判断复分解反应）"
+        }
+      ],
+      "substanceCategories": [
+        "盐"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "K2CO3 + Ba(NO3)2 = BaCO3↓ + 2KNO3",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸钾与稀盐酸的反应",
+      "description": "碳酸钾溶液与稀盐酸反应生成氯化钾、二氧化碳和水，含碳酸根离子的盐与盐酸反应放出二氧化碳气体。",
+      "difficulty": "中等",
+      "difficultyReason": "物质5种，氯化钾系数为2，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "思考与讨论（参考溶解性表判断复分解反应）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "酸",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "K2CO3 + 2HCl = 2KCl + CO2↑ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸钾与稀硫酸的反应",
+      "description": "碳酸钾溶液与稀硫酸反应生成硫酸钾、二氧化碳和水，是复分解反应中同时生成气体和水的实例。",
+      "difficulty": "中等",
+      "difficultyReason": "物质5种，系数均为1，有气体符号",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "课题3 常见的盐",
+          "context": "思考与讨论（参考溶解性表判断复分解反应）"
+        }
+      ],
+      "substanceCategories": [
+        "酸",
+        "盐",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "H2SO4 + K2CO3 = K2SO4 + CO2↑ + H2O",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "碳酸钾与氢氧化钙的反应（草木灰制去污剂）",
+      "description": "古人将草木灰（含碳酸钾）的水溶液与贝壳烧成的灰（氧化钙与水生成的氢氧化钙）混合，反应生成碳酸钙沉淀和氢氧化钾，氢氧化钾就是能去污的成分。",
+      "difficulty": "简单",
+      "difficultyReason": "盐与碱的复分解沉淀反应，系数1、1、1、2",
+      "textbooks": [
+        {
+          "chapter": "第十单元 常见的酸、碱、盐",
+          "section": "复习与提高",
+          "context": "第6题（《周礼·考工记》记载）"
+        }
+      ],
+      "substanceCategories": [
+        "盐",
+        "碱"
+      ],
+      "reactionTypes": [
+        "复分解反应"
+      ],
+      "knowledgeModules": [
+        "物质及其变化"
+      ],
+      "tags": [],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "K2CO3 + Ca(OH)2 = CaCO3↓ + 2KOH",
+          "conditions": [],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    },
+    {
+      "name": "葡萄糖的缓慢氧化（呼吸作用）",
+      "description": "葡萄糖在体内酶的催化作用下经缓慢氧化，最终生成二氧化碳和水，同时为生命活动提供能量，即呼吸作用的化学本质。",
+      "difficulty": "中等",
+      "difficultyReason": "系数出现6，有机物参与，条件为酶催化",
+      "textbooks": [
+        {
+          "chapter": "第十一单元 化学与社会",
+          "section": "课题1 化学与人体健康",
+          "context": "正文（二、合理膳食）"
+        },
+        {
+          "chapter": "第十一单元 化学与社会",
+          "section": "课题1 化学与人体健康",
+          "context": "练习与应用（第5题）"
+        }
+      ],
+      "substanceCategories": [
+        "有机物",
+        "单质",
+        "氧化物"
+      ],
+      "reactionTypes": [
+        "氧化还原反应"
+      ],
+      "knowledgeModules": [
+        "化学与生活"
+      ],
+      "tags": [
+        "基础必会"
+      ],
+      "versions": [
+        {
+          "type": "chemical",
+          "line": "C6H12O6 + 6O2 = 6CO2 + 6H2O",
+          "conditions": [
+            "催化剂"
+          ],
+          "reversible": false
+        }
+      ],
+      "source": "人教版·九年级下册"
+    }
+  ],
+  "excluded": [
+    {
+      "raw": "2Ti + 6HCl = 2X + 3H2↑（X的化学式为____）",
+      "location": "第八单元 复习与提高 第6(3)题",
+      "reason": "习题以未知物X的形式呈现（X为TiCl3，可由质量守恒推出），教材未给出完整方程式，不作为标准方程式收录"
+    },
+    {
+      "raw": "CH4 + X --催化剂--> 2CO + 2H2（X的化学式为____）",
+      "location": "第八单元 复习与提高 第8(3)题",
+      "reason": "竖炉炼铁催化反应室的习题，以未知物X呈现（X为CO2，可由质量守恒推出），教材未给出完整方程式"
+    },
+    {
+      "raw": "图8-16 炼铁高炉内主要化学反应（焦炭燃烧、二氧化碳与碳反应等）",
+      "location": "第八单元 课题3 正文 图8-16",
+      "reason": "反应仅出现在示意图中，图题文字未给出具体方程式，无法按图提取（SPEC规则8）"
+    },
+    {
+      "raw": "淀粉[(C6H10O5)n] + 水 --酶--> 葡萄糖(C6H12O6)",
+      "location": "第十一单元 课题1 化学与人体健康 正文（二、合理膳食）",
+      "reason": "聚合记法(C6H10O5)n无法解析（SPEC规则4），教材仅文字描述'与水发生一系列反应'"
+    },
+    {
+      "raw": "蛋白质 + 水 --酶--> 氨基酸；氨基酸 + 氧气 --> 尿素 + 二氧化碳 + 水",
+      "location": "第十一单元 课题1 化学与人体健康 正文（二、合理膳食）",
+      "reason": "文字描述性反应，氨基酸、尿素等化学式教材未给出，无法转换为配平的一行式"
+    },
+    {
+      "raw": "浓硫酸使纸张、木材、布料脱水碳化（生成黑色的炭）",
+      "location": "第十单元 课题2 常见的酸和碱 正文（实验10-5）",
+      "reason": "反应物为含碳、氢、氧的复杂有机混合物，只能定性描述，无法写成完整方程式"
+    },
+    {
+      "raw": "氢氧化钠与油脂反应（炉具清洁剂去油污原理）",
+      "location": "第十单元 课题2 常见的酸和碱 正文",
+      "reason": "油脂是混合物，具体成分与方程式教材未给出"
+    },
+    {
+      "raw": "柠檬酸 + 碳酸氢钠 --> 二氧化碳（自制汽水）",
+      "location": "第九单元 练习与应用 第7题",
+      "reason": "柠檬酸的化学式教材未给出，无法确定化学式（SPEC规则2）"
+    },
+    {
+      "raw": "碳酸氢钠 + 有机酸 --> 二氧化碳（发酵粉发面）",
+      "location": "第十单元 课题3 常见的盐 练习与应用 第3(2)题",
+      "reason": "'有机酸'具体成分与化学式教材未给出，无法确定"
+    },
+    {
+      "raw": "醋酸(CH3COOH) + 水垢(CaCO3、Mg(OH)2) --> 醋酸盐 + 二氧化碳 + 水",
+      "location": "第十单元 课题2 常见的酸和碱 练习与应用 第5(3)题",
+      "reason": "教材仅要求解释现象、未要求写方程式，醋酸盐化学式教材未出现，按'宁可少而准'不收录"
+    }
+  ]
+}

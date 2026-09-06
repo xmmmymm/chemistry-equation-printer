@@ -1,0 +1,614 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "R0001",
+      "name": "钠与水反应",
+      "description": "金属钠与水反应生成氢氧化钠和氢气",
+      "openPrompt": "",
+      "difficulty": "中等",
+      "difficultyReason": "物质 3 种，系数为 2，有气体符号，教材重点",
+      "starred": true,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "必修第一册", "chapter": "第二章", "section": "第一节" }],
+      "substanceCategories": ["单质", "碱", "氢化物"],
+      "reactionTypes": ["氧化还原反应", "离子反应"],
+      "knowledgeModules": ["金属及其化合物"],
+      "tags": ["高频", "基础必会"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0001-chem",
+          "type": "chemical",
+          "label": "化学方程式",
+          "reversible": false,
+          "conditions": [{ "code": "roomTemperature", "text": "常温" }],
+          "reactants": [
+            { "formula": "Na", "coefficient": 2 },
+            { "formula": "H2O", "coefficient": 2 }
+          ],
+          "products": [
+            { "formula": "NaOH", "coefficient": 2 },
+            { "formula": "H2", "coefficient": 1, "gas": true }
+          ],
+          "extras": {}
+        },
+        {
+          "id": "R0001-ion",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "conditions": [{ "code": "roomTemperature", "text": "常温" }],
+          "reactants": [
+            { "formula": "Na", "coefficient": 2 },
+            { "formula": "H2O", "coefficient": 2 }
+          ],
+          "products": [
+            { "formula": "Na+", "coefficient": 2 },
+            { "formula": "OH-", "coefficient": 2 },
+            { "formula": "H2", "coefficient": 1, "gas": true }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0002",
+      "name": "铁在氧气中燃烧",
+      "description": "铁在氧气中剧烈燃烧，火星四射，生成四氧化三铁",
+      "openPrompt": "",
+      "difficulty": "简单",
+      "difficultyReason": "必修初期常见反应，物质 2 种",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "必修第一册", "chapter": "第一章", "section": "第二节" }],
+      "substanceCategories": ["单质", "氧化物"],
+      "reactionTypes": ["化合反应", "氧化还原反应", "燃烧反应"],
+      "knowledgeModules": ["物质及其变化"],
+      "tags": ["基础必会"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0002-chem",
+          "type": "chemical",
+          "label": "化学方程式",
+          "reversible": false,
+          "conditions": [{ "code": "ignite", "text": "点燃" }],
+          "reactants": [
+            { "formula": "Fe", "coefficient": 3 },
+            { "formula": "O2", "coefficient": 2 }
+          ],
+          "products": [
+            { "formula": "Fe3O4", "coefficient": 1 }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0003",
+      "name": "碳酸钙与稀盐酸反应",
+      "description": "碳酸钙与稀盐酸反应生成氯化钙、水和二氧化碳",
+      "openPrompt": "",
+      "difficulty": "中等",
+      "difficultyReason": "物质 4 种，有气体符号，酸碱盐转化",
+      "starred": true,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "必修第一册", "chapter": "第一章", "section": "第二节" }],
+      "substanceCategories": ["盐", "酸", "氧化物"],
+      "reactionTypes": ["复分解反应", "离子反应"],
+      "knowledgeModules": ["物质及其变化"],
+      "tags": ["高频"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0003-chem",
+          "type": "chemical",
+          "label": "化学方程式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "CaCO3", "coefficient": 1 },
+            { "formula": "HCl", "coefficient": 2 }
+          ],
+          "products": [
+            { "formula": "CaCl2", "coefficient": 1 },
+            { "formula": "H2O", "coefficient": 1 },
+            { "formula": "CO2", "coefficient": 1, "gas": true }
+          ],
+          "extras": {}
+        },
+        {
+          "id": "R0003-ion",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "CaCO3", "coefficient": 1 },
+            { "formula": "H+", "coefficient": 2 }
+          ],
+          "products": [
+            { "formula": "Ca^2+", "coefficient": 1 },
+            { "formula": "H2O", "coefficient": 1 },
+            { "formula": "CO2", "coefficient": 1, "gas": true }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0004",
+      "name": "盐酸与氢氧化钠中和反应",
+      "description": "盐酸与氢氧化钠溶液发生中和反应生成氯化钠和水",
+      "openPrompt": "写出一个属于复分解反应的化学方程式。",
+      "difficulty": "简单",
+      "difficultyReason": "强酸强碱中和，拆分清晰",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "必修第一册", "chapter": "第一章", "section": "第二节" }],
+      "substanceCategories": ["酸", "碱", "盐"],
+      "reactionTypes": ["复分解反应", "中和反应", "离子反应"],
+      "knowledgeModules": ["物质及其变化"],
+      "tags": ["基础必会"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0004-ion",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "H+", "coefficient": 1 },
+            { "formula": "OH-", "coefficient": 1 }
+          ],
+          "products": [
+            { "formula": "H2O", "coefficient": 1 }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0005",
+      "name": "氨的催化氧化",
+      "description": "氨气在催化剂和加热条件下与氧气反应生成一氧化氮和水",
+      "openPrompt": "",
+      "difficulty": "较难",
+      "difficultyReason": "系数较大（4、5、6），多条件，易漏条件",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "必修第二册", "chapter": "第五章", "section": "第三节" }],
+      "substanceCategories": ["氢化物", "氧化物"],
+      "reactionTypes": ["氧化还原反应", "燃烧反应"],
+      "knowledgeModules": ["非金属及其化合物"],
+      "tags": ["月考重点"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0005-chem",
+          "type": "chemical",
+          "label": "化学方程式",
+          "reversible": false,
+          "conditions": [
+            { "code": "catalyst", "text": "催化剂" },
+            { "code": "highTemperature", "text": "高温" }
+          ],
+          "reactants": [
+            { "formula": "NH3", "coefficient": 4 },
+            { "formula": "O2", "coefficient": 5 }
+          ],
+          "products": [
+            { "formula": "NO", "coefficient": 4 },
+            { "formula": "H2O", "coefficient": 6 }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0006",
+      "name": "工业合成氨",
+      "description": "氮气与氢气在催化剂和高温条件下可逆反应生成氨气",
+      "openPrompt": "",
+      "difficulty": "中等",
+      "difficultyReason": "可逆反应，需注意可逆号与条件",
+      "starred": true,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "选择性必修2", "chapter": "第二章", "section": "第二节" }],
+      "substanceCategories": ["单质", "氢化物"],
+      "reactionTypes": ["化合反应", "可逆反应", "氧化还原反应"],
+      "knowledgeModules": ["化学平衡"],
+      "tags": ["高频", "易错"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0006-chem",
+          "type": "chemical",
+          "label": "化学方程式",
+          "reversible": true,
+          "conditions": [
+            { "code": "catalyst", "text": "催化剂" },
+            { "code": "highTemperature", "text": "高温" }
+          ],
+          "reactants": [
+            { "formula": "N2", "coefficient": 1 },
+            { "formula": "H2", "coefficient": 3 }
+          ],
+          "products": [
+            { "formula": "NH3", "coefficient": 2 }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0007",
+      "name": "氯酸钾受热分解",
+      "description": "加热氯酸钾（二氧化锰作催化剂）生成氯化钾和氧气",
+      "openPrompt": "",
+      "difficulty": "中等",
+      "difficultyReason": "实验室制氧气重点反应，需写催化剂与加热条件",
+      "starred": false,
+      "mustInclude": true,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "必修第一册", "chapter": "第一章", "section": "第二节" }],
+      "substanceCategories": ["盐", "单质"],
+      "reactionTypes": ["分解反应", "氧化还原反应"],
+      "knowledgeModules": ["化学实验"],
+      "tags": ["高频"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0007-chem",
+          "type": "chemical",
+          "label": "化学方程式",
+          "reversible": false,
+          "conditions": [
+            { "code": "custom", "text": "MnO2" },
+            { "code": "heat", "text": "△" }
+          ],
+          "reactants": [
+            { "formula": "KClO3", "coefficient": 2 }
+          ],
+          "products": [
+            { "formula": "KCl", "coefficient": 2 },
+            { "formula": "O2", "coefficient": 3, "gas": true }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0008",
+      "name": "醋酸的电离",
+      "description": "醋酸（弱电解质）在水中部分电离生成醋酸根离子和氢离子",
+      "openPrompt": "",
+      "difficulty": "中等",
+      "difficultyReason": "弱电解质可逆电离，需用可逆号",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "选择性必修1", "chapter": "第三章", "section": "第一节" }],
+      "substanceCategories": ["酸"],
+      "reactionTypes": ["电离", "可逆反应"],
+      "knowledgeModules": ["水溶液中的离子平衡"],
+      "tags": ["易错"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0008-ion",
+          "type": "ionization",
+          "label": "电离方程式",
+          "reversible": true,
+          "conditions": [],
+          "reactants": [
+            { "formula": "CH3COOH", "coefficient": 1 }
+          ],
+          "products": [
+            { "formula": "CH3COO-", "coefficient": 1 },
+            { "formula": "H+", "coefficient": 1 }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0009",
+      "name": "盐酸的电离",
+      "description": "盐酸（强电解质）在水中完全电离生成氢离子和氯离子",
+      "openPrompt": "",
+      "difficulty": "简单",
+      "difficultyReason": "强酸完全电离，一步电离",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "选择性必修1", "chapter": "第三章", "section": "第一节" }],
+      "substanceCategories": ["酸"],
+      "reactionTypes": ["电离"],
+      "knowledgeModules": ["水溶液中的离子平衡"],
+      "tags": ["基础必会"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0009-ion",
+          "type": "ionization",
+          "label": "电离方程式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "HCl", "coefficient": 1 }
+          ],
+          "products": [
+            { "formula": "H+", "coefficient": 1 },
+            { "formula": "Cl-", "coefficient": 1 }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0010",
+      "name": "碳酸氢钠水解",
+      "description": "碳酸氢钠溶液中碳酸氢根离子发生水解，溶液显碱性",
+      "openPrompt": "",
+      "difficulty": "中等",
+      "difficultyReason": "水解需用可逆号，易漏可逆号",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "选择性必修1", "chapter": "第三章", "section": "第三节" }],
+      "substanceCategories": ["盐"],
+      "reactionTypes": ["水解反应", "可逆反应", "离子反应"],
+      "knowledgeModules": ["水溶液中的离子平衡"],
+      "tags": ["易错", "期中考前"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0010-hyd",
+          "type": "hydrolysis",
+          "label": "水解方程式",
+          "reversible": true,
+          "conditions": [],
+          "reactants": [
+            { "formula": "HCO3-", "coefficient": 1 },
+            { "formula": "H2O", "coefficient": 1 }
+          ],
+          "products": [
+            { "formula": "H2CO3", "coefficient": 1 },
+            { "formula": "OH-", "coefficient": 1 }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0011",
+      "name": "铜锌原电池负极反应",
+      "description": "铜锌原电池中锌作负极失去电子生成锌离子",
+      "openPrompt": "",
+      "difficulty": "简单",
+      "difficultyReason": "常见原电池，单一电子转移",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "选择性必修1", "chapter": "第一章", "section": "第一节" }],
+      "substanceCategories": ["单质", "盐"],
+      "reactionTypes": ["电极反应", "氧化还原反应"],
+      "knowledgeModules": ["电化学"],
+      "tags": ["基础必会"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0011-ele",
+          "type": "electrode",
+          "label": "电极反应式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "Zn", "coefficient": 1 }
+          ],
+          "products": [
+            { "formula": "Zn^2+", "coefficient": 1 },
+            { "formula": "e-", "coefficient": 2, "isElectron": true }
+          ],
+          "extras": { "electrode": "负极" }
+        }
+      ]
+    },
+    {
+      "id": "R0012",
+      "name": "氢氧燃料电池正极反应",
+      "description": "氢氧燃料电池（碱性介质）中氧气在正极得电子生成氢氧根离子",
+      "openPrompt": "",
+      "difficulty": "中等",
+      "difficultyReason": "需结合电解质环境配平水与氢氧根",
+      "starred": true,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "选择性必修1", "chapter": "第一章", "section": "第二节" }],
+      "substanceCategories": ["氧化物"],
+      "reactionTypes": ["电极反应", "氧化还原反应"],
+      "knowledgeModules": ["电化学"],
+      "tags": ["高频", "期中考前"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0012-ele",
+          "type": "electrode",
+          "label": "电极反应式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "O2", "coefficient": 1 },
+            { "formula": "H2O", "coefficient": 2 },
+            { "formula": "e-", "coefficient": 4, "isElectron": true }
+          ],
+          "products": [
+            { "formula": "OH-", "coefficient": 4 }
+          ],
+          "extras": { "electrode": "正极", "medium": "碱性介质" }
+        }
+      ]
+    },
+    {
+      "id": "R0013",
+      "name": "氢气燃烧的热化学方程式",
+      "description": "氢气在氧气中燃烧生成液态水并放热",
+      "openPrompt": "",
+      "difficulty": "简单",
+      "difficultyReason": "常见燃烧反应，状态标注简单",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "选择性必修1", "chapter": "第一章", "section": "第一节" }],
+      "substanceCategories": ["单质", "氧化物"],
+      "reactionTypes": ["燃烧反应", "氧化还原反应", "热化学反应"],
+      "knowledgeModules": ["化学反应与能量"],
+      "tags": ["基础必会"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0013-th",
+          "type": "thermochemical",
+          "label": "热化学方程式",
+          "reversible": false,
+          "conditions": [{ "code": "ignite", "text": "点燃" }],
+          "reactants": [
+            { "formula": "H2", "coefficient": 2, "state": "g" },
+            { "formula": "O2", "coefficient": 1, "state": "g" }
+          ],
+          "products": [
+            { "formula": "H2O", "coefficient": 2, "state": "l" }
+          ],
+          "extras": { "deltaH": "-571.6 kJ/mol" }
+        }
+      ]
+    },
+    {
+      "id": "R0014",
+      "name": "铁与硫酸铜反应",
+      "description": "铁与硫酸铜溶液发生置换反应生成硫酸亚铁和铜",
+      "openPrompt": "写出一个属于置换反应的化学方程式。",
+      "difficulty": "简单",
+      "difficultyReason": "物质 3 种，系数简单，基础反应",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "必修第一册", "chapter": "第一章", "section": "第二节" }],
+      "substanceCategories": ["单质", "盐"],
+      "reactionTypes": ["置换反应", "氧化还原反应", "离子反应"],
+      "knowledgeModules": ["物质及其变化"],
+      "tags": [],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0014-chem",
+          "type": "chemical",
+          "label": "化学方程式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "Fe", "coefficient": 1 },
+            { "formula": "CuSO4", "coefficient": 1 }
+          ],
+          "products": [
+            { "formula": "FeSO4", "coefficient": 1 },
+            { "formula": "Cu", "coefficient": 1 }
+          ],
+          "extras": {}
+        },
+        {
+          "id": "R0014-ion",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "Fe", "coefficient": 1 },
+            { "formula": "Cu^2+", "coefficient": 1 }
+          ],
+          "products": [
+            { "formula": "Fe^2+", "coefficient": 1 },
+            { "formula": "Cu", "coefficient": 1 }
+          ],
+          "extras": {}
+        }
+      ]
+    },
+    {
+      "id": "R0015",
+      "name": "二氧化碳与氢氧化钙反应",
+      "description": "二氧化碳通入澄清石灰水生成碳酸钙沉淀和水",
+      "openPrompt": "写出一个生成沉淀的离子方程式。",
+      "difficulty": "简单",
+      "difficultyReason": "常见沉淀反应，教材基础",
+      "starred": false,
+      "mustInclude": false,
+      "enabled": true,
+      "textbooks": [{ "version": "人教版", "book": "必修第一册", "chapter": "第一章", "section": "第二节" }],
+      "substanceCategories": ["氧化物", "碱", "盐"],
+      "reactionTypes": ["复分解反应", "离子反应"],
+      "knowledgeModules": ["非金属及其化合物"],
+      "tags": ["高频"],
+      "remark": "",
+      "source": "教材整理",
+      "versions": [
+        {
+          "id": "R0015-chem",
+          "type": "chemical",
+          "label": "化学方程式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "Ca(OH)2", "coefficient": 1 },
+            { "formula": "CO2", "coefficient": 1 }
+          ],
+          "products": [
+            { "formula": "CaCO3", "coefficient": 1, "precipitate": true },
+            { "formula": "H2O", "coefficient": 1 }
+          ],
+          "extras": {}
+        },
+        {
+          "id": "R0015-ion",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "conditions": [],
+          "reactants": [
+            { "formula": "Ca^2+", "coefficient": 1 },
+            { "formula": "OH-", "coefficient": 2 },
+            { "formula": "CO2", "coefficient": 1 }
+          ],
+          "products": [
+            { "formula": "CaCO3", "coefficient": 1, "precipitate": true },
+            { "formula": "H2O", "coefficient": 1 }
+          ],
+          "extras": {}
+        }
+      ]
+    }
+  ]
+}
