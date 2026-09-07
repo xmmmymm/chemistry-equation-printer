@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-本许可仅覆盖本仓库中的源代码（src/、main.js、preload.js、scripts/ 等）。
-
-data/library.json 中的化学方程式题库系依据人民教育出版社出版教材内容
-整理、校验而成，其原始数据权利归原出版社所有。该题库随本软件一并提供，
-仅供教学与学习用途；如用于商业分发，请自行确认并取得相应授权。
