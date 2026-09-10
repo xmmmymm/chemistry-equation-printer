@@ -22,6 +22,7 @@ extraction/*.round1.json
 
 # ---- 开发过程产物，不入库 ----
 docs/images/
+!docs/screenshots/
 其他文件/
 PROMPT-*.md
 
