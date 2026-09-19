@@ -1,0 +1,25 @@
+{
+  "_说明": "课堂限时练：必修一第一章，10 题，指定难度 4/4/2，附加要求「钠相关≥2 题」。口语范围写在 scopeInput 里，由 tools/preflight.js 归一。",
+  "jobVersion": 1,
+  "scenario": "timedDrill",
+  "generation": {
+    "scopeInput": {"books": ["必修一"], "chapters": ["第一章"]},
+    "exclude": {},
+    "totalCount": 10,
+    "versionStrategy": "preferChemical",
+    "questionTypeCounts": {"B": 0, "C": 0, "D": 0, "E": 0, "H": 0},
+    "difficultyMode": "counts",
+    "difficultyCounts": {"simple": 4, "medium": 4, "hard": 2},
+    "manualEntryIds": [],
+    "allowSameEntryDifferentVersion": false
+  },
+  "export": {"pdf": true, "docx": true, "images": false, "imagesOnDemand": null},
+  "layoutOverrides": {},
+  "outputDir": null,
+  "dryRun": false,
+  "extraAcceptance": [
+    {"kind": "containsFormula", "value": "Na", "minCount": 2, "label": "钠相关≥2题"}
+  ],
+  "maxRedraws": 1,
+  "snapshot": {"drift": false, "checkedAt": null, "note": ""}
+}

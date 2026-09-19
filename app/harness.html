@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>chem-equation-paper · 渲染壳</title>
+<style>html,body{background:#fff;margin:0;padding:0;}</style>
+</head>
+<body>
+<!--
+  chem-equation-paper · 薄渲染壳（阶段 4）
+  ============================================================
+  设计要点（规格 §2.7）：
+    - 用普通 <script src> 加载引擎（引擎是 UMD：无 module 环境时挂到 root.Chem / root.Const /
+      root.DocBuilder / root.DocxBuilder / root.ImageDoc）。
+    - **不开 nodeIntegration、不自建 IPC**：主进程用 webContents.executeJavaScript
+      调本页的全局函数 window.__harness.* 即可。
+    - **不加载主项目的 index.html**（缺 IPC 会挂死）——本页自包含。
+
+  暴露的 API：
+    window.__harness.ready()                     → 引擎是否就绪
+    window.__harness.buildDocument(items, layout, mode)
+                                                 → {ok, html, pages, widthMm, heightMm, overflowCount}
+    window.__harness.buildImage(items, imageOptions)
+                                                 → {ok, htmls, names, format, ext, count}
+    window.__harness.measure()                   → {w, h}（量当前页 body 外框；见下方注意）
+    window.__harness.ping()                      → {ok, chem, doc, image, docx}
+
+  ⚠ 生命周期注意：每次 loadFile(卷面/图片 html) 都会**替换整个页面**，
+    页面里的 window.__harness 随之消失。所以：
+      · 构建卷面前 → 主进程先 loadFile(harness.html) 并等 ping().ok；
+      · 量图片尺寸时 → 页面已经是图片文档，必须由主进程**内联**测量脚本
+        （document.body.getBoundingClientRect()），不能再调 window.__harness.measure()。
+    measure() 保留给「在 harness 页面内直接量」的场景。
+-->
+<script src="../engine/chem.js"></script>
+<script src="../engine/constants.js"></script>
+<script src="../engine/exporter.js"></script>
+<script src="../engine/docx.js"></script>
+<script src="../engine/image.js"></script>
+<script>
+(function () {
+  'use strict';
+  var C = window.Chem, K = window.Const, Doc = window.DocBuilder, Docx = window.DocxBuilder, Img = window.ImageDoc;
+
+  function measureBoxFor(layout) {
+    // createMeasureBox 依赖 DOM（document.createElement），必须在这里调用
+    var box = Doc.createMeasureBox();
+    box.setCss(Doc.docCSS(layout));
+    return box;
+  }
+
+  var H = {
+    ping: function () {
+      return {
+        ok: !!(C && K && Doc && Docx && Img),
+        chem: !!C, doc: !!Doc, docx: !!Docx, image: !!Img,
+        eqTypes: K ? Object.keys(K.EQ_TYPE_MAP) : [],
+        paperSizes: K ? Object.keys(K.PAPER_SIZES) : []
+      };
+    },
+
+    /**
+     * 构建卷面文档（分页需要 DOM 实测）。
+     * @param {Array} items 组卷 items（含 snapshot.version）
+     * @param {object} layout 已解析占位符的 layoutSettings
+     * @param {string} mode 'question' | 'answer'
+     */
+    buildDocument: function (items, layout, mode) {
+      var box = null;
+      try {
+        box = measureBoxFor(layout);
+        var r = Doc.buildDocument(items || [], layout, mode === 'answer' ? 'answer' : 'question', box);
+        return {
+          ok: true,
+          html: r.html,
+          pages: (r.paginated && r.paginated.pages) ? r.paginated.pages.length : 0,
+          overflowCount: (r.paginated && r.paginated.overflowCount) || 0,
+          widthMm: r.widthMm,
+          heightMm: r.heightMm
+        };
+      } catch (e) {
+        return { ok: false, error: String(e && e.message || e), stack: String(e && e.stack || '') };
+      } finally {
+        if (box) { try { box.destroy(); } catch (_) {} }
+      }
+    },
+
+    /** 构建图片通道文档（单张/多张） */
+    buildImage: function (items, imageOptions) {
+      try {
+        var r = Img.buildFromItems(items || [], imageOptions || {});
+        return { ok: true, htmls: r.htmls, names: r.names, format: r.format, ext: r.ext, count: r.count };
+      } catch (e) {
+        return { ok: false, error: String(e && e.message || e), stack: String(e && e.stack || '') };
+      }
+    },
+
+    /**
+     * 量 body 实际尺寸（图片通道）。
+     * ⚠ 用 document.body.getBoundingClientRect()，不要用 documentElement.scrollWidth（§7 坑 2）
+     */
+    measure: function () {
+      return Img.measure();
+    },
+
+    /** 页面尺寸自检：返回 1mm 对应多少 px（供主进程换算参考） */
+    pxPerMm: function () {
+      var box = Doc.createMeasureBox();
+      var v = box.pxPerMm;
+      box.destroy();
+      return v;
+    }
+  };
+
+  window.__harness = H;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# chem-equation-paper · 固定卷面模板（layoutSettings）
+# 规格来源：PROMPT-方程式出题skill.md §3.3 layout（v1.1 定稿，不得变更）
+#
+# 说明：
+#   - 本文件是 skill 内嵌的**固定**模板；老师不需要、也不应该被问卷面参数（见 references/决策清单.md）。
+#   - @preset.title / @preset.studentInfoEnabled 两个占位符由 presets.yml 的场景包在运行时解析。
+#   - 本模板**不读**主项目的 settings.json，也不读主项目 data/templates/。
+#   - 引擎侧字段名严格对齐 engine/constants.js 的 defaultLayoutSettings()（多出的字段会被忽略，不会报错）。
+
+paper: {size: A4, orientation: portrait, customWidthMm: 210, customHeightMm: 297}
+margins: {top: 2cm, bottom: 2cm, left: 2cm, right: 2cm}
+columns: 1
+columnGapMm: 8
+font: {chinese: SimSun, latin: Times New Roman, titleSizePt: 16, bodySizePt: 12, noteSizePt: 10.5}
+spacing: {lineSpacing: single, customLineSpacingPt: 20, questionSpacingPt: 6}
+answerLine: {enabled: false, defaultHeightPt: 24, thickness: thin, color: "#000000"}
+fixedQuestionsPerPage: 0
+title: "@preset.title"
+studentInfo: {enabled: "@preset.studentInfoEnabled", fields: [姓名, 班级, 日期]}

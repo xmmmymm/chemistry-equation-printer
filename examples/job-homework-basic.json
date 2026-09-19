@@ -1,0 +1,23 @@
+{
+  "_说明": "最简默认卷：全库、10 题、优先化学、PDF+Word 双卷。useMemory=false 表示明确主张默认值（全库），不受上次偏好记忆影响。",
+  "jobVersion": 1,
+  "useMemory": false,
+  "scenario": "homework",
+  "generation": {
+    "scopes": {},
+    "exclude": {},
+    "totalCount": 10,
+    "versionStrategy": "preferChemical",
+    "questionTypeCounts": {"B": 0, "C": 0, "D": 0, "E": 0, "H": 0},
+    "difficultyMode": "counts",
+    "difficultyCounts": {"simple": 0, "medium": 0, "hard": 0},
+    "manualEntryIds": [],
+    "allowSameEntryDifferentVersion": false
+  },
+  "export": {"pdf": true, "docx": true, "images": false, "imagesOnDemand": null},
+  "layoutOverrides": {},
+  "outputDir": null,
+  "dryRun": false,
+  "extraAcceptance": [],
+  "snapshot": {"drift": false, "checkedAt": null, "note": ""}
+}

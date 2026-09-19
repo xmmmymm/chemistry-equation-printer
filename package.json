@@ -6,9 +6,15 @@
   "main": "app/main.js",
   "scripts": {
     "test:engine": "node engine/test-chem.js",
+    "test:preflight": "node tools/preflight.js --self-test",
+    "test:state": "node tools/skill-state.js self-test",
+    "test:acceptance": "node tools/acceptance.js",
     "sync": "node tools/sync-from-source.js",
     "sync:check": "node tools/sync-from-source.js --check",
-    "paper": "node tools/run-paper.js"
+    "paper": "node tools/run-paper.js",
+    "preflight": "node tools/preflight.js",
+    "state": "node tools/skill-state.js",
+    "render-check": "node tools/run-paper.js"
   },
   "engines": {
     "node": ">=18"

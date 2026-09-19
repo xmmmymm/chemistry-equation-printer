@@ -5,6 +5,7 @@
  * 用法：
  *   node tools/run-paper.js <job.json>            # 出卷（job.json 见 PROMPT §4.2）
  *   node tools/run-paper.js <job.json> --keep     # 出错时保留中间产物（不清理临时目录）
+ *   node tools/run-paper.js <job.json> --render-check   # 开发期：只渲染卷面并截图（不产出卷子）
  *
  * 设计要点：
  *   - electron.exe 是**通用运行时**：`electron.exe <app目录>` 可运行任意 Electron 应用。
@@ -66,7 +67,8 @@ const child = spawn(electron, [SKILL_ROOT], {
   env: Object.assign({}, process.env, {
     SKILLJOB: absJob,
     SKILL_ROOT,
-    CHEMEQ_KEEP: process.argv.includes('--keep') ? '1' : ''
+    CHEMEQ_KEEP: process.argv.includes('--keep') ? '1' : '',
+    CHEMEQ_MODE: process.argv.includes('--render-check') ? 'render-check' : 'paper'
   })
 });
 

@@ -1,0 +1,22 @@
+{
+  "_说明": "离子方程式专练：选择性必修1 第三章（水溶液中的离子反应与平衡），15 题，优先离子；只要 PDF。",
+  "jobVersion": 1,
+  "scenario": "examPrep",
+  "generation": {
+    "scopeInput": {"books": ["选必1"], "chapters": ["第三章"]},
+    "exclude": {},
+    "totalCount": 15,
+    "versionStrategy": "preferIonic",
+    "questionTypeCounts": {"B": 0, "C": 0, "D": 0, "E": 0, "H": 0},
+    "difficultyMode": "counts",
+    "difficultyCounts": {"simple": 0, "medium": 0, "hard": 0},
+    "manualEntryIds": [],
+    "allowSameEntryDifferentVersion": false
+  },
+  "export": {"pdf": true, "docx": false, "images": false, "imagesOnDemand": null},
+  "layoutOverrides": {},
+  "outputDir": null,
+  "dryRun": false,
+  "extraAcceptance": [],
+  "snapshot": {"drift": false, "checkedAt": null, "note": ""}
+}

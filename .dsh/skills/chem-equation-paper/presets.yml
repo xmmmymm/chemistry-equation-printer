@@ -1,0 +1,28 @@
+# chem-equation-paper · 场景预设包
+# 规格来源：PROMPT-方程式出题skill.md §3.3 scenarioPresets（v1.1 定稿，不得变更）
+# 用途：layout.yml 里的 @preset.title / @preset.studentInfoEnabled 两个占位符由这里的场景包解析。
+
+scenarioPresets:
+
+  # 课后作业（默认场景）
+  homework:
+    title: 化学方程式作业
+    studentInfoEnabled: false
+
+  # 课堂限时练
+  timedDrill:
+    title: 化学方程式课堂限时练
+    studentInfoEnabled: true
+
+  # 备考练习
+  examPrep:
+    title: 化学方程式备考练习
+    studentInfoEnabled: true
+
+  # 三场景共用项（与场景包合并；场景包字段优先）
+  common:
+    subtitle: ""
+    note: ""
+    header: {enabled: false, text: "", useTitle: false}
+    footer: {enabled: true, format: number}
+    studentInfoFields: [姓名, 班级, 日期]

@@ -1,0 +1,35 @@
+{
+  "_说明": "只出图片（点名才产）：6 题，PNG 2 倍缩放，带题号与名称。图片规格覆盖走 export.imagesOnDemand。",
+  "jobVersion": 1,
+  "scenario": "homework",
+  "generation": {
+    "scopeInput": {"books": ["九上"]},
+    "exclude": {},
+    "totalCount": 6,
+    "versionStrategy": "preferChemical",
+    "questionTypeCounts": {"B": 0, "C": 0, "D": 0, "E": 0, "H": 0},
+    "difficultyMode": "counts",
+    "difficultyCounts": {"simple": 0, "medium": 0, "hard": 0},
+    "manualEntryIds": [],
+    "allowSameEntryDifferentVersion": false
+  },
+  "export": {
+    "pdf": false,
+    "docx": false,
+    "images": true,
+    "imagesOnDemand": {
+      "mode": "single", "versionScope": "main", "allowedTypes": ["chemical"],
+      "number": true, "showName": true, "showType": false, "showDifficulty": false, "showTextbook": false,
+      "fontPt": 16, "metaFontPt": 10, "scale": 2, "cols": 1, "format": "png",
+      "textAlign": "left", "eqAlign": "left", "gapPt": 4, "padPt": 27,
+      "zhFont": "Microsoft YaHei", "enFont": "Times New Roman",
+      "heightMode": "auto", "canvasHeightPt": 120, "vAlign": "middle",
+      "baseName": "化学方程式", "saveMode": "auto"
+    }
+  },
+  "layoutOverrides": {},
+  "outputDir": null,
+  "dryRun": false,
+  "extraAcceptance": [],
+  "snapshot": {"drift": false, "checkedAt": null, "note": ""}
+}
