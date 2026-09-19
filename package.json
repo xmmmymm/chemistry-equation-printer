@@ -1,0 +1,18 @@
+{
+  "name": "chem-equation-paper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "方程式出题 skill：基于题库快照组卷并导出 Word / PDF / 图片（独立项目，数据源只读）",
+  "main": "app/main.js",
+  "scripts": {
+    "test:engine": "node engine/test-chem.js",
+    "sync": "node tools/sync-from-source.js",
+    "sync:check": "node tools/sync-from-source.js --check",
+    "paper": "node tools/run-paper.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "comment": "无 dependencies：Electron 运行时借用主项目（见 data/SOURCE.json 的 electronRuntime），不复制、不安装。",
+  "license": "MIT"
+}

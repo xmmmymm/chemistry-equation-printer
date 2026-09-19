@@ -1,0 +1,12 @@
+# 依赖（本项目无 dependencies；如日后自装 Electron 会用到）
+node_modules/
+
+# 产物与临时文件
+out/
+*.tmp
+*.log
+
+# 运行时状态（偏好记忆、归档、_pending）——不进版本库
+.dsh/skill-state/
+
+# 注意：.dsh/skills/ 是 skill 本体（SKILL.md 等），**必须入库**，不要忽略整个 .dsh/
