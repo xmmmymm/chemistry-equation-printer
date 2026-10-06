@@ -8,7 +8,7 @@
  *   3. 失效 ID 校验（B11）
  *   4. 运行时可出题数：buildCandidates → distinct entry.id 数量（**不是 available 版本数**）
  *   5. 四选项流（B1）与题型等比缩放 + 最大余数（B4）
- *   6. 文件名预览 + 快照信息（供复述框）
+ *   6. 文件名预览 + 题库数据信息（供复述框）
  *
  * 用法：
  *   node tools/preflight.js --job <job.json>
@@ -615,7 +615,7 @@ function previewFileNames(job, scenario, totalCount, channels) {
 }
 
 // ============================================================
-// 十、快照信息
+// 十、题库数据信息（data/ 为本项目自有数据）
 // ============================================================
 
 function snapshotInfo(library, driftInfo) {
@@ -627,7 +627,7 @@ function snapshotInfo(library, driftInfo) {
     updatedAt: (library && library.updatedAt) || (meta && meta.library && meta.library.updatedAt) || null,
     entries: ((library && library.entries) || []).length,
     versions,
-    syncedAt: (meta && meta.syncedAt) || null,
+    syncedAt: (meta && (meta.lockedAt || meta.syncedAt)) || null,
     sha256: (meta && meta.library && meta.library.sha256) || null,
     drift: driftInfo && typeof driftInfo.drift === 'boolean' ? driftInfo.drift : null,
     driftNote: driftInfo && driftInfo.note ? driftInfo.note : ''
@@ -746,8 +746,138 @@ function applyMemory(job) {
   };
 }
 
+// ============================================================
+// 十一·后 intake 覆盖度（AC-18）：必问项到底是谁给的？
+// ============================================================
+
 /**
- * @returns {{ok, exitCode, job, diagnostics, preflight, restate, snapshot}}
+ * 把「必问 3 项 + 关键可默认项」的来源逐项标注出来，供复述框与确认闸门使用。
+ *
+ * 为什么需要：冲突链（当次 > 记忆 > 默认）让「没问」和「问了但老师答默认」在合并后的
+ * job 里长得一模一样——`restate.versionStrategyAsked` 只表示「最终值不是 ASK」，
+ * 记忆补上的同样为 `true`，**不能**当作「agent 问过老师」的证据。于是 agent 漏问 intake 时
+ * 预检照样 `exit 0` 放行（实测：一个只写 totalCount 的 job 会被记忆补成「跟上次一样」并放行）。
+ * 本结构把这件事显式化，让「漏问」当场可见。
+ *
+ * 来源三档：
+ *   explicit —— 当次 job 里**显式给出**（= agent 从老师那儿问到的）
+ *   memory   —— 当次没给，由 `.dsh/skill-state/last-run.json` 补上
+ *   default  —— 当次没给、记忆也没有，落到系统默认
+ *
+ * @returns {{requiredKeys, items, explicitKeys, memoryKeys, defaultKeys, unasked,
+ *            needsConfirm, verdict, note, confirmRequired, confirmHint}}
+ */
+function buildIntakeCoverage(ctx) {
+  const raw = ctx.rawJob || {};
+  const rawGen = raw.generation || {};
+  const memUsed = new Set((ctx.memoryReport && ctx.memoryReport.usedFields) || []);
+  const source = (explicit, memField) => (explicit ? 'explicit' : (memField && memUsed.has(memField) ? 'memory' : 'default'));
+  const sum = (o, keys) => (o ? keys.reduce((a, k) => a + (Number(o[k]) || 0), 0) : 0);
+  const nzDiff = (o) => sum(o, ['simple', 'medium', 'hard']);
+  const nzType = (o) => sum(o, ['B', 'C', 'D', 'E', 'H']);
+
+  const rawScopeGiven = (isPlainObj(rawGen.scopeInput) && Object.keys(rawGen.scopeInput).length > 0)
+    || (isPlainObj(rawGen.scopes) && Object.keys(rawGen.scopes).length > 0);
+  const rawVs = rawGen.versionStrategy;
+  const rawExtra = Array.isArray(raw.extraAcceptance) ? raw.extraAcceptance : [];
+
+  const ch = ctx.channels || {};
+  const chParts = [];
+  if (ch.pdf) chParts.push('PDF 题目卷+答案卷');
+  if (ch.docx) chParts.push('Word 题目卷+答案卷');
+  if (ch.images) chParts.push('图片');
+  const chLabel = chParts.length ? chParts.join('；') : '（未指定 → 默认 PDF+Word 双卷）';
+
+  const extraLabel = rawExtra.length
+    ? rawExtra.map((e) => e && (e.label || `${e.kind}:${e.value}`)).filter(Boolean).join('；')
+    : '无';
+
+  const items = [
+    {
+      key: 'scenario', label: '场景', required: true,
+      source: source(!!raw.scenario, 'scenario'),
+      value: ctx.scenarioLabel
+    },
+    {
+      key: 'scope', label: '范围', required: true,
+      source: source(rawScopeGiven, 'scopes'),
+      value: ctx.scopeDescription,
+      detail: ctx.scopeMapping || []
+    },
+    {
+      key: 'versionStrategy', label: '版本策略', required: true,
+      source: source(!!rawVs && rawVs !== 'ASK', 'versionStrategy'),
+      value: ctx.versionStrategyAsked ? ctx.versionStrategyLabel : '未指定（ASK）'
+    },
+    {
+      key: 'totalCount', label: '题量', required: false,
+      source: source(Number(rawGen.totalCount) > 0, 'totalCount'),
+      value: `${ctx.total} 题`
+    },
+    {
+      key: 'questionTypeCounts', label: '题型分布', required: false,
+      source: source(nzType(rawGen.questionTypeCounts) > 0, 'questionTypeCounts'),
+      value: nzType(ctx.questionTypeCounts) > 0
+        ? `B${ctx.questionTypeCounts.B}/C${ctx.questionTypeCounts.C}/D${ctx.questionTypeCounts.D}/E${ctx.questionTypeCounts.E}`
+        : '自动（全 0 → 引擎按实际可出题型补足）'
+    },
+    {
+      key: 'difficulty', label: '难度目标', required: false,
+      source: source(nzDiff(rawGen.difficultyCounts) > 0 || nzDiff(rawGen.difficultyRatios) > 0, 'difficulty'),
+      value: nzDiff(ctx.difficultyCounts) > 0
+        ? `简单 ${ctx.difficultyCounts.simple}/中等 ${ctx.difficultyCounts.medium}/较难 ${ctx.difficultyCounts.hard}`
+        : '不限制（按题库实际分布）'
+    },
+    {
+      key: 'extraAcceptance', label: '附加要求', required: false,
+      source: source(rawExtra.length > 0, 'extraAcceptance'),
+      value: extraLabel
+    },
+    {
+      key: 'export', label: '导出通道', required: false,
+      source: source(isPlainObj(raw.export), 'export'),
+      value: chLabel
+    },
+    {
+      key: 'outputDir', label: '存放位置', required: false,
+      source: raw.outputDir ? 'explicit' : 'default',
+      value: ctx.outputDir
+    }
+  ];
+
+  const keysOf = (s) => items.filter((i) => i.source === s).map((i) => i.key);
+  const explicitKeys = keysOf('explicit');
+  const memoryKeys = keysOf('memory');
+  const defaultKeys = keysOf('default');
+  // 必问项里**不是当次给的** → 就是 agent 漏问的（记忆/默认替它答了）
+  const unasked = items.filter((i) => i.required && i.source !== 'explicit').map((i) => i.key);
+  const verdict = !ctx.versionStrategyAsked ? 'blocked' : (unasked.length ? 'intake-incomplete' : 'intake-complete');
+  const note = {
+    'intake-complete': '必问 3 项都由当次指令显式给出（intake 问全了）。',
+    'intake-incomplete': `必问项里有 ${unasked.length} 项不是当次给的（记忆/默认补的）→ 复述框必须点明，`
+      + '不能当成「老师已经确认过」。',
+    blocked: '版本策略仍是 ASK（没问出来）→ 已拦截，不进导出。'
+  }[verdict];
+
+  return {
+    requiredKeys: ['scenario', 'scope', 'versionStrategy'],
+    items,
+    explicitKeys,
+    memoryKeys,
+    defaultKeys,
+    unasked,
+    // 非「当次显式给出」的项都要老师在复述框里过目
+    needsConfirm: items.filter((i) => i.source !== 'explicit').map((i) => i.key),
+    verdict,
+    note,
+    memoryDisabled: !!(ctx.memoryReport && ctx.memoryReport.disabled),
+    confirmRequired: true,
+    confirmHint: '把 restate + intakeCoverage 给老师过目；确认后带 --confirmed 重跑才生成。'
+  };
+}
+
+/**
+ * @returns {{ok, exitCode, job, diagnostics, preflight, restate, snapshot, intakeCoverage}}
  */
 function preflight(job, opts) {
   opts = opts || {};
@@ -756,7 +886,10 @@ function preflight(job, opts) {
   const index = buildIndex(library, classifications);
 
   // ---- 冲突链：当次 > 记忆 > 默认（可用 --no-memory 关闭）----
-  const memRes = opts.memory === false ? { job, memoryReport: { applied: false, note: '已用 --no-memory 关闭记忆' } } : applyMemory(job);
+  // ⚠ 先留一份「当次原始 job」：合并后 job 里「没问」与「问了但答默认」无法区分，
+  //    intakeCoverage（AC-18）要靠这份原文判定每项到底是 explicit / memory / default。
+  const rawJob = JSON.parse(JSON.stringify(job || {}));
+  const memRes = opts.memory === false ? { job, memoryReport: { applied: false, disabled: true, note: '已用 --no-memory 关闭记忆' } } : applyMemory(job);
   job = memRes.job;
   const memoryReport = memRes.memoryReport;
 
@@ -775,6 +908,30 @@ function preflight(job, opts) {
     versionStrategy = VERSION_STRATEGY_ALIASES[vk] || versionStrategy;
   }
 
+  /**
+   * 版本类型（`allowedVersionTypes`，仅 `versionStrategy='custom'` 时生效）归一。
+   *
+   * 现象：`{"versionStrategy":"custom","allowedVersionTypes":["离子"]}` 归一前会把中文原样
+   * 传给引擎的 `versionsForEntry()`，`allowedTypes.includes(v.type)` 恒 false → 候选 0 →
+   * 误报 `B1_ZERO_CANDIDATE`（实测 exit 2 被拦），而 `归一映射表.md` §六 明写
+   * 「离子 / 离子方程式 / ionic → ionic」—— 文档承诺的能力实际不可用。
+   *
+   * 根因：`resolveScope()` 只归一 `scopeInput.versionTypes`（筛选维度），没管
+   * `generation.allowedVersionTypes`（策略参数），后者直接进了 `buildSettings()`。
+   *
+   * 修法：按同一张 `VERSION_TYPE_ALIASES` + 文本层归一（`matchKey`）逐项归一；
+   * 认不出的值**原样保留**（不静默丢弃），交给下游按「无可用版本」处理。
+   */
+  function normalizeAllowedVersionTypes(list) {
+    if (!Array.isArray(list)) return list;
+    return list.map((raw) => {
+      const k = matchKey(raw);
+      if (VERSION_TYPE_ALIASES[k]) return VERSION_TYPE_ALIASES[k];
+      const hit = K.EQ_TYPES.map((t) => t.code).find((c) => matchKey(c) === k);
+      return hit || raw;
+    });
+  }
+
   // ---- 范围归一 ----
   const resolved = resolveScope(index, genIn.scopeInput || {}, genIn.scopes || {});
   const resolvedExclude = resolveScope(index, genIn.excludeInput || {}, genIn.exclude || {});
@@ -786,6 +943,9 @@ function preflight(job, opts) {
   job2.generation.scopes = resolved.scopes;
   job2.generation.exclude = resolvedExclude.scopes;
   if (versionStrategy !== 'ASK') job2.generation.versionStrategy = versionStrategy;
+  if (Array.isArray(genIn.allowedVersionTypes) && genIn.allowedVersionTypes.length) {
+    job2.generation.allowedVersionTypes = normalizeAllowedVersionTypes(genIn.allowedVersionTypes);
+  }
 
   const settings = buildSettings(job2);
   const total = settings.totalCount;
@@ -798,6 +958,30 @@ function preflight(job, opts) {
     blockers: [],   // 必须让用户先决策的项
     warnings: []
   };
+
+  // ASK：版本策略未指定 —— 规格 §3.1 决策块 3「每次必问、无静默默认」。
+  // ⚠ 本工具是**无头执行器**，问不了老师；但绝不能把「没问」伪装成「已选定 chemicalOnly」。
+  //    定稿行为（用户拍板）：**直接拦截**，强制 agent 回 intake 轮问清楚，不进导出。
+  const versionStrategyAsked = versionStrategy !== 'ASK';
+  if (!versionStrategyAsked) {
+    diagnostics.blockers.push({
+      code: 'ASK_VERSION_STRATEGY',
+      title: '版本策略未指定（必须问老师，不得静默替老师决定）',
+      detail: 'job.generation.versionStrategy 缺失或为 "ASK"。规格 §3.1 决策块 3 要求版本策略**每次必问、无静默默认**。'
+        + `若不问就出卷，会落到引擎默认 ${settings.versionStrategy}（${K.VERSION_STRATEGIES[settings.versionStrategy] || settings.versionStrategy}）——`
+        + '同一道题有化学/离子等多种写法，策略一变可出题数与卷面内容都会变，属于返工级错误。',
+      effectiveIfNotAsked: settings.versionStrategy,
+      suggestion: 'intake 轮按六选一问老师；老师答「推荐 / 照旧 / 你定」→ preferChemical。',
+      options: [
+        'preferChemical 优先化学方程式（建议默认）',
+        'chemicalOnly 只出化学方程式',
+        'preferIonic 优先离子方程式',
+        'ionicOnly 只出离子方程式',
+        'allAvailable 所有可用版本均可',
+        'custom 教师指定版本类型（需配 allowedVersionTypes）'
+      ]
+    });
+  }
 
   // B7：H 题型恒 0
   if (Number(settings.questionTypeCounts.H) > 0) {
@@ -929,7 +1113,7 @@ function preflight(job, opts) {
   const files = previewFileNames(job2, scenario, total, channels);
   const snap = snapshotInfo(library, job.snapshot);
 
-  const hardBlock = diagnostics.blockers.filter((b) => ['B6_AMBIGUOUS', 'B6_UNMATCHED', 'B11_INVALID_MANUAL_ID', 'B3_MANUAL_EXCEED', 'B7_H_UNAVAILABLE', 'B1_TYPE_UNAVAILABLE'].includes(b.code));
+  const hardBlock = diagnostics.blockers.filter((b) => ['B6_AMBIGUOUS', 'B6_UNMATCHED', 'B11_INVALID_MANUAL_ID', 'B3_MANUAL_EXCEED', 'B7_H_UNAVAILABLE', 'B1_TYPE_UNAVAILABLE', 'ASK_VERSION_STRATEGY'].includes(b.code));
   const softBlock = diagnostics.blockers.filter((b) => ['B1_SHORTAGE', 'B1_ZERO_CANDIDATE'].includes(b.code));
 
   return {
@@ -961,8 +1145,14 @@ function preflight(job, opts) {
       questionTypeCounts: settings.questionTypeCounts,
       difficultyMode: settings.difficultyMode,
       difficultyCounts: settings.difficultyCounts,
-      versionStrategy: settings.versionStrategy,
-      versionStrategyLabel: K.VERSION_STRATEGIES[settings.versionStrategy] || settings.versionStrategy,
+      // ⚠ versionStrategy 未指定（ASK）时如实回显 'ASK'，**不能**回显 buildSettings 的兜底值，
+      //    否则复述框会告诉老师「只出化学方程式」——而老师根本没被问过（规格 §3.1 决策块 3）。
+      versionStrategy: versionStrategyAsked ? settings.versionStrategy : 'ASK',
+      versionStrategyLabel: versionStrategyAsked
+        ? (K.VERSION_STRATEGIES[settings.versionStrategy] || settings.versionStrategy)
+        : '⚠ 未指定 —— 必须先问老师（建议：优先化学方程式 preferChemical）',
+      versionStrategyEffective: settings.versionStrategy,
+      versionStrategyAsked,
       scopeResolved: resolved.scopes,
       scopeMapping: resolved.mapping,
       scopeExclude: resolvedExclude.scopes,
@@ -972,6 +1162,24 @@ function preflight(job, opts) {
       snapshot: snap,
       channels
     },
+    // AC-18：必问项来源标注（explicit / memory / default）——复述框与确认闸门都读它
+    intakeCoverage: buildIntakeCoverage({
+      rawJob,
+      memoryReport,
+      scenario,
+      scenarioLabel: { homework: '课后作业', timedDrill: '课堂限时练', examPrep: '备考练习' }[scenario],
+      scopeDescription: describeScopes(resolved.scopes),
+      scopeMapping: resolved.mapping,
+      versionStrategyAsked,
+      versionStrategyLabel: versionStrategyAsked
+        ? (K.VERSION_STRATEGIES[settings.versionStrategy] || settings.versionStrategy)
+        : '未指定（ASK）',
+      total,
+      questionTypeCounts: settings.questionTypeCounts,
+      difficultyCounts: settings.difficultyCounts,
+      channels,
+      outputDir: files.dir
+    }),
     snapshot: snap
   };
 }
@@ -1001,11 +1209,11 @@ function selfTest() {
   const classifications = loadJson(path.join(SKILL_ROOT, 'data', 'classifications.json'));
   const cases = [
     { name: '全库 · 仅化学', scopes: {}, strategy: 'chemicalOnly', expectEntries: 301, expectVersions: 304 },
-    { name: '全库 · 全版本', scopes: {}, strategy: 'allAvailable', expectEntries: 392, expectVersions: 531 },
+    { name: '全库 · 全版本', scopes: {}, strategy: 'allAvailable', expectEntries: 392, expectVersions: 553 },
     { name: '必修第一册/第一章 · 仅化学', scopes: { books: ['必修第一册'], chapters: ['第一章 物质及其变化'] }, strategy: 'chemicalOnly', expectEntries: 45, expectVersions: 45 },
     { name: '必修第一册/第一章/第二节 · 优先化学', scopes: { books: ['必修第一册'], chapters: ['第一章 物质及其变化'], sections: ['第二节 离子反应'] }, strategy: 'preferChemical', expectEntries: 30, expectVersions: 30 },
     { name: '选择性必修2 · 仅化学', scopes: { books: ['选择性必修2'] }, strategy: 'chemicalOnly', expectEntries: 3, expectVersions: 3 },
-    { name: '选择性必修3 · 仅离子', scopes: { books: ['选择性必修3'] }, strategy: 'ionicOnly', expectEntries: 0, expectVersions: 0 }
+    { name: '选择性必修3 · 仅离子', scopes: { books: ['选择性必修3'] }, strategy: 'ionicOnly', expectEntries: 17, expectVersions: 17 }
   ];
   let pass = 0;
   const lines = [];
@@ -1027,12 +1235,39 @@ function selfTest() {
 // 十三、CLI
 // ============================================================
 
+/**
+ * CLI 参数解析。
+ * ⚠ 不能简单用「第一个不以 -- 开头的参数」当 job 路径：`--out <path>` 的值同样不以 `--` 开头，
+ *    那样 `--out x.json --job y.json` 会把 x.json 误当 job（实测踩到）。
+ * 取值型开关（--job / --out）会**连它的值一起跳过**；同时支持 `--job=<path>` 写法。
+ */
+function parseArgs(args) {
+  const VALUE_FLAGS = new Set(['--job', '--out']);
+  const out = { positional: [], flags: new Set() };
+  for (let i = 0; i < args.length; i++) {
+    const a = args[i];
+    const eq = /^--([A-Za-z][\w-]*)=(.*)$/.exec(a);
+    if (eq) { out[eq[1]] = eq[2]; continue; }
+    if (VALUE_FLAGS.has(a)) {
+      const v = args[i + 1];
+      if (v != null && !v.startsWith('--')) { out[a.slice(2)] = v; i++; }
+      else out.flags.add(a);
+      continue;
+    }
+    if (a.startsWith('--')) { out.flags.add(a); continue; }
+    out.positional.push(a);
+  }
+  return out;
+}
+
 function main() {
   const args = process.argv.slice(2);
-  if (args.includes('--self-test')) process.exit(selfTest());
-  const jobArg = args.find((a) => !a.startsWith('--'));
+  const cli = parseArgs(args);
+  if (cli.flags.has('--self-test')) process.exit(selfTest());
+  const jobArg = (typeof cli.job === 'string' && cli.job) || cli.positional[0];
   if (!jobArg) {
     console.error('用法：node tools/preflight.js --job <job.json>');
+    console.error('      node tools/preflight.js --job <job.json> --out <写入归一后 job 的路径>');
     console.error('      node tools/preflight.js --self-test');
     process.exit(3);
   }
@@ -1044,15 +1279,15 @@ function main() {
   catch (e) { console.error('job.json 解析失败：' + e.message); process.exit(3); }
 
   let result;
-  try { result = preflight(job, { memory: !args.includes('--no-memory') }); }
+  try { result = preflight(job, { memory: !cli.flags.has('--no-memory') }); }
   catch (e) {
     console.error(JSON.stringify({ ok: false, error: 'PREFLIGHT_FAILED', message: e.message, stack: e.stack }, null, 2));
     process.exit(3);
   }
 
-  const outArgIdx = args.indexOf('--out');
-  if (outArgIdx >= 0 && args[outArgIdx + 1]) {
-    const outPath = path.resolve(args[outArgIdx + 1]);
+  const outArg = typeof cli.out === 'string' && cli.out ? cli.out : null;
+  if (outArg) {
+    const outPath = path.resolve(outArg);
     const rel = path.relative(SKILL_ROOT, outPath);
     if (rel.startsWith('..') || path.isAbsolute(rel)) {
       console.error('拒绝写入 skill 项目之外的路径：' + outPath);
@@ -1071,6 +1306,7 @@ module.exports = {
   preflight, buildIndex, resolveScope, buildSettings, candidateStats, strategyTable,
   scaleTypeCounts, validateManualIds, checkAcceptance, previewFileNames, snapshotInfo,
   describeScopes, matchKey, toHalfWidth, cnNumToArabic, asArray, uniq, applyMemory,
+  buildIntakeCoverage,
   BOOK_ALIASES, DIFFICULTY_ALIASES, VERSION_TYPE_ALIASES, VERSION_STRATEGY_ALIASES, SCENARIO_ALIASES
 };
 

@@ -1,7 +1,7 @@
 ---
 name: chem-equation-paper
-description: 从化学方程式题库快照出卷并导出 Word / PDF / 图片。当用户说「出一份化学方程式卷子 / 作业 / 限时练 / 备考练习」「给我出 10 道方程式题」「把这些章节的方程式出成卷子」「出题打印」等意图时使用。流程：澄清需求（场景 / 范围 / 版本策略）→ 预检可出题数 → 复述确认 → 无头组卷导出 → 结构化汇报。产物落在本项目 out/{yyyy-mm-dd}/，绝不写入题库主项目。
-version: 1.1.0
+description: 从化学方程式题库出卷并导出 Word / PDF / 图片。当用户说「出一份化学方程式卷子 / 作业 / 限时练 / 备考练习」「给我出 10 道方程式题」「把这些章节的方程式出成卷子」「出题打印」等意图时使用。流程：澄清需求（场景 / 范围 / 版本策略）→ 预检可出题数 → 复述确认 → 无头组卷导出 → 结构化汇报。产物落在本项目 out/{yyyy-mm-dd}/，绝不写入题库或引擎上游项目。
+version: 1.2.0
 ---
 
 # 方程式出题 skill（chem-equation-paper）
@@ -14,7 +14,7 @@ version: 1.1.0
 2. **预检**——把口语范围归一成引擎能懂的范围，算出「最多能出几题」，不够就当场给选项；
 3. **复述确认**——用老师看得懂的话把「要出几题、什么范围、存哪、叫什么名」摆出来；
 4. **执行**——一条命令无头组卷导出 PDF 双卷 + Word 双卷（图片点名才出）；
-5. **汇报**——产物路径、卷面统计、引擎 notices 原文、快照时间与漂移状态、参数存档。
+5. **汇报**——产物路径、卷面统计、引擎 notices 原文、题库数据时间与数据锁状态、参数存档。
 
 **卷面格式是固定的**（`layout.yml`），老师不需要调；只有**场景包**（标题 + 有无学生栏）随场景变。
 
@@ -24,22 +24,26 @@ version: 1.1.0
 
 | # | 边界 | 具体要求 |
 |---|---|---|
-| **1** | **绝不写主项目** | 主项目 `E:\DSH work\方程式` 只读。题库、设置、历史作业、导出目录、备份目录**一个字节都不碰**。产物只落本项目 `out/`。 |
+| **1** | **绝不写引擎上游** | 上游项目（旧版桌面应用，仓库 `chemistry-equation-printer` 的归档分支 `archive/desktop-app-v1`）只读。题库、设置、历史作业、导出目录、备份目录**一个字节都不碰**。产物只落本项目 `out/`。 |
 | **2** | **不写回题库** | 条目的 `questionCount` / `lastUsedAt` **只读不改**（v1.1 已取消写回）。 |
 | **3** | **不自动放宽** | 范围零命中时**禁止**自动放宽到全库；必须列候选让老师选（B6）。 |
 
-> 交付验收含 **AC-17：出卷前后对主项目做全量 sha256 快照 → 零差异**。任何时候都不要在主项目路径下创建临时文件。
+> 交付验收含 **AC-17：出卷前后对上游做全量 sha256 快照 → 零差异**。任何时候都不要在上游路径下创建临时文件。
+> 上游未配置（未设 `CHEMEQ_SOURCE`）时该快照自动跳过并标注 `skipped`，其余验收照常。
 
 ---
 
 ## 2. 调用方式（一条命令）
 
 ```powershell
-cd "E:\DSH work\方程式出题skill"
-node tools/run-paper.js <job.json>
+cd chem-equation-paper            # 本项目根目录
+node tools/run-paper.js <job.json>              # ① 预检 + 复述框 + 覆盖度报告（不生成卷子）
+node tools/run-paper.js <job.json> --confirmed  # ② 老师确认覆盖度后 → 出卷
 ```
 
-- `job.json` 的 schema 见 §6；启动器会用**借用的** Electron 运行时（主项目那份，不安装、不复制）跑 `app/main.js`。
+- **`--confirmed` 是确认闸门**（AC-18）：不带它时只回 `CONFIRM_REQUIRED` + `restate` +
+  `intakeCoverage`，**一个字节都不写盘**（`exitCode 2`）。详见 §3.2b。
+- `job.json` 的 schema 见 §6；启动器会用**本项目自带的** Electron 运行时（`runtime/electron/`，v33.4.11，不安装、不复制、不依赖项目外）跑 `app/main.js`。
 - 退出码：`0` = ≥1 个通道成功（`ok:true`）；非 0 = 全部失败（`ok:false`）。
 - 无论成功失败，都会打印一份 JSON，并写 `result.json` 到 `out/{yyyy-mm-dd}/`。
 - **无头**：不会有任何对话框。
@@ -48,7 +52,7 @@ node tools/run-paper.js <job.json>
 
 ```powershell
 node tools/skill-state.js state                  # intake 第一步：drift + memory + pending 一次拿全
-node tools/skill-state.js drift                  # 快照漂移检测（不阻塞出卷）
+node tools/skill-state.js drift                  # 题库数据锁检测（不阻塞出卷）
 node tools/skill-state.js memory                 # 读偏好记忆
 node tools/skill-state.js pending                # 列 _pending 未完成项（intake 轮要提示）
 node tools/skill-state.js archive                # >30 天的 _pending 归档到 .dsh/skill-state/archive/
@@ -70,10 +74,10 @@ node tools/run-paper.js <job.json> --render-check      # 开发期：只渲染�
    ↓  （先跑 node tools/skill-state.js state：拿 drift / memory / pending）
 [resolve + preflight]  node tools/preflight.js --job <job.json>
    ↓  （有拦截项 → 当场给选项，不进 generate）
-[restate] 复述框（老师确认/改）
+[restate] 复述框 + intakeCoverage 覆盖度报告（老师确认/改）
    ↓  （老师说“改” → 回 intake，只问变化项）
-[execute]  node tools/run-paper.js <job.json>
-   ↓
+[execute]  node tools/run-paper.js <job.json> --confirmed
+   ↓  （不带 --confirmed → CONFIRM_REQUIRED，不生成任何卷子）
 [report]  全量报告
 ```
 
@@ -90,7 +94,7 @@ node tools/skill-state.js state
 
 | 块 | 用途 |
 |---|---|
-| `drift` | 快照时间 / 条目数 / 是否与主项目一致 → **抄进复述框**，漂移**不阻塞**（B12） |
+| `drift` | 题库数据时间 / 条目数 / 是否与数据锁一致 → **抄进复述框**，异常**不阻塞**（B12） |
 | `memory` | 上次的偏好（`last`）→ 用于冲突链「当次 > 记忆 > 默认」；损坏时给默认 + 一行说明 |
 | `pending` | 未完成的导出留痕 → **intake 轮提示**「上次有导出没成功，要现在重试吗？」（B10） |
 
@@ -125,13 +129,39 @@ node tools/skill-state.js state
 
 ### 3.2 复述框（确认后才执行）
 
-固定五块，用老师看得懂的话写（**模板见 `references/文案模板.md` §二**）：
+固定六块，用老师看得懂的话写（**模板见 `references/文案模板.md` §二**）：
 
 1. **全参数表**——场景、题量、题型分布、难度目标、版本策略、导出通道
 2. **范围映射结果**——老师说的口语 → 归一后的册/章/节（含**归一依据**，来自 `restate.scopeMapping`）
 3. **预检可出题数**——**必须是条目数**（`preflight.authoritativeCount`，不是引擎的 `available` 版本数）；不足时给四选项
 4. **文件名预览**——`restate.files[].name`（含避让后的实际名）+ `restate.outputDir`
-5. **快照时间与漂移状态**——`restate.snapshot`
+5. **数据时间与数据锁状态**——`restate.snapshot`（题库是本项目自有数据；异常不阻塞出卷，只标注）
+6. **intake 覆盖度**——`intakeCoverage`：每个参数**是谁给的**（`explicit` 当次问到 / `memory` 记忆补的 / `default` 系统默认）
+
+### 3.2b intake 覆盖度与确认闸门（AC-18）
+
+`intakeCoverage.verdict` 三档，**必须在复述框里如实讲**：
+
+| verdict | 含义 | 你要做的 |
+|---|---|---|
+| `intake-complete` | 必问 3 项（场景/范围/版本策略）**都是当次问到的** | 正常复述，等老师点头 |
+| `intake-incomplete` | 必问项里有 `unasked[]` 是**记忆/默认替答的** | 复述框里**点明这几项不是老师说的**，请老师确认或改；别当成「老师已经确认过」 |
+| `blocked` | 版本策略仍是 ASK | 回 intake 补问（见上表 `ASK_VERSION_STRATEGY`） |
+
+> ⚠ 为什么需要它：`restate.versionStrategyAsked` 只表示「最终值不是 ASK」——**记忆补上的同样为
+> `true`**，不能当「agent 问过老师」的证据。实测：一个只写 `totalCount` 的 job 会被记忆补成
+> 「跟上次一样」并 `exit 0` 放行。`intakeCoverage` 把这种「漏问」显式标出来。
+
+**确认闸门（引擎级，不只是话术）**：`node tools/run-paper.js <job.json>` **不带 `--confirmed`
+时一个字节都不生成**，只回 `CONFIRM_REQUIRED` + `restate` + `intakeCoverage`（`exitCode 2`）。
+把覆盖度摆给老师、老师点头后，才带 `--confirmed` 重跑：
+
+```powershell
+node tools/run-paper.js my-job.json --confirmed
+```
+
+> 豁免：`--render-check`（只截图）与 `job.dryRun:true`（只组卷）不产交付物，不受闸门约束。
+> `intakeCoverage.needsConfirm` 列出所有「不是当次显式给出」的项——这些都要老师在复述框里过目。
 
 可改项（`restateModifiable`）：题量、题型分布、难度目标、手选必出、排除范围、导出通道、是否出图片。
 **永不问**：卷面参数、`allowDuplicateEntry`、`includeMustInclude`、学习项目挂靠。
@@ -140,6 +170,7 @@ node tools/skill-state.js state
 
 | code | 你要做的 |
 |---|---|
+| `ASK_VERSION_STRATEGY` | **你漏问了第 3 问**：版本策略没指定（或写了 `"ASK"`）。回 intake 补问六选一，**不进导出**（规格：每次必问、无静默默认）。话术见 `references/文案模板.md` §四 |
 | `B6_AMBIGUOUS` | 把 `blockers[].items[].candidates` **列给老师选** |
 | `B6_UNMATCHED` | 列 `blockers[].items[].hints` 里的候选（册/章/节全集），**禁止自动放宽到全库** |
 | `B11_INVALID_MANUAL_ID` | 列失效 ID + 原因，要求剔除 |
@@ -151,8 +182,11 @@ node tools/skill-state.js state
 
 ### 3.3 执行
 
-确认后写 `job.json`（§6）→ `node tools/run-paper.js <job.json>` → 读 `result.json`。
+确认后写 `job.json`（§6）→ `node tools/run-paper.js <job.json> --confirmed` → 读 `result.json`。
 
+- **`--confirmed` 是硬要求**（AC-18）：不带它，app 只回 `CONFIRM_REQUIRED` + `restate` +
+  `intakeCoverage`，**不生成任何卷子**（`exitCode 2`）。它的语义是「老师已经看过并确认了
+  intake 覆盖度」，不是「agent 自己觉得可以了」。
 - `result.ok === true` 表示 **≥1 个通道成功**（AC-10）；逐通道看 `result.channels`。
 - `result.failures` 非空 → 有通道失败，按 §4.6 出**红字提示** + `_pending` 路径。
 - 退出码 `0` / 非 0 与 `ok` 一致。
@@ -165,7 +199,7 @@ node tools/skill-state.js state
 - 卷面统计：题量（请求/实际）、题型实际分布、难度实际分布、范围命中条目数 ← `result.generation`
 - 引擎 `notices` **原文转述**（不加工、不省略）
 - **附加要求核查**：`result.generation.acceptance`（命中 / 要求 / 是否满足 / 重抽次数）
-- 快照信息：时间 / 条目数 / 版本数 / 漂移状态 ← `result.snapshot`
+- 题库数据信息：时间 / 条目数 / 版本数 / 数据锁状态 ← `result.snapshot`
 - 本次生效的完整参数 ← `result.params`
 - 题卷 / 答案卷页数 ← `result.channels.pdf[].pages`
 - 失败通道的红字提示 + `_pending` 路径（若有）
@@ -185,9 +219,15 @@ node tools/skill-state.js state
 | `allAvailable` | 所有可用版本均可 | 六类全可 | 老师不在意写法 |
 | `custom` | 教师指定版本类型 | 需配 `allowedVersionTypes` | 老师点名「只要电离和水解」 |
 
+> ⚠ **不指定 = 拦截**：`versionStrategy` 缺失或写成 `"ASK"` 时，预检直接给
+> `ASK_VERSION_STRATEGY` 拦截（`exitCode: 2`，不进导出），**不会**静默用 `chemicalOnly` 出卷；
+> `restate.versionStrategy` 也如实回显 `"ASK"`。看到这个 code 就是**你漏问了第 3 问**，回 intake 补问。
+
 **量化后果（必须主动提示老师）**：
 - 全库 392 条里，`chemicalOnly` 只剩 **301** 条（损失 91 条）；
-- **选择性必修 3（有机）离子版本 = 0 条** → `ionicOnly` 命中 0 条；
+- **选择性必修 3（有机）整册离子版本 = 17 条**（第三章 烃的衍生物 13 + 第四章 生物大分子 4；
+  第二轮拍板补全后由 16 变 17），但**第二章 烃 = 0 条**（纯有机反应，无离子式）→
+  老师要「选必3 的烃 + 只出离子」时命中 0 条，走 B6/B1 零候选流（别自动放宽到整册）；
 - **选择性必修 2 只有 6 条**条目（`chemicalOnly` 3 条）。
 
 ### 4.2 题型（`questionTypeCounts`）
@@ -262,9 +302,10 @@ node tools/skill-state.js state
 | B9 | 导出失败 / 写盘失败 | 各通道独立；失败记入 `_pending`；部分失败 → **红字提示**；`.tmp` + rename 事务写 |
 | B10 | `_pending` 生命周期 | **手动触发重试**（intake 轮提示）；**>30 天归档**到 `.dsh/skill-state/archive/` |
 | B11 | 手选指向已禁用 / 已删条目 | 复述框前**列失效 ID + 原因**，要求剔除 |
-| B12 | 快照漂移 | `sync:check` 比对 sha256；**不阻塞出卷**，报告标注「快照时间 X / 主项目已更新 Y」 |
+| B12 | 题库数据锁异常 | `sync:check` 比对 `data/` 与 `data/SOURCE.json` 的数据锁；**不阻塞出卷**，报告标注「数据时间 X / 与数据锁不一致」 |
 | B13 | 溢页 / 页数不齐 | 接受自然分页；报题卷/答案卷页数；**不裁剪、不补空白页** |
 | B14 | 文件被占用 / 目录不可写 | 后缀避让 `-2 … -99`；仍失败 → 通道隔离；全失败 → `_pending` + 报路径 |
+| **AC-18** | `CONFIRM_REQUIRED`（没确认就出卷） | **不是错误，是关卡**：把 `restate` + `intakeCoverage` 摆给老师确认，点头后带 `--confirmed` 重跑。若 `intakeCoverage.verdict = intake-incomplete`，先点明 `unasked[]` 里哪几项不是老师说的 |
 
 ---
 
@@ -306,7 +347,7 @@ node tools/skill-state.js state
 | `export.images` | 默认 `false`；老师点名要图片才 `true` |
 | `export.imagesOnDemand` | 图片规格覆盖（默认取 §3.3 `imageOptions`，即 `engine/image.js` 的 `defaultImageOptions()`） |
 | `layoutOverrides` | 留空即可（卷面固定）；只允许覆盖 `title` / `subtitle` / `note` / `studentInfo` |
-| `outputDir` | `null` = `out/{yyyy-mm-dd}/`；**必须在本项目内**（写主项目路径会被拒绝） |
+| `outputDir` | `null` = `out/{yyyy-mm-dd}/`；**必须在本项目内**（写项目外路径会被拒绝） |
 | `dryRun` | `true` = 只组卷不导出（用于自检） |
 | `extraAcceptance` | AC-14 附加要求，`kind` ∈ `containsFormula` / `containsName` / `difficultyIs` / `versionTypeIs`，例：`[{"kind":"containsFormula","value":"Na","minCount":2,"label":"钠相关≥2题"}]` |
 | `snapshot` | 把 `skill-state.js drift` 的结果抄进来，供报告标注（B12） |
@@ -341,22 +382,29 @@ node tools/skill-state.js state
 ```
 
 ```powershell
-cd "E:\DSH work\方程式出题skill"
-node tools/preflight.js --job my-job.json        # ① 预检 → 看 diagnostics / restate
-node tools/run-paper.js my-job.json              # ② 出卷 → 打印 result.json
-node tools/skill-state.js pending                # ③ 看有没有失败留痕
+cd chem-equation-paper            # 本项目根目录
+node tools/preflight.js --job my-job.json        # ① 预检 → 看 diagnostics / restate / intakeCoverage
+node tools/run-paper.js my-job.json              # ② 未确认 → CONFIRM_REQUIRED，不生成卷子
+node tools/run-paper.js my-job.json --confirmed  # ③ 老师确认后 → 出卷，打印 result.json
+node tools/skill-state.js pending                # ④ 看有没有失败留痕
 ```
 
 ---
 
 ## 7. 自检清单（交付前逐项确认）
 
-- [ ] 主项目 `E:\DSH work\方程式` 下**没有任何文件被创建/修改**（AC-17）
+- [ ] 引擎上游项目下**没有任何文件被创建/修改**（AC-17；上游未配置时该快照 `skipped`）
 - [ ] `npm run test:engine` = 「通过 238 项，失败 0 项」
+- [ ] `npm run test:edge` = 「通过 106 / 失败 0」
+- [ ] `npm run test:patches` = 「21/21 通过」（2 个本地补丁：`engine/docx.js`、`engine/chem.js`；未配置上游时 19/21）
+- [ ] `npm run test:acceptance` = 「18/18 通过」（含 AC-18 覆盖度 / 确认闸门）
+- [ ] `npm run data:check` = 「数据已锁定：392 条 / 553 版本」
+- [ ] `npm run runtime:check` = 「Electron 运行时就绪（本项目自带）」
 - [ ] `npm run sync:check` = 「全部一致 ✓」
 - [ ] 预检报的是**条目数**，不是引擎的 `available` 版本数
 - [ ] 卷内**没有 H 题**；C 题有 24pt 答案线、B/D/E 没有
-- [ ] 复述框里能看到：题量、范围、存哪、叫什么名、快照时间
+- [ ] 复述框里能看到：题量、范围、存哪、叫什么名、题库数据时间、**intake 覆盖度**（哪几项是记忆/默认给的）
+- [ ] 出卷命令带 `--confirmed`；不带时**零卷子产出**（`CONFIRM_REQUIRED`，只留 result.json）
 - [ ] 失败通道有红字提示 + `_pending` 路径；全失败时退出码非 0
 
 ## 8. 配套文件与工具
@@ -368,15 +416,20 @@ node tools/skill-state.js pending                # ③ 看有没有失败留痕
 | `references/决策清单.md` | 必问 3 项 / 可默认项 / 永不问项 / 冲突链 |
 | `references/归一映射表.md` | 口语 → 引擎枚举（B8 的实现依据） |
 | `references/文案模板.md` | intake / 复述框 / 报告 / 拒绝 / 红字提示话术 + 常见追问 |
-| `../../../PROMPT-方程式出题skill.md` | 需求规格 v1.1 全文（含 17 条验收用例） |
+| `../../../PROMPT-方程式出题skill.md` | 需求规格全文（v1.1 正文 + §3.2b 的 v1.2 变更记录，含 17 条验收用例） |
 
 | 工具 | 作用 |
 |---|---|
-| `tools/preflight.js` | 归一 + 预检 + 文件名预览 + 诊断 + 记忆补全（`--self-test` 跑 6 基准对照） |
-| `tools/run-paper.js` | 出卷启动器（借 Electron 运行时跑 `app/main.js`；`--render-check` 只截图） |
-| `tools/skill-state.js` | 记忆 / 漂移 / `_pending` 生命周期（`state` / `drift` / `memory` / `pending` / `archive`） |
-| `tools/sync-from-source.js` | 从主项目同步快照与引擎副本；`--check` 只比对（漂移检测） |
+| `tools/preflight.js` | 归一 + 预检 + 文件名预览 + 诊断 + 记忆补全（`--self-test` 跑 6 基准对照）；也归一 `custom` 策略的 `allowedVersionTypes` |
+| `tools/run-paper.js` | 出卷启动器（用**本项目自带**的 `runtime/electron/` 跑 `app/main.js`；**`--confirmed` = 确认闸门放行**，不带则只回 `CONFIRM_REQUIRED` + 覆盖度；`--render-check` 只截图；`--print-runtime` 查路径） |
+| `tools/skill-state.js` | 记忆 / 数据锁 / `_pending` 生命周期（`state` / `drift` / `memory` / `pending` / `archive`） |
+| `tools/data-lock.js` | 题库数据锁：`data/` 是本项目自有数据；合法变更后重新锁定（`npm run data:lock`） |
+| `tools/install-runtime.js` | Electron 运行时装入 / 校验（`npm run runtime:install` / `runtime:check` / `--print`） |
+| `tools/sync-from-source.js` | 只同步**引擎副本**（数据不同步）；`--check` 只比对（引擎漂移 + 数据锁）；登记过的本地补丁按 `data/ENGINE-PATCHES.json` 认账 |
+| `tools/test-engine-patches.js` | 校验引擎副本的本地补丁（哈希 + 行为断言）；重新打补丁后 `--update` 刷新登记 |
+| `tools/test-edge.js` | 边界与异常回归（归一 / 拦截 / CLI / 输出目录 / `_pending` / 补丁登记 / 数据锁 / 自带运行时 / 公式渲染 / 版本类型归一 / 离子式拍板结论，**93 项**） |
+| `data/ENGINE-PATCHES.json` | 本地补丁登记表（上游哈希 / 补丁哈希 / 症状 / 根因 / 修法）—— 现有 2 项：`engine/docx.js`（Word 电荷渲染）、`engine/chem.js`（纯文本多位数下标 + 尾随电荷） |
 | `engine/paper.js` | 组卷编排（调 `G.generate` + perItemRules + 附加验收核查） |
-| `engine/image.js` | 图片通道文档构建（移植主项目已验证实现） |
+| `engine/image.js` | 图片通道文档构建（移植自上游已验证实现） |
 | `app/main.js` / `app/harness.html` | 无头 Electron 主进程 / 薄渲染壳 |
 | `tools/yml.js` | 极小 YAML 子集解析 + `layout.yml`/`presets.yml` 装载（无依赖） |

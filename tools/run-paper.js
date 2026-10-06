@@ -1,15 +1,26 @@
 #!/usr/bin/env node
 /*
- * 出卷启动器：用「借用的」Electron 运行时启动本项目的无头 app。
+ * 出卷启动器：用**本项目自带的** Electron 运行时启动本项目的无头 app。
  *
  * 用法：
- *   node tools/run-paper.js <job.json>            # 出卷（job.json 见 PROMPT §4.2）
+ *   node tools/run-paper.js <job.json>            # 预检 + 复述框 + 覆盖度报告（**不生成卷子**）
+ *   node tools/run-paper.js <job.json> --confirmed   # 老师已确认 intake 覆盖度 → 出卷
  *   node tools/run-paper.js <job.json> --keep     # 出错时保留中间产物（不清理临时目录）
  *   node tools/run-paper.js <job.json> --render-check   # 开发期：只渲染卷面并截图（不产出卷子）
+ *   node tools/run-paper.js --print-runtime       # 只打印解析到的 electron.exe 路径（诊断）
+ *
+ * 确认闸门（AC-18）：不带 `--confirmed` 时，app 侧只回 `CONFIRM_REQUIRED` + restate +
+ *   intakeCoverage，**一个字节都不写盘**；确认后带 `--confirmed` 才进导出。
+ *   豁免：`--render-check`（只截图）与 job 里的 `dryRun:true`（只组卷）不产交付物。
  *
  * 设计要点：
  *   - electron.exe 是**通用运行时**：`electron.exe <app目录>` 可运行任意 Electron 应用。
- *     因此本项目不复制 180MB 运行时，只借用主项目那份（路径见 data/SOURCE.json）。
+ *   - 运行时实体在本项目 `runtime/electron/`（v33.4.11，268MB，由 tools/install-runtime.js 装入），
+ *     **不再借用主项目那份**——本项目零项目外依赖。
+ *   - 解析顺序：`CHEMEQ_ELECTRON` 环境变量（显式覆盖，允许项目外但会告警）
+ *     → data/SOURCE.json 的 electronRuntime.path（**必须是本项目内的路径**）
+ *     → `runtime/electron/electron.exe`。除显式覆盖外，**任何项目外路径一律拒绝**，
+ *     防止悄悄退回外部依赖。
  *   - stdio 用 'inherit'（不是 'pipe'）：本机沙箱下 pipe 捕获会 EPERM，inherit 才能正常回显。
  *   - 本脚本只负责"启动 + 转发退出码"，不做任何业务逻辑。
  */
@@ -21,25 +32,41 @@ const { spawn } = require('child_process');
 
 const SKILL_ROOT = path.resolve(__dirname, '..');
 
+/** 路径必须落在本项目内（零项目外依赖的硬约束） */
+function insideSkill(p) {
+  const rel = path.relative(SKILL_ROOT, path.resolve(p));
+  return !!rel && !rel.startsWith('..') && !path.isAbsolute(rel);
+}
+
 function resolveElectron() {
-  if (process.env.CHEMEQ_ELECTRON && fs.existsSync(process.env.CHEMEQ_ELECTRON)) {
-    return process.env.CHEMEQ_ELECTRON;
-  }
   const meta = (() => {
     try { return JSON.parse(fs.readFileSync(path.join(SKILL_ROOT, 'data', 'SOURCE.json'), 'utf8')); }
     catch (_) { return null; }
   })();
   const fromMeta = meta && meta.electronRuntime && meta.electronRuntime.path;
-  if (fromMeta && fs.existsSync(fromMeta)) return fromMeta;
-  // 最后兜底：主项目默认位置
-  const fallback = 'E:/DSH work/方程式/node_modules/electron/dist/electron.exe';
-  if (fs.existsSync(fallback)) return fallback;
+  const envOverride = process.env.CHEMEQ_ELECTRON || null;
+  if (envOverride && fs.existsSync(envOverride) && !insideSkill(envOverride)) {
+    console.error('⚠ CHEMEQ_ELECTRON 指向项目外路径（' + envOverride + '）——本项目设计为自带运行时，请尽快改用 runtime/electron/。');
+  }
+  const candidates = [
+    envOverride,
+    fromMeta && insideSkill(fromMeta) ? fromMeta : null,
+    path.join(SKILL_ROOT, 'runtime', 'electron', 'electron.exe')
+  ];
+  for (const c of candidates) if (c && fs.existsSync(c)) return c;
   return null;
 }
 
 const jobPath = process.argv[2];
-if (!jobPath) {
-  console.error('用法：node tools/run-paper.js <job.json>');
+if (!jobPath || jobPath === '--print-runtime') {
+  if (jobPath === '--print-runtime') {
+    const e = resolveElectron();
+    if (e) { console.log(e); process.exit(0); }
+    console.error('✗ 本项目缺少 Electron 运行时（runtime/electron/electron.exe）');
+    console.error('  → node tools/install-runtime.js [--from=<Electron dist 目录>]');
+    process.exit(4);
+  }
+  console.error('用法：node tools/run-paper.js <job.json>　｜　node tools/run-paper.js --print-runtime');
   process.exit(2);
 }
 const absJob = path.resolve(jobPath);
@@ -57,8 +84,10 @@ if (!fs.existsSync(appEntry)) {
 
 const electron = resolveElectron();
 if (!electron) {
-  console.error('找不到 Electron 运行时。请设置 CHEMEQ_ELECTRON=<electron.exe 绝对路径>，');
-  console.error('或先运行 node tools/sync-from-source.js 记录运行时位置。');
+  console.error('找不到 Electron 运行时。本项目自带那份应位于：');
+  console.error('  ' + path.join(SKILL_ROOT, 'runtime', 'electron', 'electron.exe'));
+  console.error('→ 跑 node tools/install-runtime.js [--from=<Electron dist 目录>] 装入；');
+  console.error('  或设 CHEMEQ_ELECTRON=<本项目内的 electron.exe 路径>（仅诊断用，不接受项目外路径）。');
   process.exit(4);
 }
 
@@ -68,7 +97,9 @@ const child = spawn(electron, [SKILL_ROOT], {
     SKILLJOB: absJob,
     SKILL_ROOT,
     CHEMEQ_KEEP: process.argv.includes('--keep') ? '1' : '',
-    CHEMEQ_MODE: process.argv.includes('--render-check') ? 'render-check' : 'paper'
+    CHEMEQ_MODE: process.argv.includes('--render-check') ? 'render-check' : 'paper',
+    // AC-18：intake 覆盖度确认闸门。child 读不到 argv，用 env 传。
+    CHEMEQ_CONFIRMED: process.argv.includes('--confirmed') ? '1' : ''
   })
 });
 

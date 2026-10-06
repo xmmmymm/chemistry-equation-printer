@@ -115,6 +115,34 @@
   }
 
   // ---------- 物质 → run 序列（下标/电荷上标） ----------
+  /*
+   * ⚠⚠ 本地补丁（本项目对主项目副本的唯一改动；登记在 data/ENGINE-PATCHES.json）⚠⚠
+   *
+   * 上游原实现：
+   *     for (const ch of String(sp.formula || '')) specs.push(/[0-9]/.test(ch) ? {t:ch,sub:true} : {t:ch});
+   *     if (sp.charge) specs.push({ t: sp.charge, sup: true });
+   * 它把 `^` 记法与尾随 `+/-` 当成**普通字符**照抄，随后又把 sp.charge 追加成上标，
+   * 于是电荷被渲染两次、`^` 泄漏、电荷数字还被当成元素下标。实测（word/document.xml 原文）：
+   *     Fe^2+  →  Fe ^ ₂ + ²      （应为 Fe²⁺）
+   *     OH-    →  OH - ⁻¹         （应为 OH⁻）
+   *     H+     →  H + ¹           （应为 H⁺）
+   * 影响面：531 个版本中 185 个（34.8%）含带电物种，而 Word 双卷是默认通道。
+   * PDF/HTML 通道走 chem.js formulaHTML()，渲染正确 —— 本补丁就是让 docx 与它对齐。
+   */
+  function splitFormulaCharge(rawFormula) {
+    let body = String(rawFormula == null ? '' : rawFormula);
+    let charge = null;
+    let m = body.match(/\^(\d*)[+-]$/);
+    if (m) {
+      charge = (m[1] || '') + (body.charAt(body.length - 1) === '+' ? '+' : '−');
+      body = body.slice(0, body.length - m[0].length);
+    } else {
+      m = body.match(/[+-]$/);
+      if (m) { charge = m[0] === '+' ? '+' : '−'; body = body.slice(0, -1); }
+    }
+    return { body: body, charge: charge };
+  }
+
   function speciesRunSpecs(sp, opts) {
     opts = opts || {};
     const specs = [];
@@ -128,10 +156,18 @@
     }
     if (coefBlank) specs.push({ t: '____' });
     else if (sp.coefficient && sp.coefficient !== 1) specs.push({ t: String(sp.coefficient) });
-    for (const ch of String(sp.formula || '')) {
+    // 电荷记法先摘出来，主体再逐字符渲染下标（与 chem.js formulaHTML 同规则）
+    const parsed = splitFormulaCharge(sp.formula);
+    for (const ch of parsed.body) {
       specs.push(/[0-9]/.test(ch) ? { t: ch, sub: true } : { t: ch });
     }
-    if (sp.charge) specs.push({ t: sp.charge, sup: true });
+    // 电荷优先取 formula 里的记法；formula 未写符号时才退回 sp.charge 字段（题库实际无此情形）
+    let chargeText = parsed.charge;
+    if (!chargeText && sp.charge) {
+      const n = Math.abs(Number(sp.charge)) || 1;
+      chargeText = (n === 1 ? '' : String(n)) + (Number(sp.charge) > 0 ? '+' : '−');
+    }
+    if (chargeText) specs.push({ t: chargeText, sup: true });
     if (sp.state) specs.push({ t: '(' + sp.state + ')' });
     if (sp.gas) specs.push({ t: '↑' });
     if (sp.precipitate) specs.push({ t: '↓' });

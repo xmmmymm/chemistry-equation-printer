@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-05T05:54:08.257Z",
+  "updatedAt": "2026-09-19T09:33:56.503Z",
   "entries": [
     {
       "id": "R0001",
@@ -12306,7 +12306,7 @@
     {
       "id": "R0101",
       "name": "硫酸亚铁处理含铬废水",
-      "description": "以铁板作阴、阳极电解处理酸性含铬废水：阳极生成的Fe2+将Cr2O7^2-还原为Cr3+，最后以Cr(OH)3形式除去",
+      "description": "以铁板作阴、阳极电解处理酸性含铬废水：阳极生成的Fe2+将Cr2O7²⁻还原为Cr3+，最后以Cr(OH)3形式除去",
       "openPrompt": "",
       "difficulty": "较难",
       "difficultyReason": "离子方程式系数大（6、14、7），酸性介质条件，复杂氧化还原配平",
@@ -14188,6 +14188,63 @@
           "conditions": [],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0118-ionic",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "Ca^2+",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": 2
+            },
+            {
+              "formula": "ClO-",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -1
+            },
+            {
+              "formula": "CO2",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            }
+          ],
+          "products": [
+            {
+              "formula": "CaCO3",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": true,
+              "isElectron": false
+            },
+            {
+              "formula": "HClO",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            }
+          ],
+          "conditions": [],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
@@ -14274,6 +14331,70 @@
               "gas": false,
               "precipitate": false,
               "isElectron": false
+            },
+            {
+              "formula": "Cl2",
+              "coefficient": 1,
+              "gas": true,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            }
+          ],
+          "conditions": [
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
+        },
+        {
+          "id": "R0119-ionic",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "MnO2",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "H+",
+              "coefficient": 4,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": 1
+            },
+            {
+              "formula": "Cl-",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "Mn^2+",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": 2
             },
             {
               "formula": "Cl2",
@@ -22542,7 +22663,7 @@
           "reversible": false,
           "reactants": [
             {
-              "formula": "C2H5OH",
+              "formula": "CH3CH2OH",
               "coefficient": 2,
               "gas": false,
               "precipitate": false,
@@ -27685,7 +27806,7 @@
       "description": "醋酸是弱电解质，在水中部分电离生成CH3COO-和H+，分子与离子共存，存在电离平衡",
       "openPrompt": "",
       "difficulty": "中等",
-      "difficultyReason": "弱电解质可逆电离，电离常数Ka=1.75×10^-5",
+      "difficultyReason": "弱电解质可逆电离，电离常数Ka=1.75×10⁻⁵",
       "starred": false,
       "mustInclude": false,
       "enabled": true,
@@ -27829,7 +27950,7 @@
     {
       "id": "R0252",
       "name": "碳酸的一级电离",
-      "description": "碳酸是二元弱酸，第一步电离生成H+和HCO3-（Ka1=4.5×10^-7）",
+      "description": "碳酸是二元弱酸，第一步电离生成H+和HCO3-（Ka1=4.5×10⁻⁷）",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "多元弱酸分步电离，第一步为主",
@@ -27903,7 +28024,7 @@
     {
       "id": "R0253",
       "name": "碳酸的二级电离",
-      "description": "碳酸第二步电离生成H+和CO3^2-（Ka2=4.7×10^-11，远小于Ka1）",
+      "description": "碳酸第二步电离生成H+和CO3²⁻（Ka2=4.7×10⁻¹¹，远小于Ka1）",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "多元弱酸二级电离，程度更小",
@@ -28861,7 +28982,7 @@
     {
       "id": "R0262",
       "name": "碳酸钠的水解（第一步）",
-      "description": "Na2CO3是强碱弱酸盐，CO3^2-第一步水解生成HCO3-和OH-，溶液呈碱性（纯碱可作碱使用的原因）",
+      "description": "Na2CO3是强碱弱酸盐，CO3²⁻第一步水解生成HCO3-和OH-，溶液呈碱性（纯碱可作碱使用的原因）",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "水解可逆，分步水解的第一步",
@@ -29635,7 +29756,7 @@
     {
       "id": "R0271",
       "name": "氯化银的沉淀溶解平衡",
-      "description": "AgCl在水中存在沉淀与溶解的动态平衡（Ksp=1.8×10^-10），决定Ag+与Cl-的反应不能进行完全",
+      "description": "AgCl在水中存在沉淀与溶解的动态平衡（Ksp=1.8×10⁻¹⁰），决定Ag+与Cl-的反应不能进行完全",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "沉淀溶解平衡，溶度积概念的核心实例",
@@ -29716,7 +29837,7 @@
     {
       "id": "R0272",
       "name": "碘化银的沉淀溶解平衡",
-      "description": "AgI在水中存在沉淀溶解平衡，Ksp=8.5×10^-17远小于AgCl，溶解度更小",
+      "description": "AgI在水中存在沉淀溶解平衡，Ksp=8.5×10⁻¹⁷远小于AgCl，溶解度更小",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "沉淀溶解平衡，Ksp大小比较",
@@ -30192,7 +30313,7 @@
     {
       "id": "R0278",
       "name": "氢氧化镁的沉淀溶解平衡",
-      "description": "Mg(OH)2在水中存在沉淀溶解平衡（Ksp=5.6×10^-12），加入酸可促使平衡右移",
+      "description": "Mg(OH)2在水中存在沉淀溶解平衡（Ksp=5.6×10⁻¹²），加入酸可促使平衡右移",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "沉淀溶解平衡，Ksp表达式书写",
@@ -30439,7 +30560,7 @@
     {
       "id": "R0281",
       "name": "硫酸钡的沉淀溶解平衡",
-      "description": "BaSO4在水中存在沉淀溶解平衡（Ksp=1.1×10^-10）；用含SO4^2-的稀硫酸洗涤可抑制其溶解减少损失，且不溶于胃酸故可作钡餐",
+      "description": "BaSO4在水中存在沉淀溶解平衡（Ksp=1.1×10⁻¹⁰）；用含SO4²⁻的稀硫酸洗涤可抑制其溶解减少损失，且不溶于胃酸故可作钡餐",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "沉淀溶解平衡，同离子效应应用",
@@ -30595,7 +30716,7 @@
     {
       "id": "R0283",
       "name": "硫化钠沉淀废水中的汞离子",
-      "description": "以Na2S作沉淀剂，使废水中的Hg2+生成极难溶的HgS沉淀而除去（Ksp=1.6×10^-52）",
+      "description": "以Na2S作沉淀剂，使废水中的Hg2+生成极难溶的HgS沉淀而除去（Ksp=1.6×10⁻⁵²）",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "沉淀生成，离子方程式简单但应用性强",
@@ -30752,7 +30873,7 @@
     {
       "id": "R0285",
       "name": "银离子与铬酸根离子的反应",
-      "description": "Ag+与CrO4^2-反应生成砖红色Ag2CrO4沉淀；化学分析中以其指示AgNO3滴定Cl-的终点",
+      "description": "Ag+与CrO4²⁻反应生成砖红色Ag2CrO4沉淀；化学分析中以其指示AgNO3滴定Cl-的终点",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "沉淀生成，结合Ksp计算滴定终点",
@@ -30993,7 +31114,7 @@
     {
       "id": "R0288",
       "name": "重铬酸根与铬酸根的转化平衡",
-      "description": "K2Cr2O7溶液中存在Cr2O7^2-（橙色）与CrO4^2-（黄色）的水合平衡；加碱或加酸使平衡移动",
+      "description": "K2Cr2O7溶液中存在Cr2O7²⁻（橙色）与CrO4²⁻（黄色）的水合平衡；加碱或加酸使平衡移动",
       "openPrompt": "",
       "difficulty": "中等",
       "difficultyReason": "可逆离子平衡，颜色变化明显",
@@ -31283,20 +31404,21 @@
             },
             {
               "formula": "OH-",
-              "coefficient": 2,
+              "coefficient": 4,
               "gas": false,
               "precipitate": false,
-              "charge": -1,
-              "isElectron": false
+              "isElectron": false,
+              "charge": -1
             }
           ],
           "products": [
             {
-              "formula": "Zn(OH)2",
+              "formula": "Zn(OH)4^2-",
               "coefficient": 1,
               "gas": false,
               "precipitate": false,
-              "isElectron": false
+              "isElectron": false,
+              "charge": -2
             },
             {
               "formula": "e-",
@@ -31391,6 +31513,14 @@
               "gas": false,
               "precipitate": false,
               "isElectron": false
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -1
             }
           ],
           "products": [
@@ -31402,11 +31532,69 @@
               "isElectron": false
             },
             {
-              "formula": "Zn(OH)2",
+              "formula": "Zn(OH)4^2-",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -2
+            }
+          ],
+          "conditions": [],
+          "extras": {},
+          "questionCount": 0
+        },
+        {
+          "id": "R0291-ionic",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "Zn",
               "coefficient": 1,
               "gas": false,
               "precipitate": false,
               "isElectron": false
+            },
+            {
+              "formula": "MnO2",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "MnO(OH)",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "Zn(OH)4^2-",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -2
             }
           ],
           "conditions": [],
@@ -31612,12 +31800,57 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0292-ionic4",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "PbSO4",
+              "coefficient": 2
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 2
+            }
+          ],
+          "products": [
+            {
+              "formula": "Pb",
+              "coefficient": 1
+            },
+            {
+              "formula": "PbO2",
+              "coefficient": 1
+            },
+            {
+              "formula": "H+",
+              "coefficient": 4,
+              "charge": 1
+            },
+            {
+              "formula": "SO4^2-",
+              "coefficient": 2,
+              "charge": -2
+            }
+          ],
+          "conditions": [
+            {
+              "code": "electric",
+              "text": "通电",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-03T11:01:30.719Z",
-      "updatedAt": "2026-09-03T11:01:30.719Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0293",
@@ -33040,22 +33273,38 @@
               "gas": false,
               "precipitate": false,
               "isElectron": false
-            }
-          ],
-          "products": [
+            },
             {
-              "formula": "ZnO",
+              "formula": "OH-",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -1
+            },
+            {
+              "formula": "H2O",
               "coefficient": 1,
               "gas": false,
               "precipitate": false,
               "isElectron": false
-            },
+            }
+          ],
+          "products": [
             {
               "formula": "Ag",
               "coefficient": 2,
               "gas": false,
               "precipitate": false,
               "isElectron": false
+            },
+            {
+              "formula": "Zn(OH)4^2-",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -2
             }
           ],
           "conditions": [],
@@ -33077,27 +33326,21 @@
             },
             {
               "formula": "OH-",
-              "coefficient": 2,
+              "coefficient": 4,
               "gas": false,
               "precipitate": false,
-              "charge": -1,
-              "isElectron": false
+              "isElectron": false,
+              "charge": -1
             }
           ],
           "products": [
             {
-              "formula": "ZnO",
+              "formula": "Zn(OH)4^2-",
               "coefficient": 1,
               "gas": false,
               "precipitate": false,
-              "isElectron": false
-            },
-            {
-              "formula": "H2O",
-              "coefficient": 1,
-              "gas": false,
-              "precipitate": false,
-              "isElectron": false
+              "isElectron": false,
+              "charge": -2
             },
             {
               "formula": "e-",
@@ -33164,6 +33407,63 @@
             "electrode": "正极",
             "medium": "碱性介质"
           },
+          "questionCount": 0
+        },
+        {
+          "id": "R0306-ionic",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "Zn",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "Ag2O",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -1
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            }
+          ],
+          "products": [
+            {
+              "formula": "Ag",
+              "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "Zn(OH)4^2-",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -2
+            }
+          ],
+          "conditions": [],
+          "extras": {},
           "questionCount": 0
         }
       ],
@@ -33263,7 +33563,7 @@
     {
       "id": "R0308",
       "name": "锌-空气电池",
-      "description": "锌-空气电池（KOH电解质）放电：Zn在负极被氧化为Zn(OH)4^2-，总反应为2Zn+O2+4OH-+2H2O=2Zn(OH)4^2-；配离子按一行式惯例省略方括号",
+      "description": "锌-空气电池（KOH电解质）放电：Zn在负极被氧化为Zn(OH)4²⁻，总反应为2Zn+O2+4OH-+2H2O=2Zn(OH)4²⁻；配离子按一行式惯例省略方括号",
       "openPrompt": "",
       "difficulty": "较难",
       "difficultyReason": "配离子电极反应，碱性介质（待父代理复核机器解析）",
@@ -35948,12 +36248,54 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0337-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH3CH2Br",
+              "coefficient": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 1,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "CH3CH2OH",
+              "coefficient": 1
+            },
+            {
+              "formula": "Br-",
+              "coefficient": 1,
+              "charge": -1
+            }
+          ],
+          "conditions": [
+            {
+              "code": "custom",
+              "text": "水",
+              "position": "auto"
+            },
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.287Z",
-      "updatedAt": "2026-09-04T00:19:04.287Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0338",
@@ -36055,12 +36397,59 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0338-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH3CH2Br",
+              "coefficient": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 1,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "CH2=CH2",
+              "coefficient": 1,
+              "gas": true
+            },
+            {
+              "formula": "Br-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 1
+            }
+          ],
+          "conditions": [
+            {
+              "code": "custom",
+              "text": "醇",
+              "position": "auto"
+            },
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.287Z",
-      "updatedAt": "2026-09-04T00:19:04.287Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0339",
@@ -36472,12 +36861,54 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0343-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH2ClCH2Cl",
+              "coefficient": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 2,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "HOCH2CH2OH",
+              "coefficient": 1
+            },
+            {
+              "formula": "Cl-",
+              "coefficient": 2,
+              "charge": -1
+            }
+          ],
+          "conditions": [
+            {
+              "code": "custom",
+              "text": "水",
+              "position": "auto"
+            },
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.287Z",
-      "updatedAt": "2026-09-04T00:19:04.287Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0344",
@@ -36995,12 +37426,43 @@
           "conditions": [],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0349-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "C6H5OH",
+              "coefficient": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 1,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "C6H5O-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 1
+            }
+          ],
+          "conditions": [],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.287Z",
-      "updatedAt": "2026-09-04T00:19:04.287Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0350",
@@ -37076,12 +37538,39 @@
           "conditions": [],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0350-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "C6H5O-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "H+",
+              "coefficient": 1,
+              "charge": 1
+            }
+          ],
+          "products": [
+            {
+              "formula": "C6H5OH",
+              "coefficient": 1
+            }
+          ],
+          "conditions": [],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.287Z",
-      "updatedAt": "2026-09-04T00:19:04.287Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0351",
@@ -37165,12 +37654,47 @@
           "conditions": [],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0351-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "C6H5O-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "CO2",
+              "coefficient": 1
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 1
+            }
+          ],
+          "products": [
+            {
+              "formula": "C6H5OH",
+              "coefficient": 1
+            },
+            {
+              "formula": "HCO3-",
+              "coefficient": 1,
+              "charge": -1
+            }
+          ],
+          "conditions": [],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.287Z",
-      "updatedAt": "2026-09-04T00:19:04.287Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0352",
@@ -37445,12 +37969,68 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0354-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH3CHO",
+              "coefficient": 1
+            },
+            {
+              "formula": "[Ag(NH3)2]+",
+              "coefficient": 2,
+              "charge": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 2,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "CH3COO-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "NH4+",
+              "coefficient": 1,
+              "charge": 1
+            },
+            {
+              "formula": "NH3",
+              "coefficient": 3
+            },
+            {
+              "formula": "Ag",
+              "coefficient": 2,
+              "precipitate": true
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 1
+            }
+          ],
+          "conditions": [
+            {
+              "code": "custom",
+              "text": "水浴加热",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.287Z",
-      "updatedAt": "2026-09-04T00:19:04.287Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0355",
@@ -37547,12 +38127,58 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0355-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH3CHO",
+              "coefficient": 1
+            },
+            {
+              "formula": "Cu(OH)2",
+              "coefficient": 2
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 1,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "CH3COO-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "Cu2O",
+              "coefficient": 1,
+              "precipitate": true
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 3
+            }
+          ],
+          "conditions": [
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.287Z",
-      "updatedAt": "2026-09-04T00:19:04.287Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0356",
@@ -38236,12 +38862,49 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0363-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH3COOC2H5",
+              "coefficient": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 1,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "CH3COO-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "CH3CH2OH",
+              "coefficient": 1
+            }
+          ],
+          "conditions": [
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.288Z",
-      "updatedAt": "2026-09-04T00:19:04.288Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0364",
@@ -38330,12 +38993,49 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0364-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "C3H5(OCOC17H35)3",
+              "coefficient": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 3,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "C3H5(OH)3",
+              "coefficient": 1
+            },
+            {
+              "formula": "C17H35COO-",
+              "coefficient": 3,
+              "charge": -1
+            }
+          ],
+          "conditions": [
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.288Z",
-      "updatedAt": "2026-09-04T00:19:04.288Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0365",
@@ -38482,12 +39182,39 @@
           "conditions": [],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0366-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "C6H5NH2",
+              "coefficient": 1
+            },
+            {
+              "formula": "H+",
+              "coefficient": 1,
+              "charge": 1
+            }
+          ],
+          "products": [
+            {
+              "formula": "C6H5NH3+",
+              "coefficient": 1,
+              "charge": 1
+            }
+          ],
+          "conditions": [],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.288Z",
-      "updatedAt": "2026-09-04T00:19:04.288Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0367",
@@ -38576,12 +39303,53 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0367-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH3CONH2",
+              "coefficient": 1
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 1
+            },
+            {
+              "formula": "H+",
+              "coefficient": 1,
+              "charge": 1
+            }
+          ],
+          "products": [
+            {
+              "formula": "CH3COOH",
+              "coefficient": 1
+            },
+            {
+              "formula": "NH4+",
+              "coefficient": 1,
+              "charge": 1
+            }
+          ],
+          "conditions": [
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.288Z",
-      "updatedAt": "2026-09-04T00:19:04.288Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0368",
@@ -38663,12 +39431,50 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0368-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH3CONH2",
+              "coefficient": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 1,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "CH3COO-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "NH3",
+              "coefficient": 1,
+              "gas": true
+            }
+          ],
+          "conditions": [
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.288Z",
-      "updatedAt": "2026-09-04T00:19:04.288Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0369",
@@ -38949,12 +39755,68 @@
           ],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0371-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH2OH(CHOH)4CHO",
+              "coefficient": 1
+            },
+            {
+              "formula": "[Ag(NH3)2]+",
+              "coefficient": 2,
+              "charge": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 2,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "CH2OH(CHOH)4COO-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "NH4+",
+              "coefficient": 1,
+              "charge": 1
+            },
+            {
+              "formula": "NH3",
+              "coefficient": 3
+            },
+            {
+              "formula": "Ag",
+              "coefficient": 2,
+              "precipitate": true
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 1
+            }
+          ],
+          "conditions": [
+            {
+              "code": "custom",
+              "text": "水浴加热",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.288Z",
-      "updatedAt": "2026-09-04T00:19:04.288Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0372",
@@ -39015,11 +39877,18 @@
               "gas": false,
               "precipitate": false,
               "isElectron": false
+            },
+            {
+              "formula": "NaOH",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
             }
           ],
           "products": [
             {
-              "formula": "CH2OH(CHOH)4COOH",
+              "formula": "CH2OH(CHOH)4COONa",
               "coefficient": 1,
               "gas": false,
               "precipitate": false,
@@ -39034,7 +39903,70 @@
             },
             {
               "formula": "H2O",
+              "coefficient": 3,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            }
+          ],
+          "conditions": [
+            {
+              "code": "heat",
+              "text": "△",
+              "position": "auto"
+            }
+          ],
+          "extras": {},
+          "questionCount": 0
+        },
+        {
+          "id": "R0372-ionic",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "CH2OH(CHOH)4CHO",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "Cu(OH)2",
               "coefficient": 2,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "CH2OH(CHOH)4COO-",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": false,
+              "isElectron": false,
+              "charge": -1
+            },
+            {
+              "formula": "Cu2O",
+              "coefficient": 1,
+              "gas": false,
+              "precipitate": true,
+              "isElectron": false
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 3,
               "gas": false,
               "precipitate": false,
               "isElectron": false
@@ -39122,12 +40054,39 @@
           "conditions": [],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0373-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "NH2CH2COOH",
+              "coefficient": 1
+            },
+            {
+              "formula": "H+",
+              "coefficient": 1,
+              "charge": 1
+            }
+          ],
+          "products": [
+            {
+              "formula": "NH3CH2COOH+",
+              "coefficient": 1,
+              "charge": 1
+            }
+          ],
+          "conditions": [],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.288Z",
-      "updatedAt": "2026-09-04T00:19:04.288Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0374",
@@ -39204,12 +40163,43 @@
           "conditions": [],
           "extras": {},
           "questionCount": 0
+        },
+        {
+          "id": "R0374-ionic2",
+          "type": "ionic",
+          "label": "离子方程式",
+          "reversible": false,
+          "reactants": [
+            {
+              "formula": "NH2CH2COOH",
+              "coefficient": 1
+            },
+            {
+              "formula": "OH-",
+              "coefficient": 1,
+              "charge": -1
+            }
+          ],
+          "products": [
+            {
+              "formula": "NH2CH2COO-",
+              "coefficient": 1,
+              "charge": -1
+            },
+            {
+              "formula": "H2O",
+              "coefficient": 1
+            }
+          ],
+          "conditions": [],
+          "extras": {},
+          "questionCount": 0
         }
       ],
       "questionCount": 0,
       "lastUsedAt": "",
       "createdAt": "2026-09-04T00:19:04.288Z",
-      "updatedAt": "2026-09-04T00:19:04.288Z"
+      "updatedAt": "2026-09-19T09:33:56.503Z"
     },
     {
       "id": "R0375",

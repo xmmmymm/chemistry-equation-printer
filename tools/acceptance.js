@@ -8,8 +8,9 @@
  *   node tools/acceptance.js --list         # 列出用例
  *
  * 设计原则：
- *   - **不修改主项目**：AC-08 用「临时副本」模拟主项目题库被外部修改
- *     （`tools/sync-from-source.js --source=<临时目录>`），绝不触碰真主项目。
+ *   - **不修改主项目**：AC-17 出卷前后对主项目做全量 sha256 快照，必须零差异。
+ *   - AC-08 的「外部改动」只动本项目自己的 data/library.json（用完立刻还原），
+ *     题库是**本项目自有数据**，B12 的漂移语义 = 本地题库 vs data/SOURCE.json 的数据锁。
  *   - 证据全部落 `out/_acceptance/`（本项目内，已 gitignore），并打印摘要。
  *   - 每条用例独立目录，避免互相污染。
  */
@@ -27,11 +28,14 @@ const TMP = path.join(OUT, '_tmp');
 /** 验收测试用独立状态目录：避免测试之间（以及测试与真实使用之间）互相污染偏好记忆 */
 const STATE_DIR = path.join(OUT, '_state');
 const TEST_ENV = { CHEMEQ_STATE_DIR: STATE_DIR };
-const SOURCE_ROOT = 'E:\\DSH work\\方程式';
-const ELECTRON = (() => {
-  try { return JSON.parse(fs.readFileSync(path.join(SKILL_ROOT, 'data', 'SOURCE.json'), 'utf8')).electronRuntime.path; }
-  catch (_) { return null; }
-})();
+/**
+ * 引擎上游（旧仓库 chemistry-equation-printer，本地克隆）——**只读**，用于 AC-17「零写入」快照。
+ * 上游不在场时快照为空，AC-17 自动跳过断言并标注 skipped（见 cases 里的 AC-17）。
+ * 需要本地跑完整 AC-17 时设 CHEMEQ_SOURCE=<上游克隆路径>。
+ */
+const SOURCE_ROOT = process.env.CHEMEQ_SOURCE
+  ? path.resolve(process.env.CHEMEQ_SOURCE)
+  : '';
 
 const Preflight = require(path.join(SKILL_ROOT, 'tools', 'preflight.js'));
 const Paper = require(path.join(SKILL_ROOT, 'engine', 'paper.js'));
@@ -62,7 +66,9 @@ function node(scriptArgs, opts) {
 }
 
 function runPaper(jobPath, env) {
-  return node([path.join('tools', 'run-paper.js'), jobPath], { env });
+  // AC-18：这些用例模拟的都是「老师已确认 intake 覆盖度」之后的出卷，故带 --confirmed。
+  // 未确认路径由 test-edge.js 的确认闸门用例覆盖。
+  return node([path.join('tools', 'run-paper.js'), jobPath, '--confirmed'], { env });
 }
 
 function writeJson(p, v) {
@@ -124,8 +130,9 @@ function hashDir(dir, filter) {
   return out;
 }
 
-/** 主项目全量 sha256 快照（AC-17 用；**只读**） */
+/** 引擎上游全量 sha256 快照（AC-17 用；**只读**）。上游不可达时返回 null。 */
 function snapshotMainProject() {
+  if (!SOURCE_ROOT || !fs.existsSync(SOURCE_ROOT)) return null;
   const roots = ['data', 'src/libs', 'scripts', 'examples'];
   const out = {};
   for (const r of roots) {
@@ -146,6 +153,7 @@ function snapshotMainProject() {
 }
 
 function diffSnapshots(a, b) {
+  if (a === null || b === null) return [];   // 上游不可达 → 无从比较，视为「零差异」（调用方另行标注 skipped）
   const keys = new Set([...Object.keys(a), ...Object.keys(b)]);
   const diffs = [];
   for (const k of keys) {
@@ -203,14 +211,15 @@ test('AC-01', '场景=homework、范围=全库、策略=preferChemical、10 题 
     ['报告含 notices 字段', !!(res && res.generation && Array.isArray(res.generation.notices))],
     ['报告含快照信息', !!(res && res.snapshot && res.snapshot.entries === 392 && res.snapshot.drift === false)],
     ['报告含 params', !!(res && res.params && res.params.generation)],
-    ['主项目零差异（AC-17 预检）', mainDiff.length === 0],
+    ['引擎上游零差异（AC-17 预检）', mainDiff.length === 0],
     ['产物 4 个文件', Object.keys(files).length === 4]
   ];
   return {
     checks,
+    skipped: before === null ? '引擎上游不在场（未设 CHEMEQ_SOURCE），AC-17 零写入快照未比对' : null,
     evidence: {
       exitCode: r.code, stdout: r.stdout.slice(0, 4000),
-      outDir, files, mainProjectDiff: mainDiff,
+      outDir, files, upstreamDiff: mainDiff, upstreamChecked: before !== null,
       pdf: res && res.channels.pdf, docx: res && res.channels.docx,
       generation: res && res.generation && {
         requested: res.generation.requested, produced: res.generation.produced,
@@ -307,12 +316,13 @@ test('AC-04', '范围=选择性必修2、10 题 → 复述框报可出 6（条�
   return { checks, evidence: { preflightExit: pfRes.code, blocker: b, strategies: pf.preflight.strategies, paperExit: paperRes.code, files } };
 });
 
-// ---- AC-05：选必3 + ionicOnly + 10 → 拒绝，文案「命中 0 条条目（非版本策略损失）」 ----
-test('AC-05', '范围=选择性必修3 + ionicOnly + 10 题 → 拒绝并文案「命中 0 条条目（非版本策略损失）」；无文件', () => {
+// ---- AC-05：选必3「第二章 烃」+ ionicOnly + 10 → 拒绝，文案「命中 0 条条目（非版本策略损失）」 ----
+// 注：v1.2 补全离子方程式后，选必3 整册不再是 0 候选；改用整章都是纯有机反应的「第二章 烃」构造零候选。
+test('AC-05', '范围=选择性必修3/第二章 烃 + ionicOnly + 10 题 → 拒绝并文案「命中 0 条条目（非版本策略损失）」；无文件', () => {
   const d = cleanCaseDir('AC-05');
   const outDir = path.join(d, 'out');
   rmrf(outDir);
-  const job = { scenario: 'homework', generation: { scopeInput: { books: ['选择性必修3'] }, totalCount: 10, versionStrategy: 'ionicOnly' }, outputDir: outDir };
+  const job = { scenario: 'homework', generation: { scopeInput: { books: ['选择性必修3'], chapters: ['第二章 烃'] }, totalCount: 10, versionStrategy: 'ionicOnly' }, outputDir: outDir };
   const jobPath = writeJson(path.join(d, 'job.json'), job);
   rmrf(outDir);
   const pfRes = node([path.join('tools', 'preflight.js'), jobPath]);
@@ -377,59 +387,62 @@ test('AC-07', 'manualEntryIds 12 个 + totalCount=10 → B3 复述框拦截给�
   return { checks, evidence: { blocker: b, manualIds: ids } };
 });
 
-// ---- AC-08：主项目题库被外部修改 → sync:check 报漂移(exit 1)；skill 仍用旧快照 ----
-test('AC-08', '主项目 library.json 被外部修改后运行 → sync:check 报漂移（exit 1）；skill 仍用旧快照出卷', () => {
+// ---- AC-08：本地题库被项目之外改动 → sync:check 报数据锁不一致(exit 1)；skill 仍能出卷 ----
+// 注：题库是**本项目自有数据**（不再从主项目同步）。B12 的「漂移」语义随之改为
+//     「本地题库与 data/SOURCE.json 的数据锁是否一致」，仍不阻塞出卷。
+test('AC-08', '本地 data/library.json 被项目之外改动后 → sync:check 报数据锁不一致（exit 1）；skill 仍能出卷', () => {
   const d = caseDir('AC-08');
-  const fakeSource = path.join(d, 'fake-source');
-  rmrf(fakeSource);
-  // 造一个「主项目副本」：拷真主项目的 data/ 与 src/libs/（**只读真主项目**），再改副本题库
-  for (const r of ['data', 'src/libs', 'scripts', 'examples']) {
-    const from = path.join(SOURCE_ROOT, r);
-    if (!fs.existsSync(from)) continue;
-    fs.mkdirSync(path.join(fakeSource, r), { recursive: true });
-    for (const f of fs.readdirSync(from)) {
-      const p = path.join(from, f);
-      if (fs.statSync(p).isFile()) fs.copyFileSync(p, path.join(fakeSource, r, f));
-    }
-  }
-  const fakeLib = path.join(fakeSource, 'data', 'library.json');
-  const origHash = sha256File(fakeLib);
-  const parsed = JSON.parse(fs.readFileSync(fakeLib, 'utf8'));
-  parsed.updatedAt = new Date(Date.now() + 86400000).toISOString();
-  parsed.entries = parsed.entries.slice(0, 300); // 模拟被外部删改
-  fs.writeFileSync(fakeLib, JSON.stringify(parsed, null, 2), 'utf8');
-  const newHash = sha256File(fakeLib);
-  const checkRes = node([path.join('tools', 'sync-from-source.js'), '--check', '--source=' + fakeSource]);
-  const driftRes = node([path.join('tools', 'skill-state.js'), 'drift']);
-  // skill 仍用本地旧快照出卷
+  const libPath = path.join(SKILL_ROOT, 'data', 'library.json');
+  const backup = path.join(TMP, 'ac08-library.json.bak');
+  fs.mkdirSync(TMP, { recursive: true });
+  fs.copyFileSync(libPath, backup);
+  const origHash = sha256File(libPath);
+  const lockedHash = readJson(path.join(SKILL_ROOT, 'data', 'SOURCE.json')).library.sha256;
+
+  let checkRes, lockRes, driftRes, paperRes, res;
   const outDir = path.join(d, 'out');
   rmrf(outDir);
   const jobPath = writeJson(path.join(d, 'job.json'), {
     scenario: 'homework',
     generation: { totalCount: 10, versionStrategy: 'preferChemical' },
     export: { pdf: true, docx: true, images: false }, outputDir: outDir,
-    snapshot: { drift: true, checkedAt: new Date().toISOString(), note: '主项目已更新' }
+    snapshot: { drift: true, checkedAt: new Date().toISOString(), note: '题库数据锁不一致' }
   });
-  const paperRes = runPaper(jobPath);
-  const res = readJson(path.join(outDir, 'result.json'));
+  try {
+    // 模拟「项目之外改动了题库」：只动一个字段，不动任何版本
+    const parsed = JSON.parse(fs.readFileSync(libPath, 'utf8'));
+    parsed.entries = parsed.entries.slice(0, 300);
+    fs.writeFileSync(libPath, JSON.stringify(parsed, null, 2), 'utf8');
+
+    checkRes = node([path.join('tools', 'sync-from-source.js'), '--check']);
+    lockRes = node([path.join('tools', 'data-lock.js'), '--check']);
+    driftRes = node([path.join('tools', 'skill-state.js'), 'drift']);
+    paperRes = runPaper(jobPath);
+    res = readJson(path.join(outDir, 'result.json'));
+  } finally {
+    fs.copyFileSync(backup, libPath); // 恢复
+    fs.unlinkSync(backup);
+  }
+  const driftJson = (() => { try { return JSON.parse(driftRes.stdout); } catch (_) { return null; } })();
   const checks = [
-    ['sync:check exit=1（漂移）', checkRes.code === 1],
-    ['sync:check 输出含「需要同步」', /需要同步/.test(checkRes.stdout)],
-    ['sync:check 输出含主项目 updatedAt 变化提示', /主项目题库已变化/.test(checkRes.stdout)],
-    ['假主项目题库哈希确实变了', origHash !== newHash],
+    ['sync:check exit=1（数据锁不一致）', checkRes.code === 1],
+    ['sync:check 输出含「数据锁不一致」', /数据锁不一致/.test(checkRes.stdout)],
+    ['sync:check 输出含「需要处理」', /需要处理/.test(checkRes.stdout)],
+    ['data-lock --check exit=1 且指向 data:lock', lockRes.code === 1 && /data:lock/.test(lockRes.stdout)],
+    ['skill-state drift 报 drift=true', !!(driftJson && driftJson.drift === true)],
     ['skill 仍能出卷（exit 0）', paperRes.code === 0],
     ['result.ok=true（不阻塞）', !!(res && res.ok)],
-    ['报告标注漂移状态', !!(res && res.snapshot && res.snapshot.drift === true)],
-    ['报告标注快照时间', !!(res && res.snapshot && res.snapshot.updatedAt)],
-    ['快照条目数仍为 392（用旧快照）', !!(res && res.snapshot && res.snapshot.entries === 392)],
-    ['主项目真身未被本次测试触碰', diffSnapshots(snapshotMainProject(), snapshotMainProject()).length === 0]
+    ['报告标注数据锁异常', !!(res && res.snapshot && res.snapshot.drift === true)],
+    ['报告标注数据时间', !!(res && res.snapshot && res.snapshot.updatedAt)],
+    ['题库条目数按改动后的 300 照常出卷', !!(res && res.snapshot && res.snapshot.entries === 300)],
+    ['题库已恢复（哈希与数据锁一致）', sha256File(libPath) === lockedHash && sha256File(libPath) === origHash]
   ];
   writeJson(path.join(d, 'sync-check.txt'), checkRes.stdout + '\n--- stderr ---\n' + checkRes.stderr);
-  return { checks, evidence: { syncCheckExit: checkRes.code, syncCheckOut: checkRes.stdout, fakeSourceLibHash: { before: origHash, after: newHash }, paperExit: paperRes.code, snapshot: res && res.snapshot } };
+  return { checks, evidence: { syncCheckExit: checkRes.code, syncCheckOut: checkRes.stdout, dataLockOut: lockRes.stdout, drift: driftJson, paperExit: paperRes.code, snapshot: res && res.snapshot } };
 });
 
-// ---- AC-09：快照缺失/不可读 → 明确报错、退出码非 0、不产出半成品 ----
-test('AC-09', '快照文件缺失/不可读 → 明确报错、退出码非 0、不产出半成品', () => {
+// ---- AC-09：题库数据缺失/不可读 → 明确报错、退出码非 0、不产出半成品 ----
+test('AC-09', '题库数据文件缺失/不可读 → 明确报错、退出码非 0、不产出半成品', () => {
   const d = caseDir('AC-09');
   const outDir = path.join(d, 'out');
   rmrf(outDir);
@@ -460,11 +473,11 @@ test('AC-09', '快照文件缺失/不可读 → 明确报错、退出码非 0、
   const checks = [
     ['缺失时退出码非 0', results.missing.code !== 0],
     ['缺失时 error.code=SNAPSHOT_MISSING', !!(res1 && res1.error && res1.error.code === 'SNAPSHOT_MISSING')],
-    ['缺失时给出同步指引', !!(res1 && /sync-from-source/.test(res1.error.message))],
+    ['缺失时给出恢复指引（自有数据，不依赖主项目）', !!(res1 && /自有数据/.test(res1.error.message))],
     ['损坏时退出码非 0', results.corrupt.code !== 0],
     ['损坏时 error.code=SNAPSHOT_CORRUPT', !!(res2 && res2.error && res2.error.code === 'SNAPSHOT_CORRUPT')],
     ['无半成品卷子文件', Object.keys(files).length === 0],
-    ['快照已恢复（哈希与 SOURCE.json 一致）', sha256File(libPath) === readJson(path.join(SKILL_ROOT, 'data', 'SOURCE.json')).library.sha256]
+    ['题库已恢复（哈希与数据锁一致）', sha256File(libPath) === readJson(path.join(SKILL_ROOT, 'data', 'SOURCE.json')).library.sha256]
   ];
   return { checks, evidence: { missing: res1 && res1.error, corrupt: res2 && res2.error, exitCodes: { missing: results.missing.code, corrupt: results.corrupt.code }, files } };
 });
@@ -565,6 +578,13 @@ test('AC-12', '二次调用「跟上次一样但 15 题」→ 记忆供范围/�
       ['题量取当次 15（当次 > 记忆）', pf.preflight.requestedCount === 15],
       ['预检数已刷新（选必/必修一第一章 preferIonic=60）', pf.preflight.authoritativeCount === 60],
       ['文件名反映 15 题', pf.restate.files.some((f) => /15题/.test(f.name))],
+      // AC-18：记忆补上的必问项必须被标成 memory（而不是伪装成「老师说过」）
+      ['覆盖度：scenario/scope/versionStrategy 标为 memory',
+        ['scenario', 'scope', 'versionStrategy'].every((k) => pf.intakeCoverage.memoryKeys.includes(k)),
+        JSON.stringify(pf.intakeCoverage.memoryKeys)],
+      ['覆盖度：verdict=intake-incomplete（漏问可见）', pf.intakeCoverage.verdict === 'intake-incomplete', pf.intakeCoverage.verdict],
+      ['覆盖度：unasked 列出记忆替答的必问项', ['scenario', 'scope', 'versionStrategy'].every((k) => pf.intakeCoverage.unasked.includes(k)), JSON.stringify(pf.intakeCoverage.unasked)],
+      ['覆盖度：题量仍是当次 explicit', pf.intakeCoverage.explicitKeys.includes('totalCount')],
       ['出卷成功', pr.code === 0],
       ['记忆文件已更新', after && after.updatedAt && after.updatedAt !== before.updatedAt],
       ['新记忆记下 15 题', after && after.last.totalCount === 15]
@@ -665,13 +685,28 @@ test('AC-15', 'env 无头跑全流程 → 无任何对话框；打印 JSON；exi
   try { parsed = JSON.parse(r.stdout.slice(r.stdout.indexOf('{'))); parseOk = true; } catch (_) {}
   const files = hashDir(outDir, (f) => !f.startsWith('_') && f !== 'result.json');
   // 另跑一次「不指定 outputDir」→ 验证默认落位 out/{yyyy-mm-dd}/
+  // ⚠ 这一跑会写**真实**的 out/{yyyy-mm-dd}/：先记下跑之前的目录内容，断言完再把本次新建的
+  //   文件删掉、把被覆盖的 result.json 还原——否则验收台会在老师真实的产物目录里留下垃圾
+  //   （实测：跑完 npm run test:acceptance 后 out/{日期}/ 多出 2 个 examPrep_4题*.docx）。
+  const preExisting = new Set(fs.existsSync(defaultDir) ? fs.readdirSync(defaultDir) : []);
+  const defaultResultPath = path.join(defaultDir, 'result.json');
+  // ⚠ 还原必须连 **mtime** 一起还原：只写回字节的话，内容哈希虽然一致，但 mtime 会变，
+  //    老师真实产物目录里的 result.json 时间戳仍被测试动过（本项目 AC-17 的口径就是
+  //    「sha256 + bytes + mtimeMs 零差异」，验收台自己也该守这条）。
+  const defaultResultBackup = (() => {
+    try {
+      if (!fs.existsSync(defaultResultPath)) return null;
+      const st = fs.statSync(defaultResultPath);
+      return { buf: fs.readFileSync(defaultResultPath), atimeMs: st.atimeMs, mtimeMs: st.mtimeMs };
+    } catch (_) { return null; }
+  })();
   const jobDefault = writeJson(path.join(d, 'job-default.json'), {
     jobVersion: 1, useMemory: false, scenario: 'examPrep',
     generation: { totalCount: 4, versionStrategy: 'preferChemical' },
     export: { pdf: false, docx: true, images: false }
   });
   const rDefault = runPaper(jobDefault);
-  const resDefault = readJson(path.join(defaultDir, 'result.json'));
+  const resDefault = readJson(defaultResultPath);
   const defaultFiles = hashDir(defaultDir, (f) => !f.startsWith('_') && f !== 'result.json');
   const checks = [
     ['exit 0', r.code === 0],
@@ -685,11 +720,36 @@ test('AC-15', 'env 无头跑全流程 → 无任何对话框；打印 JSON；exi
     ['默认目录产物落位（2 个 docx）', defaultFiles && Object.keys(defaultFiles).length >= 2],
     ['无 _pending（全成功）', !fs.existsSync(path.join(outDir, '_pending.json'))]
   ];
+  // ---- 清理默认目录：只删本次新建的文件，还原被覆盖的 result.json ----
+  const cleaned = [];
+  for (const name of Object.keys(defaultFiles)) {
+    if (preExisting.has(name)) continue;
+    try { fs.unlinkSync(path.join(defaultDir, name)); cleaned.push(name); } catch (_) {}
+  }
+  try {
+    if (defaultResultBackup != null) {
+      fs.writeFileSync(defaultResultPath, defaultResultBackup.buf);
+      // 还原时间戳（utimes 要秒为单位；用 Date 对象传毫秒精度）
+      try { fs.utimesSync(defaultResultPath, new Date(defaultResultBackup.atimeMs), new Date(defaultResultBackup.mtimeMs)); } catch (_) {}
+    } else if (!preExisting.has('result.json') && fs.existsSync(defaultResultPath)) { fs.unlinkSync(defaultResultPath); cleaned.push('result.json'); }
+  } catch (_) {}
+  // 断言：默认目录里**只剩**跑之前就存在的文件（多一个都算污染）
+  const afterCleanup = new Set(fs.existsSync(defaultDir) ? fs.readdirSync(defaultDir) : []);
+  const residue = [...afterCleanup].filter((f) => !preExisting.has(f));
+  checks.push(['默认目录清理干净（无本次新建文件残留）', residue.length === 0]);
+  checks.push(['被覆盖的 result.json 已还原（内容 + mtime）', (() => {
+    if (defaultResultBackup == null) return true;
+    try {
+      const st = fs.statSync(defaultResultPath);
+      return fs.readFileSync(defaultResultPath).equals(defaultResultBackup.buf)
+        && Math.round(st.mtimeMs) === Math.round(defaultResultBackup.mtimeMs);
+    } catch (_) { return false; }
+  })()]);
   return {
     checks,
     evidence: {
       exitCode: r.code, outDir, files,
-      defaultRun: { exitCode: rDefault.code, defaultDir, files: Object.keys(defaultFiles || {}) },
+      defaultRun: { exitCode: rDefault.code, defaultDir, files: Object.keys(defaultFiles || {}), cleanedUp: cleaned },
       resultSummary: res && { ok: res.ok, scenario: res.scenario, channels: { pdf: res.channels.pdf.map((c) => ({ role: c.role, pages: c.pages, bytes: c.bytes })), docx: res.channels.docx.map((c) => ({ role: c.role, bytes: c.bytes })) } }
     }
   };
@@ -709,8 +769,8 @@ test('AC-16', 'npm run test:engine → 输出「通过 238 项，失败 0 项」
   return { checks, evidence: { exitCode: r.code, match: m ? m[0] : null, tail: out.trim().split('\n').slice(-4).join('\n') } };
 });
 
-// ---- AC-17：出卷前后主项目全量 sha256 → 零差异；sync:check 通过 ----
-test('AC-17', '出卷前后对主项目做全量 sha256 快照 → 零差异；sync:check 通过', () => {
+// ---- AC-17：出卷前后引擎上游全量 sha256 → 零差异；sync:check 通过 ----
+test('AC-17', '出卷前后对引擎上游做全量 sha256 快照 → 零差异；sync:check 通过', () => {
   const d = caseDir('AC-17');
   const outDir = path.join(d, 'out');
   rmrf(outDir);
@@ -723,22 +783,105 @@ test('AC-17', '出卷前后对主项目做全量 sha256 快照 → 零差异；s
   const r = runPaper(jobPath);
   const after = snapshotMainProject();
   const diffs = diffSnapshots(before, after);
+  const upstreamReachable = before !== null;
   const syncCheck = node([path.join('tools', 'sync-from-source.js'), '--check']);
   const checks = [
     ['出卷 exit 0', r.code === 0],
-    ['主项目文件数一致', Object.keys(before).length === Object.keys(after).length],
+    ['引擎上游文件数一致', !upstreamReachable || Object.keys(before).length === Object.keys(after).length],
     ['零差异（内容 + mtime）', diffs.length === 0],
     ['sync:check exit 0', syncCheck.code === 0],
     ['sync:check 输出「全部一致」', /全部一致/.test(syncCheck.stdout)],
-    ['覆盖文件数 ≥ 20', Object.keys(before).length >= 20]
+    ['覆盖文件数 ≥ 20', !upstreamReachable || Object.keys(before).length >= 20]
   ];
-  writeJson(path.join(d, 'main-project-snapshot.json'), { before, after, diffs });
-  return { checks, evidence: { filesChecked: Object.keys(before).length, diffs, syncCheckExit: syncCheck.code, syncCheckTail: syncCheck.stdout.trim().split('\n').slice(-2).join('\n'), fileList: Object.keys(before) } };
+  writeJson(path.join(d, 'upstream-snapshot.json'), { upstream: before !== null, before, after, diffs });
+  return {
+    checks,
+    skipped: upstreamReachable ? null
+      : '引擎上游不在场（未设 CHEMEQ_SOURCE）：零写入快照与文件数断言跳过，sync:check 与出卷照常验证',
+    evidence: { upstreamReachable, filesChecked: before === null ? 0 : Object.keys(before).length, diffs, syncCheckExit: syncCheck.code, syncCheckTail: syncCheck.stdout.trim().split('\n').slice(-2).join('\n'), fileList: before === null ? [] : Object.keys(before) }
+});
+
+// ---- AC-18：intake 覆盖度报告 + 确认闸门（未经老师确认不生成） ----
+test('AC-18', 'intakeCoverage 标注必问项来源（explicit/memory/default）；未经确认不生成，--confirmed 才出卷', () => {
+  const d = caseDir('AC-18');
+  const outDir = path.join(d, 'out');
+  rmrf(outDir);
+  const jobPath = writeJson(path.join(d, 'job.json'), {
+    scenario: 'timedDrill',
+    generation: {
+      scopeInput: { books: ['必修一'], chapters: ['第一章'] },
+      totalCount: 8, versionStrategy: 'preferChemical'
+    },
+    export: { pdf: false, docx: true, images: false },   // 只出 Word：快，且不启渲染
+    outputDir: outDir
+  });
+
+  // ① 未确认 → CONFIRM_REQUIRED，一个卷子文件都不产
+  const r1 = node([path.join('tools', 'run-paper.js'), jobPath]);
+  const res1 = readJson(path.join(outDir, 'result.json'));
+  const papers = (dir) => (fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /\.(pdf|docx|png)$/.test(f)) : []);
+  const files1 = papers(outDir);
+  const ic = res1 && res1.intakeCoverage;
+
+  // ② 已确认 → 正常出卷
+  const r2 = runPaper(jobPath);
+  const res2 = readJson(path.join(outDir, 'result.json'));
+  const files2 = papers(outDir);
+
+  // ③ dryRun 豁免：只组卷不导出，不产交付物，故不受闸门约束
+  const dryPath = writeJson(path.join(d, 'job-dry.json'), {
+    scenario: 'homework', dryRun: true,
+    generation: { totalCount: 3, versionStrategy: 'preferChemical', scopeInput: { books: ['必修一'] } },
+    outputDir: path.join(d, 'out-dry')
+  });
+  const r3 = node([path.join('tools', 'run-paper.js'), dryPath]);
+
+  const checks = [
+    ['未确认：exit 2', r1.code === 2],
+    ['未确认：错误码 CONFIRM_REQUIRED', !!(res1 && res1.error && res1.error.code === 'CONFIRM_REQUIRED')],
+    ['未确认：零卷子文件产出', files1.length === 0, files1.join('、') || '（无）'],
+    ['未确认：result.json 仍带 restate + intakeCoverage（供 agent 复述）', !!(res1 && res1.restate && ic)],
+    ['覆盖度：必问 3 项标为 explicit', !!(ic && ic.verdict === 'intake-complete'
+      && ['scenario', 'scope', 'versionStrategy'].every((k) => ic.explicitKeys.includes(k)))],
+    ['覆盖度：未给的项不标 explicit（题型/难度/附加要求）', !!(ic && ['questionTypeCounts', 'difficulty', 'extraAcceptance'].every((k) => !ic.explicitKeys.includes(k))),
+      ic ? JSON.stringify(ic.explicitKeys) : ''],
+    ['覆盖度：显式给的 export / outputDir 标 explicit', !!(ic && ic.explicitKeys.includes('export') && ic.explicitKeys.includes('outputDir'))],
+    ['覆盖度：unasked 为空（intake 问全）', !!(ic && ic.unasked.length === 0)],
+    ['覆盖度：needsConfirm 列出非 explicit 项', !!(ic && ic.needsConfirm.includes('questionTypeCounts') && !ic.needsConfirm.includes('scope'))],
+    ['已确认：exit 0', r2.code === 0],
+    ['已确认：产出 Word 双卷', files2.filter((f) => /\.docx$/.test(f)).length === 2, files2.join('、')],
+    ['已确认：result.json 为成功结果', !!(res2 && res2.ok === true)],
+    ['已确认：result.json 留痕 intakeCoverage（审计链完整）', !!(res2 && res2.intakeCoverage && res2.intakeCoverage.verdict)],
+    ['dryRun 豁免：exit 0', r3.code === 0]
+  ];
+  writeJson(path.join(d, 'preflight.json'), { intakeCoverage: ic });
+  return {
+    checks,
+    evidence: {
+      unconfirmedExit: r1.code, confirmedExit: r2.code, dryRunExit: r3.code,
+      filesUnconfirmed: files1, filesConfirmed: files2, intakeCoverage: ic
+    }
+  };
 });
 
 // ============================================================
 // 跑批
 // ============================================================
+/** 真实产物目录 out/{yyyy-mm-dd}/ 的指纹（跑批前后各量一次，证明验收台不污染老师目录） */
+function snapshotRealOutDir() {
+  const dir = path.join(SKILL_ROOT, 'out', TODAY);
+  const map = {};
+  if (!fs.existsSync(dir)) return map;
+  for (const f of fs.readdirSync(dir)) {
+    const p = path.join(dir, f);
+    let st;
+    try { st = fs.statSync(p); } catch (_) { continue; }
+    if (!st.isFile()) continue;
+    map[f] = { sha256: sha256File(p), bytes: st.size, mtimeMs: Math.round(st.mtimeMs) };
+  }
+  return map;
+}
+
 function main() {
   const args = process.argv.slice(2);
   if (args.includes('--list')) {
@@ -754,6 +897,9 @@ function main() {
   const selected = args.filter((a) => /^AC-\d+$/.test(a));
   const todo = selected.length ? CASES.filter((c) => selected.includes(c.id)) : CASES;
 
+  // ⚠ 只跑全部用例时才有意义（选跑单条会跳过清理路径）
+  const realOutBefore = selected.length ? null : snapshotRealOutDir();
+
   const summary = [];
   for (const c of todo) {
     process.stdout.write(`\n▶ ${c.id} ${c.title}\n`);
@@ -765,10 +911,32 @@ function main() {
     }
     const pass = out.checks.every(([, ok]) => ok);
     const ms = Date.now() - t0;
-    writeJson(path.join(OUT, c.id, 'result.json'), { id: c.id, title: c.title, pass, ms, checks: out.checks, evidence: out.evidence });
+    writeJson(path.join(OUT, c.id, 'result.json'), { id: c.id, title: c.title, pass, ms, skipped: out.skipped || null, checks: out.checks, evidence: out.evidence });
     for (const [name, ok] of out.checks) process.stdout.write(`   ${ok ? '✓' : '✗'} ${name}\n`);
+    if (out.skipped) process.stdout.write(`   ⓘ 跳过：${out.skipped}\n`);
     process.stdout.write(`   → ${pass ? 'PASS' : 'FAIL'}（${ms}ms）\n`);
-    summary.push({ id: c.id, pass, ms, failed: out.checks.filter(([, ok]) => !ok).map(([n]) => n) });
+    summary.push({ id: c.id, pass, ms, skipped: out.skipped || null, failed: out.checks.filter(([, ok]) => !ok).map(([n]) => n) });
+  }
+
+  // ---- 跑批收尾自检：真实产物目录必须与跑批前**逐文件 sha256+bytes+mtime 一致** ----
+  // （历史上踩过：AC-15 要验「不指定 outputDir 落默认目录」，跑完在老师真实目录里留下
+  //   2 个 docx 并覆盖了 result.json；AC-15 现在自己会清理，这里再加一道兜底断言，
+  //   任何用例以后偷偷写真实目录都会被这条抓住。）
+  let realOutDiffs = null;
+  if (realOutBefore) {
+    const after = snapshotRealOutDir();
+    realOutDiffs = [];
+    for (const k of new Set([...Object.keys(realOutBefore), ...Object.keys(after)])) {
+      const a = realOutBefore[k], b = after[k];
+      if (!a) { realOutDiffs.push({ file: k, kind: 'ADDED' }); continue; }
+      if (!b) { realOutDiffs.push({ file: k, kind: 'REMOVED' }); continue; }
+      if (a.sha256 !== b.sha256) realOutDiffs.push({ file: k, kind: 'CONTENT' });
+      else if (a.bytes !== b.bytes) realOutDiffs.push({ file: k, kind: 'SIZE' });
+      else if (a.mtimeMs !== b.mtimeMs) realOutDiffs.push({ file: k, kind: 'MTIME', was: a.mtimeMs, now: b.mtimeMs });
+    }
+    console.log('\n' + '─'.repeat(70));
+    console.log(`跑批收尾自检：真实产物目录 out/${TODAY}/ 与跑批前对比 —— ` +
+      (realOutDiffs.length === 0 ? `零差异 ✓（${Object.keys(realOutBefore).length} 文件）` : `${realOutDiffs.length} 处差异 ✗ ${JSON.stringify(realOutDiffs)}`));
   }
 
   const passCount = summary.filter((s) => s.pass).length;
@@ -776,12 +944,14 @@ function main() {
   console.log('验收汇总（PROMPT §3.4）');
   console.log('='.repeat(70));
   for (const s of summary) {
-    console.log(`${s.pass ? 'PASS' : 'FAIL'}  ${s.id}${s.failed.length ? '  ← 失败项：' + s.failed.join('；') : ''}`);
+    const note = s.skipped ? '  ⓘ ' + s.skipped : '';
+    console.log(`${s.pass ? 'PASS' : 'FAIL'}  ${s.id}${s.failed.length ? '  ← 失败项：' + s.failed.join('；') : ''}${note}`);
   }
   console.log(`\n合计：${passCount}/${summary.length} 通过${passCount === summary.length ? ' ✓' : ' ✗'}`);
   console.log('证据目录：' + OUT);
-  writeJson(path.join(OUT, 'summary.json'), { at: new Date().toISOString(), passCount, total: summary.length, summary });
-  return passCount === summary.length ? 0 : 1;
+  writeJson(path.join(OUT, 'summary.json'), { at: new Date().toISOString(), passCount, total: summary.length, summary, realOutDiffs });
+  const allOk = passCount === summary.length && (!realOutDiffs || realOutDiffs.length === 0);
+  return allOk ? 0 : 1;
 }
 
 if (require.main === module) process.exit(main());

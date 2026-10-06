@@ -1,0 +1,35 @@
+{
+  "_说明": "本项目对「主项目引擎副本」的**本地补丁登记表**。tools/sync-from-source.js 据此判定一致：上游哈希未变 + 本地补丁哈希完好 → 视为一致（不算漂移），sync:check 保持 exit 0。上游一旦变化，sync:check 会报「上游已更新，本地补丁需重新评估」并 exit 1。",
+  "_维护": "重新打补丁后跑 node tools/test-engine-patches.js --update 刷新哈希；跑 node tools/test-engine-patches.js 校验（含行为断言）。",
+  "version": 1,
+  "patches": {
+    "engine/chem.js": {
+      "upstreamFile": "src/libs/chem.js",
+      "upstreamSha256": "a582307bccd68a411c7427bb70120f8916a83431bd6322dd194d3b925788aedf",
+      "patchedSha256": "751fa66cb4718595858425f4174f46807cd766cf120c90253d48b9566ef0a189",
+      "patchedAt": "2026-09-19T11:28:43.101Z",
+      "severity": "medium",
+      "title": "纯文本通道 formulaUnicode() 两处渲染错：多位数下标只吃第一位 + 尾随 +/- 电荷不转上标",
+      "symptom": "① `C17H35` → `C₁7H₃5`（应为 `C₁₇H₃₅`）、`C6H12O6` → `C₆H₁2O₆`；② `H+` → `H+`（应为 `H⁺`）、`OH-` → `OH-`（应为 `OH⁻`）、`e-` → `e-`（应为 `e⁻`）",
+      "impact": "仅纯文本通道（`equationUnicodeText()` → `result.json` 的 `itemsPreview` / 剪贴板复制）。① 影响 13 种含多位数下标的化学式；② 影响 30 种用尾随 +/- 记法的物种 / 164 个版本（占 548 版本的 29.9%）。Word / PDF 走 `formulaHTML()`（逐位 `<sub>`、认尾随符号），两条通道渲染正确 —— 但正因为如此，同一份卷子在 `itemsPreview` 里会与 PDF/docx **不一致**（跨通道一致性缺陷）。",
+      "rootCause": "① 下标判定 `/[A-Za-z)\\]$/.test(out)` 只认「前一个输出字符是字母 / 右括号」，连排数字的第二位前面是下标数字 → 被当普通字符。② `formulaUnicode()` 只认 `^` 记法，而 `formulaHTML()` 第 477-482 行还认尾随 `+`/`-` → 两条通道规则不对齐。",
+      "fix": "① 下标判定追加 `\\u2080-\\u2089`（下标数字）。② 与 `formulaHTML()` 同款规则：先用 `CHARGE_TAIL` 摘出尾随电荷（`^n+` / `^n-` / `+` / `-`），主体渲染完再补 Unicode 上标。两处都不影响既有断言 `CuSO4·5H2O → CuSO₄·5H₂O`（`·5` 的 5 前面是 `·`）。",
+      "upstreamStatus": "主项目 src/libs/chem.js 为同一份代码，两个 bug 同样存在；本项目按铁律不写主项目，故先在本项目副本打补丁。上游修好后跑 node tools/sync-from-source.js，并删除本登记项。",
+      "test": "node tools/test-engine-patches.js"
+    },
+    "engine/docx.js": {
+      "upstreamFile": "src/libs/docx.js",
+      "upstreamSha256": "d16502794abfe7d431186e61fac9fbdf8dcca0f51fb51ca9a0693273df5735ed",
+      "patchedSha256": "854c14bba84da3d379e9db87388210f63277580d81d7dd9341aacdb5d6749033",
+      "patchedAt": "2026-09-19T11:28:43.102Z",
+      "severity": "high",
+      "title": "Word 通道把离子电荷渲染错（^ 记法泄漏 + 电荷重复上标 + 电荷数字被当元素下标）",
+      "symptom": "Fe^2+ → `Fe ^ ₂ + ²`（应为 Fe²⁺）；OH- → `OH - ⁻¹`（应为 OH⁻）；H+ → `H + ¹`（应为 H⁺）",
+      "impact": "553 个版本中 209 个（37.8%）含带电物种；Word 双卷是默认产出通道，故每份含离子方程式的 Word 卷子都受影响。PDF/HTML 通道走 chem.js formulaHTML()，渲染正确。",
+      "rootCause": "speciesRunSpecs() 逐字符照抄 sp.formula（`^` 与尾随 +/- 当普通字符），随后又把 sp.charge 追加成上标 → 电荷渲染两次且记法泄漏。",
+      "fix": "新增 splitFormulaCharge()，按 chem.js formulaHTML() 的同款规则先摘出电荷记法，再渲染主体下标，最后补一个上标电荷；formula 未写符号时才退回 sp.charge 字段（题库实际无此情形）。",
+      "upstreamStatus": "主项目 src/libs/docx.js 为同一份代码，bug 同样存在；本项目按铁律不写主项目，故先在本项目副本打补丁。上游修好后跑 node tools/sync-from-source.js，并删除本登记项。",
+      "test": "node tools/test-engine-patches.js"
+    }
+  }
+}

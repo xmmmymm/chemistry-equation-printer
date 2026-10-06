@@ -1,58 +1,86 @@
 {
-  "sourceProject": "E:\\DSH work\\方程式",
-  "syncedAt": "2026-09-19T04:36:46.134Z",
+  "dataOwnership": "local",
+  "dataNote": "data/library.json 与 data/classifications.json 是**本项目自有数据**（source of truth），不再从上游同步；变更后运行 npm run data:lock 重新锁定。引擎上游（旧仓库 chemistry-equation-printer）只作为引擎副本的可选来源（见 sourceProject / files）。",
+  "sourceProject": null,
+  "sourceProjectNote": "引擎上游（旧仓库 chemistry-equation-printer，本地克隆路径）。默认 null = 未配置；npm run sync / npm run sync:check 会跳过引擎比对。用 --source=<路径> 或环境变量 CHEMEQ_SOURCE 临时指定。",
+  "lockedAt": "2026-09-19T12:20:56.779Z",
+  "origin": {
+    "note": "本项目题库的历史来源（fork 点）。此后 data/ 由本项目自持，不再随上游同步；origin 仅供溯源。",
+    "project": null,
+    "forkedFrom": "chemistry-equation-printer (已废弃的旧桌面版)",
+    "forkedAt": "2026-09-19T04:36:46.134Z",
+    "library": {
+      "sha256": "86c00e835b34ad79938a01b9a3fbeaf1bf0eb74c58392d1f4f7bd4a919a763f3",
+      "updatedAt": "2026-09-05T05:54:08.257Z",
+      "entries": 392,
+      "versions": 531
+    }
+  },
   "library": {
-    "sha256": "86c00e835b34ad79938a01b9a3fbeaf1bf0eb74c58392d1f4f7bd4a919a763f3",
-    "updatedAt": "2026-09-05T05:54:08.257Z",
+    "sha256": "b697e36f40194af25d8940f4f211f0153dca0f5bf72f6bbdc0473feef92e54e9",
+    "bytes": 1186753,
+    "updatedAt": "2026-09-19T09:33:56.503Z",
     "entries": 392,
-    "versions": 531
+    "versions": 553
+  },
+  "classifications": {
+    "sha256": "2241e03c15bd6bbcab696c77238fe875fdfe75bd93fa598b6b7bd9145d96800d",
+    "bytes": 5624
   },
   "files": {
-    "data/library.json": {
-      "sha256": "86c00e835b34ad79938a01b9a3fbeaf1bf0eb74c58392d1f4f7bd4a919a763f3",
-      "bytes": 1162309
-    },
-    "data/classifications.json": {
-      "sha256": "2241e03c15bd6bbcab696c77238fe875fdfe75bd93fa598b6b7bd9145d96800d",
-      "bytes": 5624
-    },
     "engine/chem.js": {
       "sha256": "a582307bccd68a411c7427bb70120f8916a83431bd6322dd194d3b925788aedf",
-      "bytes": 36804
+      "bytes": 36804,
+      "localPatched": false
     },
     "engine/constants.js": {
       "sha256": "f230860b4f9e51f1b1b12c0d7afa733afcdd883800588d65e67c533ad08492d1",
-      "bytes": 7529
+      "bytes": 7529,
+      "localPatched": false
     },
     "engine/generator.js": {
       "sha256": "f5af044ac89ac992449ed8137e04e3fb0b00fb5d76f384e6ffc09aab6c5a39ef",
-      "bytes": 26500
+      "bytes": 26500,
+      "localPatched": false
     },
     "engine/exporter.js": {
       "sha256": "21f21b351380599aa38de06e101f55f30e6beee0c03a28d852e527bf205d3c9d",
-      "bytes": 21208
+      "bytes": 21208,
+      "localPatched": false
     },
     "engine/docx.js": {
       "sha256": "d16502794abfe7d431186e61fac9fbdf8dcca0f51fb51ca9a0693273df5735ed",
-      "bytes": 18101
+      "bytes": 18101,
+      "localPatched": true
     },
     "engine/importer.js": {
       "sha256": "ce48e9abf7116a410c05237925da8ef867dfe144f06ded79e8a35e1500173cdf",
-      "bytes": 12048
+      "bytes": 12048,
+      "localPatched": false
     },
     "engine/test-chem.js": {
       "sha256": "4be8473220ae033a4f826c3d4c6355e81b5a8bafbb19bb5832df107a3833b44a",
-      "bytes": 47007
+      "bytes": 47007,
+      "localPatched": false
     },
     "engine/fixtures/sample-library.json": {
       "sha256": "a47110bcc7476c4d76107231bab2220246d5b0160baee8c4839fddddbbab5dbd",
-      "bytes": 21509
+      "bytes": 21509,
+      "localPatched": false
     }
   },
   "electronRuntime": {
-    "path": "E:\\DSH work\\方程式\\node_modules\\electron\\dist\\electron.exe",
+    "path": "runtime/electron/electron.exe",
+    "pathNote": "相对本项目根的路径。实体由 tools/install-runtime.js 装入（runtime/ 已 gitignore）。",
     "exists": true,
     "version": "33.4.11",
-    "mode": "borrowed（借用主项目运行时，不复制、不修改）"
+    "mode": "local（本项目自带，runtime/electron/；不依赖项目外）",
+    "origin": {
+      "note": "本项目运行时的来源（仅溯源；运行时实体已复制进 runtime/electron/，不再依赖该路径）",
+      "path": null,
+      "version": "33.4.11",
+      "copiedAt": "2026-09-19T10:38:26.839Z"
+    },
+    "sizeMB": 268
   }
 }

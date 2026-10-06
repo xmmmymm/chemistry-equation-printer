@@ -3,7 +3,7 @@
  * skill 运行时状态管理（阶段 5/6）——纯 Node，不依赖 Electron。
  *
  * 子命令：
- *   drift                      快照漂移检测（B12：比对主项目 sha256，不阻塞出卷）
+ *   drift                      题库数据锁检测（B12：比对 data/SOURCE.json 的数据锁，不阻塞出卷）
  *   memory                     读偏好记忆（last-run.json），损坏时给系统默认 + 一行说明
  *   memory:save <json|->       写偏好记忆（供人工/agent 调用；app/main.js 出卷后也会自动写）
  *   pending                    列 _pending 未完成项（intake 轮提示用）
@@ -35,7 +35,8 @@ const ARCHIVE_DIR = path.join(STATE_DIR, 'archive');
 const OUT_DIR = process.env.CHEMEQ_OUT_DIR ? path.resolve(process.env.CHEMEQ_OUT_DIR) : path.join(SKILL_ROOT, 'out');
 const PENDING_MAX_AGE_DAYS = 30;
 
-const SOURCE_ROOT = process.env.CHEMEQ_SOURCE || 'E:\\DSH work\\方程式';
+// 引擎上游（旧仓库 chemistry-equation-printer 的本地克隆，可选）。仅用于溯源显示，不参与任何判定。
+const SOURCE_ROOT = process.env.CHEMEQ_SOURCE || null;
 
 function readJsonSafe(p) {
   try { return { ok: true, value: JSON.parse(fs.readFileSync(p, 'utf8')) }; }
@@ -59,72 +60,55 @@ function sha256File(p) {
 }
 
 // ============================================================
-// drift：快照漂移检测（B12）
+// drift：题库数据锁检测（B12）
+// data/ 是**本项目自有数据**，不再从主项目同步；这里只检查「本地题库是否与
+// data/SOURCE.json 的数据锁一致」，主项目仅作为溯源信息（不参与判定、不阻塞出卷）。
 // ============================================================
 function drift() {
   const metaRes = readJsonSafe(path.join(SKILL_ROOT, 'data', 'SOURCE.json'));
   const meta = metaRes.ok ? metaRes.value : null;
   const localLib = path.join(SKILL_ROOT, 'data', 'library.json');
+  const originProject = (meta && meta.origin && meta.origin.project) || (meta && meta.sourceProject) || SOURCE_ROOT;
   const out = {
+    dataOwnership: (meta && meta.dataOwnership) || 'local',
     snapshot: {
       updatedAt: meta && meta.library ? meta.library.updatedAt : null,
       entries: meta && meta.library ? meta.library.entries : null,
       versions: meta && meta.library ? meta.library.versions : null,
-      syncedAt: meta ? meta.syncedAt : null,
+      syncedAt: meta ? (meta.lockedAt || meta.syncedAt || null) : null,
       sha256: meta && meta.library ? meta.library.sha256 : null,
-      sourceProject: meta ? meta.sourceProject : SOURCE_ROOT
+      sourceProject: originProject
     },
-    sourceProject: SOURCE_ROOT,
-    sourceExists: fs.existsSync(SOURCE_ROOT),
+    // 溯源信息：题库的历史来源（fork 点），仅作参考
+    origin: meta && meta.origin ? meta.origin : null,
+    originProject,
+    originExists: fs.existsSync(originProject),
+    sourceProject: originProject,
+    sourceExists: fs.existsSync(originProject),
     drift: false,
     files: [],
     note: ''
   };
 
-  // ① 本地快照是否被外部改过（与 SOURCE.json 记录比对）
+  // 本地题库是否被项目之外改动（与 data/SOURCE.json 的数据锁比对）
   if (!fs.existsSync(localLib)) {
     out.drift = true;
-    out.note = '本地题库快照缺失 → 运行 node tools/sync-from-source.js';
+    out.note = '题库数据缺失：data/library.json 不存在 → 从版本库恢复（本项目数据自持，不依赖主项目）';
     out.files.push({ label: 'data/library.json', status: 'missing' });
   } else {
     const localSha = sha256File(localLib);
     out.localSha256 = localSha;
     if (out.snapshot.sha256 && localSha !== out.snapshot.sha256) {
       out.drift = true;
-      out.note = '本地快照与 data/SOURCE.json 记录的哈希不一致（快照可能被外部修改）';
+      out.note = '本地题库与 data/SOURCE.json 的数据锁不一致（data/ 被项目之外改动过）'
+        + ' → 合法改动请跑 npm run data:lock 重新锁定；**不阻塞出卷**，报告里标注即可';
       out.files.push({ label: 'data/library.json', status: 'local-drift', expected: out.snapshot.sha256, actual: localSha });
+    } else {
+      out.files.push({ label: 'data/library.json', status: 'locked' });
     }
   }
 
-  // ② 主项目题库是否已更新（与快照哈希比对）——需要主项目可读
-  const srcLib = path.join(SOURCE_ROOT, 'data', 'library.json');
-  if (fs.existsSync(srcLib)) {
-    try {
-      const srcSha = sha256File(srcLib);
-      out.sourceSha256 = srcSha;
-      const srcMeta = readJsonSafe(srcLib);
-      out.source = {
-        updatedAt: srcMeta.ok ? srcMeta.value.updatedAt : null,
-        entries: srcMeta.ok && srcMeta.value.entries ? srcMeta.value.entries.length : null,
-        versions: srcMeta.ok && srcMeta.value.entries
-          ? srcMeta.value.entries.reduce((a, e) => a + ((e.versions || []).length), 0) : null
-      };
-      if (out.snapshot.sha256 && srcSha !== out.snapshot.sha256) {
-        out.drift = true;
-        out.note = `快照时间 ${K.fmtDateTime(out.snapshot.updatedAt)} / 主项目已更新 ${K.fmtDateTime(out.source.updatedAt)}`
-          + ' → 漂移**不阻塞出卷**，报告里标注即可；要同步请跑 node tools/sync-from-source.js';
-        out.files.push({ label: '主项目 data/library.json', status: 'source-newer', expected: out.snapshot.sha256, actual: srcSha });
-      } else {
-        out.files.push({ label: '主项目 data/library.json', status: 'same' });
-      }
-    } catch (e) {
-      out.files.push({ label: '主项目 data/library.json', status: 'unreadable', error: e.message });
-    }
-  } else {
-    out.files.push({ label: '主项目 data/library.json', status: 'source-missing' });
-  }
-
-  if (!out.note) out.note = out.sourceExists ? '快照与主项目一致 ✓' : '主项目路径不可达（只影响漂移检测，不影响出卷）';
+  if (!out.note) out.note = '题库数据与数据锁一致 ✓（本项目自有数据，不随主项目同步）';
   return out;
 }
 
@@ -211,19 +195,42 @@ function mergeWithMemory(current, mem) {
 // ============================================================
 // pending：失败留痕生命周期（B10）
 // ============================================================
+/**
+ * 递归找出 out/ 下的 `_pending.json`。
+ *
+ * 为什么不能只看 `out/*\/_pending.json` 一层：`job.outputDir` 允许自定义（§4.2），
+ * 自定义目录里的失败留痕就落在更深一层，一层扫描会**完全看不到**它
+ * （实测：out/_manual/pending-test/_pending.json 被漏掉），B10 的 intake 轮提示随之失效。
+ *
+ * ⚠ 跳过 `_` 开头的目录（`_acceptance` / `_state` / `_manual` / `_render-check` 等
+ *    测试与开发脚手架目录）：那里的 `_pending.json` 是测试产物，不是老师的未完成导出。
+ */
+function findPendingFiles(root, depth) {
+  const out = [];
+  let items;
+  try { items = fs.readdirSync(root, { withFileTypes: true }); } catch (_) { return out; }
+  for (const it of items) {
+    const p = path.join(root, it.name);
+    if (it.isFile()) { if (it.name === '_pending.json') out.push(p); continue; }
+    if (!it.isDirectory()) continue;
+    if (it.name.startsWith('_')) continue;
+    if (depth > 0) out.push(...findPendingFiles(p, depth - 1));
+  }
+  return out;
+}
+
+const PENDING_SCAN_DEPTH = 3; // out/ 往下最多 3 层（out/{日期}/ 是 1 层）
+
 function listPending() {
   if (!fs.existsSync(OUT_DIR)) return { ok: true, count: 0, items: [] };
   const items = [];
-  for (const d of fs.readdirSync(OUT_DIR)) {
-    const dir = path.join(OUT_DIR, d);
-    if (!fs.statSync(dir).isDirectory()) continue;
-    const p = path.join(dir, '_pending.json');
-    if (!fs.existsSync(p)) continue;
+  for (const p of findPendingFiles(OUT_DIR, PENDING_SCAN_DEPTH)) {
+    const dir = path.dirname(p);
     const res = readJsonSafe(p);
     const ageDays = (Date.now() - fs.statSync(p).mtimeMs) / 86400000;
     items.push({
       path: p,
-      date: d,
+      date: path.basename(dir),
       ageDays: Math.round(ageDays * 10) / 10,
       stale: ageDays > PENDING_MAX_AGE_DAYS,
       createdAt: res.ok ? res.value.createdAt : null,
@@ -283,7 +290,7 @@ function selfTest() {
 
   const d = drift();
   check('drift 可调用且带 snapshot', !!d.snapshot && typeof d.drift === 'boolean', `drift=${d.drift} note=${d.note}`);
-  check('快照条目数 392', d.snapshot.entries === 392, `entries=${d.snapshot.entries}`);
+  check('题库条目数 392', d.snapshot.entries === 392, `entries=${d.snapshot.entries}`);
 
   const m = memory();
   check('memory 可调用（缺失/损坏都返回默认）', !!m.defaults && typeof m.corrupted === 'boolean', `exists=${m.exists} corrupted=${m.corrupted}`);

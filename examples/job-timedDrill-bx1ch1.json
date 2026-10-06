@@ -1,0 +1,23 @@
+{
+  "_说明": "演示用：必修一第一章 课堂限时练，10 题，优先化学方程式，PDF+Word 双卷（不出图片）。useMemory=false 明确主张「就按这次说的范围」，不受上次偏好记忆影响。",
+  "jobVersion": 1,
+  "useMemory": false,
+  "scenario": "timedDrill",
+  "generation": {
+    "scopeInput": {"books": ["必修一"], "chapters": ["第一章"]},
+    "exclude": {},
+    "totalCount": 10,
+    "versionStrategy": "preferChemical",
+    "questionTypeCounts": {"B": 0, "C": 0, "D": 0, "E": 0, "H": 0},
+    "difficultyMode": "counts",
+    "difficultyCounts": {"simple": 0, "medium": 0, "hard": 0},
+    "manualEntryIds": [],
+    "allowSameEntryDifferentVersion": false
+  },
+  "export": {"pdf": true, "docx": true, "images": false, "imagesOnDemand": null},
+  "layoutOverrides": {},
+  "outputDir": null,
+  "dryRun": false,
+  "extraAcceptance": [],
+  "snapshot": {"drift": false, "checkedAt": null, "note": ""}
+}

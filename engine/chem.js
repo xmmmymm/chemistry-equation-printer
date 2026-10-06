@@ -750,21 +750,50 @@
   const SUB_DIGITS = { '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄', '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉' };
   const SUP_CHARS = { '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹', '+': '⁺', '-': '⁻' };
 
-  /** 化学式 → Unicode：元素后数字变下标；^ 后电荷变上标；结晶水 ·5 的 5 保持正常 */
+  /**
+   * 化学式 → Unicode：元素后数字变下标；^ 后电荷变上标；尾随 +/- 电荷也变上标；
+   * 结晶水 ·5 的 5 保持正常。
+   *
+   * ⚠ 本地补丁（登记在 data/ENGINE-PATCHES.json），修两个上游 bug：
+   *   ① 多位数下标只吃第一位：`C17H35` → `C₁7H₃5`（应为 `C₁₇H₃₅`）。
+   *      根因：原判定只认「前一个输出字符是字母 / 右括号」，连排数字的第二位前面是
+   *      下标数字，于是被当普通字符。修法：把「前一个输出字符是下标数字」也纳入条件。
+   *   ② 尾随 +/- 电荷不转上标：`H+` → `H+`（应为 `H⁺`）、`OH-` → `OH-`（应为 `OH⁻`）、
+   *      `e-` → `e-`（应为 `e⁻`）。根因：`formulaHTML()` 认尾随符号（第 477-482 行），
+   *      `formulaUnicode()` 只认 `^` 记法，两条通道对同一物种渲染不一致 ——
+   *      题库 30 种物种 / 164 个版本用尾随记法（`H+` `OH-` `NO3-` `CH3COO-` `e-` …）。
+   *      修法：与 formulaHTML() 同款规则先摘出尾随电荷，主体渲染完再补 Unicode 上标。
+   *   两者都不影响既有断言 `CuSO4·5H2O → CuSO₄·5H₂O`（`·5` 的 5 前面是 `·`）。
+   */
+  const CHARGE_TAIL = /(\^(\d*)([+-])|([+-]))$/;
   function formulaUnicode(f) {
+    let s = String(f == null ? '' : f);
+    // ① 先摘出尾随电荷（与 formulaHTML() 同款规则）：`^n+` / `^n-` / `+` / `-`
+    let charge = '';
+    const m = s.match(CHARGE_TAIL);
+    if (m) {
+      const sign = (m[3] || m[4]);
+      const digits = m[2] || '';
+      charge = (digits && digits !== '1' ? digits.split('').map((d) => SUP_CHARS[d] || d).join('') : '')
+        + (sign === '+' ? '⁺' : '⁻');
+      s = s.slice(0, -m[0].length);
+    }
+    // ② 主体：元素后数字变下标（连排数字全部吃下），`^` 记法仍按上标
     let out = '';
-    for (let i = 0; i < f.length; i++) {
-      const ch = f[i];
+    for (let i = 0; i < s.length; i++) {
+      const ch = s[i];
       if (ch === '^') {
         i++;
-        while (i < f.length && SUP_CHARS[f[i]]) { out += SUP_CHARS[f[i]]; i++; }
+        while (i < s.length && SUP_CHARS[s[i]]) { out += SUP_CHARS[s[i]]; i++; }
         i--; // 抵消外层 for 的自增
         continue;
       }
-      if (SUB_DIGITS[ch] && /[A-Za-z)\]]$/.test(out)) { out += SUB_DIGITS[ch]; continue; }
+      // 「前一个输出字符是字母 / 右括号 / 下标数字」→ 当前数字算下标
+      // （下标数字那一条修的就是「连排数字只吃第一位」）
+      if (SUB_DIGITS[ch] && /[A-Za-z)\]\u2080-\u2089]$/.test(out)) { out += SUB_DIGITS[ch]; continue; }
       out += ch;
     }
-    return out;
+    return out + charge;
   }
 
   /** Unicode 美化纯文本（如 2H₂ =点燃= 2H₂O；SO₄²⁻ 电荷上标）。

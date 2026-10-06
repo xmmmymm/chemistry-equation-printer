@@ -4,7 +4,7 @@
 # 说明：
 #   - 本文件是 skill 内嵌的**固定**模板；老师不需要、也不应该被问卷面参数（见 references/决策清单.md）。
 #   - @preset.title / @preset.studentInfoEnabled 两个占位符由 presets.yml 的场景包在运行时解析。
-#   - 本模板**不读**主项目的 settings.json，也不读主项目 data/templates/。
+#   - 本模板**不读**上游项目的 settings.json，也不读上游 data/templates/。
 #   - 引擎侧字段名严格对齐 engine/constants.js 的 defaultLayoutSettings()（多出的字段会被忽略，不会报错）。
 
 paper: {size: A4, orientation: portrait, customWidthMm: 210, customHeightMm: 297}

@@ -1,14 +1,47 @@
 {
   "name": "chem-equation-paper",
-  "version": "0.1.0",
+  "version": "1.4.0",
+  "description": "给 AI agent 的化学方程式出题 skill：基于自有题库组卷，导出 Word / PDF / 图片。确认闸门 + 零项目外依赖。",
+  "keywords": [
+    "chemistry",
+    "chemical-equation",
+    "equation",
+    "ionic-equation",
+    "worksheet",
+    "paper-generator",
+    "quiz",
+    "high-school",
+    "teacher",
+    "electron",
+    "pdf",
+    "docx",
+    "ai-agent",
+    "skill"
+  ],
+  "homepage": "https://github.com/xmmmymm/chemistry-equation-printer#readme",
+  "bugs": {
+    "url": "https://github.com/xmmmymm/chemistry-equation-printer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmmmymm/chemistry-equation-printer.git",
+    "homepage": "https://github.com/xmmmymm/chemistry-equation-printer"
+  },
+  "author": "xmmmymm",
   "private": true,
-  "description": "方程式出题 skill：基于题库快照组卷并导出 Word / PDF / 图片（独立项目，数据源只读）",
   "main": "app/main.js",
   "scripts": {
     "test:engine": "node engine/test-chem.js",
     "test:preflight": "node tools/preflight.js --self-test",
     "test:state": "node tools/skill-state.js self-test",
     "test:acceptance": "node tools/acceptance.js",
+    "test:patches": "node tools/test-engine-patches.js",
+    "test:edge": "node tools/test-edge.js",
+    "test": "node engine/test-chem.js && node tools/preflight.js --self-test && node tools/skill-state.js self-test && node tools/test-engine-patches.js && node tools/test-edge.js",
+    "data:lock": "node tools/data-lock.js",
+    "data:check": "node tools/data-lock.js --check",
+    "runtime:install": "node tools/install-runtime.js",
+    "runtime:check": "node tools/install-runtime.js --check",
     "sync": "node tools/sync-from-source.js",
     "sync:check": "node tools/sync-from-source.js --check",
     "paper": "node tools/run-paper.js",
@@ -19,6 +52,6 @@
   "engines": {
     "node": ">=18"
   },
-  "comment": "无 dependencies：Electron 运行时借用主项目（见 data/SOURCE.json 的 electronRuntime），不复制、不安装。",
+  "comment": "无 dependencies：题库数据为本项目自有（data/，变更后 npm run data:lock）；Electron 运行时按需装入 runtime/electron/（268MB，已 gitignore；npm run runtime:install 装入）——本项目零项目外依赖。",
   "license": "MIT"
 }

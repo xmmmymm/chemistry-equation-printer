@@ -1,6 +1,11 @@
 # 依赖（本项目无 dependencies；如日后自装 Electron 会用到）
 node_modules/
 
+# Electron 运行时（本项目自带，268MB / 73 文件，v33.4.11）
+# ⚠ 不入版本库：electron.exe 单文件 188MB，超过 GitHub 100MB 硬上限，提交会直接推不上去。
+#    新克隆 / 换机后用 `npm run runtime:install [-- --from=<Electron dist 目录>]` 重新装入。
+runtime/
+
 # 产物与临时文件
 out/
 *.tmp
@@ -8,5 +13,8 @@ out/
 
 # 运行时状态（偏好记忆、归档、_pending）——不进版本库
 .dsh/skill-state/
+
+# 本地 agent 记忆归档（含本机绝对路径等私人上下文）——不进版本库
+.dsh/hme/
 
 # 注意：.dsh/skills/ 是 skill 本体（SKILL.md 等），**必须入库**，不要忽略整个 .dsh/

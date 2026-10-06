@@ -41,17 +41,27 @@ async function waitHarness(win) {
 async function run({ BrowserWindow, jobPath, outDir }) {
   const job = JSON.parse(fs.readFileSync(jobPath, 'utf8'));
   const lib = JSON.parse(fs.readFileSync(path.join(SKILL_ROOT, 'data', 'library.json'), 'utf8'));
-  const settings = Preflight.buildSettings(job);
-  const scenario = job.scenario || 'homework';
-  const layout = Yml.loadLayout(scenario, job.layoutOverrides || {});
+  // ⚠ 必须先跑 preflight 拿「归一 + 记忆补全」后的 job，再用它 buildSettings。
+  //    直接 buildSettings(原始 job) 会丢掉 scopeInput 的归一结果（scopes 恒为 {} = 全库），
+  //    导致 --render-check 渲染出来的卷子范围与真实出卷**不一致**（实测：应 60 条却按 392 条出）。
   const pf = Preflight.preflight(job, { library: lib });
+  // 与真实出卷同口径：预检有拦截项就不渲染（否则会渲染出一份「本该被拦住」的卷面）
+  if (pf.exitCode === 2) {
+    return { ok: false, blocked: true, blockers: pf.diagnostics.blockers, preflight: pf.preflight };
+  }
+  const mergedJob = pf.job;
+  const settings = Preflight.buildSettings(mergedJob);
+  const scenario = pf.scenario || mergedJob.scenario || 'homework';
+  const layout = Yml.loadLayout(scenario, mergedJob.layoutOverrides || {});
   const gen = Paper.generatePaper(lib, settings, {
     totalCount: settings.totalCount,
     authoritativeCount: pf.preflight.authoritativeCount,
-    perItemRules: Paper.defaultPerItemRules(),
-    extraAcceptance: job.extraAcceptance || []
+    perItemRules: (mergedJob.perItemRules && mergedJob.perItemRules.length)
+      ? mergedJob.perItemRules : Paper.defaultPerItemRules(),
+    extraAcceptance: mergedJob.extraAcceptance || [],
+    maxRedraws: typeof mergedJob.maxRedraws === 'number' ? mergedJob.maxRedraws : 1
   });
-  if (!gen.ok) return { ok: false, error: gen.failure };
+  if (!gen.ok) return { ok: false, error: gen.failure, preflight: pf.preflight };
 
   fs.mkdirSync(outDir, { recursive: true });
   const win = new BrowserWindow({
@@ -64,7 +74,13 @@ async function run({ BrowserWindow, jobPath, outDir }) {
     await win.loadFile(path.join(SKILL_ROOT, 'app', 'harness.html'));
     if (!await waitHarness(win)) return { ok: false, error: '渲染壳未就绪（engine 脚本加载失败）' };
 
-    const info = { scenario, layout: { title: layout.title, studentInfo: layout.studentInfo, footer: layout.footer }, modes: {} };
+    const info = {
+      scenario,
+      scopes: settings.scopes,
+      authoritativeCount: pf.preflight.authoritativeCount,
+      layout: { title: layout.title, studentInfo: layout.studentInfo, footer: layout.footer },
+      modes: {}
+    };
     for (const mode of ['question', 'answer']) {
       // ⚠ 每轮都要重新加载 harness.html：上一轮 loadFile(卷面 html) 已经把页面替换掉，
       //    页面里的 window.__harness 随之消失（引擎对象只在 harness 页面存在）。

@@ -13,7 +13,8 @@
  *   ⑥ 写 result.json → app.exit(0)；失败 → 打印 JSON 错误 → app.exit(非0)
  *
  * 硬性约束：
- *   - **绝不写入主项目**（E:\DSH work\方程式）：本进程只写 SKILL_ROOT 下的 out/ 与 .dsh/skill-state/。
+ *   - 本项目**零项目外依赖**：只读 `SKILL_ROOT` 下的 `data/`（自有题库）与 `runtime/electron/`（自带运行时），
+ *     只写 `SKILL_ROOT` 下的 `out/` 与 `.dsh/skill-state/`；不读写主项目任何文件。
  *   - PDF 的 pageSize 按**英寸**解释 → 必须 mm/25.4 换算（§7 坑 1）。
  *   - 图片量尺寸用 document.body.getBoundingClientRect()（§7 坑 2），且必须**内联**测量脚本。
  *   - 离屏窗口必须 offscreen:true（§7 坑 3）；sandbox:false 才能让 executeJavaScript 走主世界。
@@ -42,8 +43,9 @@ const Preflight = require(path.join(SKILL_ROOT, 'tools', 'preflight.js'));
 
 const MODE = process.env.CHEMEQ_MODE || 'paper';
 const RENDER_OUT = process.env.CHEMEQ_RENDER_OUT || path.join(SKILL_ROOT, 'out', '_render-check');
-
-const SOURCE_ROOT = 'E:\\DSH work\\方程式';
+// AC-18 确认闸门：intake 覆盖度（restate + intakeCoverage）必须经老师确认后才开始生成。
+// 由 tools/run-paper.js 的 `--confirmed` 置位（env 传递，child 拿不到 argv）。
+const CONFIRMED = process.env.CHEMEQ_CONFIRMED === '1';
 
 // ============================================================
 // 工具
@@ -94,7 +96,8 @@ async function resolveOutputPath(dir, base, ext, taken) {
 }
 
 // ============================================================
-// 快照读取与漂移检测（B12 / AC-09）
+// 题库读取与数据锁校验（B12 / AC-09）
+// data/library.json 是**本项目自有数据**（source of truth），不再是从主项目同步的快照。
 // ============================================================
 function readSourceMeta() {
   try { return JSON.parse(fs.readFileSync(path.join(SKILL_ROOT, 'data', 'SOURCE.json'), 'utf8')); }
@@ -104,33 +107,34 @@ function readSourceMeta() {
 function loadLibrary() {
   const libPath = path.join(SKILL_ROOT, 'data', 'library.json');
   if (!fs.existsSync(libPath)) {
-    const e = new Error('题库快照缺失：' + libPath + '\n→ 运行 node tools/sync-from-source.js 从主项目同步');
+    const e = new Error('题库数据缺失：' + libPath
+      + '\n→ data/library.json 是本项目自有数据（不依赖主项目），请检查是否被误删或从版本库恢复');
     e.code = 'SNAPSHOT_MISSING';
     throw e;
   }
   let raw;
   try { raw = fs.readFileSync(libPath); }
   catch (err) {
-    const e = new Error('题库快照不可读：' + libPath + '（' + err.message + '）');
+    const e = new Error('题库数据不可读：' + libPath + '（' + err.message + '）');
     e.code = 'SNAPSHOT_UNREADABLE';
     throw e;
   }
   let lib;
   try { lib = JSON.parse(raw.toString('utf8')); }
   catch (err) {
-    const e = new Error('题库快照解析失败（文件可能损坏）：' + libPath + '（' + err.message + '）');
+    const e = new Error('题库数据解析失败（文件可能损坏）：' + libPath + '（' + err.message + '）');
     e.code = 'SNAPSHOT_CORRUPT';
     throw e;
   }
   if (!lib || !Array.isArray(lib.entries)) {
-    const e = new Error('题库快照结构不合法（缺少 entries 数组）：' + libPath);
+    const e = new Error('题库数据结构不合法（缺少 entries 数组）：' + libPath);
     e.code = 'SNAPSHOT_INVALID';
     throw e;
   }
   return { lib, sha256: crypto.createHash('sha256').update(raw).digest('hex'), bytes: raw.length, path: libPath };
 }
 
-/** 漂移检测：本地快照 sha256 vs SOURCE.json 记录的 sha256 */
+/** 数据锁校验：本地题库 sha256 vs data/SOURCE.json 的 library 记录（合法改动后用 npm run data:lock 重新锁定） */
 function driftInfo(localSha, jobSnapshot) {
   const meta = readSourceMeta();
   const recorded = meta && meta.library && meta.library.sha256;
@@ -143,18 +147,19 @@ function driftInfo(localSha, jobSnapshot) {
     jobReportedDrift: jobDrift,
     checkedAt: (jobSnapshot && jobSnapshot.checkedAt) || new Date().toISOString(),
     note: drift
-      ? '本地题库快照与 data/SOURCE.json 记录的哈希不一致（可能被外部修改）'
-      : (jobDrift ? '出卷前 tools/skill-state.js drift 报告主项目题库已更新' : '快照与主项目一致')
+      ? '本地题库与 data/SOURCE.json 的数据锁不一致（data/ 被项目之外改动过；合法改动请跑 npm run data:lock 重新锁定）'
+      : (jobDrift ? '出卷前 tools/skill-state.js drift 报告题库数据锁异常' : '题库数据与数据锁一致 ✓')
   };
 }
 
 // ============================================================
 // 组卷 + 布局
 // ============================================================
-/** 预检阻断码：出现这些就不能进导出（B1/B3/B6/B7/B11） */
+/** 预检阻断码：出现这些就不能进导出（B1/B3/B6/B7/B11 + ASK） */
 const BLOCKING_CODES = [
   'B6_AMBIGUOUS', 'B6_UNMATCHED', 'B11_INVALID_MANUAL_ID', 'B3_MANUAL_EXCEED',
-  'B7_H_UNAVAILABLE', 'B1_TYPE_UNAVAILABLE', 'B1_SHORTAGE', 'B1_ZERO_CANDIDATE'
+  'B7_H_UNAVAILABLE', 'B1_TYPE_UNAVAILABLE', 'B1_SHORTAGE', 'B1_ZERO_CANDIDATE',
+  'ASK_VERSION_STRATEGY'   // 规格 §3.1 决策块 3：版本策略必问、无静默默认
 ];
 
 function runGeneration(library, job) {
@@ -371,7 +376,24 @@ async function main() {
     }, safeOutDir(null));
   }
 
-  // ---- 快照（AC-09：缺失/不可读 → 明确报错、退出码非 0、不产出半成品）----
+  // ---- outputDir 越界预检 ----
+  // ⚠ 必须在任何 resolveOutDir(job) 之前做：否则会从 main() 里抛出，落到顶层 catch 变成
+  //    UNCAUGHT / exit 9，且**不写 result.json**（实测踩到）。这里给出带 code 的干净错误，
+  //    并把 result.json 落到默认目录（错误报告本身要能落盘）。
+  try {
+    resolveOutDir(job);
+  } catch (e) {
+    return finish({
+      ok: false, exitCode: 2,
+      error: {
+        code: 'OUTPUT_DIR_FORBIDDEN',
+        message: e.message,
+        hint: 'job.outputDir 必须是 skill 项目内的路径（' + SKILL_ROOT + '）；null = out/{yyyy-mm-dd}/。'
+      }
+    }, safeOutDir(null));
+  }
+
+  // ---- 题库数据（AC-09：缺失/不可读 → 明确报错、退出码非 0、不产出半成品）----
   let snapInfo;
   try {
     snapInfo = loadLibrary();
@@ -390,7 +412,7 @@ async function main() {
     versions: lib.entries.reduce((a, e) => a + ((e.versions || []).length), 0),
     sha256: snapInfo.sha256,
     bytes: snapInfo.bytes,
-    syncedAt: (readSourceMeta() || {}).syncedAt || null,
+    syncedAt: (readSourceMeta() || {}).lockedAt || (readSourceMeta() || {}).syncedAt || null,
     drift: drift.drift,
     driftNote: drift.note,
     checkedAt: drift.checkedAt
@@ -450,6 +472,36 @@ async function main() {
     }, resolveOutDir(job));
   }
 
+  // ---- 确认闸门（AC-18）：intake 覆盖度未经老师确认 → 一个字节都不生成 ----
+  // 为什么放在这里：预检只负责「归一 + 可出题数 + 诊断」，本身不产出卷子；但此前只要没有
+  // blocker，run-paper 就会直接导出——「先复述、老师点头才出」纯粹靠 agent 自觉（实测：
+  // 一个只写 totalCount 的 job 会被记忆补全并 exit 0 放行）。这里把它变成引擎级关卡。
+  // 豁免：dryRun（只组卷不导出）与 render-check（只截图）不产交付物，不受闸门约束。
+  if (!CONFIRMED && !job.dryRun) {
+    const ic = pf.intakeCoverage || null;
+    return finish({
+      ok: false, exitCode: 2,
+      error: {
+        code: 'CONFIRM_REQUIRED',
+        message: 'intake 覆盖度尚未经老师确认——本次没有生成任何卷子。',
+        hint: '把 restate + intakeCoverage 摆给老师过目；老师确认后加 --confirmed 重跑：'
+          + 'node tools/run-paper.js <job.json> --confirmed',
+        intakeVerdict: ic ? ic.verdict : null,
+        unasked: ic ? ic.unasked : [],
+        needsConfirm: ic ? ic.needsConfirm : []
+      },
+      scenario, snapshot,
+      restate: pf.restate,
+      intakeCoverage: ic,
+      generation: {
+        requested: total, produced: 0,
+        authoritativeCount: pf.preflight.authoritativeCount,
+        notices: []
+      },
+      params: buildParams(job, scenario, settings, layout)
+    }, resolveOutDir(job));
+  }
+
   // ---- 输出目录 ----
   const outDir = resolveOutDir(job);
   fs.mkdirSync(outDir, { recursive: true });
@@ -476,8 +528,10 @@ async function main() {
       params: buildParams(job, scenario, settings, layout),
       itemsPreview: Paper.toItemsJson(gen.items),
       dryRun: true,
-      outputDir: outDir
-    });
+      outputDir: outDir,
+      restate: pf.restate,
+      intakeCoverage: pf.intakeCoverage   // AC-18：留痕——这份卷子的参数是谁给的
+    }, outDir);
   }
 
   // ---- ④⑤ 渲染 + 导出 ----
@@ -594,6 +648,8 @@ async function main() {
     memoryFile,
     renderError,
     itemsPreview: Paper.toItemsJson(gen.items),
+    restate: pf.restate,                  // AC-18：成功结果也留复述框素材
+    intakeCoverage: pf.intakeCoverage,    // AC-18：留痕——这份卷子的参数是谁给的
     startedAt, finishedAt: K.nowIso()
   }, outDir);
 }
@@ -623,7 +679,8 @@ function buildGeneration(gen, pf, total) {
 function buildParams(job, scenario, settings, layout) {
   return {
     skill: 'chem-equation-paper',
-    specVersion: '1.1',
+    // 当前生效规格版本：v1.1 正文 + §3.2b 的 v1.2 变更（数据自持 / 自带运行时 / 离子补全）
+    specVersion: '1.3',
     scenario,
     generation: {
       scopes: settings.scopes, exclude: settings.exclude, totalCount: settings.totalCount,

@@ -274,7 +274,7 @@ function generatePaper(library, settings, opts) {
   let redraws = 0;
 
   // ---- 2. perItemRules ----
-  const applied = applyPerItemRules(items, rules);
+  let applied = applyPerItemRules(items, rules);
 
   // ---- 3. 附加验收（AC-14）：不满足重抽 ≤ maxRedraws 次 ----
   let acceptance = checkAcceptance(items, extraAcceptance);
@@ -300,8 +300,10 @@ function generatePaper(library, settings, opts) {
       break;
     }
   }
-  // 重抽后要重新注入 perItemRules（新 items 是干净对象）
-  if (redraws > 0) applyPerItemRules(items, rules);
+  // 重抽后要重新注入 perItemRules（新 items 是干净对象）。
+  // ⚠ 同时必须重算 applied：重抽后的卷子 C 题数量与重抽前不同，
+  //   沿用旧 applied 会把 `perItemRulesApplied[].count` 报成陈旧值（报告失真，实测 36/40 不一致）。
+  if (redraws > 0) applied = applyPerItemRules(items, rules);
 
   // ---- 4. 校验题量 ----
   if (items.length !== total) {

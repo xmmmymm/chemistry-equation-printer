@@ -1,7 +1,20 @@
 # 任务：实现「方程式出题 skill」（chem-equation-paper）——完整实施
 
 > 本文件是**自包含**的实施提示词，交给一个全新会话执行。会话不共享任何历史上下文，所需事实全部写在本文档内。
-> 工作目录：`E:\DSH work\方程式出题skill`　｜　规格版本：**v1.1**（v1.0 由外部 AI 六域澄清产出，本文件 §3.2 记录变更）
+> 工作目录：`chem-equation-paper`　｜　规格版本：**v1.1**（v1.0 由外部 AI 六域澄清产出，本文件 §3.2 记录变更）
+>
+> ⚠️ **v1.2 补丁（已生效，见 §3.2b）**：`data/` 已从「主项目快照」改为**本项目自有数据**，
+> `npm run sync` 只同步引擎副本、不再动数据；数据变更走 `npm run data:lock`。
+> **Electron 运行时也已自带**（`runtime/electron/`，268MB，`npm run runtime:install` 装入）——
+> 本项目**零项目外依赖**，主项目不在场也能完整出卷。
+> 题库已补全 17 条离子方程式 → **392 条 / 548 版本**。
+>
+> ⚠️ **v1.3 补丁（已生效，见 §3.2c）**：预检结果新增 **`intakeCoverage`**（逐项标注必问项来源：
+> `explicit` 当次问到 / `memory` 沿用上次 / `default` 系统默认）；出卷命令改为
+> **`node tools/run-paper.js <job.json> --confirmed`** —— 不带 `--confirmed` 时**一个字节都不生成**
+> （`CONFIRM_REQUIRED`，`exitCode 2`），把「先复述、老师点头才出」从话术升级为引擎级关卡。
+> 下文凡出现「题库快照 / 快照副本 / 531 版本 / 主项目题库比对 / 借用 Electron 运行时」的表述，一律以 §3.2b 为准；
+> 凡出现「`run-paper.js <job.json>`（不带 `--confirmed`）」的表述，一律以 §3.2c 为准。
 
 ---
 
@@ -13,16 +26,16 @@
 卷面格式**固定**（由 skill 内嵌模板定义），并把过程与结果结构化汇报。
 
 **边界（最重要，违反即失败）**：
-1. 本项目**独立**，与主项目 `E:\DSH work\方程式` **只读关系**——**绝不写入主项目的任何文件**（题库、设置、历史、导出目录、备份目录全部不碰）。
-2. 题库数据与引擎代码都是**副本**（已就位）；主项目更新后由 `tools/sync-from-source.js` 手动同步，不做运行时联动。
-3. 不引入任何 npm 依赖（Electron 运行时借用主项目那份，见 §2.5）。
+1. 本项目**独立**，与上游旧桌面版（`chemistry-equation-printer`，已废弃）**只读关系**——**绝不写入上游的任何文件**（题库、设置、历史、导出目录、备份目录全部不碰）。
+2. 题库数据与引擎代码都是**副本**（已就位）；上游更新后由 `tools/sync-from-source.js` 手动同步，不做运行时联动。
+3. 不引入任何 npm 依赖（Electron 运行时**本项目自带** `runtime/electron/`，见 §2.5 与 §3.2b）。
 
 ---
 
 ## 〇、开工前必读（3 分钟）
 
 ```powershell
-cd "E:\DSH work\方程式出题skill"
+cd "chem-equation-paper"
 npm run test:engine     # 必须先看到「通过 238 项，失败 0 项」，证明引擎副本完好
 npm run sync:check      # 必须看到「全部一致 ✓」，证明快照未漂移
 ```
@@ -41,7 +54,7 @@ npm run sync:check      # 必须看到「全部一致 ✓」，证明快照未�
 ### 1.2 为什么是独立项目
 
 老师的要求是：skill 不与应用联动（不改题库、不进应用的历史作业、产物独立存放）。
-因此本项目自带数据快照与引擎副本，唯一借用的是 Electron 运行时文件。
+因此本项目自带题库数据、引擎副本与 Electron 运行时，**零项目外依赖**。
 
 ### 1.3 术语
 
@@ -157,7 +170,7 @@ npm run sync:check      # 必须看到「全部一致 ✓」，证明快照未�
 
 | 通道 | 主项目参考位置 | 必须照做的要点 |
 |---|---|---|
-| PDF | `E:\DSH work\方程式\main.js:2011-2052` | 离屏 `BrowserWindow({show:false, webPreferences:{offscreen:true, contextIsolation:true}})`；把 html 写成临时文件再 `loadFile`；等 `did-finish-load`（**带 5s 超时兜底**）+ 额外 200ms；`printToPDF({pageSize:{width: inchW, height: inchH}, margins:{0,0,0,0}, printBackground:false, preferCSSPageSize:false})` |
+| PDF | `上游旧桌面版 chemistry-equation-printer\main.js:2011-2052` | 离屏 `BrowserWindow({show:false, webPreferences:{offscreen:true, contextIsolation:true}})`；把 html 写成临时文件再 `loadFile`；等 `did-finish-load`（**带 5s 超时兜底**）+ 额外 200ms；`printToPDF({pageSize:{width: inchW, height: inchH}, margins:{0,0,0,0}, printBackground:false, preferCSSPageSize:false})` |
 | 图片 | 同上 `main.js:1668-1700` | 离屏窗口 + 临时 html（放 `os.tmpdir()`）；`loadFile` 后等 250ms；用 `document.body.getBoundingClientRect()` 量尺寸（**不要用 `documentElement.scrollWidth`**，会带入右侧空白）；`setContentSize` 后等 150ms；`capturePage()`；`img.isEmpty()` 要判空 |
 | Word | 同上 `main.js:1932-1945`（写文件方式） | `Docx.buildDocx(...)` → `Docx.toBase64(bytes)` → `Buffer.from(b64,'base64')` 写盘 |
 
@@ -167,12 +180,15 @@ npm run sync:check      # 必须看到「全部一致 ✓」，证明快照未�
 > ⚠️ **另一个坑**：主项目历史上有过"独立 electron 脚本加载应用的 `index.html` 会挂死（缺 IPC）"。
 > 本项目**不加载主项目的 index.html**，而是自带一个**自包含**的薄渲染壳（§2.7），因此不会踩这个坑。
 
-### 2.5 Electron 运行时事实（借用，不复制）
+### 2.5 Electron 运行时事实（v1.2：本项目自带，不借用）
 
 - `electron.exe` 是**通用运行时**：`electron.exe "<任意 app 目录>"` 可运行任何 Electron 应用。
-- 本项目借用：`E:\DSH work\方程式\node_modules\electron\dist\electron.exe`（v33.4.11，180MB），路径已记录在 `data/SOURCE.json` → `electronRuntime.path`。
+- ~~本项目借用：`上游旧桌面版 chemistry-equation-printer\node_modules\electron\dist\electron.exe`（v33.4.11，180MB）~~
+  **【v1.2 已改】**运行时实体已复制进本项目 `runtime/electron/`（v33.4.11，268MB / 73 文件），
+  路径记录在 `data/SOURCE.json` → `electronRuntime.path`；装入/校验用 `npm run runtime:install` / `runtime:check`。
 - 启动方式：`node tools/run-paper.js <job.json>`（该脚本已实现：解析运行时路径 → `spawn(electron, [SKILL_ROOT], {stdio:'inherit', env:{SKILLJOB}})` → 转发退出码）。
-- **不要 `npm i electron`**（会重复 180MB+）。若运行时缺失，脚本会给出明确提示。
+  解析顺序：`CHEMEQ_ELECTRON`（显式覆盖，越界告警）→ `SOURCE.json`（**必须项目内**）→ `runtime/electron/`；`--print-runtime` 可查实际路径。
+- **不要 `npm i electron`**（运行时已自带，装了会重复 268MB）。若运行时缺失，脚本会给出明确提示。
 
 ### 2.6 已澄清的 5 项"资料未覆盖"事实（本次已从主项目代码查实，直接采信）
 
@@ -249,11 +265,66 @@ app/harness.html（薄渲染壳）
 
 > **`_pending.json` 保留**（导出失败留痕），位置改为 `out/{yyyy-mm-dd}/_pending.json`。
 
+### 3.2b 规格变更记录 v1.1 → v1.2（数据自持 + 离子方程式补全）
+
+变更原因：老师拍板「**把本项目的数据独立出来，不要依赖于项目文件夹外的快照**」，并要求审计/补全离子方程式。
+
+| 原 v1.1 条款 | 处置 | v1.2 |
+|---|---|---|
+| `data/library.json` / `classifications.json` = 主项目**快照副本** | **反转** | 改为**本项目自有数据（source of truth）**，`tools/sync-from-source.js` 不再同步、不再覆盖 |
+| `data/SOURCE.json` = 快照元数据（源路径 / 源哈希 / 同步时间） | **改写** | 改为**数据锁**（`library` / `classifications` 哈希 + 计数）+ `origin`（历史来源，仅供溯源）+ `sourceProject`（引擎上游） |
+| B12「漂移」= 主项目题库已更新 | **改语义** | 改为「**本地题库 vs 数据锁**不一致」（`data/` 被项目之外改动）；仍**不阻塞出卷**，报告里标注 |
+| `npm run sync` 同步 data + engine | **收窄** | 只同步 **engine 副本**；数据变更改走 `npm run data:lock`（重新锁定）/ `npm run data:check`（只校验） |
+| 主项目不可达 → `sync:check` exit 2 | **放宽** | 主项目不可达时跳过引擎上游比对，**数据锁照常校验**（本项目可脱离主项目独立运行） |
+| Electron 运行时**借用**主项目 `node_modules/electron/dist/`（180MB） | **反转** | 整份 dist 复制进本项目 **`runtime/electron/`**（v33.4.11，268MB / 73 文件，逐文件 sha256 校验一致）；新增 `tools/install-runtime.js`（`npm run runtime:install` / `runtime:check`）；`tools/run-paper.js` **只接受项目内路径**，不再有主项目兜底 |
+| AC-08「主项目题库被外部修改」 | **重写** | 「**本地** `data/library.json` 被项目之外改动 → `sync:check` 报数据锁不一致（exit 1）；skill 仍能出卷」 |
+| 题库 392 条 / **531 版本** | **数据变更** | 补全 17 条离子方程式 → 392 条 / **548 版本**（离子方程式 125 → 142 个） |
+
+> 本项目**零项目外依赖**：数据（`data/` 自有）、引擎（`engine/` 副本）、运行时（`runtime/electron/` 自带）全在项目内。
+> 主项目路径只剩两处**可选开发期**用途：`npm run sync`（拉引擎副本）与 `npm run runtime:install`（重新装入运行时）。
+> 离子方程式补全的逐条依据见 `docs/reference/05-离子方程式补全记录.md`。
+
+### 3.2c 规格变更记录 v1.2 → v1.3（intake 覆盖度 + 确认闸门）
+
+变更原因：老师追问「**agent 会在生成前尽可能地厘清需求吗**」。核查后确认：澄清原本只是
+`SKILL.md` 的**流程约定 + 话术**，引擎侧没有任何关卡，存在两处真实缺口（均为实测）：
+
+| # | 缺口 | 实测证据 |
+|---|---|---|
+| 1 | `restate.versionStrategyAsked` **不能**证明「agent 问过老师」 | 源码即 `versionStrategy !== 'ASK'`；**记忆补上的同样为 `true`** |
+| 2 | 没有确认关卡，agent 不看复述框也能出卷 | `app/main.js` 只过滤 `BLOCKING_CODES`；`{"jobVersion":1,"generation":{"totalCount":10}}` 这种什么都没说的 job 会被记忆补成「跟上次一样」并 **`exit 0` 放行** |
+
+| 原 v1.2 条款 | 处置 | v1.3 |
+|---|---|---|
+| 预检只给 `restate`（复述框素材） | **新增** | 结果里加 **`intakeCoverage`**：`items[]`（`key`/`label`/`required`/`source`/`value`）、`explicitKeys` / `memoryKeys` / `defaultKeys`、`unasked[]`（被记忆或默认替答的**必问项**）、`needsConfirm[]`、`verdict`、`note`。判来源办法：记忆合并**之前**留一份「当次原始 job」（`rawJob`），逐项比对 |
+| 「先复述、老师点头才出」= 流程约定 + 话术 | **升级为引擎级关卡** | `run-paper` 不带 `--confirmed` → 只回 `CONFIRM_REQUIRED` + `restate` + `intakeCoverage`，**零卷子产出**（`exitCode 2`，只写 `result.json`）；`--confirmed`（经 `CHEMEQ_CONFIRMED` env 传给 child）才进导出 |
+| 复述框五块 | **扩为六块** | 第六块「intake 覆盖度」：必问 3 项 + 关键可默认项的来源必须如实讲；`verdict=intake-incomplete` 时**先点明哪几项不是老师说的**，再请老师确认 |
+| 无 | **新增 AC-18** | 见 §3.4；同时 AC-12 加 4 条断言（记忆补上的必问项必须标 `memory`、`verdict=intake-incomplete`、`unasked` 点名、题量仍是 `explicit`） |
+| `test-edge` 93 项 | **扩充** | 93 → **106** 项（新增 N 段 13 项：来源三档 / verdict 三态 / `--no-memory` 无 memory 来源） |
+
+`verdict` 三档：`intake-complete`（必问 3 项都 `explicit`）/ `intake-incomplete`
+（有必问项被记忆或默认替答 → `unasked[]` 列出）/ `blocked`（版本策略仍是 ASK）。
+
+> **豁免**：`--render-check`（只截图）与 `job.dryRun:true`（只组卷）不产交付物，不受闸门约束。
+> **行为变更（破坏性）**：出卷命令从 `run-paper.js <job>` 变为 `run-paper.js <job> --confirmed`；
+> `tools/acceptance.js` 的 `runPaper()` 已统一带上（那些用例模拟的就是「老师已确认」）。
+> 落地位置：`tools/preflight.js`（`buildIntakeCoverage`）、`app/main.js`（闸门）、
+> `tools/run-paper.js`（`--confirmed`）、`tools/acceptance.js`（AC-18 + AC-12 断言）、
+> `tools/test-edge.js`（N 段）；文档：`SKILL.md` §2/§3.2/§3.2b/§5/§7、
+> `references/文案模板.md`、`references/决策清单.md` §六、`README.md`。
+
 ### 3.3 机器可读 YAML（定稿）
+
+> **版本口径**：正文仍是 v1.1 的条款文本，但**当前生效版本是 v1.3** ——
+> v1.1 → v1.2 的三处变更（`data/` 改本项目自有 + 数据锁、Electron 运行时时自带、
+> 离子方程式补全）见 §3.2b；v1.2 → v1.3 的两处变更（`intakeCoverage` 覆盖度报告、
+> `--confirmed` 确认闸门）见 §3.2c。下面的 YAML 块里没有需要随 v1.2 改写的字段
+> （`data/` 归属与运行时来源都不是 job 参数）；v1.3 只改了 `headless.launcher` 并新增
+> `headless.confirmGate`，故把 `specVersion` 升到 `1.3`。
 
 ```yaml
 skill: chem-equation-paper
-specVersion: 1.1
+specVersion: 1.3                       # v1.1 正文 + §3.2b（数据自持/自带运行时/离子补全）+ §3.2c（覆盖度/确认闸门）
 scenarioPresets:                      # 阶段 1 落地为 .dsh/skills/chem-equation-paper/presets.yml
   homework:   {title: 化学方程式作业,        studentInfoEnabled: false}
   timedDrill: {title: 化学方程式课堂限时练,   studentInfoEnabled: true}
@@ -334,12 +405,13 @@ exceptions: {B1: 运行时条目数权威+四选项流, B2: 防御翻译分支, 
   B10: 手动重试+30天归档, B11: 失效 ID 拦截, B12: 快照漂移检测（不阻塞）,
   B13: 自然分页+报页数, B14: 后缀避让+通道隔离回退}
 batch: none                           # v1.1 一次一份
-headless: {driver: env, envVar: SKILLJOB, launcher: "node tools/run-paper.js <job.json>",
-           wordPhase: pureNode, pdfImagePhase: electron(borrowed),
+headless: {driver: env, envVar: SKILLJOB, launcher: "node tools/run-paper.js <job.json> --confirmed",
+           confirmGate: "不带 --confirmed → CONFIRM_REQUIRED，零卷子产出（exitCode 2）；dryRun/render-check 豁免",
+           wordPhase: pureNode, pdfImagePhase: electron(bundled),
            output: "result.json + exit code"}
 ```
 
-### 3.4 验收用例（15 条 + v1.1 新增 2 条）
+### 3.4 验收用例（15 条 + v1.1 新增 2 条 + v1.3 新增 1 条 = 18 条）
 
 | # | 类型 | 输入 | 预期 |
 |---|---|---|---|
@@ -360,6 +432,7 @@ headless: {driver: env, envVar: SKILLJOB, launcher: "node tools/run-paper.js <jo
 | AC-15 | 应成功 | env 无头跑全流程 | **无任何对话框**；打印 JSON；exit 0；文件落 `out/{yyyy-mm-dd}/` |
 | **AC-16** | 应成功 | `npm run test:engine` | 输出「通过 238 项，失败 0 项」 |
 | **AC-17** | 应成功 | 出卷前后对主项目做全量 sha256 快照 | **零差异**（证明只读边界）；`tools/sync-from-source.js --check` 通过 |
+| **AC-18** | 应成功 | ① 同一 job 跑 `run-paper` 不带 `--confirmed`；② 带 `--confirmed`；③ `dryRun:true` 不带 `--confirmed` | ① `exit 2` + `CONFIRM_REQUIRED` + **零卷子产出**（仅 `result.json`，内含 `restate` + `intakeCoverage`）；② `exit 0` + 正常出卷；③ 豁免放行。另断言覆盖度来源标注：必问 3 项 `explicit`、未给项非 `explicit`、`unasked`/`needsConfirm` 正确（§3.2c） |
 
 ### 3.5 异常与边界 B1–B14（定稿行为）
 
@@ -394,7 +467,7 @@ H 开放题；mustInclude/starred 机制；学习项目挂靠（`projectScope`/`
 ### 4.1 目录布局（最终形态）
 
 ```
-E:\DSH work\方程式出题skill\
+chem-equation-paper\
 ├─ .dsh\
 │  ├─ skills\chem-equation-paper\        ★入库
 │  │  ├─ SKILL.md                        阶段 1：skill 本体（含三清单）
@@ -453,9 +526,14 @@ E:\DSH work\方程式出题skill\
                 "images": [] },
   "failures": [],
   "pendingPath": null,
+  "restate": { "...": "复述框素材：场景/题量/题型/难度/版本策略/范围映射/可出题数/文件名/快照/通道" },
+  "intakeCoverage": { "...": "v1.3：必问项来源标注 items[] + explicitKeys/memoryKeys/defaultKeys + unasked[] + needsConfirm[] + verdict（§3.2c）" },
   "params": { "...": "本次实际生效的完整参数（即 §3.3 YAML 实例）" }
 }
 ```
+
+> v1.3：未带 `--confirmed` 时 `result.json` 里 `ok:false` / `exitCode:2` /
+> `error.code:"CONFIRM_REQUIRED"`，并**照常带** `restate` + `intakeCoverage`（供 agent 复述、老师确认）。
 
 ### 4.4 `.dsh/skill-state/last-run.json`（偏好记忆）
 
@@ -493,7 +571,7 @@ E:\DSH work\方程式出题skill\
 ### 阶段 0 · 基线自检（**必须先做**）
 
 ```powershell
-cd "E:\DSH work\方程式出题skill"
+cd "chem-equation-paper"
 npm run test:engine      # 期望：通过 238 项，失败 0 项
 npm run sync:check       # 期望：全部一致 ✓（exit 0）
 git status               # 确认工作区干净
@@ -575,15 +653,15 @@ git status               # 确认工作区干净
 
 ### 6.1 功能
 
-- [ ] AC-01 … AC-17 全部通过（§3.4）
+- [ ] AC-01 … AC-18 全部通过（§3.4；`npm run test:acceptance` 应报 18/18）
 - [ ] `npm run test:engine` = 238/0
 - [ ] `npm run sync:check` = 全部一致
 - [ ] 预检 6 个基准场景与 `04-可出题量预检.md` 完全一致
 
 ### 6.2 边界（**最高优先级**）
 
-- [ ] **出卷前后对主项目 `E:\DSH work\方程式` 做全量 sha256 快照 → 零差异**（AC-17）
-- [ ] 主项目 `data/`、`build/`、`backups/` 的 mtime 未被改动
+- [ ] **出卷前后对上游旧桌面版（`chemistry-equation-printer`）做全量 sha256 快照 → 零差异**（AC-17）
+- [ ] 上游 `data/`、`build/`、`backups/` 的 mtime 未被改动
 - [ ] 本项目 `out/` 之外无散落产物；临时文件已清理
 - [ ] `_pending` 只在失败时出现，且内容完整可重试
 
@@ -627,7 +705,7 @@ git status               # 确认工作区干净
 10. **`generate` 内部会 shuffle**：断言只能按集合，不能按顺序。
 11. **写文件用 `.tmp` + rename**（事务），避免半成品。
 12. **`stdio: 'inherit'`**（不是 `'pipe'`）：本机沙箱下 pipe 捕获会 EPERM；`tools/run-paper.js` 已按此实现。
-13. **不要 `npm i electron`**：运行时借用主项目那份（180MB），路径在 `data/SOURCE.json`。
+13. **不要 `npm i electron`**：运行时已自带（`runtime/electron/`，268MB），装了会重复一份；路径在 `data/SOURCE.json`。
 14. **主项目引擎仍在迭代**：副本会漂移，交付前跑 `npm run sync:check`；升级引擎后必须复跑 `npm run test:engine`。
 
 ---
@@ -641,7 +719,7 @@ git status               # 确认工作区干净
 4. **下一步**
 
 全部完成后给一份总报告，包含：
-- AC-01…AC-17 的逐条结果（含原始证据：文件路径、字节数、页数、sha256 对比）
+- AC-01…AC-18 的逐条结果（含原始证据：文件路径、字节数、页数、sha256 对比）
 - **主项目零写入的证据**（出卷前后主项目全量 sha256 对比表）
 - 已知限制与未做项（对照 §3.6）
 - 后续建议（如引擎同步策略、图片通道是否补 multi 模式）
