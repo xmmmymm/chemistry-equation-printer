@@ -32,6 +32,7 @@ const path = require('path');
 const SKILL_ROOT = path.resolve(__dirname, '..');
 const G = require(path.join(SKILL_ROOT, 'engine', 'generator.js'));
 const K = require(path.join(SKILL_ROOT, 'engine', 'constants.js'));
+const AdHoc = require(path.join(__dirname, 'adhoc.js'));
 
 // ============================================================
 // 一、通用文本归一
@@ -423,7 +424,11 @@ function buildSettings(job) {
     includeMustInclude: false,
     allowDuplicateEntry: false,
     allowSameEntryDifferentVersion: !!gen.allowSameEntryDifferentVersion,
-    manualEntryIds: asArray(gen.manualEntryIds)
+    manualEntryIds: asArray(gen.manualEntryIds),
+    // ad-hoc（题库外临时插入）：① 每题可指定题型（钉进必出时用）；
+    // ② enforceScope=true 时让引擎对 ad-hoc 条目同样施加范围筛选（防超纲）。
+    manualQuestionTypes: Object.assign({}, gen.manualQuestionTypes || {}),
+    adHocEnforceScope: gen.adHocEnforceScope === true
   });
 }
 
@@ -530,8 +535,10 @@ function validateManualIds(library, ids, settings) {
       continue;
     }
     // 是否在范围内
+    // ⚠ ad-hoc（题库外临时插入）条目豁免这条：默认语义就是「点名要出、不受范围约束」
+    //   （教师已用 adHocOptions.enforceScope=true 明确要求受约束时，它们根本不会走到这里）。
     const refined = G.refineBooksByScope(library.entries, settings.scopes);
-    if (settings.scopes && Object.keys(settings.scopes).length && !G.entryInScope(e, settings.scopes, refined)) {
+    if (!e._adHoc && settings.scopes && Object.keys(settings.scopes).length && !G.entryInScope(e, settings.scopes, refined)) {
       invalid.push({ id, name: e.name, reason: '不在本次范围内（手选必出**不会**自动放宽范围）' });
       continue;
     }
@@ -881,9 +888,33 @@ function buildIntakeCoverage(ctx) {
  */
 function preflight(job, opts) {
   opts = opts || {};
-  const library = opts.library || loadJson(path.join(SKILL_ROOT, 'data', 'library.json'));
+  const baseLibrary = opts.library || loadJson(path.join(SKILL_ROOT, 'data', 'library.json'));
   const classifications = opts.classifications || loadJson(path.join(SKILL_ROOT, 'data', 'classifications.json'));
-  const index = buildIndex(library, classifications);
+  // 范围词表（册/章/节）以**题库本体**为权威：ad-hoc 条目即便自带 textbooks，
+  // 也不扩充可选范围词表 —— 避免「临时插一道题」把新章名塞进老师的范围候选。
+  const index = buildIndex(baseLibrary, classifications);
+
+  // ---- ad-hoc（题库外临时插入的方程式）：只走内存，绝不写 data/library.json ----
+  // app/main.js 在调 runGeneration 前已合并过（带 __adhoc 标记）→ 此处不重复合并，
+  // 但**必须从 _adHoc 标记还原条目列表**：否则「钉进必出」「范围剔除报告」都会因为
+  // 拿不到条目而静默失效（实测踩到：pinned 恒为 0、临时题根本没进卷面）。
+  const adhocRaw = (job && job.adHocEntries) || [];
+  const alreadyMerged = !!(baseLibrary && baseLibrary.__adhoc);
+  const adhocRes = alreadyMerged
+    ? {
+        library: baseLibrary,
+        entries: (baseLibrary.entries || []).filter((e) => e._adHoc === true),
+        report: baseLibrary.__adhoc,
+        problems: (baseLibrary.__adhoc && baseLibrary.__adhoc.problems) || [],
+        warnings: (baseLibrary.__adhoc && baseLibrary.__adhoc.warnings) || []
+      }
+    : AdHoc.applyAdHoc(baseLibrary, adhocRaw);
+  const library = adhocRes.library;
+  // 一次都没请求、也没有已合并的临时题 → 报告置空（避免 restate 里出现「临时题 0 条」噪音）
+  const rawReport = adhocRes.report || null;
+  const adhocReport = (rawReport && (rawReport.requested > 0 || rawReport.accepted > 0)) ? rawReport : null;
+  const adhocOptions = (job && job.adHocOptions) || {};
+  const adHocEnforceScope = adhocOptions.enforceScope === true;
 
   // ---- 冲突链：当次 > 记忆 > 默认（可用 --no-memory 关闭）----
   // ⚠ 先留一份「当次原始 job」：合并后 job 里「没问」与「问了但答默认」无法区分，
@@ -1019,6 +1050,34 @@ function preflight(job, opts) {
     });
   }
 
+  // ---- ad-hoc（题库外临时插入的方程式）：校验 + 决定是否「钉」进必出 ----
+  // 默认（enforceScope=false）：点名要出 → 钉进 manualEntryIds，保证出现在卷面上，
+  //   与 manualEntryIds 同语义（不受 scopes 约束）。可带每题题型。
+  // enforceScope=true：不钉 → 交给引擎按 scopes 正常筛选（防超纲），范围外的会被排除。
+  const adhocEntries = adhocRes.entries || [];
+  if (adhocReport && adhocReport.problems && adhocReport.problems.length) {
+    diagnostics.blockers.push({
+      code: 'ADHOC_INVALID',
+      title: '临时插入的方程式不合法',
+      detail: '以下 adHocEntries 未通过校验（字段 / 化学式 / 原子守恒 / 电荷守恒），必须修正或剔除后才能出卷。',
+      items: adhocReport.problems,
+      options: ['按提示修正后重试', '从 adHocEntries 里剔除这些条目']
+    });
+  }
+  if (adhocEntries.length) {
+    if (adHocEnforceScope) {
+      settings.adHocEnforceScope = true;
+      job2.generation.adHocEnforceScope = true;
+    } else {
+      const pinned = adhocEntries.map((e) => e.id);
+      settings.manualEntryIds = uniq([...(settings.manualEntryIds || []), ...pinned]);
+      job2.generation.manualEntryIds = settings.manualEntryIds.slice();
+      settings.manualQuestionTypes = Object.assign({}, settings.manualQuestionTypes || {});
+      adhocEntries.forEach((e) => { settings.manualQuestionTypes[e.id] = e._adHocQuestionType || 'B'; });
+      job2.generation.manualQuestionTypes = Object.assign({}, settings.manualQuestionTypes);
+    }
+  }
+
   // B11：手选 ID 校验
   const manual = validateManualIds(library, settings.manualEntryIds, settings);
   diagnostics.invalidManualIds = manual.invalid;
@@ -1060,6 +1119,26 @@ function preflight(job, opts) {
   // ---- 可出题数（条目数权威口径）----
   const current = candidateStats(library, settings);
   const strategies = strategyTable(library, settings);
+
+  // ---- ad-hoc 报告（题库外临时插入；enforceScope=true 时列出被范围筛掉的）----
+  const adhocIdList = adhocEntries.map((e) => e.id);
+  const adhocDropped = (adHocEnforceScope && adhocIdList.length)
+    ? adhocIdList.filter((id) => !current.entryIds.includes(id))
+    : [];
+  const adhocInfo = adhocReport ? {
+    requested: adhocReport.requested,
+    accepted: adhocReport.accepted,
+    rejected: adhocReport.rejected,
+    pinned: adHocEnforceScope ? 0 : adhocEntries.length,
+    enforceScope: adHocEnforceScope,
+    entries: adhocReport.entries,
+    problems: adhocReport.problems,
+    warnings: adhocReport.warnings,
+    scopeDropped: adhocDropped,
+    note: adHocEnforceScope
+      ? '受范围约束（enforceScope=true）：临时题与库内条目同等筛选，范围外的不进卷面'
+      : '点名要出（enforceScope=false，默认）：临时题已钉进必出，不受范围约束'
+  } : null;
 
   const shortage = current.entryCount < total;
   const zeroHit = current.entryCount === 0;
@@ -1111,9 +1190,15 @@ function preflight(job, opts) {
     images: !!(job.export && job.export.images)
   };
   const files = previewFileNames(job2, scenario, total, channels);
-  const snap = snapshotInfo(library, job.snapshot);
+  // 快照口径 = **磁盘上的题库本体**（data/library.json），不含本次临时插入的 ad-hoc 条目：
+  // 否则「题库 N 条」会被临时题虚增，且与数据锁 sha256 的口径对不上。
+  // 注意：app/main.js 传进来的 library 可能已经是「已合并」副本，所以这里按 _adHoc 标记剔除。
+  const diskLibrary = Object.assign({}, baseLibrary, {
+    entries: (baseLibrary.entries || []).filter((e) => e._adHoc !== true)
+  });
+  const snap = snapshotInfo(diskLibrary, job.snapshot);
 
-  const hardBlock = diagnostics.blockers.filter((b) => ['B6_AMBIGUOUS', 'B6_UNMATCHED', 'B11_INVALID_MANUAL_ID', 'B3_MANUAL_EXCEED', 'B7_H_UNAVAILABLE', 'B1_TYPE_UNAVAILABLE', 'ASK_VERSION_STRATEGY'].includes(b.code));
+  const hardBlock = diagnostics.blockers.filter((b) => ['B6_AMBIGUOUS', 'B6_UNMATCHED', 'B11_INVALID_MANUAL_ID', 'B3_MANUAL_EXCEED', 'B7_H_UNAVAILABLE', 'B1_TYPE_UNAVAILABLE', 'ASK_VERSION_STRATEGY', 'ADHOC_INVALID'].includes(b.code));
   const softBlock = diagnostics.blockers.filter((b) => ['B1_SHORTAGE', 'B1_ZERO_CANDIDATE'].includes(b.code));
 
   return {
@@ -1136,7 +1221,8 @@ function preflight(job, opts) {
       typeNotes,
       manualValid: manual.valid,
       extraAcceptance: extra,
-      scales: scaled.scaled ? { before: scaled.before, after: scaled.after } : null
+      scales: scaled.scaled ? { before: scaled.before, after: scaled.after } : null,
+      adhoc: adhocInfo
     },
     restate: {
       scenario,
@@ -1160,7 +1246,8 @@ function preflight(job, opts) {
       files: files.files,
       outputDir: files.dir,
       snapshot: snap,
-      channels
+      channels,
+      adhoc: adhocInfo
     },
     // AC-18：必问项来源标注（explicit / memory / default）——复述框与确认闸门都读它
     intakeCoverage: buildIntakeCoverage({

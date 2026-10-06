@@ -1,0 +1,70 @@
+{
+  "_说明": "演示「临时插入题库外的方程式」：必修一第一章 课堂限时练 8 题，其中 2 题由 adHocEntries 现场提供（一道离子、一道化学方程式）。默认 adHocOptions.enforceScope=false → 这两题按「点名要出」钉进卷面，不受范围约束。注意：临时题**只走内存**，不写 data/library.json，数据锁 sha256 不变。改 enforceScope=true 可让临时题与库内条目同等受范围筛选（防超纲）。",
+  "jobVersion": 1,
+  "useMemory": false,
+  "scenario": "timedDrill",
+  "generation": {
+    "scopeInput": {"books": ["必修一"], "chapters": ["第一章"]},
+    "exclude": {},
+    "totalCount": 8,
+    "versionStrategy": "preferChemical",
+    "questionTypeCounts": {"B": 0, "C": 0, "D": 0, "E": 0, "H": 0},
+    "difficultyMode": "counts",
+    "difficultyCounts": {"simple": 0, "medium": 0, "hard": 0},
+    "manualEntryIds": [],
+    "allowSameEntryDifferentVersion": false
+  },
+  "adHocEntries": [
+    {
+      "name": "酸性高锰酸钾与过氧化氢",
+      "difficulty": "中等",
+      "questionType": "B",
+      "description": "向酸性高锰酸钾溶液中滴加过氧化氢，紫色褪去并放出能使带火星木条复燃的气体。",
+      "tags": ["临时补充", "氧化还原"],
+      "knowledgeModules": ["物质及其变化"],
+      "reactionTypes": ["氧化还原反应", "离子反应"],
+      "versions": [
+        {
+          "type": "ionic",
+          "reactants": [
+            {"formula": "MnO4^-", "coefficient": 2},
+            {"formula": "H2O2", "coefficient": 5},
+            {"formula": "H+", "coefficient": 6}
+          ],
+          "products": [
+            {"formula": "Mn^2+", "coefficient": 2},
+            {"formula": "O2", "coefficient": 5, "gas": true},
+            {"formula": "H2O", "coefficient": 8}
+          ],
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "name": "铝热反应",
+      "difficulty": "较难",
+      "questionType": "E",
+      "versions": [
+        {
+          "type": "chemical",
+          "reactants": [
+            {"formula": "Al", "coefficient": 2},
+            {"formula": "Fe2O3", "coefficient": 1}
+          ],
+          "products": [
+            {"formula": "Al2O3", "coefficient": 1},
+            {"formula": "Fe", "coefficient": 2}
+          ],
+          "conditions": [{"code": "highTemperature", "text": "高温"}]
+        }
+      ]
+    }
+  ],
+  "adHocOptions": {"enforceScope": false},
+  "export": {"pdf": true, "docx": true, "images": false, "imagesOnDemand": null},
+  "layoutOverrides": {},
+  "outputDir": null,
+  "dryRun": false,
+  "extraAcceptance": [],
+  "snapshot": {"drift": false, "checkedAt": null, "note": ""}
+}

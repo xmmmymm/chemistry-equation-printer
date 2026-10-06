@@ -17,6 +17,8 @@
   把「先复述、老师点头才出」从话术约定升级为引擎级关卡
 - **零项目外依赖**：题库 `data/` 自持、引擎副本 `engine/` 在库内、Electron 运行时装进 `runtime/`
 - **化学正确性内建**：原子守恒 + 电荷守恒校验；553 个版本全部通过
+- **可临时插入题库外的方程式**：`adHocEntries` 现场给题（同样过守恒校验），**只走内存、
+  不写题库**——数据锁 sha256 与「392 条 / 553 版本」口径都不变
 - **零副作用**：对上游项目只读，出卷前后全量 sha256 快照验证**零差异**（AC-17）
 
 ## 快速开始
@@ -119,12 +121,13 @@ PROMPT-方程式出题skill.md          实施提示词（需求规格 v1.1 全�
 
 ```powershell
 # 回归
-npm test                   # 五套快测一把跑：engine 238 / preflight 6 / state 9 / patches 19-21 / edge 106
+npm test                   # 六套快测一把跑：engine 238 / preflight 6 / state 9 / patches 19-21 / edge 106 / adhoc 25+27
 npm run test:engine        # 引擎副本回归：应为「通过 238 项，失败 0 项」
 npm run test:preflight     # 预检 6 个基准场景对照 docs/reference/04-可出题量预检.md
 npm run test:state         # 状态管理自检（记忆 / 数据锁 / pending / 冲突链）
 npm run test:patches       # 引擎副本本地补丁校验（哈希 + 17 条行为断言）→ 21/21；未配置上游时 19/21（跳过 2 条上游哈希校验）
 npm run test:edge          # 边界与异常回归（归一/拦截/CLI/输出目录/_pending/补丁登记/数据锁/自带运行时/公式渲染/版本类型归一/intake 覆盖度）
+npm run test:adhoc         # 临时插入题库外方程式：自检 25 项 + 集成 27 项（进卷 / 题型 / 范围开关 / 零副作用）
 npm run test:acceptance    # 跑 §3.4 全部 17 条验收用例 + 本项目 AC-18（18/18；含上游零写入校验 + 真实产物目录零污染自检）
 
 # 数据（本项目自有，不从上游同步）
@@ -168,6 +171,10 @@ node tools/preflight.js --self-test
   老师点头才出」从话术升级为引擎级关卡
 - ✅ v1.4 开源发布：清除本机绝对路径（代码改环境变量 / `--source`，文档改相对表述），
   补 LICENSE / 仓库元数据，标注上游 `chemistry-equation-printer` 已废弃、本项目为改进替代品
+- ✅ v1.5 题库外临时插入：`job.adHocEntries` 现场给方程式（原子/电荷守恒校验 + 硬拦截），
+  只在**内存副本**合并 → 数据锁 sha256 与快照条目数不变；每题可指定题型；
+  `adHocOptions.enforceScope` 切换「点名要出（默认）」/「同等受范围约束（防超纲）」。
+  回归：`npm run test:adhoc`（自检 25 项 + 集成 27 项）。见 SKILL.md §6.2
 
 ### v1.4 变更：开源发布（去除本机路径绑定）
 
@@ -188,6 +195,32 @@ node tools/preflight.js --self-test
 > 验证：清理后 `npm test` 全绿（engine 238 / preflight 6 / state 9 / patches 19 / edge 106），
 > `data:check`、`sync:check` 均 exit 0；配 `CHEMEQ_SOURCE` 指向本地上游时 `patches` 回到 21/21、
 > `sync:check` 8 个引擎文件全部一致。
+
+### v1.5 变更：题库外临时插入方程式（`adHocEntries`）
+
+**需求**：老师手上有一道题库里没有的方程式，想「临时加进这份卷子」——此前只能改
+`data/library.json`（触发数据锁不一致 + 违背「不写回题库」边界），或干脆出不了。
+
+**做法**：引擎 `generate(library, settings, opts)` 只读内存里的 `library.entries`，所以
+**在内存副本里合并**即可让整条管线（范围筛选 / 版本策略 / 题型分配 / 难度配额 / 守恒校验）原样复用。
+
+| 文件 | 变更 |
+|---|---|
+| `tools/adhoc.js`（新增） | 规范化 + 校验（`Chem.validateVersion`：原子守恒 + 电荷守恒）+ 合并；`--self-test` 25 项 |
+| `engine/generator.js` | `buildCandidates`：`_adHoc` 条目默认**放行** `settings.scopes`（`adHocEnforceScope` 时照常约束）；手选循环支持 `settings.manualQuestionTypes[id]`（默认 `B`） |
+| `tools/preflight.js` | 合并 ad-hoc（`app/main.js` 已合并时按 `_adHoc` 标记还原，避免静默失效）；`ADHOC_INVALID` 硬拦截；默认钉进 `manualEntryIds`；快照口径改按**磁盘题库**（剔除 `_adHoc`）算 |
+| `app/main.js` | 组卷前合并；`result.json` 增加 `adhoc` 报告；`BLOCKING_CODES` 加 `ADHOC_INVALID` |
+| `tools/run-paper.js` | 剥掉子进程环境里的 `ELECTRON_RUN_AS_NODE`（见下） |
+| `tools/test-adhoc.js`（新增） | 集成回归 27 项 |
+| `examples/job-adhoc-external.json`（新增） | 可直接照抄的完整样例 |
+
+**顺带修掉的坑**：宿主环境若设了 `ELECTRON_RUN_AS_NODE=1`（不少 Node 工具链 / agent 运行时会设），
+`electron.exe` 会退化成纯 Node，`app/main.js` 的 `require('electron')` 直接 `MODULE_NOT_FOUND`，
+报错完全看不出根因。`run-paper.js` 现在显式剥掉这个变量再 spawn。
+
+**验证**：`npm run test:adhoc`（25 + 27 全绿）；真实出卷 `examples/job-adhoc-external.json` →
+`entryIds` 含 `AD-001`/`AD-002`、`typeActual` 为 `B:1 … E:1`（每题题型生效）、
+`snapshot.entries` 仍为 **392**、`data:check` 仍「392 条 / 553 版本」、`sync:check` 全部一致。
 
 ### v1.2 变更：零项目外依赖 + 离子方程式补全
 
@@ -308,6 +341,9 @@ CLI/错误路径；并发；`_pending` 生命周期）共发现 **9** 个问题�
 - H 开放题（题库 `openPrompt` 全空）、mustInclude / starred 机制（题库无数据）
 - 学习项目挂靠（`projectScope` / `projectCounts` / `round`）
 - 批量 / AB 卷与跨卷避重；覆盖约束（每节 ≥1 题）
+- **临时插入的方程式（`adHocEntries`）不做跨卷持久化去重**：没有桌面版那种 `used.json`，
+  每次都要重新给；同一道临时题反复插入会重复出现（单卷内仍去重）。要做就得再加一个状态文件
+- **临时题占用 `totalCount`**（不是额外追加）：要「10 题 + 2 道临时题」需把 `totalCount` 写成 12
 - 读上游 `settings.json` 的卷面默认与 `data/templates/`
 - 图片 multi 模式（单张模式已实现）；难度未满足自动重试；强制裁页 / 补空白页
 - `_pending` 自动重试（只做 intake 轮手动提示）；联网 / 云

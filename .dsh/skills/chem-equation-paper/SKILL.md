@@ -305,6 +305,7 @@ node tools/run-paper.js my-job.json --confirmed
 | B12 | 题库数据锁异常 | `sync:check` 比对 `data/` 与 `data/SOURCE.json` 的数据锁；**不阻塞出卷**，报告标注「数据时间 X / 与数据锁不一致」 |
 | B13 | 溢页 / 页数不齐 | 接受自然分页；报题卷/答案卷页数；**不裁剪、不补空白页** |
 | B14 | 文件被占用 / 目录不可写 | 后缀避让 `-2 … -99`；仍失败 → 通道隔离；全失败 → `_pending` + 报路径 |
+| **ADHOC_INVALID** | `adHocEntries` 里有不合法的临时题 | **硬拦截**（不进导出）：把 `blockers[].items` 的逐条错误念给老师（字段缺失 / 化学式解析不了 / **原子不守恒** / **电荷不守恒** / 版本策略下无可用版本），修正或剔除后重试。见 §6.2 |
 | **AC-18** | `CONFIRM_REQUIRED`（没确认就出卷） | **不是错误，是关卡**：把 `restate` + `intakeCoverage` 摆给老师确认，点头后带 `--confirmed` 重跑。若 `intakeCoverage.verdict = intake-incomplete`，先点明 `unasked[]` 里哪几项不是老师说的 |
 
 ---
@@ -327,6 +328,8 @@ node tools/run-paper.js my-job.json --confirmed
     "allowSameEntryDifferentVersion": false
   },
   "export": {"pdf": true, "docx": true, "images": false, "imagesOnDemand": null},
+  "adHocEntries": [],
+  "adHocOptions": {"enforceScope": false},
   "layoutOverrides": {},
   "outputDir": null,
   "dryRun": false,
@@ -343,6 +346,8 @@ node tools/run-paper.js my-job.json --confirmed
 | `generation.questionTypeCounts` | `H` **必须为 0**；全 0 = 引擎自动补足 |
 | `generation.manualEntryIds` | 手选必出（条目 id 数组，如 `["R0014"]`）；**先过预检**防 exceed（B3） |
 | `generation.allowSameEntryDifferentVersion` | 只在 **B1 四选项流第 ④ 项**被老师选中时临时置 `true` |
+| `adHocEntries` | **题库外临时插入的方程式**（数组）。老师给了一道题库里没有的方程式、要求「加进这份卷子」时用。**只走内存，不写 `data/library.json`**（数据锁 sha256 不变）。字段见 §6.2 |
+| `adHocOptions.enforceScope` | 默认 `false` = 临时题**点名要出**（钉进必出，不受范围约束）；`true` = 与库内条目同等受范围筛选（防超纲，范围外的会被剔除并在报告里列出 `scopeDropped`） |
 | `export.pdf` / `export.docx` | 默认 `true`（双卷） |
 | `export.images` | 默认 `false`；老师点名要图片才 `true` |
 | `export.imagesOnDemand` | 图片规格覆盖（默认取 §3.3 `imageOptions`，即 `engine/image.js` 的 `defaultImageOptions()`） |
@@ -389,6 +394,69 @@ node tools/run-paper.js my-job.json --confirmed  # ③ 老师确认后 → 出�
 node tools/skill-state.js pending                # ④ 看有没有失败留痕
 ```
 
+### 6.2 临时插入题库外的方程式（`adHocEntries`）
+
+**什么时候用**：老师说「再加一道 XXX 方程式，题库里没有」。这是**唯一**允许引入库外方程式的通道。
+
+> ⚠ 不要为了插一道题去改 `data/library.json` —— 那会触发数据锁不一致（B12），且违背「不写回题库」的边界。
+> `adHocEntries` 只在**内存副本**里合并，磁盘题库与数据锁 sha256 一个字节都不动。
+
+```json
+"adHocEntries": [
+  {
+    "name": "酸性高锰酸钾与过氧化氢",
+    "difficulty": "中等",
+    "questionType": "B",
+    "description": "向酸性高锰酸钾溶液中滴加过氧化氢，紫色褪去并放出能使带火星木条复燃的气体。",
+    "tags": ["临时补充"],
+    "versions": [
+      {
+        "type": "ionic",
+        "reactants": [
+          {"formula": "MnO4^-", "coefficient": 2},
+          {"formula": "H2O2", "coefficient": 5},
+          {"formula": "H+", "coefficient": 6}
+        ],
+        "products": [
+          {"formula": "Mn^2+", "coefficient": 2},
+          {"formula": "O2", "coefficient": 5, "gas": true},
+          {"formula": "H2O", "coefficient": 8}
+        ],
+        "conditions": []
+      }
+    ]
+  }
+],
+"adHocOptions": {"enforceScope": false}
+```
+
+| 字段 | 必填 | 说明 |
+|---|---|---|
+| `name` | ✅ | 条目名（复述框与报告都用它） |
+| `difficulty` | | `简单` / `中等` / `较难`，默认 `中等` |
+| `questionType` | | `B` / `C` / `D` / `E`，默认 `B`。**`H` 不支持**（题库无开放题素材）；`C` 必须同时写 `description` |
+| `description` | C 题必填 | 文字描述（C 题型据此出题） |
+| `id` | | 不写则自动分配 `AD-001`…；写了就不能与题库条目或本次其它临时题重名 |
+| `versions[]` | ✅ | 至少 1 个；字段与题库 `versions` 完全一致（`type` ∈ 六种方程式类型、`reactants`/`products` 的 `formula`+`coefficient`、可选 `conditions`） |
+| `tags` / `knowledgeModules` / `reactionTypes` / `substanceCategories` / `textbooks` | | 与题库条目同义，用于筛选与报告 |
+
+**引擎会做什么**：
+- 逐条做**原子守恒 + 电荷守恒**校验（与题库同款 `engine/chem.js`）——配平写错、电荷不平**直接硬拦截**（`ADHOC_INVALID`，`exitCode 2`，不进导出），错误信息逐条列出。
+- 默认 `enforceScope:false` → 临时题**钉进必出**，一定出现在卷面上，不受 `scopes` 约束（与 `manualEntryIds` 同语义）。
+- `enforceScope:true` → 不钉，与库内条目同等受范围筛选；被范围挡掉的会在 `result.json` 的 `adhoc.scopeDropped` 与复述框里如实列出。
+- **占用总题数**：临时题算在 `totalCount` 里（要 10 题 + 2 道临时题 → `totalCount` 写 12）。
+- 报告里 `result.json.adhoc` 给出 `requested / accepted / rejected / pinned / scopeDropped / entries`；复述框里是 `restate.adhoc`。
+
+**跨卷去重**：本项目**不**持久化记录临时题（没有桌面版那种 `used.json`）。临时题每次都要重新给；
+若同一道题反复插入，报告里会照常出现，需要老师自己留意。
+
+**零副作用的证据**（`npm run test:adhoc` 会逐项断言）：
+- `data/library.json` 字节不变、`data:check` 仍为「392 条 / 553 版本」
+- `result.json` 的 `snapshot.entries` 仍是 **392**（临时题不虚增题库口径）
+- 出卷产物落在 `out/{yyyy-mm-dd}/`，题库目录无任何写入
+
+可直接照抄的完整样例：`examples/job-adhoc-external.json`。
+
 ---
 
 ## 7. 自检清单（交付前逐项确认）
@@ -396,6 +464,7 @@ node tools/skill-state.js pending                # ④ 看有没有失败留痕
 - [ ] 引擎上游项目下**没有任何文件被创建/修改**（AC-17；上游未配置时该快照 `skipped`）
 - [ ] `npm run test:engine` = 「通过 238 项，失败 0 项」
 - [ ] `npm run test:edge` = 「通过 106 / 失败 0」
+- [ ] `npm run test:adhoc` = 「通过 25 项」+「通过 27 项」（临时插入题库外方程式：校验 / 进卷 / 范围开关 / 零副作用）
 - [ ] `npm run test:patches` = 「21/21 通过」（2 个本地补丁：`engine/docx.js`、`engine/chem.js`；未配置上游时 19/21）
 - [ ] `npm run test:acceptance` = 「18/18 通过」（含 AC-18 覆盖度 / 确认闸门）
 - [ ] `npm run data:check` = 「数据已锁定：392 条 / 553 版本」
@@ -423,11 +492,13 @@ node tools/skill-state.js pending                # ④ 看有没有失败留痕
 | `tools/preflight.js` | 归一 + 预检 + 文件名预览 + 诊断 + 记忆补全（`--self-test` 跑 6 基准对照）；也归一 `custom` 策略的 `allowedVersionTypes` |
 | `tools/run-paper.js` | 出卷启动器（用**本项目自带**的 `runtime/electron/` 跑 `app/main.js`；**`--confirmed` = 确认闸门放行**，不带则只回 `CONFIRM_REQUIRED` + 覆盖度；`--render-check` 只截图；`--print-runtime` 查路径） |
 | `tools/skill-state.js` | 记忆 / 数据锁 / `_pending` 生命周期（`state` / `drift` / `memory` / `pending` / `archive`） |
+| `tools/adhoc.js` | **题库外临时插入的方程式**（§6.2）：规范化 + 化学校验 + 内存合并（不写盘）。`--self-test` 跑 25 项；`--example` 打印可粘贴样例 |
 | `tools/data-lock.js` | 题库数据锁：`data/` 是本项目自有数据；合法变更后重新锁定（`npm run data:lock`） |
 | `tools/install-runtime.js` | Electron 运行时装入 / 校验（`npm run runtime:install` / `runtime:check` / `--print`） |
 | `tools/sync-from-source.js` | 只同步**引擎副本**（数据不同步）；`--check` 只比对（引擎漂移 + 数据锁）；登记过的本地补丁按 `data/ENGINE-PATCHES.json` 认账 |
 | `tools/test-engine-patches.js` | 校验引擎副本的本地补丁（哈希 + 行为断言）；重新打补丁后 `--update` 刷新登记 |
 | `tools/test-edge.js` | 边界与异常回归（归一 / 拦截 / CLI / 输出目录 / `_pending` / 补丁登记 / 数据锁 / 自带运行时 / 公式渲染 / 版本类型归一 / 离子式拍板结论，**93 项**） |
+| `tools/test-adhoc.js` | ad-hoc 集成回归（**27 项**）：临时题确实进卷 / 每题题型生效 / `enforceScope` 开关 / 非法题硬拦截 / 数据锁与快照零副作用 |
 | `data/ENGINE-PATCHES.json` | 本地补丁登记表（上游哈希 / 补丁哈希 / 症状 / 根因 / 修法）—— 现有 2 项：`engine/docx.js`（Word 电荷渲染）、`engine/chem.js`（纯文本多位数下标 + 尾随电荷） |
 | `engine/paper.js` | 组卷编排（调 `G.generate` + perItemRules + 附加验收核查） |
 | `engine/image.js` | 图片通道文档构建（移植自上游已验证实现） |

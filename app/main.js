@@ -40,6 +40,7 @@ const Paper = require(path.join(SKILL_ROOT, 'engine', 'paper.js'));
 const Docx = require(path.join(SKILL_ROOT, 'engine', 'docx.js'));
 const Yml = require(path.join(SKILL_ROOT, 'tools', 'yml.js'));
 const Preflight = require(path.join(SKILL_ROOT, 'tools', 'preflight.js'));
+const AdHoc = require(path.join(SKILL_ROOT, 'tools', 'adhoc.js'));
 
 const MODE = process.env.CHEMEQ_MODE || 'paper';
 const RENDER_OUT = process.env.CHEMEQ_RENDER_OUT || path.join(SKILL_ROOT, 'out', '_render-check');
@@ -159,7 +160,8 @@ function driftInfo(localSha, jobSnapshot) {
 const BLOCKING_CODES = [
   'B6_AMBIGUOUS', 'B6_UNMATCHED', 'B11_INVALID_MANUAL_ID', 'B3_MANUAL_EXCEED',
   'B7_H_UNAVAILABLE', 'B1_TYPE_UNAVAILABLE', 'B1_SHORTAGE', 'B1_ZERO_CANDIDATE',
-  'ASK_VERSION_STRATEGY'   // 规格 §3.1 决策块 3：版本策略必问、无静默默认
+  'ASK_VERSION_STRATEGY',  // 规格 §3.1 决策块 3：版本策略必问、无静默默认
+  'ADHOC_INVALID'          // 题库外临时插入的方程式未通过校验（字段/化学式/守恒）
 ];
 
 function runGeneration(library, job) {
@@ -418,10 +420,15 @@ async function main() {
     checkedAt: drift.checkedAt
   };
 
+  // ---- ad-hoc（题库外临时插入的方程式）：只在**内存副本**里合并 ----
+  // 快照（上面）已按磁盘题库口径算完 → 临时题不会虚增「题库 N 条」，也不动数据锁 sha256。
+  const adhocRes = AdHoc.applyAdHoc(lib, job.adHocEntries);
+  const runLib = adhocRes.library;
+
   // ---- ②③ 组卷（纯 Node）----
   let ctx;
   try {
-    ctx = runGeneration(lib, job);
+    ctx = runGeneration(runLib, job);
   } catch (e) {
     return finish({
       ok: false, exitCode: 4,
@@ -441,6 +448,7 @@ async function main() {
         blockers: ctx.blockers
       },
       scenario: ctx.scenario, snapshot,
+      adhoc: adhocRes.report,
       generation: {
         requested: ctx.total, produced: 0,
         authoritativeCount: ctx.pf.preflight.authoritativeCount,
@@ -650,6 +658,7 @@ async function main() {
     itemsPreview: Paper.toItemsJson(gen.items),
     restate: pf.restate,                  // AC-18：成功结果也留复述框素材
     intakeCoverage: pf.intakeCoverage,    // AC-18：留痕——这份卷子的参数是谁给的
+    adhoc: adhocRes.report,               // 题库外临时插入的方程式（本次实际进了组卷的）
     startedAt, finishedAt: K.nowIso()
   }, outDir);
 }

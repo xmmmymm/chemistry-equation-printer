@@ -91,16 +91,23 @@ if (!electron) {
   process.exit(4);
 }
 
+const childEnv = Object.assign({}, process.env, {
+  SKILLJOB: absJob,
+  SKILL_ROOT,
+  CHEMEQ_KEEP: process.argv.includes('--keep') ? '1' : '',
+  CHEMEQ_MODE: process.argv.includes('--render-check') ? 'render-check' : 'paper',
+  // AC-18：intake 覆盖度确认闸门。child 读不到 argv，用 env 传。
+  CHEMEQ_CONFIRMED: process.argv.includes('--confirmed') ? '1' : ''
+});
+// ELECTRON_RUN_AS_NODE=1 会让 electron.exe 退化成**纯 Node**：app/main.js 里
+// require('electron') 直接 MODULE_NOT_FOUND，报错完全看不出根因（本机实测踩到 ——
+// 一些 Node 工具链 / agent 运行时会全局设这个变量）。本项目要的是真 Electron 主进程
+// （PDF 通道靠离屏窗口 printToPDF），所以在这里显式剥掉它，不让宿主环境污染出卷。
+delete childEnv.ELECTRON_RUN_AS_NODE;
+
 const child = spawn(electron, [SKILL_ROOT], {
   stdio: 'inherit',
-  env: Object.assign({}, process.env, {
-    SKILLJOB: absJob,
-    SKILL_ROOT,
-    CHEMEQ_KEEP: process.argv.includes('--keep') ? '1' : '',
-    CHEMEQ_MODE: process.argv.includes('--render-check') ? 'render-check' : 'paper',
-    // AC-18：intake 覆盖度确认闸门。child 读不到 argv，用 env 传。
-    CHEMEQ_CONFIRMED: process.argv.includes('--confirmed') ? '1' : ''
-  })
+  env: childEnv
 });
 
 child.on('exit', (code) => process.exit(code === null ? 1 : code));

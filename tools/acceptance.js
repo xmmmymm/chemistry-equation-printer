@@ -741,8 +741,10 @@ test('AC-15', 'env 无头跑全流程 → 无任何对话框；打印 JSON；exi
     if (defaultResultBackup == null) return true;
     try {
       const st = fs.statSync(defaultResultPath);
+      // ⚠ mtime 容差 2ms（同 realOutDiffs 自检）：utimesSync 经 Date 往返在 Windows 上会掉 ±1ms。
+      //   内容仍要求逐字节相等。
       return fs.readFileSync(defaultResultPath).equals(defaultResultBackup.buf)
-        && Math.round(st.mtimeMs) === Math.round(defaultResultBackup.mtimeMs);
+        && Math.abs(st.mtimeMs - defaultResultBackup.mtimeMs) <= 2;
     } catch (_) { return false; }
   })()]);
   return {
@@ -799,6 +801,7 @@ test('AC-17', '出卷前后对引擎上游做全量 sha256 快照 → 零差异�
     skipped: upstreamReachable ? null
       : '引擎上游不在场（未设 CHEMEQ_SOURCE）：零写入快照与文件数断言跳过，sync:check 与出卷照常验证',
     evidence: { upstreamReachable, filesChecked: before === null ? 0 : Object.keys(before).length, diffs, syncCheckExit: syncCheck.code, syncCheckTail: syncCheck.stdout.trim().split('\n').slice(-2).join('\n'), fileList: before === null ? [] : Object.keys(before) }
+  };
 });
 
 // ---- AC-18：intake 覆盖度报告 + 确认闸门（未经老师确认不生成） ----
@@ -932,7 +935,11 @@ function main() {
       if (!b) { realOutDiffs.push({ file: k, kind: 'REMOVED' }); continue; }
       if (a.sha256 !== b.sha256) realOutDiffs.push({ file: k, kind: 'CONTENT' });
       else if (a.bytes !== b.bytes) realOutDiffs.push({ file: k, kind: 'SIZE' });
-      else if (a.mtimeMs !== b.mtimeMs) realOutDiffs.push({ file: k, kind: 'MTIME', was: a.mtimeMs, now: b.mtimeMs });
+      // ⚠ mtime 容差 2ms：还原被覆盖文件要经 fs.utimesSync(new Date(ms))，Windows 上
+      //   Date 只保留整数毫秒、NTFS 实际是 100ns 粒度，往返会掉 ±1ms（实测踩到：
+      //   was 1791274611424 / now 1791274611423，内容 sha256 完全一致）。
+      //   内容仍要求逐字节相等，只有时间戳给这点容差。
+      else if (Math.abs(a.mtimeMs - b.mtimeMs) > 2) realOutDiffs.push({ file: k, kind: 'MTIME', was: a.mtimeMs, now: b.mtimeMs });
     }
     console.log('\n' + '─'.repeat(70));
     console.log(`跑批收尾自检：真实产物目录 out/${TODAY}/ 与跑批前对比 —— ` +

@@ -1,7 +1,7 @@
 {
   "name": "chem-equation-paper",
-  "version": "1.4.0",
-  "description": "给 AI agent 的化学方程式出题 skill：基于自有题库组卷，导出 Word / PDF / 图片。确认闸门 + 零项目外依赖。",
+  "version": "1.5.0",
+  "description": "给 AI agent 的化学方程式出题 skill：基于自有题库组卷，导出 Word / PDF / 图片，支持临时插入题库外方程式。确认闸门 + 零项目外依赖。",
   "keywords": [
     "chemistry",
     "chemical-equation",
@@ -37,7 +37,8 @@
     "test:acceptance": "node tools/acceptance.js",
     "test:patches": "node tools/test-engine-patches.js",
     "test:edge": "node tools/test-edge.js",
-    "test": "node engine/test-chem.js && node tools/preflight.js --self-test && node tools/skill-state.js self-test && node tools/test-engine-patches.js && node tools/test-edge.js",
+    "test:adhoc": "node tools/adhoc.js --self-test && node tools/test-adhoc.js",
+    "test": "node engine/test-chem.js && node tools/preflight.js --self-test && node tools/skill-state.js self-test && node tools/test-engine-patches.js && node tools/test-edge.js && node tools/adhoc.js --self-test && node tools/test-adhoc.js",
     "data:lock": "node tools/data-lock.js",
     "data:check": "node tools/data-lock.js --check",
     "runtime:install": "node tools/install-runtime.js",

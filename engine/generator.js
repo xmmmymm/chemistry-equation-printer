@@ -149,7 +149,12 @@
     const refinedScopes = refineBooksByScope(entries, settings.scopes);
     const refinedProject = projectScope ? refineBooksByScope(entries, projectScope) : null;
     const refinedExclude = refineBooksByScope(entries, settings.exclude);
-    const scoped = entries.filter(e => entryInScope(e, settings.scopes, refinedScopes) &&
+    // ad-hoc（题库外临时插入）条目：默认**放行** settings.scopes 范围筛选（教师点名要出，
+    // 与 manualEntryIds 同语义）；settings.adHocEnforceScope === true 时与库内条目同等受约束
+    // （防超纲）。exclude（明确排除）对 ad-hoc 仍生效 —— 负向意图优先于正向点名。
+    const adHocFree = (e) => e._adHoc === true && settings.adHocEnforceScope !== true;
+    const scoped = entries.filter(e =>
+      (adHocFree(e) || entryInScope(e, settings.scopes, refinedScopes)) &&
       (!projectScope || entryInScope(e, projectScope, refinedProject)));
     const excludedIds = new Set();
     if (scopeFilterActive(settings.exclude)) {
@@ -392,7 +397,10 @@
       if (roundLimit !== null && !allowOverRound && pairCountOf(vs[0], 'B') > roundLimit) {
         notices.push(`「${e.name}」已达本轮出题上限，仍按指定加入`);
       }
-      tryAdd(e, vs[0], 'B');
+      // 手选题型：默认 B（给反应物写产物并配平）；ad-hoc 条目可自带 _adHocQuestionType，
+      // 由 preflight 写进 settings.manualQuestionTypes，使「临时插入的题」也能是指定的题型。
+      const qType = (settings.manualQuestionTypes && settings.manualQuestionTypes[id]) || 'B';
+      tryAdd(e, vs[0], qType);
     }
 
     // 3. 题型与难度分配（随机补足仅使用候选池可出的题型）
