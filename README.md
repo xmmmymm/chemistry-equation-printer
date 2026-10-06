@@ -358,6 +358,16 @@ npm run data:lock           # 改完题库后重新锁定数据
 代码零 `dependencies`（只用 Node 内置模块 + `tools/yml.js` 极小 YAML 解析）。
 唯一的大件是 Electron 运行时，按需装入 `runtime/`（已 gitignore）。
 
+## 配套项目
+
+| 项目 | 关系 |
+|---|---|
+| [xkw-toolkit](https://github.com/xmmmymm/xkw-toolkit) | 互补的**另一条出题链路**：走学科网/组卷网实时抓取（依赖网校通会员，CDP 复用登录态）。本工具走**内置教材题库**（392 条，完全离线、已机器校验配平与守恒）。可串联：xkw-toolkit 攒题 → 转 JSON → 交给本工具排版打印。 |
+| [chem-reaction-3d](https://github.com/xmmmymm/chem-reaction-3d) | 把 289 个方程做成断键成键的 3D 微观演示，适合讲评时回放反应机理——本工具出**考题**，它讲**原理**。 |
+| [electrolyte-ionization](https://github.com/xmmmymm/electrolyte-ionization) | 题库中「电离方程式」那一类（共 21 条）的原理讲解：离子从晶格到溶液的 3D 过程。 |
+
+全部项目见索引：**[chem-edu-index](https://github.com/xmmmymm/chem-edu-index)**
+
 ## 许可
 
 [MIT](LICENSE) © xmmmymm。题库数据与引擎代码的来源见 README 顶部「与上游项目的关系」。
